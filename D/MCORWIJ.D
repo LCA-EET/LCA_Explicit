@@ -96,7 +96,11 @@ APPEND LCCORWIJ
 		= @17 /* ~Come here, hero.~ */
 		
 		= @18 /* ~(You pull eachother into a tight embrace, and lock lips during a long, sensual kiss. Slowly, you slide your hands down her back, from her shoulder blades to her waist, while she does the same. You caress and squeeze her round, firm behind, as she giggles in delight.)~ */
-			
+		
+		= @159 /* ~(Unable to resist, you bury your head in Schael's ample breasts, and begin to kiss them. They are warm and soft, and smell of lilacs.)~ */
+		
+		= @160 /* ~(She laughs as she strokes the back of your head.)~*/
+		
 		= @20 /* ~It seems that demigods have the same breast fixation as normal men.~ */
 		
 		= @21 /*  ~(She reaches down and begins to gently stroke your already leaking member with one hand, while massaging your jewels with the other. The feeling of her soft, skilled hands on your package is indescribable, and you gasp in pleasure.)~ */
@@ -403,9 +407,9 @@ APPEND LCCORWIJ
 		
 		= @118 /* ~(She pushes you off her body and begins massaging her breasts with her left hand, while she fingers herself with the right.)~ */
 		
-		= @119 /* ~Ohhh... <CHARNAME>...~*/
+		= @119 /*  ~Ohhh... <CHARNAME>... my hero... ohh!~*/
 		
-		= @120 /* ~(The sight and sound of Schael pleasuring herself while moaning your name is enough to reinvigorate your aching member. You stand over your love. Eying your growing, throbbing tool, she spreads her legs and invites you in.)~ */
+		= @120 /* ~(The sight and sound of Schael pleasuring herself while moaning your name is enough to reinvigorate your aching member. You stand over your love and begin to stroke your tool back to life. Eying your growing, throbbing tool, she spreads her legs and invites you in.)~ */
 		
 		= @121 /* ~Give it to me, lover! Show me how a great and powerful hero fucks his woman!~ */
 		
