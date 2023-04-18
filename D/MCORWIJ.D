@@ -29,8 +29,21 @@ APPEND PLAYER1
 	END
 END
 
-APPEND LCCORWIJ
 
+
+APPEND LCCORWIJ
+	IF ~~ THEN BEGIN LCA_PPIRENI2_3_CHAIN_2_END
+		SAY @157 /* ~Let.. me.. GO!~ */
+		
+		IF ~~ THEN REPLY #44251 /* ~What are you doing, Irenicus?! What is all of this?~ */ 
+		EXTERN PPIRENI2 5
+
+		IF ~~ THEN REPLY @158 /* ~Release us! I will kill you, I swear it!~ */ 
+		EXTERN PPIRENI2 4
+
+		IF ~~ THEN REPLY #44253 /* ~Where is Imoen?! What have you done to her?!~ */ 
+		EXTERN PPIRENI2 6 
+	END
 //{ #region Corwin Sex 1 
 	IF ~
 		Global("LCA_CorwinSex_1", "GLOBAL", 2)
@@ -534,3 +547,22 @@ APPEND LCCORWIJ
 //} #endregion
 
 END
+
+CHAIN PPIRENI2 LCA_PPIRENI2_3_CHAIN_2
+	@153 /* ~Worry not, my dear. Unlike the others, you will live past these next few minutes. Once I am done with <CHARNAME>, you'll soon be returned home, where you will assassinate the Council of Four on my behalf.~ */
+	
+	== LCCORWIJ
+	@154 /* ~What..? No, never!~ */
+	
+	== PPIRENI2
+	IF ~
+		See("Yoshimo")
+	~
+	@155 /* ~It's a trivial matter. You'll be enslaved just as easily as Yoshimo was. Enjoy your last moments of autonomy, child.~ */
+	
+	== PPIRENI2
+	IF ~
+		!See("Yoshimo")
+	~
+	@156 /* ~It's a trivial matter. You'll be enslaved through the use of a geas. Enjoy your last moments of autonomy, child.~ */
+END LCCORWIJ LCA_PPIRENI2_3_CHAIN_2_END
