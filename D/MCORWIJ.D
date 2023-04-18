@@ -1,4 +1,33 @@
-
+APPEND PLAYER1
+	IF ~
+		Global("LCA_Explicit_0002", "GLOBAL", 1)
+	~ THEN BEGIN LCA_0002
+		SAY @151 /* ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling against her bonds to be profoundly erotic.)~*/
+		
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN 
+		DO ~
+			SetGlobal("LCA_Explicit_0002", "GLOBAL", 2)
+		~
+		GOTO LCA_0002_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN
+		DO ~
+			SetGlobal("LCA_Explicit_0002", "GLOBAL", 2)
+		~		
+		EXTERN PPIRENI2 LCA_PPIRENI2_3_CHAIN_2
+	END
+	
+	IF ~~ THEN BEGIN LCA_0002_M
+		SAY @152 /* ~(Feeling ashamed, you take a deep breath and try to control your arousal before anyone notices.)~ */
+		
+		IF ~~ THEN
+		EXTERN PPIRENI2 LCA_PPIRENI2_3_CHAIN_2
+	END
+END
 
 APPEND LCCORWIJ
 
