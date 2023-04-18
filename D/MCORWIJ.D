@@ -459,4 +459,49 @@ APPEND LCCORWIJ
 		EXIT
 	END
 //} #endregion
+
+//{ #region DLG-0001
+	IF ~
+		Global("LCA_Explicit_0001", "GLOBAL", 1)
+	~ THEN BEGIN LCA_0001
+		SAY @148 /* ~(She turns and leaves. As she walks away, you gaze longingly at her well-formed ass and shapely legs.)~  */
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN
+		GOTO LCA_0001_F
+		
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN
+		GOTO LCA_0001_M
+	END
+	
+	IF ~~ THEN BEGIN LCA_0001_M
+		SAY @149 /* ~(Your mind fills with thoughts of what she has planned for tonight, and in moments, you're sporting a rock hard erection.)~  */
+		
+		IF ~~ THEN
+		DO ~
+			SetLeavePartyDialogFile()
+			ChangeAIScript("",DEFAULT)
+			LeaveParty()
+			EscapeAreaMove("BG1316",400,250,S)
+		~
+		EXIT
+	END
+	
+	IF ~~ THEN BEGIN LCA_0001_F
+		SAY @150 /* ~(Your heart flutters as you wonder what she has planned for tonight.)~  */
+		
+		IF ~~ THEN
+		DO ~
+			SetLeavePartyDialogFile()
+			ChangeAIScript("",DEFAULT)
+			LeaveParty()
+			EscapeAreaMove("BG1316",400,250,S)
+		~
+		EXIT
+	END
+//} #endregion
+
 END
