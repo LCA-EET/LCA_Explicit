@@ -1,0 +1,39 @@
+IF
+	Global("LCA_CorwinSex_1", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("LCA_CorwinSex_1", "GLOBAL", 2)
+		StartDialog("LCCORWIJ", Player1)
+END
+
+IF
+	Global("LCA_CorwinSex_2", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("LCA_CorwinSex_2", "GLOBAL", 2)
+		StartDialog("LCCORWIJ", Player1)
+END
+
+IF
+	Global("LCA_CorwinSex_3", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("LCA_CorwinSex_3", "GLOBAL", 2)
+		StartDialog("LCCORWIJ", Player1)
+END
+
+IF
+	Global("LCA_CorwinSex_4", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("LCA_CorwinSex_4", "GLOBAL", 2)
+		StartDialog("LCCORWIJ", Player1)
+END
+
+IF
+	Global("LCA_CorwinSex_5", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("LCA_CorwinSex_5", "GLOBAL", 2)
+		StartDialog("LCCORWIJ", Player1)
+END
