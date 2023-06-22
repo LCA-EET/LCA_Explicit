@@ -1,7 +1,0 @@
-IF 
-	Global("LCA_ExplicitModActive", "GLOBAL", 0)
-THEN
-	RESPONSE #100
-		SetGlobal("LCA_ExplicitModActive", "GLOBAL", 1)
-		Continue()
-END
