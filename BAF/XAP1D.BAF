@@ -1,4 +1,4 @@
-IF 
+IF
 	Global("XA_ExplicitModActive", "GLOBAL", 0)
 THEN
 	RESPONSE #100
