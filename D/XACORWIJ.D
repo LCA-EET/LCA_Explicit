@@ -47,7 +47,6 @@ APPEND XACORWIJ
 //{ #region Corwin Sex 1 
 	IF ~
 		Global("XA_CorwinSex_1","GLOBAL",1)
-		Global("XA_SleepInn","GLOBAL",1)
 		AreaCheck("XAEXPL01")
 	~ THEN BEGIN XA_XAEXPL01
 		SAY @0 /* ~This room is perfect.~ */
@@ -197,7 +196,7 @@ APPEND XACORWIJ
 		IF ~~ THEN 
 		DO ~
 			StartCutSceneMode()
-			StartCutScene("XACS1EX")
+			StartCutScene("XAEX01EX")
 		~
 		EXIT
 	END
@@ -206,7 +205,6 @@ APPEND XACORWIJ
 //{ #region Corwin Sex 2 - Dialog J-47 - Tested 2023-04-17
 IF ~
 	Global("XA_CorwinSex_2", "GLOBAL", 1)
-	Global("XA_SleepInn", "GLOBAL", 1)
 	AreaCheck("XAEXPL02")
 	// play romance song
 ~ THEN BEGIN XA_XAEXPL02
@@ -330,6 +328,9 @@ IF ~~ THEN BEGIN XA_CorwinSex2_5C
 	SAY @80 /* ~(She stands with her arms crossed just beneath her alluring breasts, and a look of disappointment on her face.)~ */
 		
 	IF ~~ THEN REPLY @81 /* ~I said no!~ */
+	DO ~
+		SetGlobal("XA_WontAttack", "GLOBAL", 1)
+	~
 	GOTO XA_CorwinSex2_5D
 	
 	IF ~~ THEN REPLY @72 /* ~Fine. You asked for it. (Attack her.)~ */
@@ -352,24 +353,22 @@ IF ~~ THEN BEGIN XA_CorwinSex2_6
 	GOTO XA_CorwinSex2_7
 END
 
-IF ~~ THEN BEGIN XA_CorwinSex2_7
-	SAY @87 /* ~Dazed, you look up and see her standing over you, with her hands on her hips.~ */
+IF ~~ THEN BEGIN XA_CorwinSex2_7A
+	SAY @94 /* ~Again, like you mean it this time.~ */
 	
-	= @88 /* ~(She smiles and, using her toes, she fondles your balls and gives the tip of your member a gentle squeeze. Your penis rewards her toes with a steady flow of pre-cum.))~ */
+	IF ~~ THEN
+	GOTO XA_CorwinSex2_7END
+END
+IF ~~ THEN BEGIN XA_CorwinSex2_7B
+	SAY @162 /*  ~Good. Now, hit me damnit!~  */
 	
-	= @89 /* ~(Laughing gleefully, she continues with her footjob, and you moan loudly in pleasure as she brings you closer and closer to the edge.)~ */
+	IF ~~ THEN REPLY @72 /* ~Fine. You asked for it! (Attack her.)~*/
+	GOTO XA_CorwinSex2_7END
+END
+IF ~~ THEN BEGIN XA_CorwinSex2_7END
+	SAY @95 /* ~(You throw a series of one-two combinations, but she easily dodges or parries your blows. Your throbbing tool flails in all directions as you try and fail to hit her. She laughs.)~ */
 	
-	= @90 /* ~(Before you can release your seed onto her foot, she stops.)~ */
-	
-	= @91 /* ~Get up.~ */
-	
-	= @92 /* ~(With a groan, you shake off the cobwebs and unsteadily get back on your feet.)~*/
-	
-	= @94 /* ~Again, like you mean it this time.~*/
-	
-	= @95 /* ~(You throw a series of one-two combinations, but she easily dodges or parries your blows. Your throbbing tool flails wildly as you try and fail to hit her. She laughs.)~ */
-	
-	= @96 /* ~A little better. But as much as I like watching that big dick swing around, we're getting nowhere.~*/
+	= @96 /* ~Not bad. But as much as I like watching that big dick swing around, we're getting nowhere.~*/
 	
 	= @97 /* ~(You throw another right hook. She dodges, turns her body and grabs your right arm in one motion, then throws you over her back. As you try and scramble back to your feet, she takes your back and puts you into a sleeper hold, then wraps her legs around yours.)~*/
 	
@@ -389,6 +388,29 @@ IF ~~ THEN BEGIN XA_CorwinSex2_7
 	
 	IF ~~ THEN REPLY @105 /* ~Schael, y-you're hurting me! Please, stop! Let... aagh...  go!~*/
 	GOTO XA_CorwinSex2_8
+END
+IF ~~ THEN BEGIN XA_CorwinSex2_7
+	SAY @87 /* ~Dazed, you look up and see her standing over you, with her hands on her hips.~ */
+	
+	= @88 /* ~(She smiles and, using her toes, she fondles your balls and gives the tip of your member a gentle squeeze. Your penis rewards her toes with a steady flow of pre-cum.))~ */
+	
+	= @89 /* ~(Laughing gleefully, she continues with her footjob, and you moan loudly in pleasure as she brings you closer and closer to the edge.)~ */
+	
+	= @90 /* ~(Before you can release your seed onto her foot, she stops.)~ */
+	
+	= @91 /* ~Get up.~ */
+	
+	= @92 /* ~(With a groan, you shake off the cobwebs and unsteadily get back on your feet.)~*/
+	
+	IF ~~ THEN
+	GOTO XA_CorwinSex2_7A
+	
+	IF ~
+		Global("XA_WontAttack", "GLOBAL", 1)
+	~ THEN
+	GOTO XA_CorwinSex2_7B
+	
+	
 END
 
 IF ~~ THEN BEGIN XA_CorwinSex2_8
@@ -512,7 +534,7 @@ IF ~~ THEN BEGIN XA_CorwinSex2_12
 	IF ~~ THEN
 	DO ~
 		StartCutSceneMode()
-		StartCutScene("XACS2EX")
+		StartCutScene("XAEX02EX")
 	~
 	EXIT
 END
