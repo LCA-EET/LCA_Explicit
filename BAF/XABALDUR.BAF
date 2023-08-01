@@ -1,0 +1,10 @@
+IF
+	GlobalLT("XA_ExplicitModActive", "GLOBAL", 0)
+THEN
+	RESPONSE #100
+		SetInterrupt(TRUE)
+		SetGlobal("XA_ExplicitModActive", "GLOBAL", 1)
+		SetGlobal("XA_ExplicitCheckComplete", "GLOBAL", 1)
+		SetInterrupt(FALSE)
+		Continue()
+END

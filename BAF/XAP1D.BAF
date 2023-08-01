@@ -1,7 +1,0 @@
-IF
-	Global("XA_ExplicitModActive", "GLOBAL", 0)
-THEN
-	RESPONSE #100
-		SetGlobal("XA_ExplicitModActive", "GLOBAL", 1)
-		Continue()
-END
