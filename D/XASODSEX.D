@@ -29,7 +29,7 @@ APPEND BDCORWIJ
 	IF ~~ THEN BEGIN XA_SODSex3
 		SAY @17 /* ~(You try and create some space between you and her so that you can remove your pants and free your tool, but she shoves you back into the wall.)~*/
 		
-		= @16 /* ~Don't! There are too many people around! Just keep still, and no one will know.~ */
+		= @16 /* ~Don't! There are too many people around! Just keep still — trust me.~ */
 		
 		= @15 /* ~(You realize that she's right. From a casual onlookers view, it would seem that the two of you are in a loving embrace, and nothing more.)~*/
 		
@@ -55,7 +55,7 @@ APPEND BDCORWIJ
 	IF ~~ THEN BEGIN XA_SODSex5
 		SAY @13 /* ~(You moan uncontrollably as you spew your seed wildly into your trousers.)~ */ 
 		
-		= @29 /* ~That's it... give it to me, hero. Every last drop.~*/
+		= @29 /* ~Mmm... give it to me, hero. Every last drop.~*/
 		
 		= @30 /* ~(She continues to rub her leg against your spent genitals, as they slowly return to their relaxed state.)~*/
 		
@@ -65,9 +65,9 @@ APPEND BDCORWIJ
 	END
 	
 	IF ~~ THEN BEGIN XA_SODSex6
-		SAY @26 /* ~(You share a warm and tender embrace.)~ */
+		SAY @26 /*  ~(You kiss as Schael playfully pats your crotch.)~ */
 		
-		= @12 /*~Like I said, it's just a taste of what awaits you when we get home, love.~*/
+		= @12 /*~It's the least I can do for the hero of Baldur's Gate. Just remember that it's only a taste of what awaits you when we get home, love.~*/
 		
 		IF ~~ THEN REPLY @32 /* ~I can't wait.~ */
 		GOTO XA_SODSex7
