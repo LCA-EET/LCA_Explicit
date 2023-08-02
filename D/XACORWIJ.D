@@ -549,7 +549,7 @@ END
 CHAIN PPIRENI2 XA_PPIRENI2_3_CHAIN_2
 	@153 /* ~Worry not, my dear. Unlike the others, you will live past these next few minutes. Once I am done with <CHARNAME>, you'll soon be returned home, where you will assassinate the Council of Four on my behalf.~ */
 	
-	== LCCORWIJ
+	== XACORWIJ
 	@154 /* ~What..? No, never!~ */
 	
 	== PPIRENI2
