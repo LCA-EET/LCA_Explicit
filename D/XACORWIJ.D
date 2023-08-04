@@ -88,15 +88,44 @@ APPEND XACORWIJ
 		= @12 /* ~(She's as used to giving orders in the bedroom as she is outside of it, you think to yourself.)~ */
 		
 		IF ~~ THEN REPLY @13 /* ~R-right.~ */
+		GOTO XA_ScarTalk
+	END
+	
+	IF ~~ THEN BEGIN XA_ScarTalk
+		SAY @163 /* ~(You hurriedly remove your armor, then your shirt. Before you can remove your pants, she gasps.)~ */
+		
+		SAY @164 /*~What... gods, look what he did do to you...~*/
+		
+		= @165 /* ~(She places her hands on your chest and gently moves them on and around the scars left behind from your imprisonment at the hands of the wizard.)~*/
+		
+		= @166 /* ~Irenicus... damn him! I... I'm so sorry that you had to endure this. It must've been excruciating.~ */
+		
+		IF ~~ THEN REPLY @169  /*~Listen... if you're having second thoughts... I'd understand.~ */
+		GOTO XA_ScarTalk2
+	END
+	
+	IF ~~ THEN BEGIN XA_ScarTalk2
+		SAY @170 /* ~Don't be ridiculous. I love you, <CHARNAME>. I just wasn't prepared for it, that's all. Where else did he hurt you?~*/
+		
+		IF ~~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
+		GOTO XA_ScarTalk3
+	END
+	
+	IF ~~ THEN BEGIN XA_ScarTalk3
+		SAY @172 /*~Let me see.~*/
+		
+		= @173 /* ~(You turn around and hear a slight gasp. In moments, she reaches out to touch your scars. The feeling of her fingers caressing your back is soothing. In moments, you feel something warm and wet touch your skin... It's Schael, kissing one the largest of the many scars that were left on your back.)~*/
+		
+		= @175 /* ~Now turn around, and take those off.~ */
+		
+		IF ~~ THEN
 		GOTO XA_CorwinSex1_4
 	END
 	
 	IF ~~ THEN BEGIN XA_CorwinSex1_4
-		SAY @14 /* ~(You hurriedly remove your armor and clothing, and nearly trip over your own pants while doing so. She laughs as you stand and face her.)~ */
+		SAY @176 /* ~(You quickly lower your pants and nearly trip over yourself while doing so. She laughs, and a wide smile graces her face as she eyes your throbbing, erect member.)~*/
 		
-		= @15 /* ~(A wide smile graces her face as she eyes your throbbing, erect member.)~ */
-		
-		= @16 /* ~You're bigger than I expected. What a pleasant surprise.~ */
+		= @178 /* ~Well... at least he had the decency to leave *some* parts of you unharmed. You have a beautiful cock, and ... you're even bigger than I expected. What a pleasant surprise.~ */
 		
 		= @17 /* ~Come here, hero.~ */
 		
@@ -119,7 +148,7 @@ APPEND XACORWIJ
 	IF ~~ THEN BEGIN XA_CorwinSex1_5
 		SAY @23 /* ~(In a fluid motion, she pulls back, and drops to her knees. Realizing what is about to happen, you brace yourself.) ~ */
 		
-		= @24 /* ~It's about time you received a worthy reward for all that you've done.~ [LCCORJ53]~  */
+		= @24 /* ~It's about time you received a worthy reward for all that you've done.~   */
 		
 		= @25 /* ~(Crooning softly, Schael begins to kiss and lick your engorged member, starting at the base and slowly working her way up. You quiver in anticipation as she kisses your sensitive tip.)~*/
 		
@@ -161,15 +190,15 @@ APPEND XACORWIJ
 		
 		= @41 /* ~No, you're not hurting me, but I may hurt you if you stop again. Fuck me, hero! FUCK ME!!~ */
 		
-		= @42 /* ~(That was all you needed. With a roar you pull yourself out and throw her out of the bed, onto the floor. She lands on her back with a hiss. In a moment you are on her, ferociously penetrating her and pounding her into the floor. She howls in delight as you push and push, meeting your thrusts with thrusts of her own, while her nails rake into your back.)~ */
+		= @42 /* ~(That was all you needed. With a roar, you lift her up with your hands and hips, then turn so that you're on top of her. Using the headboard as leverage, you ferociously and repeatedly penetrate her. She howls in delight as you push and push, meeting your thrusts with thrusts of her own, while her nails rake into your back.)~*/
 		
-		= @43 /* ~(Together, your animalistic cries reach a new pitch as you near your orgasms, and then you're there. You shudder and scream as you release your massive load into her. She scissors her taut, muscled legs around you and pulls you in, draining your member of every last drop.)~ */
+		= @43 /* ~(Together, your animalistic cries reach a new pitch as you near your orgasms, and then you're there. You shudder and scream as you release a truly massive load into her. She scissors her taut, muscled legs around you and pulls you in, draining your member of every last drop.)~*/
 		
-		= @44 /* ~(This last exertion on her part sends her over the edge, and she moans in ecstasy as the wave of her orgasm sweeps through her, from her toes to her head, crashing through her and carrying her away on a tide of pleasure.)~ */
+		= @44 /* ~(This last exertion on her part sends her over the edge, and she moans in ecstasy as the wave of her orgasm sweeps through her, from her head to her toes, crashing through her and carrying her away on a tidal wave of pleasure.)~*/
 		
 		= @45 /* ~(As you lay there together, you inhale the smells of sweat and sex in the air, and try to comprehend what has just happened. Eventually, you are able to gather yourselves. Your member shrinks to its former size and you pull out of her, but you remain locked in an embrace with her legs wrapped around your hips, and your head resting next to hers.)~ */
 		
-		= @46 /* ~(Finally, you rise. Placing one arm around her back and the other around the bend of her knees, you pick her up and carry her with you into bed.)~  */
+		= @46 /* ~(Finally, you roll to your left, so that you're laying side by side.)~  */
 		
 		= @47 /* ~Mm, <CHARNAME>. That was wonderful.~ */
 		
