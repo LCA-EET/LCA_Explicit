@@ -94,7 +94,7 @@ APPEND XACORWIJ
 	IF ~~ THEN BEGIN XA_ScarTalk
 		SAY @163 /* ~(You hurriedly remove your armor, then your shirt. Before you can remove your pants, she gasps.)~ */
 		
-		SAY @164 /*~What... gods, look what he did do to you...~*/
+		= @164 /*~What... gods, look what he did do to you...~*/
 		
 		= @165 /* ~(She places her hands on your chest and gently moves them on and around the scars left behind from your imprisonment at the hands of the wizard.)~*/
 		
