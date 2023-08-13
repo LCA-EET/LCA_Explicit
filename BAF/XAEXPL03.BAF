@@ -1,0 +1,18 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		SetGlobal("XA_XAEXPL03", "GLOBAL", 1)
+		StorePartyLocations()
+		FadeToColor([30.0],0)
+		Wait(3)
+		ZoomLock(TRUE)
+		LeaveAreaLUAPanic("XAEXPL03","",[350.160],SW) 
+		LeaveAreaLUA("XAEXPL03","",[350.160],SW)
+		Explore()
+		FadeFromColor([30.0],0)
+		SmallWait(1)
+		Wait(2)
+		StartDialog("PLAYER1", Player1)
+END

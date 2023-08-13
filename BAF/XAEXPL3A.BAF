@@ -1,0 +1,13 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneID(Player1)
+		CreateCreature("XACOREX3", [110.375], N)
+		CreateCreature("XANEOMA", [100.410], N)
+		Wait(1)
+		ActionOverride("XACOREX3", MoveToPoint([300.255]))
+		ActionOverride("XANEOMA", MoveToPoint([270.250]))
+		Wait(4)
+		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
+END
