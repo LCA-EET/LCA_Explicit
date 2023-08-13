@@ -13,5 +13,5 @@ THEN
 		ActionOverride("XANEOMA", MoveToPoint([625.305]))
 		Wait(1)
 		MoveToPoint([540.285])
-		ActionOverride("XANEOMA", StartDialog("XANEOMA", Player1))
+		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
 END
