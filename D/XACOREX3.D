@@ -1,15 +1,64 @@
 BEGIN ~XACOREX3~
 
 //{ Corwin Sex 3 - Schael
+
 IF ~
-	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+	Global("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+~ THEN BEGIN XA_XAEXPL03_Schael_End
+	SAY @41  /* ~(You awaken and see Schael getting dressed.)~*/
+	
+	IF ~~ THEN REPLY @36  /*  ~Schael? Where are you going?~*/
+	DO ~
+		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 5)
+	~
+	GOTO XA_XAEXPL03_Neoma_25
+END
+
+IF ~
+	Global("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
+~ THEN BEGIN XA_XAEXPL03_Schael_A_1
+	SAY @93  /* ~(Using a towel and the warm bath water, you gently wipe her face clean. You also double check to make sure that none of it got in her hair, which, fortunately, it didn't.)~*/
+	
+	IF ~~ THEN REPLY @95  /*~Schael, you were amazing. Thank you.~ */
+	DO ~
+		SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 2)
+	~
+	GOTO XA_XAEXPL03_Schael_A_2
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_2
+	SAY @96  /* ~I'm glad you enjoyed it. I did, too, but next time I'll be better prepared.~*/
+	
+	= @33  /*~(She eyes your member, which has suddenly sprung back to life, and smiles.)~ */
+	
+	= @34  /* ~Looks like we're both ready for round two...~*/
+	
+	= @35  /* ~(Schael takes hold of your erect penis and walks you back into bed. You the next few hours drinking wine, making love and pleasuring each other, before you finally fall asleep.)~*/
+	
+	IF ~~ THEN 
+	DO ~
+		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+		StartCutSceneMode()
+		StartCutScene("XAEXPL3E")
+	~
+	EXIT
+END
+
+IF ~
+	Global("XA_CorwinSex_3_Schael", "GLOBAL", 2)
 ~ THEN BEGIN XA_XAEXPL03_Schael_1
 	SAY @61 /*~I'm glad you're still awake.~*/
 	
 	IF ~~ THEN REPLY @62 /*~Another few minutes and I wouldn't have been.~*/
+	DO ~
+		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 3)
+	~
 	GOTO XA_XAEXPL03_Schael_3
 	
 	IF ~~ THEN REPLY @63 /*~Wow... Schael, you look amazing...~*/
+	DO ~
+		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 3)
+	~
 	GOTO XA_XAEXPL03_Schael_2
 END
 
@@ -43,6 +92,65 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_5
 	= @71 /* ~(You remove the covers, and Schael gasps with delight as she ogles your nude body.)~*/
 	
 	= @72 /*~Oh, my... someone got started a little early, mm?~ */
+	
+	= @74 /* ~(You pour her a glass and hand it to her, then pour one for yourself.)~*/
+	
+	= @75  /*~Mm. Thank you, dear.~ */
+	
+	= @76  /*~(With the wine glass in one hand, she takes hold of your dick in the other and leads you back to the edge of the bed. You sit down, and tell each other about your day, while she lovingly strokes and caresses your package. After a few minutes of this teasing, you set your wine glasses aside. Schael stands to disrobe, and with just a couple of fluid movements, her dress falls to the floor. You think to yourself that you'll never get tired of seeing her beautiful, magnificent physique in all its nude glory.)~  */
+	
+	= @77  /* ~(Without another word, she turns and pushes you down so that you are laying flat on your back. She then straddles your body, so that her hips are directly over your erect, leaking cock.)~*/
+	
+	= @78  /* ~So. What are your orders, hero?~ */
+	
+	IF ~~ THEN REPLY @79 /* ~I need you, Schael. I need you to suck my cock!~ */
+	GOTO XA_XAEXPL03_Schael_A
+	
+	IF ~~ THEN REPLY @80 /* ~Fuck me, Schael!~*/
+	GOTO XA_XAEXPL03_Schael_B
+	
+	IF ~~ THEN REPLY @81 /* ~Turn around. I want to take you from behind.~*/
+	GOTO XA_XAEXPL03_Schael_C
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A
+	SAY @82  /* ~Gladly, my love... Gods, I've been dreaming about this for so long...~ */
+	
+	= @83  /* ~(Schael places her head between your legs, and begins to kiss and lick your engorged member, starting from the base and working ever so slowly toward the tip. To help keep it steady, she uses her left hand to hold it at the base, while she uses her right to gently fondle your balls. Upon reaching the bulbous head of your massively erect cock, she darts and swirls her tongue around it... the feeling is intense, and it causes you to moan and shudder uncontrollably. She looks up at you with a wide smile, then takes you in to her mouth. Up and down her head bobs on your shaft, and in moments you place your hand on the back of her head to help her get the rhythm just right. Throughout, you can hear Schael moan, giggle, and squeal as more and more of your fluids make it into her mouth. After only a couple of minutes of this truly exquisite blowjob, you feel a surge begin to build in the base of your shaft...)~*/
+	
+	IF ~~ THEN REPLY @84  /* ~I - I'm so close!~*/
+	GOTO XA_XAEXPL03_Schael_A_2
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_2
+	SAY @85 /* ~(Hearing this, Schael increases her rhythm and the pressure against your balls. With a scream, you release your seed into her.)~*/
+	
+	= @86 /*~Mmmfh!~ */
+	
+	= @87 /* ~(She's able to swallow the first three blasts before needing to pull back entirely. As she gasps for air, a fourth and fifth spurt from your still erupting cock land on her face, covering her chin and right cheek, narrowly missing her silky, ebony hair.)~ */
+	
+	= @88  /* ~*Cough* *gag* *cough*~ */
+	
+	IF ~~ THEN REPLY @89  /* ~Love, are you alright?~ */
+	GOTO XA_XAEXPL03_Schael_A_3
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_3
+	SAY @90  /* ~I'm *cough* fine, love. Just hand me a towel...~*/
+	
+	= @91  /* ~Let me heat up the bath water for you. I'll get you cleaned up, hon.~*/
+	
+	IF ~~ THEN
+	DO ~
+		SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
+		StartCutSceneMode()
+		StartCutScene("XAEXPL3T")
+	~
+	EXIT
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B
+	SAY @92  /* ~(With a smile, she presses down on your cock as you easily slide into her. She's so warm and moist, and you can feel the tip of your cock smash against her cervix with each savage thrust. You reach up and take hold of her breasts and squeeze them, gently at first, then harder until Schael lets out a squeal. After several minutes, you can feel the pace and ferocity of Schael's thrusts increase, and you take hold of her hips, which are now covered in sweat, to try and compensate. She reaches out and takes hold of the headboard, and uses that as leverage as she continues to drive herself even harder on to your cock. As she drives downward, you drive upward, causing you both to scream in pleasure.)~*/
 END
 //}
 
@@ -206,7 +314,9 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_25
 	IF ~~ THEN REPLY @38 /* ~Oh, of course. ~ */
 	GOTO XA_XAEXPL03_Neoma_26
 	
-	IF ~~ THEN REPLY @46 /* ~Oh, right. I wonder how Neoma's doing.~*/
+	IF ~
+		GlobalGT("XA_CorwinSex_3_Neoma", "GLOBAL", 0)
+	~ THEN REPLY @46 /* ~Oh, right. I wonder how Neoma's doing.~*/
 	GOTO XA_Neoma
 END
 

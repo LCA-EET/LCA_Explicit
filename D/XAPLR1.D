@@ -72,7 +72,7 @@ APPEND PLAYER1
 		
 		IF ~~ THEN REPLY @5 /* ~Come in!~*/
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+			SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 2)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL3S")
 		~
