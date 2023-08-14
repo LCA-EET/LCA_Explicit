@@ -1,8 +1,54 @@
 BEGIN ~XACOREX3~
 
+//{ Corwin Sex 3 - Schael
+IF ~
+	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+~ THEN BEGIN XA_XAEXPL03_Schael_1
+	SAY @61 /*~I'm glad you're still awake.~*/
+	
+	IF ~~ THEN REPLY @62 /*~Another few minutes and I wouldn't have been.~*/
+	GOTO XA_XAEXPL03_Schael_3
+	
+	IF ~~ THEN REPLY @63 /*~Wow... Schael, you look amazing...~*/
+	GOTO XA_XAEXPL03_Schael_2
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_2
+	SAY @64 /* ~Thanks, love. It's been so long since I've worn a dress!~*/
+	
+	IF ~~ THEN
+	GOTO XA_XAEXPL03_Schael_3
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_3
+	SAY @65 /*~Sorry I'm so late. It took a while to get Rohma to bed. She was so excited, she told me everything that she did with her grandfather while I was gone. Did you know she's first in her class at math?~*/
+	
+	IF ~~ THEN REPLY @66 /*~She's a smart kid.~*/
+	GOTO XA_XAEXPL03_Schael_4A
+	
+	IF ~~ THEN REPLY @67 /*~No need to apologize. Sounds like you two had a great time.~*/
+	GOTO XA_XAEXPL03_Schael_4B
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_4
+	SAY @73 /*~She really is... oh, what's this? You brought wine?~ */
+	
+	IF ~~ THEN REPLY @69 /*~Berduskan dark wine, your favourite. Would you like me to pour you a glass?~*/
+	GOTO XA_XAEXPL03_Schael_5
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_5
+	SAY @70 /* ~Such a gentleman. Yes, please.~*/
+	
+	= @71 /* ~(You remove the covers, and Schael gasps with delight as she ogles your nude body.)~*/
+	
+	= @72 /*~Oh, my... someone got started a little early, mm?~ */
+END
+//}
+
 //{ Corwin Sex 3 - Neoma
 IF ~
-	Global("XA_CorwinSex_3", "GLOBAL", 6)
+	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 6)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_24
 	SAY @41  /* ~(You awaken and see Schael getting dressed.)~*/
 	
@@ -11,7 +57,7 @@ IF ~
 END
 
 IF ~
-	Global("XA_CorwinSex_3",  "GLOBAL",5)
+	Global("XA_CorwinSex_3_Neoma",  "GLOBAL",5)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_23
 	SAY @32  /* ~Thank you, Schael.~ */
 	
@@ -23,7 +69,7 @@ IF ~
 	
 	IF ~~ THEN 
 	DO ~
-		SetGlobal("XA_CorwinSex_3", "GLOBAL", 6)
+		SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 6)
 		StartCutSceneMode()
 		StartCutScene("XAEXPL3E")
 	~
@@ -31,7 +77,7 @@ IF ~
 END
 
 IF ~
-	Global("XA_CorwinSex_3", "GLOBAL", 4)
+	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 4)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_21
 	SAY @29  /* ~(You watch as Schael tenderly washes Neoma's face and hair in the bath. In just a few minutes, the last remnants of your seed are washed away, and Neoma dries off and gets dressed. Schael uses the opportunity to take off the strap on and clean it before placing it back in Neoma's bag.)~*/
 	
@@ -40,7 +86,7 @@ IF ~
 END
 
 IF ~
-	Global("XA_CorwinSex_3", "GLOBAL", 2)
+	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_1
 	SAY @0 /* ~(Schael stumbles in, followed by Neoma, her 'friend' that you met earlier in the day. Neoma's carrying a bag with her. Both ladies appear to be somewhat inebriated.)~*/
 	
@@ -51,7 +97,7 @@ IF ~
 END
 
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_3C
-	SAY @27 /* ~Oh, stop it. I'm not on duty... well, Flaming Fist duty, anyway. Tonight, my duty is to fuck you senseless, hero.~*/
+	SAY @60 /* ~Oh, stop it. I'm not on duty... well, Flaming Fist duty, anyway. Tonight, my duty is to fuck you senseless, hero.~*/
 	
 	IF ~~ THEN 
 	EXTERN XANEOMA XA_XAEXPL03_Neoma_6A
@@ -147,7 +193,7 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_16
 	
 	IF ~~ THEN
 	DO ~
-		SetGlobal("XA_CorwinSex_3", "GLOBAL", 3)
+		SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 3)
 		StartCutSceneMode()
 		StartCutScene("XAEXPL3B")
 	~

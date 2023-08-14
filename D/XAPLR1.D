@@ -38,8 +38,19 @@ APPEND PLAYER1
 		= @3 /* ~(Having nothing better to do, you decide to pass the time by pleasuring yourself while remembering the first time that you and Schael made love. You make sure to avoid reaching a climax; every time you feel yourself get close to the edge, you stop and wait for your erection to subside before starting again. Minutes slowly turn to hours... maybe she isn't coming tonight after all. You pull up the covers around you as you begin to doze off... )~*/
 		
 		IF ~
+			!Global("XA_CorwinNeomaRelationship", "GLOBAL", 2)
+		~ THEN
+		DO ~
+			SetGlobal("XA_CorwinSex_3", "GLOBAL", 2)
+		~
+		GOTO XA_XAEXPL03_Schael
+		
+		IF ~
 			Global("XA_CorwinNeomaRelationship", "GLOBAL", 2)
-		~ THEN 
+		~ THEN
+		DO ~
+			SetGlobal("XA_CorwinSex_3", "GLOBAL", 2)
+		~
 		GOTO XA_XAEXPL03_Neoma
 	END
 	
@@ -48,9 +59,22 @@ APPEND PLAYER1
 		
 		IF ~~ THEN REPLY @5 /* ~Come in!~*/
 		DO ~
-			SetGlobal("XA_CorwinSex_3", "GLOBAL", 2)
+			SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL3A")
+		~
+		EXIT
+	END
+	
+	
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael
+		SAY @6 /*~(You hear a knock at the door, and what sounds like laughing. It must be her!)~*/
+		
+		IF ~~ THEN REPLY @5 /* ~Come in!~*/
+		DO ~
+			SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+			StartCutSceneMode()
+			StartCutScene("XAEXPL3S")
 		~
 		EXIT
 	END
