@@ -21,7 +21,7 @@ APPEND XANEOMA
 		GOTO XA_XAEXPL03_Neoma_3A
 		
 		IF ~~ THEN REPLY @2 /* ~Schael? Are you drunk?~ */
-		EXTERN XACOREX3 XA_XAEXPL03_Neoma_3B
+		EXTERN XACOREX3 XA_XAEXPL03_Neoma_3C
 	END
 	
 	IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_3A
@@ -36,6 +36,13 @@ APPEND XANEOMA
 		
 		IF ~~ THEN REPLY @5 /* ~Berduskan dark wine, your favorite, love.~*/
 		EXTERN XACOREX3 XA_XAEXPL03_Neoma_5
+	END
+	
+	IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_6A
+		SAY @28 /* ~Our duty. You've done so much for all of us, <CHARNAME>.~*/
+		
+		IF ~~ THEN REPLY @7 /* ~What did you have in mind?~ */
+		EXTERN XACOREX3 XA_XAEXPL03_Neoma_7
 	END
 	
 	IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_6

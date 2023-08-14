@@ -50,6 +50,13 @@ IF ~
 	EXTERN XANEOMA XA_XAEXPL03_Neoma_2
 END
 
+IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_3C
+	SAY @27 /* ~Oh, stop it. I'm not on duty... well, Flaming Fist duty, anyway. Tonight, my duty is to fuck you senseless, hero.~*/
+	
+	IF ~~ THEN 
+	EXTERN XANEOMA XA_XAEXPL03_Neoma_6A
+END
+
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_3B
 	SAY @2 /* ~I'm sorry I'm late, love. It took a while for me to get Rohma to bed, then Neoma and I went out for a couple of... wait. Was it a couple?~*/
 	
@@ -150,14 +157,86 @@ END
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_25
 	SAY @37  /* ~Home. I want to be there when Rohma wakes up.~ */
 	
-	IF ~~ THEN REPLY @38
+	IF ~~ THEN REPLY @38 /* ~Oh, of course. ~ */
 	GOTO XA_XAEXPL03_Neoma_26
+	
+	IF ~~ THEN REPLY @46 /* ~Oh, right. I wonder how Neoma's doing.~*/
+	GOTO XA_Neoma
+END
+
+IF ~~ THEN BEGIN XA_Neoma
+	SAY @47 /* ~You're worried about her? Don't be. She's a lot tougher than she looks.~*/
+	
+	IF ~~ THEN REPLY @48 /*~Definitely.~*/
+	GOTO XA_XAEXPL03_Neoma_26
+	
+	IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
+	GOTO XA_CheckNeoma
+	
+	IF ~~ THEN REPLY @53 /*~I think... Schael, I think she has feelings for you.~*/
+	GOTO XA_Feelings
+END
+
+IF ~~ THEN BEGIN XA_Feelings
+	SAY @54 /* ~Don't be ridiculous, love. I've discussed this with her already. She understands that it's only sex.~ */
+	
+	IF ~~ THEN REPLY @55 /*~That might be *your* understanding, but I'm not sure that it's hers.~*/
+	GOTO XA_NeomaRelationship
+	
+	IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
+	GOTO XA_CheckNeoma
+	
+	IF ~~ THEN REPLY @59 /*~I see...~*/
+	GOTO XA_XAEXPL03_Neoma_26
+END
+
+IF ~~ THEN BEGIN XA_NeomaRelationship
+	SAY @56 /* ... */
+	
+	IF ~~ THEN REPLY @57 /*~Schael?~*/
+	GOTO XA_NeomaRelationship2
+END
+
+IF ~~ THEN BEGIN XA_NeomaRelationship2
+	SAY @58 /*~It sounds like I need to talk to her. Thanks for letting me know, love. I'll stop by her place after the debriefing.~*/
+	
+	IF ~~ THEN REPLY @51 /*~The debriefing! Gods, with this hangover?~*/
+	GOTO XA_Hangover
+	
+	IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
+	GOTO XA_Sex3_Neoma_END
+END
+
+IF ~~ THEN BEGIN XA_CheckNeoma
+	SAY @50 /*~Fine. I'll stop by her place after the debriefing.~ */
+	
+	IF ~~ THEN REPLY @51 /*~The debriefing! Gods, with this hangover?~*/
+	GOTO XA_Hangover
+	
+	IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
+	GOTO XA_Sex3_Neoma_END
 END
 
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_26
 	SAY @39 /* ~See you at the debriefing, love.~*/
 	
-	= @40  /* ~(She plants a kiss on your forehead, and leaves.)~*/
+	IF ~~ THEN REPLY @42 /* ~Gods, the debriefing. With this hangover?~*/
+	GOTO XA_Hangover
+	
+	IF ~~ THEN REPLY @44 /* ~Right. See you there, love.~ */
+	GOTO XA_Sex3_Neoma_END
+
+END
+
+IF ~~ THEN BEGIN XA_Hangover
+	SAY @43 /* ~Heh, I know what you mean. I poured you a glass of water. Drink it, it'll help.~  */
+	
+	IF ~~ THEN REPLY @45 /*~Thanks. See you at the debriefing, dear.~*/
+	GOTO XA_Sex3_Neoma_END
+END
+
+IF ~~ THEN BEGIN XA_Sex3_Neoma_END
+	SAY @40 /*~(She plants a kiss on your forehead, and leaves.)~*/
 	
 	IF ~~ THEN
 	DO ~
