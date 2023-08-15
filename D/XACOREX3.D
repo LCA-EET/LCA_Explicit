@@ -113,45 +113,121 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_5
 	GOTO XA_XAEXPL03_Schael_C
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A
-	SAY @82  /* ~Gladly, my love... Gods, I've been dreaming about this for so long...~ */
-	
-	= @83  /* ~(Schael places her head between your legs, and begins to kiss and lick your engorged member, starting from the base and working ever so slowly toward the tip. To help keep it steady, she uses her left hand to hold it at the base, while she uses her right to gently fondle your balls. Upon reaching the bulbous head of your massively erect cock, she darts and swirls her tongue around it... the feeling is intense, and it causes you to moan and shudder uncontrollably. She looks up at you with a wide smile, then takes you in to her mouth. Up and down her head bobs on your shaft, and in moments you place your hand on the back of her head to help her get the rhythm just right. Throughout, you can hear Schael moan, giggle, and squeal as more and more of your fluids make it into her mouth. After only a couple of minutes of this truly exquisite blowjob, you feel a surge begin to build in the base of your shaft...)~*/
-	
-	IF ~~ THEN REPLY @84  /* ~I - I'm so close!~*/
-	GOTO XA_XAEXPL03_Schael_A_2
-END
+	//{ Corwin A
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A
+		SAY @82  /* ~Gladly, my love... Gods, I've been dreaming about this for so long...~ */
+		
+		= @83  /* ~(Schael places her head between your legs, and begins to kiss and lick your engorged member, starting from the base and working ever so slowly toward the tip. To help keep it steady, she uses her left hand to hold it at the base, while she uses her right to gently fondle your balls. Upon reaching the bulbous head of your massively erect cock, she darts and swirls her tongue around it... the feeling is intense, and it causes you to moan and shudder uncontrollably. She looks up at you with a wide smile, then takes you in to her mouth. Up and down her head bobs on your shaft, and in moments you place your hand on the back of her head to help her get the rhythm just right. Throughout, you can hear Schael moan, giggle, and squeal as more and more of your fluids make it into her mouth. After only a couple of minutes of this truly exquisite blowjob, you feel a surge begin to build in the base of your shaft...)~*/
+		
+		IF ~~ THEN REPLY @84  /* ~I - I'm so close!~*/
+		GOTO XA_XAEXPL03_Schael_A_2
+	END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_2
-	SAY @85 /* ~(Hearing this, Schael increases her rhythm and the pressure against your balls. With a scream, you release your seed into her.)~*/
-	
-	= @86 /*~Mmmfh!~ */
-	
-	= @87 /* ~(She's able to swallow the first three blasts before needing to pull back entirely. As she gasps for air, a fourth and fifth spurt from your still erupting cock land on her face, covering her chin and right cheek, narrowly missing her silky, ebony hair.)~ */
-	
-	= @88  /* ~*Cough* *gag* *cough*~ */
-	
-	IF ~~ THEN REPLY @89  /* ~Love, are you alright?~ */
-	GOTO XA_XAEXPL03_Schael_A_3
-END
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_2
+		SAY @85 /* ~(Hearing this, Schael increases her rhythm and the pressure against your balls. With a scream, you release your seed into her.)~*/
+		
+		= @86 /*~Mmmfh!~ */
+		
+		= @87 /* ~(She's able to swallow the first three blasts before needing to pull back entirely. As she gasps for air, a fourth and fifth spurt from your still erupting cock land on her face, covering her chin and right cheek, narrowly missing her silky, ebony hair.)~ */
+		
+		= @88  /* ~*Cough* *gag* *cough*~ */
+		
+		IF ~~ THEN REPLY @89  /* ~Love, are you alright?~ */
+		GOTO XA_XAEXPL03_Schael_A_3
+	END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_3
-	SAY @90  /* ~I'm *cough* fine, love. Just hand me a towel...~*/
-	
-	= @91  /* ~Let me heat up the bath water for you. I'll get you cleaned up, hon.~*/
-	
-	IF ~~ THEN
-	DO ~
-		SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
-		StartCutSceneMode()
-		StartCutScene("XAEXPL3T")
-	~
-	EXIT
-END
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_3
+		SAY @90  /* ~I'm *cough* fine, love. Just hand me a towel...~*/
+		
+		= @91  /* ~Let me heat up the bath water for you. I'll get you cleaned up, hon.~*/
+		
+		IF ~~ THEN
+		DO ~
+			SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
+			StartCutSceneMode()
+			StartCutScene("XAEXPL3T")
+		~
+		EXIT
+	END
+	//}
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B
-	SAY @92  /* ~(With a smile, she presses down on your cock as you easily slide into her. She's so warm and moist, and you can feel the tip of your cock smash against her cervix with each savage thrust. You reach up and take hold of her breasts and squeeze them, gently at first, then harder until Schael lets out a squeal. After several minutes, you can feel the pace and ferocity of Schael's thrusts increase, and you take hold of her hips, which are now covered in sweat, to try and compensate. She reaches out and takes hold of the headboard, and uses that as leverage as she continues to drive herself even harder on to your cock. As she drives downward, you drive upward, causing you both to scream in pleasure.)~*/
-END
+	//{ Corwin B
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B
+		SAY @92  /* ~(With a smile, she presses down on your cock as you easily slide into her. She's so warm and moist, and you can feel the tip of your cock smash against her cervix with each savage thrust. You reach up and take hold of her breasts and squeeze them, gently at first, then harder until Schael lets out a squeal. After several minutes, you can feel the pace and ferocity of Schael's thrusts increase, and you take hold of her hips, which are now covered in sweat, to try and compensate. She reaches out and takes hold of the headboard, and uses that as leverage as she continues to drive herself even harder on to your cock. As she drives downward, you drive upward, causing you both to scream in pleasure.)~*/
+		
+		= @99 /* ~YES! OH GODS, YES!~*/
+		
+		= @100 /* ~(In moments, you feel a surge building in the base of your shaft.)~*/
+		
+		IF ~~ THEN REPLY @101 /* ~Schael, I - I'm so close! OH, GODS —~*/
+		GOTO XA_XAEXPL03_Schael_B_2
+	END
+
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B_2
+		SAY @102  /*~YES! GIVE IT TO ME, HERO!~ */
+		
+		= @103  /* ~(With a scream, the first three blasts of your seed explode into her as she reaches her own climax. A fourth, fifth, and sixth spurt are released with far less force than the first, as you can feel the cum ooze out of her and back onto your skin.)~*/
+		
+		= @104 /* ~Oh, <CHARNAME>.... that was incredible... I love you.~ */
+		
+		IF ~~ THEN REPLY @105  /* ~You were amazing, dear. I love you too.~*/
+		GOTO XA_XAEXPL03_Schael_B_3
+	END
+
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B_3
+		SAY @106  /* ~(She dismounts your spent cock and lays at your side, with her head and arm on your chest. You are able to sleep for a little while, but are awakened by the stirring of your cock, and the sensation of Schael fondling your balls.)~ */
+		
+		= @34  /* ~Looks like we're both ready for round two...~*/
+		
+		= @107  /* ~(You the next few hours drinking wine, making love and pleasuring each other, before you finally fall asleep.)~*/
+		
+		IF ~~ THEN 
+		DO ~
+			SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+			StartCutSceneMode()
+			StartCutScene("XAEXPL3E")
+		~
+		EXIT
+	END
+	//}
+
+	//{ Corwin C
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_C
+		SAY @108  /* ~Hah! Feeling adventurous, are we?~*/
+		
+		= @109 /* ~(She dismounts you and moves to your side, then positions herself on all fours so that she's facing the bed's headboard. You quickly position yourself behind her raised hips and ass, and take a moment to appreciate the view. With your left hand holding her hip, and your right hand grip the back of her neck, you thrust forward and enter her sex. She's so warm and moist, and you can feel the tip of your cock smash against her cervix with each thrust. A few minutes in, you release your hold on the back of her neck, and instead reach down to fondle her right breast.)~ */
+		
+		= @110 /* ~Mmmnhnnn.... harder, hero... harder!~*/
+		
+		= @111 /* ~(Schael places her right hand up against the headboard, and begins to push back as you thrust forward. She howls in delight as you realize that you've never been this deep inside of her.)~*/
+		
+		= @112 /* ~Yes! Just like that!~ */
+		
+		= @113  /* ~(No more holding back, you think to yourself. With all of your strength, you ferociously and repeatedly penetrate Schael, and she screams in pleasure. You place your right hand over her mouth to muffle the sound; you do not want anyone to interrupt what may be the most spectacular orgasm that either of you have ever experienced. In moments, you feel a telltale surge travel from your balls, to the base of your shaft, and up into Schael's welcoming vagina. You shudder and scream as spurt after spurt gushes out of you. With each one, you bury your penis deeper and deeper into Schael, who herself is lost in her own explosive climax. The intensity of your thrusts gradually lessens as your cock returns to its relaxed state. Finally, you dismount, and collapse down into the bed, as Schael does the same.)~*/
+		
+		= @104 /* ~Oh, <CHARNAME>.... that was incredible... I love you.~ */
+		
+		IF ~~ THEN REPLY @105  /* ~You were amazing, dear. I love you too.~*/
+		GOTO XA_XAEXPL03_Schael_C_2
+	END
+	
+	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_C_2
+		SAY @114  /* ~(You lay at each other's side, with her head and arm on your chest. You're able to sleep for a little while, but are awakened by the stirring of your cock, and the sensation of Schael fondling your balls.)~*/
+		
+		= @34  /* ~Looks like we're both ready for round two...~*/
+		
+		= @107  /* ~(You the next few hours drinking wine, making love and pleasuring each other, before you finally fall asleep.)~*/
+		
+		IF ~~ THEN 
+		DO ~
+			SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+			StartCutSceneMode()
+			StartCutScene("XAEXPL3E")
+		~
+		EXIT
+	END
+	//}
+
 //}
 
 //{ Corwin Sex 3 - Neoma
