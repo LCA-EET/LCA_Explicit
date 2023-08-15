@@ -16,24 +16,24 @@ END
 
 IF ~
 	Global("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
-~ THEN BEGIN XA_XAEXPL03_Schael_A_1
+~ THEN BEGIN XA_XAEXPL03_Schael_A_4
 	SAY @93  /* ~(Using a towel and the warm bath water, you gently wipe her face clean. You also double check to make sure that none of it got in her hair, which, fortunately, it didn't.)~*/
 	
 	IF ~~ THEN REPLY @95  /*~Schael, you were amazing. Thank you.~ */
 	DO ~
 		SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 2)
 	~
-	GOTO XA_XAEXPL03_Schael_A_2
+	GOTO XA_XAEXPL03_Schael_A_5
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_2
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_5
 	SAY @96  /* ~I'm glad you enjoyed it. I did, too, but next time I'll be better prepared.~*/
 	
 	= @33  /*~(She eyes your member, which has suddenly sprung back to life, and smiles.)~ */
 	
 	= @34  /* ~Looks like we're both ready for round two...~*/
 	
-	= @35  /* ~(Schael takes hold of your erect penis and walks you back into bed. You the next few hours drinking wine, making love and pleasuring each other, before you finally fall asleep.)~*/
+	= @35  /* ~(Schael takes hold of your erect penis and walks you back into bed. You spend the next few hours drinking wine, making love and pleasuring each other, before finally falling asleep in each other's embrace.)~*/
 	
 	IF ~~ THEN 
 	DO ~
@@ -79,8 +79,15 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_3
 	GOTO XA_XAEXPL03_Schael_4B
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_4
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_4A
 	SAY @73 /*~She really is... oh, what's this? You brought wine?~ */
+	
+	IF ~~ THEN REPLY @69 /*~Berduskan dark wine, your favourite. Would you like me to pour you a glass?~*/
+	GOTO XA_XAEXPL03_Schael_5
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Schael_4B
+	SAY @68 /*~We did... oh, what's this? You brought wine?~ */
 	
 	IF ~~ THEN REPLY @69 /*~Berduskan dark wine, your favourite. Would you like me to pour you a glass?~*/
 	GOTO XA_XAEXPL03_Schael_5
@@ -139,9 +146,7 @@ END
 	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_3
 		SAY @90  /* ~I'm *cough* fine, love. Just hand me a towel...~*/
 		
-		= @91  /* ~Let me heat up the bath water for you. I'll get you cleaned up, hon.~*/
-		
-		IF ~~ THEN
+		IF ~~ THEN REPLY @91/* ~Let me heat up the bath water for you. I'll get you cleaned up, hon.~*/
 		DO ~
 			SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
 			StartCutSceneMode()
@@ -153,7 +158,7 @@ END
 
 	//{ Corwin B
 	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B
-		SAY @92  /* ~(With a smile, she presses down on your cock as you easily slide into her. She's so warm and moist, and you can feel the tip of your cock smash against her cervix with each savage thrust. You reach up and take hold of her breasts and squeeze them, gently at first, then harder until Schael lets out a squeal. After several minutes, you can feel the pace and ferocity of Schael's thrusts increase, and you take hold of her hips, which are now covered in sweat, to try and compensate. She reaches out and takes hold of the headboard, and uses that as leverage as she continues to drive herself even harder on to your cock. As she drives downward, you drive upward, causing you both to scream in pleasure.)~*/
+		SAY @92  /* ~(With a smile, she presses down on your cock as you easily slide into her. She's so warm and moist, and you can feel the tip of your cock smash against her cervix with each savage thrust. You reach up and take hold of her breasts and squeeze them, gently at first, then harder until Schael lets out a squeal. After several minutes, you can feel the pace and ferocity of Schael's thrusts increase, causing you to take hold of her hips, which are now covered in sweat. She reaches out and braces herself against the headboard, using it as leverage to drive herself even harder on to your cock. As she drives downward, you push upward, causing you both to yell in pleasure.)~*/
 		
 		= @99 /* ~YES! OH GODS, YES!~*/
 		
@@ -175,11 +180,11 @@ END
 	END
 
 	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B_3
-		SAY @106  /* ~(She dismounts your spent cock and lays at your side, with her head and arm on your chest. You are able to sleep for a little while, but are awakened by the stirring of your cock, and the sensation of Schael fondling your balls.)~ */
+		SAY @106  /*  ~(She dismounts your spent cock and lays at your side, with her head and arm on your chest. You're able to sleep for a little while, but are awakened by the welcome sensation of Schael stroking your penis back to life.)~*/
 		
 		= @34  /* ~Looks like we're both ready for round two...~*/
 		
-		= @107  /* ~(You the next few hours drinking wine, making love and pleasuring each other, before you finally fall asleep.)~*/
+		= @107  /* ~(You spend the next few hours drinking wine, making love and pleasuring each other, before finally falling asleep in each other's embrace.)~*/
 		
 		IF ~~ THEN 
 		DO ~
