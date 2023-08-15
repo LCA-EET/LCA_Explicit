@@ -21,7 +21,7 @@ Copy-Item -Path "LICENSE.md" -Destination "LCAExplicit_EET/LCA_EXPLICIT"
 
 Copy-Item -Path "weidu.exe" -Destination "LCAExplicit_EET/setup-LCA_EXPLICIT.exe"
 
-$7zipPath = "F:/Program Files/7-Zip/7z.exe"
+$7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
 
 if (-not (Test-Path -Path $7zipPath -PathType Leaf)) {
     throw "7 zip file '$7zipPath' not found"
@@ -29,8 +29,8 @@ if (-not (Test-Path -Path $7zipPath -PathType Leaf)) {
 
 Set-Alias Start-SevenZip $7zipPath
 
-$Source = "F:/BGModding - LCA/Game/00783/LCA_Explicit/LCAExplicit_EET/*"
-$Target = "LCAExplicit_EET.zip"
+$Source = "./LCAExplicit_EET/*"
+$Target = "./LCAExplicit_EET.zip"
 
 Start-SevenZip a -mx=9 $Target $Source
 
