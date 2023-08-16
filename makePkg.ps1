@@ -20,6 +20,7 @@ Copy-Item -Path "LCA_EXPLICIT.TP2" -Destination "LCAExplicit_EET/LCA_EXPLICIT"
 Copy-Item -Path "LICENSE.md" -Destination "LCAExplicit_EET/LCA_EXPLICIT"
 
 Copy-Item -Path "weidu.exe" -Destination "LCAExplicit_EET/setup-LCA_EXPLICIT.exe"
+Copy-Item -Path "User Guide.pdf" -Destination "LCAExplicit_EET/User Guide.pdf"
 
 $7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
 
