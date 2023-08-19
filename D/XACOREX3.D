@@ -110,7 +110,7 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_5
 	
 	= @78  /* ~So. What are your orders, hero?~ */
 	
-	IF ~~ THEN REPLY @79 /* ~I need you, Schael. I need you to suck my cock!~ */
+	IF ~~ THEN REPLY @79 /* ~Open wide...~ */
 	GOTO XA_XAEXPL03_Schael_A
 	
 	IF ~~ THEN REPLY @80 /* ~Fuck me, Schael!~*/
