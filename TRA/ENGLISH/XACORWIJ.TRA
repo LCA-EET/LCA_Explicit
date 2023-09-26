@@ -12,9 +12,9 @@
 @11 = ~What are you doing? Get out of those clothes!~
 @12 = ~(She's as used to giving orders in the bedroom as she is outside of it, you think to yourself.)~
 @13 = ~R-right.~
-@14 = ~(You hurriedly remove your armor and clothing, and nearly trip over your own pants while doing so. She laughs as you stand and face her.)~
-@15 = ~(A wide smile graces her face as she eyes your throbbing, erect member.)~
-@16 = ~You have a beautiful cock. He at least had the decency to leave that part of you unharmed.~ 
+@14 = ~~
+@15 = ~~
+@16 = ~~
 @17 = ~Come here, hero.~
 @18 = ~(You pull each other into a tight embrace, and lock lips during a long, sensual kiss. Slowly, you slide your hands down her back, from her shoulder blades to her waist, while she does the same. You caress and squeeze her round, firm behind, as she giggles in delight.)~
 @19 = ~This is what you want, isn't it lover?~  
@@ -146,17 +146,17 @@
 @145 = ~(You spend the rest of the time going over a series of choke holds, leg locks, and armbars. She teaches you how to apply them, and how to break free from them. It'll take several years of practice before you're as proficient as she is, but you feel that the knowledge she's imparted to you has already increased your fighting ability.)~ 
 @146 = ~(During the lessons, it was difficult at times to focus, as the now familiar, strangely comforting feeling of being under Schael's control sent your libido into overdrive.)~
 @147 = ~(You end up making love again before finally falling asleep.)~
-@148 = ~(She turns and leaves. As she walks away, you gaze longingly at her swaying hips, well-formed ass, and shapely legs.)~
-@149 = ~(Your mind fills with thoughts of what she has planned for tonight, and in moments, you're sporting a rock hard erection.)~ 
-@150 = ~(Your heart flutters as you wonder what she has planned for tonight.)~ 
-@151 = ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling against her bonds to be profoundly erotic.)~
-@152 = ~(Feeling ashamed, you take a deep breath and try to control your arousal before anyone notices.)~
-@153 = ~Worry not, my dear. Unlike the others, you will live past these next few minutes. Once I am done with <CHARNAME>, you'll soon be returned home, where you will assassinate the Council of Four on my behalf.~ 
-@154 = ~What..? No, never!~ 
-@155 = ~It's a trivial matter. You'll be enslaved just as easily as Yoshimo was. Enjoy your last moments of autonomy, child.~ 
-@156 = ~It's a trivial matter. You'll be enslaved through the use of a geas. Enjoy your last moments of autonomy, child.~
-@157 = ~Let.. me.. GO!~
-@158 = ~Release us! I will kill you, I swear it!~ 
+@148 = ~~
+@149 = ~~
+@150 = ~~
+@151 = ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling helplessly against her bonds to be profoundly erotic. The severity of the situation quickly stifles your arousal before your captors could notice.)~
+@152 = ~~
+@153 = ~~
+@154 = ~~
+@155 = ~~
+@156 = ~~
+@157 = ~~
+@158 = ~~
 @159 = ~(Unable to resist, you bury your head in Schael's ample breasts, and begin to kiss them. They are warm and soft, and smell of lilacs.)~
 @160 = ~(She laughs as she lovingly strokes the back of your head.)~
 @161 = ~Gods, I've been looking forward to this all day. Help me get this armor off, lover.~
@@ -165,112 +165,15 @@
 @164 =  ~What... gods, what did he do to you...~
 @165 = ~(She places her hands on your chest and gently moves them on and around the scars left behind from your imprisonment at the hands of the wizard.)~
 @166 = ~Irenicus... damn him! I... I'm so sorry that you had to endure this. It must've been excruciating.~
-@167 = ~Yes...~
-@168 = ~I... I'm so sorry that you had to endure this. It must have been excruciating.~
+@167 = ~~
+@168 = ~~
 @169 = ~Listen... if you're having second thoughts... I'd understand.~
 @170 = ~Don't be ridiculous. I love you, <CHARNAME>. I just wasn't prepared for it, that's all. Where else did he hurt you?~
 @171 = ~My back mainly, and p-parts of my legs.~
 @172 = ~Let me see.~
 @173 = ~(You turn around and hear a slight gasp. In moments, she reaches out to touch your scars. The feeling of her fingers caressing your back is soothing. In moments, you feel something warm and wet touch your skin... It's Schael, kissing the largest of the many scars that mar your back. With each kiss, you feel your member strain harder and harder against your pants.)~
-@174 = ~I'd rather not talk about it, Schael.~
+@174 = ~~
 @175 = ~Now turn around, and take those off.~
 @176 = ~(You quickly lower your pants and nearly trip over yourself while doing so. She laughs, and a wide smile graces her face as she eyes your throbbing, erect member.)~
+@177 = ~~
 @178 = ~Well... at least he had the decency to leave *some* parts of you unharmed. You have a beautiful cock, and ... you're even bigger than I expected. What a pleasant surprise.~ 
-@179 = ~(With eager anticipation, you wait for Schael to arrive. You've made some preparations you think she'll enjoy, including buying a bottle of her favorite red — the dark wine from Berdusk. You've also taken the liberty of removing your armor and clothes.)~
-@180 = ~(Having nothing better to do, you decide to pass the time by pleasuring yourself while remembering the first time that you and Schael made love. You make sure to avoid reaching a climax; every time you feel yourself get close to the edge, you stop and wait for your erection to subside before starting again. Minutes slowly turn to hours... maybe she isn't coming tonight after all. You pull up the covers around you as you begin to doze off... )~
-@181 = ~(You hear a knock at the door. It must be her!)~
-@182 = ~Come in!~
-@183 = ~I'm glad you're still awake. Sorry it took so long to get here; I just got Rohma to bed a little while ago.~
-@184 = ~No need to apologize. How is she?~
-@185 = ~She's wonderful. We spent all day getting caught up. Did you know she's first in her class in math?~
-@186 = ~That's great, love.~
-@187 = ~It is... what's this? A bottle of wine?~
-@188 = ~It's your favorite.~
-@189 = ~You remembered. Thank you, dear.~
-@190 = ~Help me with this armor, will you?~
-@191 = ~(You pull off the covers, get out of bed and walk over to her. She smiles at the sight of your nude body.)~
-
-@193 = ~(She undresses. As always, you stand in awe of her phenomenal and sexually magnificent physique, while your cock throbs in wild excitement.)~
-@194 = ~On the bed. Now.~
-@195 = ~(Now that you're both fully undressed, you engage in some sensual and passionate foreplay.)~
-@196 = ~I've been looking forward to this night for a long time. I hope you have too.~
-@197 = ~I have. Since Dragonspear, just after we escaped Avernus... you've been promising something special for our first night back in the Gate.~
-@198 = ~That's right. On the bed. Now.~
-@199 = ~(You get on the bed, and she follows you in. Without another word, she straddles you, so that her breasts are between your legs, and your head is between her thighs, giving you a wonderful view of her sex.)~
-@200 = ~(Schael's thighs squeeze around your head snugly, and you can feel her lock her ankles together. Even with the pressure of her thighs pressing against your ears, you can hear the delighted sounds she makes as she massages your still growing cock with her large breasts. With her tits now lightly glazed with sweat and pre-cum, she takes your cock into her mouth.)~
-@201 = ~(The intense warmness of her mouth and softness of her lips causes you to moan in pleasure. You try to lift your head, but her thighs restrict you so that you can only see - past the horizon of her ass - the top of her head bobbing up and down on your shaft.)~
-@202 = ~(Engrossed in pleasure, Schael swings her shins up. This pushes your face directly in front her crotch, bringing you tantalizingly close to the heat and intoxicating aroma of her sex. You're close enough to lick her juices, so you do, sending a jolt of pleasure through her. She tastes quite good, so you continue, causing her to shake, shudder and moan repeatedly, as she continues to pleasure your penis with her lips, mouth and throat.)~
-@203 = ~(Soon, the sensation of your tool being so deep inside of her throat becomes too much to bear, and you experience a tremendous ejaculation.)~ 
-@204 = ~(While you were busy emptying your balls into her mouth, Schael too succumbed to the sensations caused by your tongue, and experienced her own climax against your face. With both of your faces covered in each other's juices, ~
-@205 = ~Mmmfh!~
-@206 = ~(Schael, though unprepared for the explosion of cum, managed to swallow the first two spurts before needing to come up for air. The third spurt landed on her face, covering her right cheek with your seed. Her focus was brought back to your erupting penis, as more helpings, coming out with far less force than the fist, came leaping out of the head. She pressed her lips and tongue against the side of your cock while cum continued to dribble out from the top, sliding slowly down the shaft and into her mouth. A final spurt reached up to just barely avoid her short, ebony hair.)~
-@207 = ~(You hear a knock at the door, and what sounds like laughing. It must be her!)~
-
-
-@210 = ~Hah! I'll be the judge of that, hon.~
-@211 = ~Hello again, Neoma. I wasn't sure you'd join us.~
-@212 = ~Schael? Have you been drinking?~
-
-@214 = ~Maybe a little more than that. Look! He brought wine!~
-@215 = ~Berduskan dark wine, your favorite, love.~
-
-@217 = ~We need to. You've done so much for all of us, <CHARNAME>.~
-@218 = ~What did you have in mind?~
-
-@220 = ~What's that?~
-@221 = ~Don't you dare touch that cock. Now, out of the bed.~
-
-@223 = ~Oh wow... Schael, you weren't exaggerating. He's *huge*!~
-@224 = ~It tastes as good as it looks, too. Get undressed, hon.~
-
-
-
-
-
-@230 = ~Are you kidding? From what Schael's been telling me, you have something that needs to be seen to be believed.~
-
-
-@233 = ~Are you ready, hon?~
-@234 = ~Mm. Yes, dear.~
-
-
-
-
-
-
-
-@242 = ~It's been too long, hero, since I've had the taste of a man in my mouth...~
-
-@244 = ~~
-
-
-
-
-
-
-@251 = ~*Cough* oh gods...~
-@252 = ~~
-@253 = ~Right. Here you are, dear.~
-@254 = ~(She wipes as much of the cum from her face as she can, though there's still a good amount in her hair.)~
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@270 = ~Oh good, you're back.~
-@271 = ~Come here.~
-@272 = ~(Schael returned with a pail of water and some clean towels, and gently washes her friend's face and hair. Before long, the last traces of your seed are washed away.)~
-@272 = ~There. Good as new.~
-@273 = ~Thanks, Schael. I better get home. <CHARNAME>, it was nice to see you again. Let's do this again sometime. Bye!~
-
-@277 = ~The bath is ready. Come hon, let's get you cleaned up.~

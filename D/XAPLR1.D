@@ -1,33 +1,4 @@
 APPEND PLAYER1
-	IF ~
-		Global("XA_Explicit_0002", "GLOBAL", 1)
-	~ THEN BEGIN XA_0002
-		SAY @0 /* ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling against her bonds to be profoundly erotic.)~*/
-		
-		IF ~
-			Gender(Player1, MALE)
-		~ THEN 
-		DO ~
-			SetGlobal("XA_Explicit_0002", "GLOBAL", 2)
-		~
-		GOTO XA_0002_M
-		
-		IF ~
-			Gender(Player1, FEMALE)
-		~ THEN
-		DO ~
-			SetGlobal("XA_Explicit_0002", "GLOBAL", 2)
-		~		
-		EXTERN PPIRENI2 XA_PPIRENI2_3_CHAIN_2
-	END
-	
-	IF ~~ THEN BEGIN XA_0002_M
-		SAY @1 /* ~(Feeling ashamed, you take a deep breath and try to control your arousal before anyone notices.)~ */
-		
-		IF ~~ THEN
-		EXTERN PPIRENI2 XA_PPIRENI2_3_CHAIN_2
-	END
-	
 	//{ Corwin Sex 3 
 	IF ~
 		Global("XA_CorwinSex_3", "GLOBAL", 1)

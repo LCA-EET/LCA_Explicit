@@ -1,18 +1,13 @@
 //{ XACORWIJ
 APPEND XACORWIJ
-	IF ~~ THEN BEGIN XA_PPIRENI2_3_CHAIN_2_END
-		SAY @157 /* ~Let.. me.. GO!~ */
+	//{ Spellhold
+	IF ~~ THEN BEGIN XA_XAGOLSTO_0
+		SAY @151 /* ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling helplessly against her bonds to be profoundly erotic. The severity of the situation quickly stifles your arousal before your captors could notice.)~ */
 		
-		IF ~~ THEN REPLY #44251 /* ~What are you doing, Irenicus?! What is all of this?~ */ 
-		EXTERN PPIRENI2 5
-
-		IF ~~ THEN REPLY @158 /* ~Release us! I will kill you, I swear it!~ */ 
-		EXTERN PPIRENI2 4
-
-		IF ~~ THEN REPLY #44253 /* ~Where is Imoen?! What have you done to her?!~ */ 
-		EXTERN PPIRENI2 6 
+		IF ~~ THEN EXTERN ~XACORWIJ~ 791
 	END
-	
+	//{
+
 	//{ #region Corwin Sex 1 
 	IF ~
 		Global("XA_CorwinSex_1","GLOBAL",1)
@@ -541,21 +536,3 @@ APPEND XACORWIJ
 END
 //}
 
-CHAIN PPIRENI2 XA_PPIRENI2_3_CHAIN_2
-	@153 /* ~Worry not, my dear. Unlike the others, you will live past these next few minutes. Once I am done with <CHARNAME>, you'll soon be returned home, where you will assassinate the Council of Four on my behalf.~ */
-	
-	== XACORWIJ
-	@154 /* ~What..? No, never!~ */
-	
-	== PPIRENI2
-	IF ~
-		See("Yoshimo")
-	~
-	@155 /* ~It's a trivial matter. You'll be enslaved just as easily as Yoshimo was. Enjoy your last moments of autonomy, child.~ */
-	
-	== PPIRENI2
-	IF ~
-		!See("Yoshimo")
-	~
-	@156 /* ~It's a trivial matter. You'll be enslaved through the use of a geas. Enjoy your last moments of autonomy, child.~ */
-END XACORWIJ XA_PPIRENI2_3_CHAIN_2_END

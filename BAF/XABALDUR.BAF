@@ -10,6 +10,7 @@ THEN
 		SetGlobal("XA_ExplicitModCheckTimerSet", "GLOBAL", 1)
 		SetGlobalTimer("XA_ExplicitModCheckTimer", "GLOBAL", ONE_HOUR)
 		SetInterrupt(TRUE)
+		//DisplayStringHead(Player1, ~1A~)
 END
 
 IF 
@@ -21,4 +22,5 @@ THEN
 		SetGlobalTimer("XA_ExplicitModCheckTimer", "GLOBAL", ONE_HOUR)
 		SetGlobal("XA_ExplicitModActive", "GLOBAL", 1)
 		SetInterrupt(TRUE)
+		//DisplayStringHead(Player1, ~1B~)
 END
