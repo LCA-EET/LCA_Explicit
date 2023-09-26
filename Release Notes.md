@@ -1,0 +1,8 @@
+## Love Conquers All (LCA) Release Notes
+
+# Report any bugs to LCAMod@danielvalle.net, or the Gibberlings 3 Forum Post 
+* Link to forum post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
+
+# RC1, 2023-09-25
+* Fixed the hook to the Spellhold encounter between Corwin and Irenicus.
+* Final improvements before the initial release, scheduled for this month.

@@ -18,6 +18,7 @@ Copy-Item -Path "WAV" -Destination "LCAExplicit_EET/LCA_EXPLICIT/WAV" -Recurse
 Copy-Item -Path "SPL" -Destination "LCAExplicit_EET/LCA_EXPLICIT/SPL" -Recurse
 Copy-Item -Path "LCA_EXPLICIT.TP2" -Destination "LCAExplicit_EET/LCA_EXPLICIT"
 Copy-Item -Path "LICENSE.md" -Destination "LCAExplicit_EET/LCA_EXPLICIT"
+Copy-Item -Path "Release Notes.md" -Destination "LCAExplicit_EET/Release Notes.md"
 
 Copy-Item -Path "weidu.exe" -Destination "LCAExplicit_EET/setup-LCA_EXPLICIT.exe"
 Copy-Item -Path "User Guide.pdf" -Destination "LCAExplicit_EET/User Guide.pdf"
