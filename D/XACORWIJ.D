@@ -1,12 +1,6 @@
 //{ XACORWIJ
 APPEND XACORWIJ
-	//{ Spellhold
-	IF ~~ THEN BEGIN XA_XAGOLSTO_0
-		SAY @151 /* ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling helplessly against her bonds to be profoundly erotic. The severity of the situation quickly stifles your arousal before your captors could notice.)~ */
-		
-		IF ~~ THEN EXTERN ~XACORWIJ~ 791
-	END
-	//{
+	
 
 	//{ #region Corwin Sex 1 
 	IF ~

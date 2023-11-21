@@ -3,6 +3,9 @@
 # Report any bugs to LCAMod@danielvalle.net, or the Gibberlings 3 Forum Post 
 * Link to forum post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
 
+# v1.0a, 2023-11-20
+* Fixed a bug in the hook for the Spellhold encounter.
+
 # v1.0, 2023-09-30
 * Initial release - enjoy!
 

@@ -26,7 +26,7 @@ APPEND BDCORWIJ
 	END
 END
 
-EXTEND_BOTTOM XACORWIJ 435
+EXTEND_BOTTOM XACORWIJ 437
 	IF ~
 		Gender(Player1, MALE)
 	~ THEN
@@ -34,6 +34,13 @@ EXTEND_BOTTOM XACORWIJ 435
 END
 
 APPEND XACORWIJ
+	//{ Spellhold
+	IF ~~ THEN BEGIN XA_XAGOLSTO_0
+		SAY @4 /* ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling helplessly against her bonds to be profoundly erotic. The severity of the situation quickly stifles your arousal before your captors could notice.)~ */
+		
+		IF ~~ THEN EXTERN ~XACORWIJ~ 793
+	END
+	//{
 	IF ~~ THEN BEGIN XA_Explicit_0004_M
 		SAY @2 /* ~(She turns and leaves. As she walks away, you gaze longingly at her well-formed ass and powerful, sexy legs.)~  */
 		
