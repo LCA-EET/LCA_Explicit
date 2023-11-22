@@ -1,3 +1,56 @@
+//{ Sex 1 & 2
+ADD_TRANS_TRIGGER XALCHOOK 0
+~
+	False()
+~
+DO 2
+
+EXTEND_BOTTOM XALCHOOK 0
+	IF ~
+		Global("XA_CorwinSex_1", "GLOBAL", 1)
+		Gender(Player1, MALE)
+	~ THEN
+	DO ~
+		StartCutSceneMode()
+		StartCutScene("XAEXPL01")
+	~
+	EXIT
+	
+	IF ~
+		Global("XA_CorwinSex_2", "GLOBAL", 1)
+		Gender(Player1, MALE)
+	~
+	THEN
+	DO ~
+		StartCutSceneMode()
+		StartCutScene("XAEXPL02")
+	~
+	EXIT
+END
+//}
+
+//{ Sex 3
+ADD_TRANS_TRIGGER XALCHOOK 1
+~
+	False()
+~
+DO 1
+
+EXTEND_BOTTOM XALCHOOK 1
+	IF ~
+		Global("XA_CorwinSex_3", "GLOBAL", 1)
+		Gender(Player1, MALE)
+	~
+	THEN
+	DO ~
+		SetGlobal("XA_SleepBG", "GLOBAL", 0)
+		StartCutSceneMode()
+		StartCutScene("XAEXPL03")
+	~
+	EXIT
+END
+//}
+
 EXTEND_BOTTOM XAGOLSTO 0
 	IF ~
 		Gender(Player1, MALE)
