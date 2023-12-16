@@ -1,39 +1,45 @@
-Remove-Item -LiteralPath "LCAExplicit_EET/LCA_EXPLICIT" -Force -Recurse
-Remove-Item "LCAExplicit_EET.zip" -Force
-Remove-Item "setup-LCA_EXPLICIT.exe" -Force
+$basePath = "LCA_Explicit_EET"
+$tp2Name = "LCA_EXPLICIT"
+$modPath = $basePath + "/" + $tp2Name 
+$archive = $basePath + ".zip"
+$exePath = "setup-" + $tp2Name + ".exe"
 
-Copy-Item -Path "2DA" -Destination "LCAExplicit_EET/LCA_EXPLICIT/2DA" -Recurse
-Copy-Item -Path "ARE" -Destination "LCAExplicit_EET/LCA_EXPLICIT/ARE" -Recurse
-Copy-Item -Path "BAF" -Destination "LCAExplicit_EET/LCA_EXPLICIT/BAF" -Recurse
-Copy-Item -Path "BAM" -Destination "LCAExplicit_EET/LCA_EXPLICIT/BAM" -Recurse
-Copy-Item -Path "BMP" -Destination "LCAExplicit_EET/LCA_EXPLICIT/BMP" -Recurse
-Copy-Item -Path "CRE" -Destination "LCAExplicit_EET/LCA_EXPLICIT/CRE" -Recurse
-Copy-Item -Path "D" -Destination "LCAExplicit_EET/LCA_EXPLICIT/D" -Recurse
-Copy-Item -Path "ITM" -Destination "LCAExplicit_EET/LCA_EXPLICIT/ITM" -Recurse
-Copy-Item -Path "MOS" -Destination "LCAExplicit_EET/LCA_EXPLICIT/MOS" -Recurse
-Copy-Item -Path "STO" -Destination "LCAExplicit_EET/LCA_EXPLICIT/STO" -Recurse
-Copy-Item -Path "TIS" -Destination "LCAExplicit_EET/LCA_EXPLICIT/TIS" -Recurse
-Copy-Item -Path "TRA" -Destination "LCAExplicit_EET/LCA_EXPLICIT/TRA" -Recurse
-Copy-Item -Path "WAV" -Destination "LCAExplicit_EET/LCA_EXPLICIT/WAV" -Recurse
-Copy-Item -Path "SPL" -Destination "LCAExplicit_EET/LCA_EXPLICIT/SPL" -Recurse
-Copy-Item -Path "LCA_EXPLICIT.TP2" -Destination "LCAExplicit_EET/LCA_EXPLICIT"
-Copy-Item -Path "LICENSE.md" -Destination "LCAExplicit_EET/LCA_EXPLICIT"
-Copy-Item -Path "Release Notes.md" -Destination "LCAExplicit_EET/Release Notes.md"
+Remove-Item -LiteralPath $modPath -Force -Recurse
+Remove-Item $archive -Force
+Remove-Item $exePath -Force
 
-Copy-Item -Path "weidu.exe" -Destination "LCAExplicit_EET/setup-LCA_EXPLICIT.exe"
-Copy-Item -Path "User Guide.pdf" -Destination "LCAExplicit_EET/User Guide.pdf"
+$folders = @(
+'ARE',
+'BAF',
+'CRE',
+'D',
+'TRA'
+)
+
+foreach($folder in $folders){
+	Copy-Item -Path $folder -Destination ($modPath + "/" + $folder) -Recurse
+}
+
+Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath 
+Copy-Item -Path "LICENSE.md" -Destination $modPath
+
+Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)
+Copy-Item -Path "Release Notes.md" -Destination ($basePath + "/Release Notes.md")
 
 $7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
 
 if (-not (Test-Path -Path $7zipPath -PathType Leaf)) {
-    $7zipPath = "F:/Program Files/7-Zip/7z.exe"
+	$7zipPath = "F:/Program Files/7-Zip/7z.exe"
 }
 
 Set-Alias Start-SevenZip $7zipPath
 
-$Source = "./LCAExplicit_EET/*"
-$Target = "./LCAExplicit_EET.zip"
+$Source = "./" + $basePath + "/*"
+$Target = "./" + $archive
 
 Start-SevenZip a -mx=9 $Target $Source
 
-Get-FileHash LCAExplicit_EET.zip -Algorithm SHA256 > SHA256.txt
+Remove-Item -LiteralPath $basePath -Force -Recurse
+Get-FileHash $archive -Algorithm SHA256 > SHA256.txt
+
+Copy-Item -Path $archive -Destination "\\192.168.1.88\smbuser\Home\Installers\" + $archive
