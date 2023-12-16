@@ -413,11 +413,17 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_25
 	SAY @37  /* ~Home. I want to be there when Rohma wakes up.~ */
 	
 	IF ~~ THEN REPLY @38 /* ~Oh, of course. ~ */
+	DO ~
+		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+	~
 	GOTO XA_XAEXPL03_Neoma_26
 	
 	IF ~
 		GlobalGT("XA_CorwinSex_3_Neoma", "GLOBAL", 0)
 	~ THEN REPLY @46 /* ~Oh, right. I wonder how Neoma's doing.~*/
+	DO ~
+		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+	~
 	GOTO XA_Neoma
 END
 

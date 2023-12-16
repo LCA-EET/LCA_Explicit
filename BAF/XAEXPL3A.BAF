@@ -9,5 +9,7 @@ THEN
 		ActionOverride("XACOREX3", MoveToPoint([300.255]))
 		ActionOverride("XANEOMA", MoveToPoint([270.250]))
 		Wait(4)
-		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
+		ActionOverride("XACOREX3", FaceObject(Player1))
+		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 1)
+		EndCutSceneMode()
 END

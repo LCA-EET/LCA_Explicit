@@ -1,24 +1,4 @@
-IF
-	InMyArea("XACOREX3")
-	GlobalLT("XA_LCE_EX3Portrait", "GLOBAL", 1)
-	Global("XA_PortraitChange_LCA", "GLOBAL", 1)
-THEN
-	RESPONSE #100
-		ApplySpellRES("XACHNG01", "XACOREX3")
-		SetGlobal("XA_LCE_EX3Portrait", "GLOBAL", 1)
-		Continue()
-END
 
-IF
-	InMyArea("XACOREX3")
-	GlobalLT("XA_LCE_EX3Portrait", "GLOBAL", 1)
-	Global("XA_PortraitChange_LCA", "GLOBAL", 0)
-THEN
-	RESPONSE #100
-		ApplySpellRES("XACHNG02", "XACOREX3")
-		SetGlobal("XA_LCE_EX3Portrait", "GLOBAL", 1)
-		Continue()
-END
 
 IF
 	Global("XA_CorwinSex_3_Schael", "GLOBAL", 4)
