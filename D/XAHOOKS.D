@@ -1,3 +1,11 @@
+//{ States to check:
+/*
+	BDCORWIJ 303 ~Back to the city, then, as soon as we can. In the meantime, let's go find someplace a little more private...~ [BD54592]
+	XACORWIJ 437 ~(She laughs). Much more. See you later.~ 
+	XACORWIJ 793  ~..... gods.... can't... breathe...~
+*/
+//}
+
 //{ Sex 1 & 2
 ADD_TRANS_TRIGGER XALCHOOK 0
 ~
