@@ -3,6 +3,9 @@
 # Report any bugs to LCAMod@danielvalle.net, or the Gibberlings 3 Forum Post 
 * Link to forum post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
 
+# v1.1, 2023-01-XX
+* Dialog improvements based on feedback received.
+
 # v1.0c, 2023-12-15
 * Fixed a bug that could cause Corwin to use the incorrect portrait during the intimate encounter in Baldur's Gate.
 

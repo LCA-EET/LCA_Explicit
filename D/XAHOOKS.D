@@ -63,6 +63,7 @@ EXTEND_BOTTOM XAGOLSTO 0
 	IF ~
 		Gender(Player1, MALE)
 		Global("XA_CorwinRomanceActive", "GLOBAL", 2)
+		Alignment(Player1, MASK_EVIL)
 	~ THEN EXTERN XACORWIJ XA_XAGOLSTO_0
 END
 
