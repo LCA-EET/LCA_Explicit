@@ -271,12 +271,43 @@ APPEND XACORWIJ
 	END
 
 	IF ~~ THEN BEGIN XA_CorwinSex2_4
-		SAY @70 /* ~Is that so? I can beat you easily. Come on, try and hit me.~ */
+		SAY @70 /*~Mm, is that so? Tell me something, hero...~ */
+		
+		= @180 /*~Do you trust me?~*/
+		
+		IF ~~ THEN REPLY @181 /* ~Of course I do.~ */
+		GOTO XA_CorwinSex2_4A
+		
+		IF ~~ THEN REPLY @182 /* ~With my life, you know that.~ */
+		GOTO XA_CorwinSex2_4A
+		
+		IF ~~ THEN REPLY @183 /* ~What are you getting at?~ */
+		GOTO XA_CorwinSex2_4B
+	END
+	
+	IF ~~ THEN BEGIN XA_CorwinSex2_4B
+		SAY @184 /* ~It's a simple enough question. Do you trust me, or not?~*/
+		
+		IF ~~ THEN REPLY @185 /*~You know I do.~*/
+		GOTO XA_CorwinSex2_4A
+	END
+
+	IF ~~ THEN BEGIN XA_CorwinSex2_4A
+		SAY @186 /* ~Good...~*/
+		
+		= @187 /*~(She widens her stance a bit, places her hands on her hips, and rolls her shoulders forwards and backwards. Slowly, she tenses the muscles in her arms, midsection and legs. You feel your cock become even harder, almost painfully so, as her beautiful breasts bounce slightly while she flexes her pectorals. The sight of her powerful, magnificent physique in all its nude glory causes you gasp in awe.)~/
+		
+		= @188 /*~(A smile graces her face as she eyes your wildly-throbbing member...)~*/
+		
+		= @189 /* ~Mm. I can beat you easily. Come on, try and hit me.~ */
 		
 		IF ~~ THEN REPLY @71 /* ~Are you serious?~ */
 		GOTO XA_CorwinSex2_5
 		
 		IF ~~ THEN REPLY @73 /* ~Schael, I don't want to see you harmed.~ */
+		GOTO XA_CorwinSex2_5
+		
+		IF ~~ THEN REPLY @190 /*~W-what?~*/
 		GOTO XA_CorwinSex2_5
 	END
 
@@ -349,7 +380,7 @@ APPEND XACORWIJ
 	IF ~~ THEN BEGIN XA_CorwinSex2_7B
 		SAY @162 /*  ~Good. Now, hit me damnit!~  */
 		
-		IF ~~ THEN REPLY @72 /* ~Fine. You asked for it! (Attack her.)~*/
+		IF ~~ THEN REPLY @152 /* ~Ugh... you asked for it! (Attack her.)~*/
 		GOTO XA_CorwinSex2_7END
 	END
 	IF ~~ THEN BEGIN XA_CorwinSex2_7END
@@ -363,7 +394,13 @@ APPEND XACORWIJ
 		
 		= @99 /* ~(You're on your left side, with your left arm pinned behind your body. Her right forearm is tight across your neck, with her right hand holding her left bicep. Her left hand is behind your head, pushing it down into her right forearm. You try but are unable with your right arm to break her hold. She gradually increases the pressure, and soon, you're on the verge of blacking out.)~ */
 		
-		= @100 /* ~Come on, hero. I thought a big, strong man like you couldn't be beaten by a woman. You *are* a man, aren't you?~*/
+		= @100 /* ~Come on, hero. I thought a big, strong man like you couldn't be beaten by a woman.*/
+		
+		IF ~~ THEN REPLY @155 /*~Ugh... Sch—~*/
+		GOTO XA_CorwinSex2_7ENDA
+	END
+	IF ~~ THEN BEGIN XA_CorwinSex2_7ENDA
+		SAY @156 /*~What was that? You *are* a man, aren't you?~*/
 		
 		= @101 /* ~(In a fluid motion, she shifts her hold so that her left forearm is across your neck, while her right hand moves lower to seize your testicles.)~*/
 		
@@ -377,13 +414,13 @@ APPEND XACORWIJ
 		GOTO XA_CorwinSex2_8
 	END
 	IF ~~ THEN BEGIN XA_CorwinSex2_7
-		SAY @87 /* ~Dazed, you look up and see her standing over you, with her hands on her hips.~ */
+		SAY @87 /* ~(Dazed, you look up and see her standing over you, with her hands on her hips. Satisfied that you aren't getting up any time soon, she takes a seat on the edge of the bed, just next to where you went down.)~*/
 		
 		= @88 /* ~(She smiles and, using her toes, she fondles your balls and gives the tip of your member a gentle squeeze. Your penis rewards her toes with a steady flow of pre-cum.))~ */
 		
 		= @89 /* ~(Laughing gleefully, she continues with her footjob, and you moan loudly in pleasure as she brings you closer and closer to the edge.)~ */
 		
-		= @90 /* ~(Before you can release your seed onto her foot, she stops.)~ */
+		= @90 /* ~(Before you can release your seed onto her foot, she stops and gets back on her feet. She walks over and past you, giving you the most amazing, if brief, view of her vagina and ass. Turning toward you, she again places her hands on her hips.)~*/
 		
 		= @91 /* ~Get up.~ */
 		
@@ -418,19 +455,21 @@ APPEND XACORWIJ
 		
 		= @112 /* ~(She reaches down and grabs your package once again. She laughs as you flinch in fear.)~ */
 		
-		= @113 /* ~Relax, dear. You'll enjoy this.~ */
+		= @113 /* ~Easy, dear. You'll enjoy this.~ */
 		
 		= @114 /* ~(Instead of squeezing, she begins to lovingly and gently caress your aching balls with her left hand, while her right hand softly strokes your member. In moments, you're once again sporting a rock hard erection.)~ */
 		
+		= @167 /*~That's right, love. Just relax...~*/
+		
 		= @115 /* ~(Kissing your neck, she seizes your fully erect tool and gives you a sensual handjob. Her hand, lubricated with your pre-cum, glides effortlessly up and down your shaft, slowly at first, then faster. It takes her less than a minute to force your seed out of you and onto her hand, while you moan weakly in submission and defeat.)~ */
 		
-		= @116 /* ~(That she's so easily able to dominate you physically and sexually is equal parts humiliating and erotic, you think to yourself. She holds up and eyes her right hand, now covered in your copious ejaculate.)~ */
+		= @116 /* ~(That she's so easily able to dominate you physically and sexually is equal parts humiliating and erotic, you think to yourself. She holds up and eyes her right hand, now covered and dripping with your copious ejaculate.)~ */
 		
 		= @117 /* ~Mm. What a mess.~ */
 		
 		= @118 /* ~(She pushes you off her body and begins massaging her breasts with her left hand, while she fingers herself with the right.)~ */
 		
-		= @119 /*  ~Ohhh... <CHARNAME>... my hero... ohh!~*/
+		= @119 /* ~Ohhh... <CHARNAME>... my love... my... my hero... ohh! OHH!~*/
 		
 		= @120 /* ~(The sight and sound of Schael pleasuring herself while moaning your name is enough to reinvigorate your aching member. You stand over your love and begin to stroke your tool back to life. Eying your growing, throbbing tool, she spreads her legs and invites you in.)~ */
 		
@@ -448,8 +487,6 @@ APPEND XACORWIJ
 		
 		IF ~~ THEN REPLY @127 /* ~My love? Are you awake?~ */ 
 		GOTO XA_CorwinSex2_10
-		
-		
 	END
 
 	IF ~~ THEN BEGIN XA_CorwinSex2_10
