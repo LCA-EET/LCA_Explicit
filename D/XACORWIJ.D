@@ -504,6 +504,9 @@ APPEND XACORWIJ
 		
 		IF ~~ THEN REPLY @133 /* ~We'll need a safe word next time for sure.~ */
 		GOTO XA_CorwinSex2_10C
+		
+		IF ~~ THEN REPLY @191 /* ~I haven't felt that helpless since I was captured by Irenicus.~ */
+		GOTO XA_CorwinSex2_10D
 	END
 
 	IF ~~ THEN BEGIN XA_CorwinSex2_10A
@@ -534,9 +537,33 @@ APPEND XACORWIJ
 		IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
 		GOTO XA_CorwinSex2_11
 	END
+	
+	IF ~~ THEN BEGIN XA_CorwinSex2_10D
+		SAY @192 /*~I... I don't know what to say. The last thing I wanted was for you to relive that nightmare. Forgive me, love.~*/
+		
+		IF ~~ THEN REPLY @193 /*~I know that wasn't your intent, and... I'm ashamed to admit it, but I enjoyed it, Schael.~*/
+		GOTO XA_CorwinSex2_10E
+		
+		IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+		GOTO XA_CorwinSex2_11
+	END
+
+	IF ~~ THEN BEGIN XA_CorwinSex2_10E
+		SAY @194 /*~Don't feel ashamed, dear. We all have our own little fantasies and... fetishes. What's important is that we trust each other enough to explore them, together.~ */
+		
+		IF ~~ THEN REPLY @195 /*~Ah, I understand. That's why you asked me if I trusted you. I still do — now, more than ever.~*/
+		GOTO XA_CorwinSex2_10F
+	END
+	
+	IF ~~ THEN BEGIN XA_CorwinSex2_10F
+		SAY @196 /*~(She leans in and kisses you on the cheek.)~*/
+		
+		IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+		GOTO XA_CorwinSex2_11
+	END
 
 	IF ~~ THEN BEGIN XA_CorwinSex2_11
-		SAY @141 /* ~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free. Instead, you tried to free those big balls of yours from my grip.~ */
+		SAY @141 /* ~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free. Instead, you tried to free those big, beautiful balls of yours from my grip.~*/
 		
 		= @142 /* ~Not that I blame you. They're quite precious, after all.~  */
 		
@@ -544,7 +571,7 @@ APPEND XACORWIJ
 		
 		= @144 /* ~Come on, get up. There are a few more things I need to show you.~ */
 		
-		= @145 /* ~(You spend the rest of the time going over a series of chokeholds, leglocks, and armbars. She teaches you how to apply them, and how to break free from them. It'll take several years of practice before you're as proficient as she is, but you feel that the knowledge she's imparted to you has already increased your effectiveness as a fighter.)~ */
+		= @145 /* ~(You spend the rest of the time going over a series of choke holds, leg locks, and armbars. She teaches you how to apply them, and how to break free from them. It'll take several years of practice before you're as proficient as she is, but you feel that the knowledge she's imparted to you has already increased your fighting ability.)~  */
 		
 		= @146 /* ~(During the lessons, it was difficult at times to focus, as the now familiar, strangely comforting feeling of being under Schael's control sent your libido into overdrive.)~*/
 		

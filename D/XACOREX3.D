@@ -268,13 +268,15 @@ END
 IF ~
 	Global("XA_CorwinSex_3_Neoma",  "GLOBAL",5)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_23
-	SAY @32  /* ~Thank you, Schael.~ */
+	SAY @32  /* ~Well, that was fun.~ */
 	
-	= @33  /*~(She eyes your member, which has suddenly sprung back to life, and smiles.)~ */
+	= @33  /*~(Your member, which has suddenly sprung back to life, throbs in agreement. She eyes it, and smiles.)~*/
 	
 	= @34  /* ~Looks like we're both ready for round two...~*/
 	
-	= @35  /* ~(Schael takes hold of your erect penis and walks you back into bed. You the next few hours drinking wine, making love and pleasuring each other, before you finally fall asleep.)~*/
+	= @35  /* ~(Schael takes hold of your erect penis and walks you back into bed. You spend the next few hours drinking wine and making love.)~ */
+	
+	= @135 /*~(Not wanting the night to end just yet, you take the opportunity to use some of the tongue techniques you learned from watching the two ladies, and successfully bring her to an other-wordly climax. This delighted Schael, so much so that she reciprocated by giving you the most fantastic and exquisite blowjob you've ever experienced. After several hours, and even more orgasms, you finally fall asleep in a warm and tender embrace.)~*/
 	
 	IF ~~ THEN 
 	DO ~
@@ -299,7 +301,7 @@ IF ~
 ~ THEN BEGIN XA_XAEXPL03_Neoma_1
 	SAY @0 /* ~(Schael stumbles in, followed by Neoma, her 'friend' that you met earlier in the day. Neoma's carrying a bag with her. Both ladies appear to be somewhat inebriated.)~*/
 	
-	= @1 /*  ~<CHARNAME>, Neoma. Neoma, <CHARNAME>, the hero of Baldursh Gate, and owner of the finest cock in the Sword Coast, or probably anywhere, heh.~*/
+	= @1 /*  ~<CHARNAME>, Neoma. Neoma, <CHARNAME>, the hero of Baldursh Gate, and owner of the finest cock and biggest balls in the Sword Coast, or probably anywhere, heh.~*/
 	
 	IF ~~ THEN
 	EXTERN XANEOMA XA_XAEXPL03_Neoma_2
@@ -327,7 +329,7 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_5
 END
 
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_7
-	SAY @4 /* ~Get out of bed, sit down on that chair in the corner, and watch.~*/
+	SAY @4 /* ~Get out of bed, and watch. Neoma and I are going to demonstrate the proper use of one's tongue.~*/
 	
 	= @5 /* ~(You pull off the covers, get out of bed and walk over to the chair. The two ladies gasp in delight as they ogle your nude body.)~ */
 	
@@ -355,15 +357,23 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_10
 	
 	= @13  /* ~That's better. Just watch. For now, at least.~*/
 	
-	= @14  /* ~(Satisfied that you'll do as your told, the two ladies resume with their kissing and touching. They take turns fondling each other's breasts, caressing their bottoms, and fingering their sex. It takes nearly all of your willpower to stop yourself from throwing them on the bed and having your way with them. When their foreplay ends, they walk over to the bed. Neoma gets in and lays face-up. Schael follows her in, and turns her body so that her head is between Neoma's legs. Using a pillow to support her neck, Neoma raises her head so that it's between Schael's powerful thighs, directly in front of her sex. You watch in awe as the ladies expertly pleasure each other using their tongues. Occasionally, they shudder and moan, as they inch ever closer to what is sure to be a momentous climax. Just when you think they are about to cross the edge, Schael stops, and Neoma does the same.)~ */
+	= @14  /* ~(Satisfied that you'll do as your told, the two ladies resume with their kissing and touching. They take turns licking and fondling each other's breasts, caressing their bottoms, and fingering their sex. It takes nearly all of your willpower to stop yourself from throwing them on the bed and having your way with the both of them.)~*/
+
+	= @123 /* ~(When their foreplay ends, they walk over to the bed. Neoma gets in first and lays face-up. Schael follows her in, and turns her body so that her head is between Neoma's legs. Using a pillow to support her neck, Neoma raises her head so that it's between Schael's powerful thighs, directly in front of her most private, sensitive, and intimate parts).~ */
+	
+	= @124 /*~(You watch with wonder as the ladies expertly pleasure each other using their tongues. Occasionally, they giggle, squeal, shudder and moan as they inch ever closer to what is sure to be a momentous climax. Just when you think they are about to cross that edge, Schael stops, and Neoma does the same.)~*/
 	
 	= @15  /* ~<CHARNAME>. Go and bring me Neoma's bag.~ */
 	
 	= @16  /* ~(You fetch the bag and bring it to your love.)~ */
 	
-	= @17  /* ~Good. Now, get in bed.~ */
+	= @125 /* ~Don't just stand there, open it!~ */
 	
-	= @18  /* ~(Neoma moves over, and you get into bed. Schael opens the bag, pulls out a strap on, and puts it around her waist.)~ */
+	= @126 /*~(Reaching into the bag, you pull out what appears to be a strap-on. You glance at Schael with a look of confusion.)~*/
+
+	= @128 /* ~Gods, don't look so worried. It's not for you. Give it to me. Good, now get in bed.~*/
+	
+	= @129 /*~(She takes the strap-on and buckles it around her waist.)~ */
 	
 	= @19  /* ~You brought the big one. Feeling adventurous, are we?~ */
 	
@@ -376,8 +386,22 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_10
 END
 
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_12
-	SAY @30 /* ~(That's as good an invitation as any, you think to yourself, as you maneuver yourself between the head board and Neoma's, well, head. You take your dick in your hand and point it toward her. She kisses it, and rubs her cheeks against it, before taking it into her mouth. As you penetrate her from the front, Schael penetrates her from behind, and begins to thrust with a steady rhythm. You can feel the force of Schael's thrusts travel through Neoma, as the lovely redhead moans and shudders. In moments, you're able to time your own thrusts so that you are pushing in as Schael is pulling back, and vice-versa. The sight of Schael's beautiful breasts bouncing wildly with each powerful thrust is a delight to behold. After several exhilarating minutes of this double penetration, Schael reaches down to fondle Neoma's right breast. Neoma lets out a long, slow moan, and the vibration from her throat on the tip of your cock is unlike anything you've ever experienced before. You feel the pacing and intensity of Schael's thrusts start to fluctuate as she cries out in pure ecstasy.)~*/
+	SAY @30 /* ~(That's as good an invitation as any, you think to yourself, as you maneuver yourself between the head board and Neoma's, well, head. You take your dick in your hand and point it toward her. She kisses it, licks off the pre-cum that has accumulated on your tip, and rubs her cheeks against it.)~ */
 
+	= @130 /*~(Without another word, she takes you into her mouth. As you penetrate her from the front, Schael fucks her from behind, and begins to thrust with a steady rhythm. You can feel the force of Schael's thrusts travel through Neoma, down through the base of your shaft, as the lovely redhead moans and shudders.)*/
+	
+	= @133 /*~I think she likes it, love! Harder!~*/
+	
+	IF ~~ THEN
+	EXTERN XANEOMA XA_XAEXPL03_Neoma_12A
+	
+END
+
+IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_12B
+	SAY @131 /*~(In moments, you're able to time your own thrusts so that you are pushing in as Schael is pulling back, and vice-versa. The sight of Schael's beautiful breasts bouncing wildly with each powerful thrust is a delight to behold.)~*/
+	
+	= @132 /*~(After several exhilarating minutes of this double penetration, Schael reaches down to fondle Neoma's right breast. Neoma lets out a long, slow moan, and the vibration from her throat on the tip of your cock is unlike anything you've ever felt before. You feel the pacing and intensity of Schael's thrusts start to fluctuate as she cries out in pure ecstasy.)~*/
+	
 	= @22 /* ~Oh.... Oh gods! I — OH..... FUCK!~*/
 	
 	= @23 /*~(With one final, savage thrust forward, Schael reaches her climax. The force of the thrust pushes Neoma's body forward, and you feel your cock slide deep down her throat. Soon, the sensation of your tool being so deep inside of her becomes too much to bear, and you experience a tremendous ejaculation.)~ */
@@ -394,11 +418,13 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_14
 END
 
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_16
-	SAY @26  /* ~Here.~ */
+	SAY @134  /* ~(Quickly, she finds where she left the bag, and pulls out a towel.)~*/
+	
+	= @26 /* Here, hon. */
 	
 	= @27 /* ~(Schael gently wipes as much of your cum from Neoma's face as she can, though there's still a good amount of it in her hair.)~ */
 	
-	= @28  /* ~Don't worry, hon. I'll clean you up. I'm just going downstairs to get a pail of water.~ */
+	= @28  /* ~Don't worry. I'll clean you up. I'm just going downstairs to get a pail of water.~ */
 	
 	IF ~~ THEN
 	DO ~
