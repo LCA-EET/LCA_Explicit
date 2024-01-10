@@ -104,7 +104,10 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_5
 	
 	= @75  /*~Mm. Thank you, dear.~ */
 	
-	= @76  /*~(With the wine glass in one hand, she takes hold of your dick in the other and leads you back to the edge of the bed. You sit down, and tell each other about your day, while she lovingly strokes and caresses your package. After a few minutes of this teasing, you set your wine glasses aside. Schael stands to disrobe, and with just a couple of fluid movements, her dress falls to the floor. You think to yourself that you'll never get tired of seeing her beautiful, magnificent physique in all its nude glory.)~  */
+	= @76  /*~(With the wine glass in one hand, she takes hold of your dick in the other and leads you back to the edge of the bed. You sit down and tell each other about your day, while she lovingly strokes and caresses your package. With each soft, gentle, and loving stroke, more and more of your pre-cum seeps out of you and onto her hand.)~ */
+	
+	= @140 /*After a few minutes of this teasing, you set your wine glasses aside. Schael stands to disrobe, and with just a couple of fluid movements, her dress falls to the floor. You think to yourself that you'll never get tired of seeing her beautiful, magnificent physique in all its nude glory.)~  */
+	
 	
 	= @77  /* ~(Without another word, she turns and pushes you down so that you are laying flat on your back. She then straddles your body, so that her hips are directly over your erect, leaking cock.)~*/
 	
@@ -133,9 +136,11 @@ END
 		
 		= @116  /* ~(She looks up at you with a wide smile, then takes you into her mouth. Up and down her head bobs on your shaft, while you use your hand on the back of her head to help her get the rhythm just right. Throughout, you can hear Schael moan, giggle, and squeal as more and more of your pre-cum makes it into her mouth.)~*/
 		
-		= @122  /* ~Everything you've suffered, everything you've had to endure... you've earned this. With that thought in mind, you finally let go of your inhibitions, and allow yourself to fully enjoy the wonderful gift that this beautiful, incredible woman is giving you. After only a few minutes of this truly exquisite blowjob, you feel an intense surge begin to build in the base of your shaft...)~*/
+		= @122  /* ~(Her efforts send you into a state of bliss, unlike anything you've experienced before. Everything you've suffered, everything you've had to endure... you've earned this. With that thought in mind, you finally let go of your inhibitions, and allow yourself to fully enjoy the wonderful gift that this beautiful, incredible woman is giving you.)~*/
 		
-		IF ~~ THEN REPLY @84  /* ~I - I'm so close!~*/
+		= @141 /*~(You lose track of time... all that matters to you now is the pleasure that you're feeling, and the love that you two share for one another. Slowly, you're pulled from your reverie as you feel an intense surge build in the base of your shaft...)~*/
+		
+		IF ~~ THEN REPLY @84  /* Gods, Schael... I'm so close!~*/
 		GOTO XA_XAEXPL03_Schael_A_2
 	END
 
@@ -258,7 +263,7 @@ IF ~
 ~ THEN BEGIN XA_XAEXPL03_Neoma_24
 	SAY @41  /* ~(You awaken and see Schael getting dressed.)~*/
 	
-	IF ~~ THEN REPLY @36
+	IF ~~ THEN REPLY @36 /* ~Schael? Where are you going?~ */ 
 	DO ~
 		SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 8)
 	~
@@ -442,22 +447,27 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_25
 	DO ~
 		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
 	~
-	GOTO XA_XAEXPL03_Neoma_26
+	GOTO XA_LastNight
 	
-	IF ~
-		GlobalGT("XA_CorwinSex_3_Neoma", "GLOBAL", 0)
-	~ THEN REPLY @46 /* ~Oh, right. I wonder how Neoma's doing.~*/
+	IF ~~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
 	DO ~
 		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
 	~
-	GOTO XA_Neoma
+	GOTO XA_LastNight
+END
+
+IF ~~ THEN BEGIN XA_LastNight
+	SAY @136 /*~Last night was incredible, love. It a wonder how you manage to keep that battering ram between your legs so hard for so long.~*/
+	
+	IF ~~ THEN REPLY @137 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
+	GOTO XA_XAEXPL03_Neoma_26
+	
+	IF ~~ THEN REPLY @139 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
+	GOTO XA_XAEXPL03_Neoma_26		
 END
 
 IF ~~ THEN BEGIN XA_Neoma
 	SAY @47 /* ~You're worried about her? Don't be. She's a lot tougher than she looks.~*/
-	
-	IF ~~ THEN REPLY @48 /*~Definitely.~*/
-	GOTO XA_XAEXPL03_Neoma_26
 	
 	IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
 	GOTO XA_CheckNeoma
@@ -467,16 +477,13 @@ IF ~~ THEN BEGIN XA_Neoma
 END
 
 IF ~~ THEN BEGIN XA_Feelings
-	SAY @54 /* ~Don't be ridiculous, love. I've discussed this with her already. She understands that it's only sex.~ */
+	SAY @54 /* ~Don't be ridiculous, hon. I've discussed this with her already. She understands that it's only sex.~ */
 	
 	IF ~~ THEN REPLY @55 /*~That might be *your* understanding, but I'm not sure that it's hers.~*/
 	GOTO XA_NeomaRelationship
 	
 	IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
 	GOTO XA_CheckNeoma
-	
-	IF ~~ THEN REPLY @59 /*~I see...~*/
-	GOTO XA_XAEXPL03_Neoma_26
 END
 
 IF ~~ THEN BEGIN XA_NeomaRelationship
@@ -489,9 +496,6 @@ END
 IF ~~ THEN BEGIN XA_NeomaRelationship2
 	SAY @58 /*~It sounds like I need to talk to her. Thanks for letting me know, love. I'll stop by her place after the debriefing.~*/
 	
-	IF ~~ THEN REPLY @51 /*~The debriefing! Gods, with this hangover?~*/
-	GOTO XA_Hangover
-	
 	IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
 	GOTO XA_Sex3_Neoma_END
 END
@@ -499,21 +503,26 @@ END
 IF ~~ THEN BEGIN XA_CheckNeoma
 	SAY @50 /*~Fine. I'll stop by her place after the debriefing.~ */
 	
-	IF ~~ THEN REPLY @51 /*~The debriefing! Gods, with this hangover?~*/
-	GOTO XA_Hangover
-	
 	IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
 	GOTO XA_Sex3_Neoma_END
 END
 
 IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_26
-	SAY @39 /* ~See you at the debriefing, love.~*/
+	SAY @39 /* ~I'm heading out. See you at the debriefing, love.~*/
 	
 	IF ~~ THEN REPLY @42 /* ~Gods, the debriefing. With this hangover?~*/
 	GOTO XA_Hangover
 	
 	IF ~~ THEN REPLY @44 /* ~Right. See you there, love.~ */
 	GOTO XA_Sex3_Neoma_END
+	
+	IF ~
+		GlobalGT("XA_CorwinSex_3_Neoma", "GLOBAL", 0)
+	~ THEN REPLY @46 /* ~Wait — do you think Neoma's okay?~*/
+	DO ~
+		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+	~
+	GOTO XA_Neoma
 
 END
 

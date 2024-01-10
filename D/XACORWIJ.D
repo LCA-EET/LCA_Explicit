@@ -295,7 +295,7 @@ APPEND XACORWIJ
 	IF ~~ THEN BEGIN XA_CorwinSex2_4A
 		SAY @186 /* ~Good...~*/
 		
-		= @187 /*~(She widens her stance a bit, places her hands on her hips, and rolls her shoulders forwards and backwards. Slowly, she tenses the muscles in her arms, midsection and legs. You feel your cock become even harder, almost painfully so, as her beautiful breasts bounce slightly while she flexes her pectorals. The sight of her powerful, magnificent physique in all its nude glory causes you gasp in awe.)~/
+		= @187 /*~(She widens her stance a bit, places her hands on her hips, and rolls her shoulders forwards and backwards. Slowly, she tenses the muscles in her arms, midsection and legs. You feel your cock become even harder, almost painfully so, as her beautiful breasts bounce slightly while she flexes her pectorals. The sight of her powerful, magnificent physique in all its nude glory causes you gasp in awe.)~*/
 		
 		= @188 /*~(A smile graces her face as she eyes your wildly-throbbing member...)~*/
 		
@@ -392,7 +392,10 @@ APPEND XACORWIJ
 		
 		= @98 /* ~Try and break out of this hold, lover.~ */
 		
-		= @99 /* ~(You're on your left side, with your left arm pinned behind your body. Her right forearm is tight across your neck, with her right hand holding her left bicep. Her left hand is behind your head, pushing it down into her right forearm. You try but are unable with your right arm to break her hold. She gradually increases the pressure, and soon, you're on the verge of blacking out.)~ */
+		= @99 /* ~(You're on your left side, with your left arm pinned behind your body. Her right forearm is tight across your neck, with her right hand holding her left bicep. Her left hand is behind your head, pushing it down into her right forearm.)~ */
+		
+		= @197 /* ~(With your right arm, you try to pull her arm away from your neck, but to your surprise, she doesn't budge. Panicking, you try and use your legs to push yourself forward in an attempt to free your pinned arm, but to no avail; her beautiful, well-muscled legs are wrapped too tightly around yours. Gradually, she increases the pressure of her forearm against your neck, and soon you're on the verge of blacking out.)~
+*/
 		
 		= @100 /* ~Come on, hero. I thought a big, strong man like you couldn't be beaten by a woman.*/
 		
