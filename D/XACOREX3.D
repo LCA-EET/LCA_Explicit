@@ -274,9 +274,9 @@ IF ~
 	
 	= @34  /* ~Looks like we're both ready for round two...~*/
 	
-	= @35  /* ~(Schael takes hold of your erect penis and walks you back into bed. You spend the next few hours drinking wine and making love.)~ */
+	= @35  /* ~(Schael takes hold of your erect penis and walks you back into bed. You spend the next few hours enjoying fresh fruit, drinking wine, and making love. Afterward, the two of you enjoy a nice, warm, candlelit bath, before heading back into bed.)~  */
 	
-	= @135 /*~(Not wanting the night to end just yet, you take the opportunity to use some of the tongue techniques you learned from watching the two ladies, and successfully bring her to an other-wordly climax. This delighted Schael, so much so that she reciprocated by giving you the most fantastic and exquisite blowjob you've ever experienced. After several hours, and even more orgasms, you finally fall asleep in a warm and tender embrace.)~*/
+	= @135 /*~(Not wanting the night to end just yet, you take the opportunity to use some of the tongue techniques you learned earlier from watching the two ladies. Though it took a little time to find the right spot, you successfully managed to bring Schael to a screaming, other-wordly climax. This delighted her, so much so that she reciprocated by giving you the most fantastic and exquisite blowjob you've ever experienced. After several hours, and even more orgasms, you finally fall asleep in a warm and tender embrace.)~*/
 	
 	IF ~~ THEN 
 	DO ~
