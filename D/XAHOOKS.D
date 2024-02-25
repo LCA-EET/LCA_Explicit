@@ -59,6 +59,13 @@ EXTEND_BOTTOM XALCHOOK 1
 END
 //}
 
+ADD_TRANS_TRIGGER XAGOLSTO 0
+~
+	OR(3)
+		!Gender(Player1, MALE)
+		!Global("XA_CorwinRomanceActive", "GLOBAL", 2)
+		!Alignment(Player1, MASK_EVIL)
+~
 EXTEND_BOTTOM XAGOLSTO 0
 	IF ~
 		Gender(Player1, MALE)
