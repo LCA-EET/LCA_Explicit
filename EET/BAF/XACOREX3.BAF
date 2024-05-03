@@ -1,0 +1,31 @@
+IF
+	GlobalLT("XA_LCE_EX3Portrait", "LOCALS", 1)
+	Global("XA_PortraitChange_LCA", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		ApplySpellRES("XACHNG01", Myself)
+		SetGlobal("XA_LCE_EX3Portrait", "LOCALS", 1)
+		Continue()
+END
+
+IF
+	GlobalLT("XA_LCE_EX3Portrait", "LOCALS", 1)
+	Global("XA_PortraitChange_LCA", "GLOBAL", 0)
+THEN
+	RESPONSE #100
+		ApplySpellRES("XACHNG02", Myself)
+		SetGlobal("XA_LCE_EX3Portrait", "LOCALS", 1)
+		Continue()
+END
+
+IF
+	OR(2)
+		Global("XA_CorwinSex_3_Schael", "GLOBAL", 2)
+		Global("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+	Global("XA_LCE_EXTalk", "GLOBAL", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 2)
+		StartCutSceneMode()
+		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
+END
