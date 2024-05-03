@@ -1,0 +1,21 @@
+
+PRINT @300 /* ~Processing Return to Baldur's Gate components...~ */
+
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/rbg/d~
+COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/rbg/baf~
+
+COPY_EXISTING ~xaa582.are~ ~override/xaexpl03.are~ // ar0118
+WRITE_ASCII 0x94 ~xa03as~ #8 // replace the area script
+
+//{ CRE
+	COPY_EXISTING ~xacorwin.cre~ ~override/xacorex3.cre~
+	WRITE_ASCII 0x2CC ~xacorex3~ #8 	// Dialogue
+	WRITE_ASCII 0x280 ~xacorex3~ #20  	// Script Name
+	WRITE_ASCII 0x248 ~xacorex3~ #8		// Override Script
+	WRITE_ASCII 0x250 ~~ #8		// Class Script
+	WRITE_ASCII 0x258 ~~ #8		// Race Script
+	WRITE_ASCII 0x260 ~~ #8		// General Script
+	WRITE_ASCII 0x268 ~~ #8		// Default Script
+	REMOVE_CRE_ITEMS
+	WRITE_LONG 0x28 0x6210 // Change animation to Mage Female Human
+//}

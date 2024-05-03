@@ -1,7 +1,5 @@
 //{ XACORWIJ
 APPEND XACORWIJ
-	
-
 	//{ #region Corwin Sex 1 
 	IF ~
 		Global("XA_CorwinSex_1","GLOBAL",1)

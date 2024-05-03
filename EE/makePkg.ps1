@@ -1,4 +1,4 @@
-$basePath = "LCA_Explicit"
+$basePath = "LCA_Explicit_EE"
 $tp2Name = "LCA_Explicit"
 $modPath = $basePath + "/" + $tp2Name 
 $archive = $basePath + ".zip"
@@ -9,6 +9,8 @@ Remove-Item $archive -Force
 Remove-Item $exePath -Force
 
 $folders = @(
+'bg2',
+'rbg',
 'sod',
 'tra'
 )
@@ -21,8 +23,8 @@ Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath
 Copy-Item -Path "LICENSE.md" -Destination $modPath
 
 Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)
-Copy-Item -Path "Release Notes.md" -Destination ($basePath + "/Release Notes.md")
-Copy-Item -Path "User Guide.pdf" -Destination ($basePath + "/User Guide.pdf")
+Copy-Item -Path "Release Notes (LCA_Explicit).md" -Destination ($basePath + "/Release Notes.md")
+Copy-Item -Path "User Guide (LCA_Explicit).pdf" -Destination ($basePath + "/User Guide.pdf")
 
 $7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
 

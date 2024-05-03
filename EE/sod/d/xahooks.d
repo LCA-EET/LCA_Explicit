@@ -1,3 +1,6 @@
+/*
+	BDCORWIJ 303: ~Back to the city, then, as soon as we can. In the meantime, let's go find someplace a little more private...~ [BD54592]
+*/
 EXTEND_BOTTOM BDCORWIJ 303
 	IF ~
 		Gender(Player1,MALE)
@@ -11,7 +14,6 @@ APPEND BDCORWIJ
 		
 		IF ~~ THEN 
 		DO ~
-			SetGlobal("XA_LCE_XAEXPL00", "GLOBAL", 1)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL00")
 		~
