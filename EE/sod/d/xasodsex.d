@@ -44,22 +44,22 @@ APPEND BDCORWIJ
 	END
 	
 	IF ~~ THEN BEGIN XA_SODSex4
-		SAY @35 /* ~(Sensing how close you are to the edge, she rapidly moves her leg up and down, and flexes her thigh with all of her might.)~*/
+		SAY @35 /* ~(Sensing how close you are to the edge, she increases the rhythm and pressure of her leg against your package, while flexing her quadriceps with all of her might. Next, she leans in, and whispers a command that you cannot help but obey...)~*/
 		
-		= @22 /* ~Cum for me hero! Cum!~ */
+		= @22 /* ~That's it... Now, cum for me, hero! Cum for your woman!~ */
 		
 		IF ~~ THEN REPLY @10 /* ~Schael, I - I'm ... aahhhhh... ohhhh...nnhn!~ */
 		GOTO XA_SODSex5
 	END
 	
 	IF ~~ THEN BEGIN XA_SODSex5
-		SAY @13 /* ~(You moan uncontrollably as you spew your seed wildly into your trousers.)~ */ 
+		SAY @13 /* ~(You moan and shudder uncontrollably as you spew your seed into your undergarment and trousers.)~*/ 
 		
 		= @29 /* ~Mmm... give it to me, hero. Every last drop.~*/
 		
 		= @30 /* ~(She continues to rub her leg against your spent genitals, as they slowly return to their relaxed state.)~*/
 		
-		IF ~~ THEN REPLY @11 /*  ~My love, that was incredible ... thank you.~ */
+		IF ~~ THEN REPLY @11 /*  ~That was incredible ... thank you, Schael.~ */
 		GOTO XA_SODSex6
 		
 	END
@@ -80,9 +80,9 @@ APPEND BDCORWIJ
 	END
 	
 	IF ~~ THEN BEGIN XA_SODSex7
-		SAY @31 /* ~(She steps back, and looks down at the large wet spot that has formed in your pants.)~ */
+		SAY @31 /* ~(She steps back, and looks down at the large wet spot on the front of your pants.)~ */
 		
-		= @6 /* ~Wow, hah! That's quite a load you saved up for me. I'm impressed you lasted as long as you did.~*/
+		= @6 /* ~Wow, that's quite the load, isn't it? I'm impressed you lasted as long as you did.~*/
 		
 		= @23 /* ~Look, some of it even seeped through onto my leggings... oh, my...~ */
 		
