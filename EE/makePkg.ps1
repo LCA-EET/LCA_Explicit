@@ -12,7 +12,8 @@ $folders = @(
 'bg2',
 'rbg',
 'sod',
-'tra'
+'tra',
+'wav'
 )
 
 foreach($folder in $folders){
