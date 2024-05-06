@@ -48,3 +48,13 @@ WHILE (j < numtriggers) BEGIN // Disable the existing area triggers
 	j = (j + 1)
 END
 WRITE_ASCII 0x94 ~~ #8 // remove the area script
+
+//{ Sounds
+SET wavIdx = 100
+OUTER_WHILE (wavIdx < 170) BEGIN
+	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/wav/xalce%wavIdx%.wav~ THEN BEGIN
+		COPY ~%MOD_FOLDER%/wav/xalce%wavIdx%.wav~ ~override~
+	END
+	OUTER_SET wavIdx = (wavIdx + 1)
+END
+//}
