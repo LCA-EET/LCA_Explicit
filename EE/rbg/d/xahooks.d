@@ -19,6 +19,16 @@ EXTEND_BOTTOM XALCHOOK 1
 	~
 	EXIT
 END
+
+/*
+	XACORWIJ 704: ~(She laughs). Much more. See you later.~ 
+*/
+EXTEND_BOTTOM XACORWIJ 704
+	IF ~
+		Gender(Player1, MALE)
+	~ THEN
+	GOTO XA_Explicit_0004_M
+END
 //}
 
 APPEND XACORWIJ

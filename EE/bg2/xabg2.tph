@@ -3,58 +3,12 @@ PRINT @200 /* ~Processing Shadows of Amn components...~*/
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 
-OUTER_SET i = 0
-OUTER_SET j = 0
-OUTER_SET expiryOffset = 0x154
-
 COPY_EXISTING ~ar0312.are~ ~override/xaexpl01.are~
-READ_SHORT 0x58 numactors
-READ_SHORT 0x5A numtriggers
-READ_LONG 0x5C triggerOffset
-
-WHILE (i < numactors) BEGIN // Disable the existing area actors
-	WRITE_LONG expiryOffset 0
-	expiryOffset = (expiryOffset + 0x110)
-	i = (i + 1)
-END
-
-triggerFlagOffset = (triggerOffset + 0x60)
-WHILE (j < numtriggers) BEGIN // Disable the existing area triggers
-	WRITE_LONG triggerFlagOffset 256
-	triggerFlagOffset = (triggerFlagOffset + 0xC4)
-	j = (j + 1)
-END
 WRITE_ASCII 0x94 ~~ #8 // remove the area script
-
-OUTER_SET i = 0
-OUTER_SET j = 0
-OUTER_SET expiryOffset = 0x154
+LPF xa_delete_are_actors END
+LPF xa_delete_are_triggers END
 
 COPY_EXISTING ~ar0416.are~ ~override/xaexpl02.are~
-READ_SHORT 0x58 numactors
-READ_SHORT 0x5A numtriggers
-READ_LONG 0x5C triggerOffset
-
-WHILE (i < numactors) BEGIN // Disable the existing area actors
-	WRITE_LONG expiryOffset 0
-	expiryOffset = (expiryOffset + 0x110)
-	i = (i + 1)
-END
-
-triggerFlagOffset = (triggerOffset + 0x60)
-WHILE (j < numtriggers) BEGIN // Disable the existing area triggers
-	WRITE_LONG triggerFlagOffset 256
-	triggerFlagOffset = (triggerFlagOffset + 0xC4)
-	j = (j + 1)
-END
 WRITE_ASCII 0x94 ~~ #8 // remove the area script
-
-//{ Sounds
-SET wavIdx = 100
-OUTER_WHILE (wavIdx < 170) BEGIN
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/wav/xalce%wavIdx%.wav~ THEN BEGIN
-		COPY ~%MOD_FOLDER%/wav/xalce%wavIdx%.wav~ ~override~
-	END
-	OUTER_SET wavIdx = (wavIdx + 1)
-END
-//}
+LPF xa_delete_are_actors END
+LPF xa_delete_are_triggers END
