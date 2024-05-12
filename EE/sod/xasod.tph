@@ -5,5 +5,33 @@ COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/baf~
 
 COPY_EXISTING ~bd4100.are~ ~override/xaexpl00.are~
 WRITE_ASCII 0x94 ~~ #8 // remove the area script
+
 LPF xa_delete_are_actors END
 LPF xa_delete_are_triggers END
+
+PATCH_DEFINE_ARRAY xa_extras
+	BEGIN
+		bdff1271
+		bdwtr62
+		bdfist64 
+		bddagf61 
+		bdfist30 
+		bdfist31 
+		bdfist36 
+		bdfist38
+		bdfist30
+		bdfistx3
+		bdfist30
+		bdwtr31
+	END
+
+LPF xa_add_extras
+	INT_VAR
+		xa_minX = 810
+		xa_maxX = 1400
+		xa_minY = 671
+		xa_maxY = 1166
+		xa_numToGenerate = 25
+		xa_poolSize = 12
+		xa_orientation = 10 // NE
+END
