@@ -580,14 +580,14 @@ APPEND XACORWIJ
 		
 		= @145 /* ~(You spend the rest of the time going over a series of choke holds, leg locks, and armbars. She teaches you how to apply them, and how to break free from them. It'll take several years of practice before you're as proficient as she is, but you feel that the knowledge she's imparted to you has already increased your fighting ability.)~  */
 		
-		= @146 /* ~(During the lessons, it was difficult at times to focus, as the now familiar, strangely comforting feeling of being under Schael's control sent your libido into overdrive.)~*/
+		= @146 /* ~(During the lessons, it was difficult at times to focus, as the now familiar, strangely comforting feeling of being under Schael's total control sent your arousal through the roof.)~*/
 		
 		IF ~~ THEN 
 		GOTO XA_CorwinSex2_12
 	END
 
 	IF ~~ THEN BEGIN XA_CorwinSex2_12
-		SAY @147 /* ~You end up making love again before finally falling asleep.~ */
+		SAY @147 /* ~(Once the lessons has concluded, you eagerly made love to each other yet again, before finally falling asleep.)~ */
 		
 		IF ~~ THEN
 		DO ~
