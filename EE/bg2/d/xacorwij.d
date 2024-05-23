@@ -454,37 +454,43 @@ APPEND XACORWIJ
 		
 		= @111 /* ~You see, love? Raw strength and power are not enough to win every fight. You need to learn how and where to apply your strength.~ */
 		
-		= @112 /* ~(She reaches down and grabs your package once again. She laughs as you flinch in fear.)~ */
+		= @112 /* ~(She dismounts you and rises to her feet, while you slowly recover from your ordeal. You're still groggy, and don't notice her standing over your legs until she uses hers to gently move them apart. She kneels, so that her knees are resting against your groin and inner thighs. Unsure of what to expect, your flinch in fear as she suddenly grabs your package once again.)~*/
 		
 		= @113 /* ~Easy, dear. You'll enjoy this.~ */
 		
-		= @114 /* ~(Instead of squeezing, she begins to lovingly and gently caress your aching balls with her left hand, while her right hand softly strokes your member. In moments, you're once again sporting a rock hard erection.)~ */
+		= @114 /* ~(Instead of squeezing, she begins to lovingly and gently caress your aching balls, one in each of her skilled hands, while whispering a healing spell. Immediately, the pain in your genitals begins to subside. With her right hand, she softly strokes your member, while she continues to massage your balls with her left. In moments, you're once again sporting a rock hard erection.)~ */
 		
 		= @167 /*~That's right, love. Just relax...~*/
 		
-		= @115 /* ~(Kissing your neck, she seizes your fully erect tool and gives you a sensual handjob. Her hand, lubricated with your pre-cum, glides effortlessly up and down your shaft, slowly at first, then faster. It takes her less than a minute to force your seed out of you and onto her hand, while you moan weakly in submission and defeat.)~ */
+		= @115 /* ~(Her hand, now fully lubricated with your pre-cum, glides effortlessly up and down your shaft, slowly at first, then faster. It takes her less than a minute to force your milky white seed out of you; the first and most powerful blast hits her square in the chest, just above and in between her beautiful breasts. She continues to furiously stroke your cock in the midst of your orgasm, while you moan weakly in submission, defeat, and ... pleasure.)~ */
 		
-		= @116 /* ~(That she's so easily able to dominate you physically and sexually is equal parts humiliating and erotic, you think to yourself. She holds up and eyes her right hand, now covered and dripping with your copious ejaculate.)~ */
+		= @148 /* ~(After rewarding Schael with more and more of its warm and voluminous offering, your penis finally softens in her hands, which are now completely covered in your copious ejaculate. That she's so easily able to dominate you physically and sexually is equal parts humiliating and erotic, you think to yourself.)~ */
 		
-		= @117 /* ~Mm. What a mess.~ */
+		= @153 /* ~(She looks down at her chest as your cum slowly drips down between her breasts, and onto the ridges of her sculpted abdominal muscles.)~ */
 		
-		= @118 /* ~(She pushes you off her body and begins massaging her breasts with her left hand, while she fingers herself with the right.)~ */
+		= @154 /* ~Heh... looks like you finally managed to land a clean shot, hero. What a mess.~ */
 		
-		= @119 /* ~Ohhh... <CHARNAME>... my love... my... my hero... ohh! OHH!~*/
+		= @157 /*~(She again rises to her feet, then lays down on a carpeted area of the floor directly across from you. As you continue your recovery from your beating and subsequent orgasm, you hear Schael moaning, softly at first, then louder.)~  */
 		
-		= @120 /* ~(The sight and sound of Schael pleasuring herself while moaning your name is enough to reinvigorate your aching member. You stand over your love and begin to stroke your tool back to life. Eying your growing, throbbing tool, she spreads her legs and invites you in.)~ */
+		= @158 /* ~(You lift your head and look to her; she's on her back, with her left leg raised and bent at the knee, so that her heel is flat on the floor. Another sensual moan leaves her lips, while she uses left hand to massage her breasts. Her right hand, meanwhile, is occupied with the delightful task of fingering her most private area.)~*/
 		
-		= @121 /* ~Give it to me, lover! Show me how a great and powerful hero fucks his woman!~ */
+		= @119 /* ~Ohhh... <CHARNAME>... my man... my love... my... my hero! Ohh! OHH!~*/
+		
+		= @120 /* ~(The sight and sound of Schael pleasuring herself while moaning your name is enough to reinvigorate you, and you summon your recovered strength to get to your feet. Standing over her, you begin to stroke your tool back to life.)~*/
+		
+		= @149 /*~(Although mere minutes have passed since you experienced one of the most powerful orgasms of your young life, your virility is such that your cock begins to harden, in response to both your physical stimulation and Schael's seductive, stunning beauty. Lustily eyeing your growing, throbbing cock, she spreads her powerful legs and invites you in.)~*/
+		
+		= @121 /* ~Give it to me, lover! Show me how a hero fucks his woman!~ [xalce120] */
 		
 		= @122 /*  ~(You immediately mount her and ram your member deep inside of her. She's extraordinarily tight, and the feeling is exquisite. You passionately kiss as you increase and try to synchronize the pace of your thrusts.)~ */
 		
-		= @123 /* ~(Once your thrusts are in sync, you fondle and then squeeze Schael's ample breasts. This is enough to send her over the edge. Screaming in pleasure, she arches her body as she experiences an earth-shattering climax.)~ */
+		= @123 /*  ~(Once your thrusts are in sync, you fondle and then squeeze Schael's ample breasts, which are still wet from your previous explosion. The combined sensation of your forceful penetration and compression of her breasts is enough to send her over the edge. Screaming wildly in pleasure, she arches her body as she experiences an earth-shattering climax.)~ */
 		
-		= @124 /* ~(With a few more savage thrusts, you reach your own orgasm. Schael, still recovering from her orgasm, weakly scissors her legs around your waist as you release your semen deep inside of her.)~ */
+		= @124 /*  ~(With a few more savage thrusts, you reach your own orgasm. Schael, still recovering from her orgasm, weakly scissors her legs around your waist as you release your semen deep inside of her.)~  */
 		
-		= @125 /* ~(You pull out of Schael and roll over, so that you're laying side by side on the floor. Just in case Schael has any more ideas, you decide to cover your still aching package with your hands. She gets up first, and groggily walks over and falls into bed. You follow her and similarly collapse into bed.)~ */
+		= @125 /* ~(You pull out of Schael and roll over, so that you're laying side by side on the carpeted floor. Just in case she has any more ideas, you decide to cover your still twitching package with your hands. She gets up first, and groggily walks over and falls into bed. You follow her and similarly collapse into bed.)~ */
 		
-		= @126 /* ~(You both sleep soundly, for a while at least. After a couple of hours, you find yourself awake in bed and turn to look at Schael. You think of how much this beautiful, incredible woman has changed your life for the better, and the confluence of events that've led you to eachother.)~ */
+		= @126 /* ~(Completely exhausted, you both sleep soundly... for a while at least. After a couple of hours, you find yourself awake in bed and turn to look at Schael. Your mind is filled with thoughts of how much this beautiful, strong and incredible woman has changed your life for the better, and the confluence of events that've led you to each other.)~*/
 		
 		IF ~~ THEN REPLY @127 /* ~My love? Are you awake?~ */ 
 		GOTO XA_CorwinSex2_10
