@@ -25,7 +25,7 @@ PATCH_DEFINE_ARRAY xa_extras
 		bdwtr31
 	END
 
-LPF xa_add_extras
+LPF xa_add_extras_rescript
 	INT_VAR
 		xa_minX = 810
 		xa_maxX = 1400
@@ -34,4 +34,11 @@ LPF xa_add_extras
 		xa_numToGenerate = 25
 		xa_poolSize = 12
 		xa_orientation = 10 // NE
+	STR_VAR 
+		xa_override = ~None~
+		xa_class = ~None~
+		xa_race = ~None~
+		xa_general = ~None~
+		xa_default = ~None~
+		xa_specifics = ~None~
 END
