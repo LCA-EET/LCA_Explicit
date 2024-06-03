@@ -35,10 +35,10 @@ LPF xa_add_extras_rescript
 		xa_poolSize = 12
 		xa_orientation = 10 // NE
 	STR_VAR 
-		xa_override = ~None~
-		xa_class = ~None~
-		xa_race = ~None~
-		xa_general = ~None~
-		xa_default = ~None~
-		xa_specifics = ~None~
+		xa_override = ~xalcnull~
+		xa_class = ~xalcnull~
+		xa_race = ~xalcnull~
+		xa_general = ~xalcnull~
+		xa_default = ~xalcnull~
+		xa_specifics = ~xalcnull~
 END
