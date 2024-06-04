@@ -1,6 +1,16 @@
 /*
 	BDCORWIJ 303: ~Back to the city, then, as soon as we can. In the meantime, let's go find someplace a little more private...~ [BD54592]
 */
+
+ALTER_TRANS_ACTION BDCORWIJ
+BEGIN 303 END
+BEGIN 1 END
+BEGIN
+	"EPILOGUE"
+	~
+		GOTO XA_Explicit_0000
+	~
+END
 EXTEND_BOTTOM BDCORWIJ 303
 	IF ~
 		Gender(Player1,MALE)
