@@ -3,6 +3,8 @@ PRINT @100 /* ~Processing Siege of Dragonspear components...~ */
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/baf~
 
+EXTEND_TOP ~bd4300.bcs~ ~%MOD_FOLDER/sod/baf/xabd4300.baf~
+
 COPY_EXISTING ~bd4100.are~ ~override/xaexpl00.are~
 WRITE_ASCII 0x94 ~~ #8 // remove the area script
 
@@ -27,10 +29,10 @@ PATCH_DEFINE_ARRAY xa_extras
 
 LPF xa_add_extras_rescript
 	INT_VAR
-		xa_minX = 810
-		xa_maxX = 1400
-		xa_minY = 671
-		xa_maxY = 1166
+		xa_minX = 590
+		xa_maxX = 900
+		xa_minY = 1500
+		xa_maxY = 1700
 		xa_numToGenerate = 25
 		xa_poolSize = 12
 		xa_orientation = 10 // NE
