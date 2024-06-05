@@ -6,6 +6,7 @@ THEN
 		FadeToColor([30.0],0)
 		Wait(3)
 		RestorePartyLocations()
+		ChangeStat(Player1, FATIGUE, 7, SET)
 		FadeFromColor([30.0],0)
 		EndCutSceneMode()
 END
