@@ -7,6 +7,7 @@ THEN
 		Wait(3)
 		RestorePartyLocations()
 		ChangeStat(Player1, FATIGUE, 7, SET)
+		SetGlobal("XA_LC_Journal_Intimate", "GLOBAL", 1)
 		FadeFromColor([30.0],0)
 		EndCutSceneMode()
 END

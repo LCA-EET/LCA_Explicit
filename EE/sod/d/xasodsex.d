@@ -91,7 +91,6 @@ APPEND BDCORWIJ
 		IF ~~ THEN
 		DO ~
 			ChangeStat(Player1, XP, 25000, ADD)
-			AddJournalEntry(@14, INFO)
 			StartCutSceneMode()
 			StartCutScene("XACS0END")
 		~
