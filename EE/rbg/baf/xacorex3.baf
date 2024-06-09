@@ -20,8 +20,8 @@ END
 
 IF
 	OR(2)
-		Global("XA_CorwinSex_3_Schael", "GLOBAL", 2)
-		Global("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+		Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 2)
+		Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 2)
 	Global("XA_LCE_EXTalk", "GLOBAL", 1)
 THEN
 	RESPONSE #100

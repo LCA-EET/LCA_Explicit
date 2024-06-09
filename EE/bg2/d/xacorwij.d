@@ -2,7 +2,7 @@
 APPEND XACORWIJ
 	//{ #region Corwin Sex 1 
 	IF ~
-		Global("XA_CorwinSex_1","GLOBAL",1)
+		Global("XA_LC_CorwinSex_1","GLOBAL",1)
 		AreaCheck("XAEXPL01")
 	~ THEN BEGIN XA_XAEXPL01
 		SAY @0 /* ~This room is perfect.~ */
@@ -189,7 +189,7 @@ APPEND XACORWIJ
 
 	//{ #region Corwin Sex 2 - Dialog J-47 - Tested 2023-04-17
 	IF ~
-		Global("XA_CorwinSex_2", "GLOBAL", 1)
+		Global("XA_LC_CorwinSex_2", "GLOBAL", 1)
 		AreaCheck("XAEXPL02")
 		// play romance song
 	~ THEN BEGIN XA_XAEXPL02

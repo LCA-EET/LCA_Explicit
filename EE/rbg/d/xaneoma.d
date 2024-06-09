@@ -1,6 +1,6 @@
 APPEND XANEOMA
 	IF ~
-		Global("XA_CorwinSex_3_Neoma", "GLOBAL", 3)
+		Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 3)
 	~ THEN BEGIN XA_XAEXPL03_Neoma_17
 		SAY @23  /* ~(Schael prepares the bath, leaving you and Neoma sitting in an awkward silence.)~ */
 		
@@ -117,7 +117,7 @@ APPEND XANEOMA
 		
 		IF ~~ THEN 
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Neoma",  "GLOBAL", 4)
+			SetGlobal("XA_LC_CorwinSex_3_Neoma",  "GLOBAL", 4)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL3C")
 		~
@@ -133,7 +133,7 @@ APPEND XANEOMA
 		
 		IF ~~ THEN 
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 5)
+			SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 5)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL3D")
 		~

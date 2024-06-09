@@ -8,7 +8,7 @@ DO 1
 
 EXTEND_BOTTOM XALCHOOK 1
 	IF ~
-		Global("XA_CorwinSex_3", "GLOBAL", 1)
+		Global("XA_LC_CorwinSex_3", "GLOBAL", 1)
 		Gender(Player1, MALE)
 	~
 	THEN
@@ -39,7 +39,7 @@ APPEND XACORWIJ
 		
 		IF ~~ THEN
 		DO ~
-			SetGlobal("XA_CorwinSex_3", "GLOBAL", 1)
+			SetGlobal("XA_LC_CorwinSex_3", "GLOBAL", 1)
 			SetGlobal("XA_CorwinWithFamily","GLOBAL",1)
 			SetGlobal("XA_CorwinMetFamily","GLOBAL",2)
 			SetLeavePartyDialogueFile()

@@ -21,7 +21,7 @@ DO 2
 
 EXTEND_BOTTOM XALCHOOK 0
 	IF ~
-		Global("XA_CorwinSex_1", "GLOBAL", 1)
+		Global("XA_LC_CorwinSex_1", "GLOBAL", 1)
 		Gender(Player1, MALE)
 	~ THEN
 	DO ~
@@ -31,7 +31,7 @@ EXTEND_BOTTOM XALCHOOK 0
 	EXIT
 	
 	IF ~
-		Global("XA_CorwinSex_2", "GLOBAL", 1)
+		Global("XA_LC_CorwinSex_2", "GLOBAL", 1)
 		Gender(Player1, MALE)
 	~
 	THEN

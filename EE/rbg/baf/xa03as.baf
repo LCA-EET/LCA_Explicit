@@ -1,30 +1,30 @@
 
 
 IF
-	Global("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 5)
+		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 5)
 		RestPartyEx(0,0,FALSE)
 END
 
 IF
-	Global("XA_CorwinSex_3_Schael", "GLOBAL", 5)
+	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 5)
 THEN
 	RESPONSE #100
 		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
 END
 
 IF 
-	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 6)
+	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 6)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 7)
+		SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 7)
 		RestPartyEx(0,0,FALSE)
 END
 
 IF 
-	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 7)
+	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 7)
 THEN
 	RESPONSE #100
 		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))

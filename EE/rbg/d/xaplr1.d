@@ -1,7 +1,7 @@
 APPEND PLAYER1
 	//{ Corwin Sex 3 
 	IF ~
-		Global("XA_CorwinSex_3", "GLOBAL", 1)
+		Global("XA_LC_CorwinSex_3", "GLOBAL", 1)
 		AreaCheck("XAEXPL03")
 	~ THEN BEGIN XA_XAEXPL03
 		SAY @2 /* ~(With eager anticipation, you wait for Schael to arrive. You've made some preparations you think she'll enjoy, including buying a bottle of her favorite red — the dark wine from Berdusk. You've also taken the liberty of removing your armor and clothes.)~*/
@@ -12,7 +12,7 @@ APPEND PLAYER1
 			!Global("XA_CorwinNeomaRelationship", "GLOBAL", 2)
 		~ THEN
 		DO ~
-			SetGlobal("XA_CorwinSex_3", "GLOBAL", 2)
+			SetGlobal("XA_LC_CorwinSex_3", "GLOBAL", 2)
 		~
 		GOTO XA_XAEXPL03_Schael
 		
@@ -20,7 +20,7 @@ APPEND PLAYER1
 			Global("XA_CorwinNeomaRelationship", "GLOBAL", 2)
 		~ THEN
 		DO ~
-			SetGlobal("XA_CorwinSex_3", "GLOBAL", 2)
+			SetGlobal("XA_LC_CorwinSex_3", "GLOBAL", 2)
 		~
 		GOTO XA_XAEXPL03_Neoma
 	END
@@ -30,7 +30,7 @@ APPEND PLAYER1
 		
 		IF ~~ THEN REPLY @5 /* ~Come in!~*/
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+			SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 2)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL3A")
 		~
@@ -43,7 +43,7 @@ APPEND PLAYER1
 		
 		IF ~~ THEN REPLY @5 /* ~Come in!~*/
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 2)
+			SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 2)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL3S")
 		~

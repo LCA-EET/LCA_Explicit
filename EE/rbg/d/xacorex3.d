@@ -3,25 +3,25 @@ BEGIN ~XACOREX3~
 //{ Corwin Sex 3 - Schael
 
 IF ~
-	Global("XA_CorwinSex_3_Schael", "GLOBAL", 5)
+	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 5)
 ~ THEN BEGIN XA_XAEXPL03_Schael_End
 	SAY @41  /* ~(You awaken and see Schael getting dressed.)~*/
 	
 	IF ~~ THEN REPLY @36  /*  ~Schael? Where are you going?~*/
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 6)
+		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 6)
 	~
 	GOTO XA_XAEXPL03_Neoma_25
 END
 
 IF ~
-	Global("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
+	Global("XA_LC_CorwinSex_3_Schael_A", "GLOBAL", 1)
 ~ THEN BEGIN XA_XAEXPL03_Schael_A_4
 	SAY @93  /* ~(Using a towel and the warm bath water, you gently wipe her face clean. You also double check to make sure that none of it got in her hair, which, fortunately, it didn't.)~*/
 	
 	IF ~~ THEN REPLY @95  /*~Schael, you were amazing. Thank you.~ */
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 2)
+		SetGlobal("XA_LC_CorwinSex_3_Schael_A", "GLOBAL", 2)
 	~
 	GOTO XA_XAEXPL03_Schael_A_5
 END
@@ -37,7 +37,7 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_5
 	
 	IF ~~ THEN 
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
 		//StartCutSceneMode()
 		//StartCutScene("XAEXPL3E")
 	~
@@ -45,19 +45,19 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_5
 END
 
 IF ~
-	Global("XA_CorwinSex_3_Schael", "GLOBAL", 2)
+	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 2)
 ~ THEN BEGIN XA_XAEXPL03_Schael_1
 	SAY @61 /*~I'm glad you're still awake.~*/
 	
 	IF ~~ THEN REPLY @62 /*~Another few minutes and I wouldn't have been.~*/
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 3)
+		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 3)
 	~
 	GOTO XA_XAEXPL03_Schael_3
 	
 	IF ~~ THEN REPLY @63 /*~Wow... Schael, you look amazing...~*/
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 3)
+		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 3)
 	~
 	GOTO XA_XAEXPL03_Schael_2
 END
@@ -162,7 +162,7 @@ END
 		
 		IF ~~ THEN REPLY @91/* ~Let me heat up the bath water for you. I'll get you cleaned up, hon.~*/
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Schael_A", "GLOBAL", 1)
+			SetGlobal("XA_LC_CorwinSex_3_Schael_A", "GLOBAL", 1)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL3T")
 		~
@@ -206,7 +206,7 @@ END
 		
 		IF ~~ THEN 
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+			SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
 			//StartCutSceneMode()
 			//StartCutScene("XAEXPL3E")
 		~
@@ -247,7 +247,7 @@ END
 		
 		IF ~~ THEN 
 		DO ~
-			SetGlobal("XA_CorwinSex_3_Schael", "GLOBAL", 4)
+			SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
 			//StartCutSceneMode()
 			//StartCutScene("XAEXPL3E")
 		~
@@ -259,19 +259,19 @@ END
 
 //{ Corwin Sex 3 - Neoma
 IF ~
-	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 7)
+	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 7)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_24
 	SAY @41  /* ~(You awaken and see Schael getting dressed.)~*/
 	
 	IF ~~ THEN REPLY @36 /* ~Schael? Where are you going?~ */ 
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 8)
+		SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 8)
 	~
 	GOTO XA_XAEXPL03_Neoma_25
 END
 
 IF ~
-	Global("XA_CorwinSex_3_Neoma",  "GLOBAL",5)
+	Global("XA_LC_CorwinSex_3_Neoma",  "GLOBAL",5)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_23
 	SAY @32  /* ~Well, that was fun.~ */
 	
@@ -285,7 +285,7 @@ IF ~
 	
 	IF ~~ THEN 
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 6)
+		SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 6)
 		//StartCutSceneMode()
 		//StartCutScene("XAEXPL3E")
 	~
@@ -293,7 +293,7 @@ IF ~
 END
 
 IF ~
-	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 4)
+	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 4)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_21
 	SAY @29  /* ~(You watch as Schael tenderly washes Neoma's face and hair in the bath. In just a few minutes, the last remnants of your seed are washed away, and Neoma dries off and gets dressed. Schael uses the opportunity to take off the strap on and clean it before placing it back in Neoma's bag.)~*/
 	
@@ -302,7 +302,7 @@ IF ~
 END
 
 IF ~
-	Global("XA_CorwinSex_3_Neoma", "GLOBAL", 2)
+	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 2)
 ~ THEN BEGIN XA_XAEXPL03_Neoma_1
 	SAY @0 /* ~(Schael stumbles in, followed by Neoma, her 'friend' that you met earlier in the day. Neoma's carrying a bag with her. Both ladies appear to be somewhat inebriated.)~*/
 	
@@ -433,7 +433,7 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_16
 	
 	IF ~~ THEN
 	DO ~
-		SetGlobal("XA_CorwinSex_3_Neoma", "GLOBAL", 3)
+		SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 3)
 		StartCutSceneMode()
 		StartCutScene("XAEXPL3B")
 	~
@@ -517,7 +517,7 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_26
 	GOTO XA_Sex3_Neoma_END
 	
 	IF ~
-		GlobalGT("XA_CorwinSex_3_Neoma", "GLOBAL", 0)
+		GlobalGT("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 0)
 	~ THEN REPLY @46 /* ~Wait — do you think Neoma's okay?~*/
 	DO ~
 		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
