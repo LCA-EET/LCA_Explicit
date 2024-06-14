@@ -20,6 +20,9 @@ foreach($folder in $folders){
 	Copy-Item -Path $folder -Destination ($modPath + "/" + $folder) -Recurse
 }
 Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\functions.tph") -Destination $modPath
+Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\d_compactor.ps1") -Destination $PSScriptRoot
+& $PSScriptRoot/d_compactor.ps1 -dPath ($modPath)
+
 Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath 
 Copy-Item -Path "LICENSE.md" -Destination $modPath
 
