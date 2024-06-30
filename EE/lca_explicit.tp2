@@ -19,33 +19,15 @@ BEGIN @0 /* Love Conquers All (LCA) - Explicit~ */
 REQUIRE_COMPONENT "setup-LCA.tp2" "0" @2 /* ~This mod requires the Love Conquers All (LCA) mod to be installed first. Please install the LCA mod, then try again.~ */
 
 PRINT @1 /* ~Be advised, this mod is intended for mature audiences only (18 years of age and older).~ */
+ACTION_READLN ~xa_proceed~
 
-ACTION_IF (GAME_IS ~eet~) THEN BEGIN
-	OUTER_SET isEET = 1
-	PRINT @3  // ~Enhanced Edition Trilogy (EET) mod has been detected.~ 
-END ELSE BEGIN
-	OUTER_SET isEET = 0
-	PRINT @4  // ~Enhanced Edition Trilogy (EET) mod has NOT been detected.~ 
+OUTER_WHILE NOT(IS_AN_INT %xa_proceed%) BEGIN
+	PRINT @1 /* ~Be advised, this mod is intended for mature audiences only (18 years of age and older).~ */
+	ACTION_READLN ~xa_proceed~
 END
 
-INCLUDE ~%MOD_FOLDER%/functions.tph~
-LAF xa_copy_folder_contents 
-	STR_VAR
-		xa_relative_path = ~%MOD_FOLDER%/wav~
-END
-
-ACTION_IF (isEET = 1) THEN BEGIN
-	INCLUDE ~%MOD_FOLDER%/sod/xasod.tph~
-	INCLUDE ~%MOD_FOLDER%/bg2/xabg2.tph~
-	INCLUDE ~%MOD_FOLDER%/rbg/xarbg.tph~
+ACTION_IF(xa_proceed = 1) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/install.tph~
 END ELSE BEGIN
-	ACTION_IF(GAME_INCLUDES ~sod~) THEN BEGIN
-		PRINT @5  // ~Siege of Dragonspear detected.~ 
-		INCLUDE ~%MOD_FOLDER%/sod/xasod.tph~
-	END
-	ACTION_IF(GAME_IS ~bg2ee~) THEN BEGIN
-		PRINT @6  // ~Baldur's Gate II Enhanced Edition detected.~ 
-		INCLUDE ~%MOD_FOLDER%/bg2/xabg2.tph~
-		INCLUDE ~%MOD_FOLDER%/rbg/xarbg.tph~
-	END
+	PRINT @7 /*~Installation cancelled.~*/
 END

@@ -24,6 +24,7 @@ Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\d_compactor.ps1") -Destin
 & $PSScriptRoot/d_compactor.ps1 -dPath ($modPath)
 
 Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath 
+Copy-Item -Path ("install.tph") -Destination $modPath 
 Copy-Item -Path "LICENSE.md" -Destination $modPath
 
 Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)

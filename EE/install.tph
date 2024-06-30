@@ -1,0 +1,29 @@
+ACTION_IF (GAME_IS ~eet~) THEN BEGIN
+	OUTER_SET isEET = 1
+	PRINT @3  // ~Enhanced Edition Trilogy (EET) mod has been detected.~ 
+END ELSE BEGIN
+	OUTER_SET isEET = 0
+	PRINT @4  // ~Enhanced Edition Trilogy (EET) mod has NOT been detected.~ 
+END
+
+INCLUDE ~%MOD_FOLDER%/functions.tph~
+LAF xa_copy_folder_contents 
+	STR_VAR
+		xa_relative_path = ~%MOD_FOLDER%/wav~
+END
+
+ACTION_IF (isEET = 1) THEN BEGIN
+	INCLUDE ~%MOD_FOLDER%/sod/xasod.tph~
+	INCLUDE ~%MOD_FOLDER%/bg2/xabg2.tph~
+	INCLUDE ~%MOD_FOLDER%/rbg/xarbg.tph~
+END ELSE BEGIN
+	ACTION_IF(GAME_INCLUDES ~sod~) THEN BEGIN
+		PRINT @5  // ~Siege of Dragonspear detected.~ 
+		INCLUDE ~%MOD_FOLDER%/sod/xasod.tph~
+	END
+	ACTION_IF(GAME_IS ~bg2ee~) THEN BEGIN
+		PRINT @6  // ~Baldur's Gate II Enhanced Edition detected.~ 
+		INCLUDE ~%MOD_FOLDER%/bg2/xabg2.tph~
+		INCLUDE ~%MOD_FOLDER%/rbg/xarbg.tph~
+	END
+END

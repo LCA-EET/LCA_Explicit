@@ -1,11 +1,14 @@
 @0 = ~Love Conquers All (LCA) - Explicit~
-@1 = ~Be advised, this mod is intended for mature audiences only (18 years of age and older).~
+@1 = ~Be advised — This mod is intended for mature audiences only (18 years of age and older).
+0) Exit.
+1) Acknowledged. Proceed with the installation.
+Enter a value: ~
 @2 = ~This mod requires the Love Conquers All (LCA) mod to be installed first. Please install the LCA mod, then try again.~
 @3 = ~Enhanced Edition Trilogy (EET) mod has been detected.~
 @4 = ~Enhanced Edition Trilogy (EET) mod has NOT been detected.~
 @5 = ~Siege of Dragonspear detected.~
 @6 = ~Baldur's Gate II Enhanced Edition detected.~
-
+@7 = ~Installation cancelled.~
 @100 = ~Processing Siege of Dragonspear components...~
 
 
