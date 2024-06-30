@@ -29,5 +29,5 @@ END
 ACTION_IF(xa_proceed = 1) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/install.tph~
 END ELSE BEGIN
-	PRINT @7 /*~Installation cancelled.~*/
+	FAIL @7 /*~Installation cancelled.~*/
 END
