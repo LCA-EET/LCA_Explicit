@@ -3,7 +3,7 @@ PRINT @300 /* ~Processing Return to Baldur's Gate components...~ */
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/rbg/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/rbg/baf~
 
-COPY_EXISTING ~xaa582.are~ ~override/xaexpl03.are~ // BG1 ar0118
+COPY_EXISTING ~xaa586.are~ ~override/xaexpl03.are~ // BG1 ar0118
 WRITE_ASCII 0x94 ~xa03as~ #8 // replace the area script
 
 //{ CRE
