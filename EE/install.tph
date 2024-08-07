@@ -7,10 +7,7 @@ END ELSE BEGIN
 END
 
 INCLUDE ~%MOD_FOLDER%/functions.tph~
-LAF xa_copy_folder_contents 
-	STR_VAR
-		xa_relative_path = ~%MOD_FOLDER%/wav~
-END
+COPY ~%MOD_FOLDER%/wav~ ~override~
 
 ACTION_IF (isEET = 1) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/sod/xasod.tph~

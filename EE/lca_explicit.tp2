@@ -18,16 +18,22 @@ BEGIN @0 /* Love Conquers All (LCA) - Explicit~ */
 
 REQUIRE_COMPONENT "setup-LCA.tp2" "0" @2 /* ~This mod requires the Love Conquers All (LCA) mod to be installed first. Please install the LCA mod, then try again.~ */
 
-PRINT @1 /* ~Be advised, this mod is intended for mature audiences only (18 years of age and older).~ */
-ACTION_READLN ~xa_proceed~
-
-OUTER_WHILE NOT(IS_AN_INT %xa_proceed%) BEGIN
-	PRINT @1 /* ~Be advised, this mod is intended for mature audiences only (18 years of age and older).~ */
-	ACTION_READLN ~xa_proceed~
-END
+OUTER_SET xa_proceed = %argv[0]%
 
 ACTION_IF(xa_proceed = 1) THEN BEGIN
 	INCLUDE ~%MOD_FOLDER%/install.tph~
 END ELSE BEGIN
-	FAIL @7 /*~Installation cancelled.~*/
+	ACTION_READLN ~xa_proceed~
+
+	OUTER_WHILE NOT(IS_AN_INT %xa_proceed%) BEGIN
+		PRINT @1 /* ~Be advised, this mod is intended for mature audiences only (18 years of age and older).~ */
+		ACTION_READLN ~xa_proceed~
+	END
+
+	ACTION_IF(xa_proceed = 1) THEN BEGIN
+		INCLUDE ~%MOD_FOLDER%/install.tph~
+	END ELSE BEGIN
+		ABORT @7 /*~Installation cancelled.~*/
+	END
 END
+
