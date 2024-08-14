@@ -1,7 +1,7 @@
 APPEND BDCORWIJ
 	IF ~
 		Global("XA_LCE_XAEXPL00", "GLOBAL", 1)
-	~ THEN BEGIN XA_SODSex1
+	~ THEN BEGIN XA_LC_SODSex1
 		SAY @0 /* ~Hm. Not quite as secluded for what I really want to do to you, but this can work.~ */
 		
 		= @1 /* ~(She pushes you against the wall.)~ */
@@ -10,10 +10,10 @@ APPEND BDCORWIJ
 		DO ~
 			SetGlobal("XA_LCE_XAEXPL00", "GLOBAL", 2)
 		~
-		GOTO XA_SODSex2
+		GOTO XA_LC_SODSex2
 	END
 	
-	IF ~~ THEN BEGIN XA_SODSex2
+	IF ~~ THEN BEGIN XA_LC_SODSex2
 		SAY @3 /* ~Don't move. Just relax.~ */
 		
 		= @4 /*  ~(She moves her right leg between yours, so that the front of her thigh is resting against your crotch. Slowly, rhythmically, she flexes her quadriceps, and gently moves her leg up and down. The feeling of her leg rubbing against your package is amazing, and in moments you're sporting a rock hard erection.)~*/
@@ -23,10 +23,10 @@ APPEND BDCORWIJ
 		= @9 /*  ~(You passionately kiss, while Schael continues to use her powerful leg muscles to further stimulate your already leaking cock...)~ */
 		
 		IF ~~ THEN REPLY @18 /* ~Ahhh... let me take these off. They're just going to get in the way...~ */
-		GOTO XA_SODSex3
+		GOTO XA_LC_SODSex3
 	END
 	
-	IF ~~ THEN BEGIN XA_SODSex3
+	IF ~~ THEN BEGIN XA_LC_SODSex3
 		SAY @17 /* ~(You try and create some space between you and her so that you can remove your pants and free your tool, but she shoves you back into the wall.)~*/
 		
 		= @16 /* ~Don't! There are too many people around! Just keep still — trust me.~ */
@@ -40,19 +40,19 @@ APPEND BDCORWIJ
 		= @24 /* ~(You feel yourself begin to lose control.)~ */
 		
 		IF ~~ THEN REPLY @21 /* ~Just a little more... oh... oh, Schael!*/
-		GOTO XA_SODSex4
+		GOTO XA_LC_SODSex4
 	END
 	
-	IF ~~ THEN BEGIN XA_SODSex4
+	IF ~~ THEN BEGIN XA_LC_SODSex4
 		SAY @35 /* ~(Sensing how close you are to the edge, she increases the rhythm and pressure of her leg against your package, while flexing her quadriceps with all of her might. Next, she leans in, and whispers a command that you cannot help but obey...)~*/
 		
 		= @22 /* ~That's it... Now, cum for me, hero! Cum for your woman!~ */
 		
 		IF ~~ THEN REPLY @10 /* ~Schael, I - I'm ... aahhhhh... ohhhh...nnhn!~ */
-		GOTO XA_SODSex5
+		GOTO XA_LC_SODSex5
 	END
 	
-	IF ~~ THEN BEGIN XA_SODSex5
+	IF ~~ THEN BEGIN XA_LC_SODSex5
 		SAY @13 /* ~(You moan and shudder uncontrollably as you spew your seed into your undergarment and trousers.)~*/ 
 		
 		= @29 /* ~Mmm... give it to me, hero. Every last drop.~*/
@@ -60,26 +60,26 @@ APPEND BDCORWIJ
 		= @30 /* ~(She continues to rub her leg against your spent genitals, as they slowly return to their relaxed state.)~*/
 		
 		IF ~~ THEN REPLY @11 /*  ~That was incredible ... thank you, Schael.~ */
-		GOTO XA_SODSex6
+		GOTO XA_LC_SODSex6
 		
 	END
 	
-	IF ~~ THEN BEGIN XA_SODSex6
+	IF ~~ THEN BEGIN XA_LC_SODSex6
 		SAY @26 /*  ~(You kiss as Schael playfully pats your crotch.)~ */
 		
 		= @12 /*~It's the least I can do for the hero of Baldur's Gate. Just remember that it's only a taste of what awaits you when we get home, love.~*/
 		
 		IF ~~ THEN REPLY @32 /* ~I can't wait.~ */
-		GOTO XA_SODSex7
+		GOTO XA_LC_SODSex7
 		
 		IF ~~ THEN REPLY @33 /*~I'm going to hold you to that.~*/
-		GOTO XA_SODSex7
+		GOTO XA_LC_SODSex7
 		
 		IF ~~ THEN REPLY @34 /*~I have some things in store for you too, love.~*/
-		GOTO XA_SODSex7
+		GOTO XA_LC_SODSex7
 	END
 	
-	IF ~~ THEN BEGIN XA_SODSex7
+	IF ~~ THEN BEGIN XA_LC_SODSex7
 		SAY @31 /* ~(She steps back, and looks down at the large wet spot on the front of your pants.)~ */
 		
 		= @6 /* ~Wow, that's quite the load, isn't it? I'm impressed you lasted as long as you did.~*/

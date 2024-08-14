@@ -4,29 +4,29 @@ BEGIN ~XACOREX3~
 
 IF ~
 	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 5)
-~ THEN BEGIN XA_XAEXPL03_Schael_End
+~ THEN BEGIN XA_LC_XAEXPL03_Schael_End
 	SAY @41  /* ~(You awaken and see Schael getting dressed.)~*/
 	
 	IF ~~ THEN REPLY @36  /*  ~Schael? Where are you going?~*/
 	DO ~
 		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 6)
 	~
-	GOTO XA_XAEXPL03_Neoma_25
+	GOTO XA_LC_XAEXPL03_Neoma_25
 END
 
 IF ~
 	Global("XA_LC_CorwinSex_3_Schael_A", "GLOBAL", 1)
-~ THEN BEGIN XA_XAEXPL03_Schael_A_4
+~ THEN BEGIN XA_LC_XAEXPL03_Schael_A_4
 	SAY @93  /* ~(Using a towel and the warm bath water, you gently wipe her face clean. You also double check to make sure that none of it got in her hair, which, fortunately, it didn't.)~*/
 	
 	IF ~~ THEN REPLY @95  /*~Schael, you were amazing. Thank you.~ */
 	DO ~
 		SetGlobal("XA_LC_CorwinSex_3_Schael_A", "GLOBAL", 2)
 	~
-	GOTO XA_XAEXPL03_Schael_A_5
+	GOTO XA_LC_XAEXPL03_Schael_A_5
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_5
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_A_5
 	SAY @96  /* ~I'm glad you enjoyed it. I did, too, but next time I'll be better prepared.~*/
 	
 	= @33  /*~(She eyes your member, which has suddenly sprung back to life, and smiles.)~ */
@@ -46,54 +46,54 @@ END
 
 IF ~
 	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 2)
-~ THEN BEGIN XA_XAEXPL03_Schael_1
+~ THEN BEGIN XA_LC_XAEXPL03_Schael_1
 	SAY @61 /*~I'm glad you're still awake.~*/
 	
 	IF ~~ THEN REPLY @62 /*~Another few minutes and I wouldn't have been.~*/
 	DO ~
 		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 3)
 	~
-	GOTO XA_XAEXPL03_Schael_3
+	GOTO XA_LC_XAEXPL03_Schael_3
 	
 	IF ~~ THEN REPLY @63 /*~Wow... Schael, you look amazing...~*/
 	DO ~
 		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 3)
 	~
-	GOTO XA_XAEXPL03_Schael_2
+	GOTO XA_LC_XAEXPL03_Schael_2
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_2
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_2
 	SAY @64 /* ~Thanks, love. It's been so long since I've worn a dress!~*/
 	
 	IF ~~ THEN
-	GOTO XA_XAEXPL03_Schael_3
+	GOTO XA_LC_XAEXPL03_Schael_3
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_3
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_3
 	SAY @65 /*~Sorry I'm so late. It took a while to get Rohma to bed. She was so excited, she told me everything that she did with her grandfather while I was gone. Did you know she's first in her class at math?~*/
 	
 	IF ~~ THEN REPLY @66 /*~She's a smart kid.~*/
-	GOTO XA_XAEXPL03_Schael_4A
+	GOTO XA_LC_XAEXPL03_Schael_4A
 	
 	IF ~~ THEN REPLY @67 /*~No need to apologize. Sounds like you two had a great time.~*/
-	GOTO XA_XAEXPL03_Schael_4B
+	GOTO XA_LC_XAEXPL03_Schael_4B
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_4A
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_4A
 	SAY @73 /*~She really is... oh, what's this? You brought wine?~ */
 	
 	IF ~~ THEN REPLY @69 /*~Berduskan dark wine, your favourite. Would you like me to pour you a glass?~*/
-	GOTO XA_XAEXPL03_Schael_5
+	GOTO XA_LC_XAEXPL03_Schael_5
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_4B
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_4B
 	SAY @68 /*~We did... oh, what's this? You brought wine?~ */
 	
 	IF ~~ THEN REPLY @69 /*~Berduskan dark wine, your favourite. Would you like me to pour you a glass?~*/
-	GOTO XA_XAEXPL03_Schael_5
+	GOTO XA_LC_XAEXPL03_Schael_5
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Schael_5
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_5
 	SAY @70 /* ~Such a gentleman. Yes, please.~*/
 	
 	= @71 /* ~(You remove the covers, and Schael gasps with delight as she ogles your nude body.)~*/
@@ -114,19 +114,19 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Schael_5
 	= @78  /* ~So. What are your orders, hero?~ */
 	
 	IF ~
-		GlobalGT("XA_CorwinOpinionOfPlayer", "GLOBAL", 109)
+		GlobalGT("XA_LC_CorwinOpinionOfPlayer", "GLOBAL", 109)
 	~ THEN REPLY @79 /* ~(Reach up and take hold of the back of her head.)~*/
-	GOTO XA_XAEXPL03_Schael_A
+	GOTO XA_LC_XAEXPL03_Schael_A
 	
 	IF ~~ THEN REPLY @80 /* ~Fuck me, Schael!~*/
-	GOTO XA_XAEXPL03_Schael_B
+	GOTO XA_LC_XAEXPL03_Schael_B
 	
 	IF ~~ THEN REPLY @81 /* ~Turn around. I want to take you from behind.~*/
-	GOTO XA_XAEXPL03_Schael_C
+	GOTO XA_LC_XAEXPL03_Schael_C
 END
 
 	//{ Corwin A
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_A
 		SAY @121  /* ~Hm. You know what you want, and aren't afraid to take it... a quality I love in a man.~ */
 		= @82  /* ~Gods, I've been dreaming about this for so long...~ */
 		
@@ -141,10 +141,10 @@ END
 		= @141 /*~(You lose track of time... all that matters to you now is the pleasure that you're feeling, and the love that you two share for one another. Slowly, you're pulled from your reverie as you feel an intense surge build in the base of your shaft...)~*/
 		
 		IF ~~ THEN REPLY @84  /* Gods, Schael... I'm so close!~*/
-		GOTO XA_XAEXPL03_Schael_A_2
+		GOTO XA_LC_XAEXPL03_Schael_A_2
 	END
 
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_2
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_A_2
 		SAY @85 /* ~(Hearing this, Schael increases her rhythm and the pressure against your balls. With a scream, you release your seed into her.)~*/
 		
 		= @86 /*~Mmmfh!~ */
@@ -154,10 +154,10 @@ END
 		= @88  /* ~*Cough* *gag* *cough*~ */
 		
 		IF ~~ THEN REPLY @89  /* ~Love, are you alright?~ */
-		GOTO XA_XAEXPL03_Schael_A_3
+		GOTO XA_LC_XAEXPL03_Schael_A_3
 	END
 
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_A_3
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_A_3
 		SAY @90  /* ~I'm *cough* fine, love. Just hand me a towel...~*/
 		
 		IF ~~ THEN REPLY @91/* ~Let me heat up the bath water for you. I'll get you cleaned up, hon.~*/
@@ -171,7 +171,7 @@ END
 	//}
 
 	//{ Corwin B
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_B
 		SAY @92  /* ~(With a smile, she presses down on your cock as you easily slide into her. She's so warm and moist, and you can feel the tip of your cock smash against her cervix with each savage thrust.)~*/
 		
 		= @117 /* ~(You reach up to her large, beautiful tits and squeeze them, gently at first, then harder until Schael lets out a squeal. After several minutes, you can feel the pace and ferocity of Schael's thrusts increase, causing you to take hold of her hips, which are now covered in sweat.)~ */
@@ -183,10 +183,10 @@ END
 		= @100 /* ~(In moments, you feel a surge building in the base of your shaft.)~*/
 		
 		IF ~~ THEN REPLY @101 /* ~Schael, I - I'm so close! OH, GODS —~*/
-		GOTO XA_XAEXPL03_Schael_B_2
+		GOTO XA_LC_XAEXPL03_Schael_B_2
 	END
 
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B_2
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_B_2
 		SAY @102  /*~YES! GIVE IT TO ME, HERO!~ */
 		
 		= @103  /* ~(With a scream, the first three blasts of your seed explode into her as she reaches her own climax. A fourth, fifth, and sixth spurt are released with far less force than the first, as you can feel the cum ooze out of her and back onto your skin.)~*/
@@ -194,10 +194,10 @@ END
 		= @104 /* ~Oh, <CHARNAME>.... that was incredible... I love you.~ */
 		
 		IF ~~ THEN REPLY @105  /* ~You were amazing, dear. I love you too.~*/
-		GOTO XA_XAEXPL03_Schael_B_3
+		GOTO XA_LC_XAEXPL03_Schael_B_3
 	END
 
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_B_3
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_B_3
 		SAY @106  /*  ~(She dismounts your spent cock and lays at your side, with her head and arm on your chest. You're able to sleep for a little while, but are awakened by the welcome sensation of Schael stroking your penis back to life.)~*/
 		
 		= @34  /* ~Looks like we're both ready for round two...~*/
@@ -215,7 +215,7 @@ END
 	//}
 
 	//{ Corwin C
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_C
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_C
 		SAY @108  /* ~Hah! Feeling adventurous, are we?~*/
 		
 		= @109 /* ~(She dismounts you and moves to your side, then positions herself on all fours so that she's facing the headboard. You quickly position your cock behind her raised hips and ass, and take a moment to appreciate the view.)~  */
@@ -235,10 +235,10 @@ END
 		= @104 /* ~Oh, <CHARNAME>.... that was incredible... I love you.~ */
 		
 		IF ~~ THEN REPLY @105  /* ~You were amazing, dear. I love you too.~*/
-		GOTO XA_XAEXPL03_Schael_C_2
+		GOTO XA_LC_XAEXPL03_Schael_C_2
 	END
 	
-	IF ~~ THEN BEGIN XA_XAEXPL03_Schael_C_2
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_C_2
 		SAY @114  /* ~(You lay at each other's side, with her head and arm on your chest. You're able to sleep for a little while, but are awakened by the stirring of your cock, and the sensation of Schael fondling your balls.)~*/
 		
 		= @34  /* ~Looks like we're both ready for round two...~*/
@@ -260,19 +260,19 @@ END
 //{ Corwin Sex 3 - Neoma
 IF ~
 	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 7)
-~ THEN BEGIN XA_XAEXPL03_Neoma_24
+~ THEN BEGIN XA_LC_XAEXPL03_Neoma_24
 	SAY @41  /* ~(You awaken and see Schael getting dressed.)~*/
 	
 	IF ~~ THEN REPLY @36 /* ~Schael? Where are you going?~ */ 
 	DO ~
 		SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 8)
 	~
-	GOTO XA_XAEXPL03_Neoma_25
+	GOTO XA_LC_XAEXPL03_Neoma_25
 END
 
 IF ~
 	Global("XA_LC_CorwinSex_3_Neoma",  "GLOBAL",5)
-~ THEN BEGIN XA_XAEXPL03_Neoma_23
+~ THEN BEGIN XA_LC_XAEXPL03_Neoma_23
 	SAY @32  /* ~Well, that was fun.~ */
 	
 	= @33  /*~(Your member, which has suddenly sprung back to life, throbs in agreement. She eyes it, and smiles.)~*/
@@ -294,46 +294,46 @@ END
 
 IF ~
 	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 4)
-~ THEN BEGIN XA_XAEXPL03_Neoma_21
+~ THEN BEGIN XA_LC_XAEXPL03_Neoma_21
 	SAY @29  /* ~(You watch as Schael tenderly washes Neoma's face and hair in the bath. In just a few minutes, the last remnants of your seed are washed away, and Neoma dries off and gets dressed. Schael uses the opportunity to take off the strap on and clean it before placing it back in Neoma's bag.)~*/
 	
 	IF ~~ THEN
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_22
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_22
 END
 
 IF ~
 	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 2)
-~ THEN BEGIN XA_XAEXPL03_Neoma_1
+~ THEN BEGIN XA_LC_XAEXPL03_Neoma_1
 	SAY @0 /* ~(Schael stumbles in, followed by Neoma, her 'friend' that you met earlier in the day. Neoma's carrying a bag with her. Both ladies appear to be somewhat inebriated.)~*/
 	
 	= @1 /*  ~<CHARNAME>, Neoma. Neoma, <CHARNAME>, the hero of Baldursh Gate, and owner of the finest cock and biggest balls in the Sword Coast, or probably anywhere, heh.~*/
 	
 	IF ~~ THEN
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_2
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_2
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_3C
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_3C
 	SAY @60 /* ~Oh, stop it. I'm not on duty... well, Flaming Fist duty, anyway. Tonight, my duty is to fuck you senseless, hero.~*/
 	
 	IF ~~ THEN 
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_6A
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_6A
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_3B
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_3B
 	SAY @2 /* ~I'm sorry I'm late, love. It took a while for me to get Rohma to bed, then Neoma and I went out for a couple of... wait. Was it a couple?~*/
 	
 	IF ~~ THEN 
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_4
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_4
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_5
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_5
 	SAY @3 /* ~Wonderful, but I think I've had enough, at least for now. I promised you a night you wouldn't forget, and I need to deliver.~ */
 	
 	IF ~~ THEN
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_6
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_6
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_7
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_7
 	SAY @4 /* ~Get out of bed, and watch. Neoma and I are going to demonstrate the proper use of one's tongue.~*/
 	
 	= @5 /* ~(You pull off the covers, get out of bed and walk over to the chair. The two ladies gasp in delight as they ogle your nude body.)~ */
@@ -341,19 +341,19 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_7
 	= @6 /* ~Oh, my. Someone got started a little early, mm?~*/
 	
 	IF ~~ THEN
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_8
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_8
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_9
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_9
 	SAY @7 /* ~It tastes as good as it looks, too. Get undressed, hon.~*/
 	
 	= @8 /*~(You watch as Schael and Neoma slowly, sensually undress. Schael is as magnificent and beautiful as ever. Neoma is quite attractive as well; though not as sculpted as Schael, she's still very fit, with large, pink nipples, and reddish-brown hair that contrasts nicely with her pale, white, and very full breasts. Already, you feel a coolness at the tip of the cock as your pre-cum seeps out of you and begins to drip to the floor. Without thinking, you begin take hold of your tool and begin to stroke it.)~ */
 	
 	IF ~~ THEN REPLY @9 /* ~Ohhhh...~ */
-	GOTO XA_XAEXPL03_Neoma_10
+	GOTO XA_LC_XAEXPL03_Neoma_10
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_10
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_10
 	SAY @10  /* ~(Hearing your moan, Schael and Neoma turn to you as you continue to masturbate.)~ */
 	
 	= @11  /* ~Stop it! Don't you DARE play with that cock!~ */
@@ -387,10 +387,10 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_10
 	= @21  /* ~As for you, <CHARNAME>...~ */
 	
 	IF ~~ THEN
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_11
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_11
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_12
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_12
 	SAY @30 /* ~(That's as good an invitation as any, you think to yourself, as you maneuver yourself between the head board and Neoma's, well, head. You take your dick in your hand and point it toward her. She kisses it, licks off the pre-cum that has accumulated on your tip, and rubs her cheeks against it.)~ */
 
 	= @130 /*~(Without another word, she takes you into her mouth. As you penetrate her from the front, Schael fucks her from behind, and begins to thrust with a steady rhythm. You can feel the force of Schael's thrusts travel through Neoma, down through the base of your shaft, as the lovely redhead moans and shudders.)*/
@@ -398,11 +398,11 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_12
 	= @133 /*~I think she likes it, love! Harder!~*/
 	
 	IF ~~ THEN
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_12A
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_12A
 	
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_12B
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_12B
 	SAY @131 /*~(In moments, you're able to time your own thrusts so that you are pushing in as Schael is pulling back, and vice-versa. The sight of Schael's beautiful breasts bouncing wildly with each powerful thrust is a delight to behold.)~*/
 	
 	= @132 /*~(After several exhilarating minutes of this double penetration, Schael reaches down to fondle Neoma's right breast. Neoma lets out a long, slow moan, and the vibration from her throat on the tip of your cock is unlike anything you've ever felt before. You feel the pacing and intensity of Schael's thrusts start to fluctuate as she cries out in pure ecstasy.)~*/
@@ -412,17 +412,17 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_12B
 	= @23 /*~(With one final, savage thrust forward, Schael reaches her climax. The force of the thrust pushes Neoma's body forward, and you feel your cock slide deep down her throat. Soon, the sensation of your tool being so deep inside of her becomes too much to bear, and you experience a tremendous ejaculation.)~ */
 	
 	IF ~~ THEN 
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_13
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_13
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_14
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_14
 	SAY @24 /* ~Neoma! Are you alright?~*/
 	
 	IF ~~ THEN REPLY @25  /* ~I — I'm sorry, Neoma. I should've warned you I was about to —~ */
-	EXTERN XANEOMA XA_XAEXPL03_Neoma_15
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_15
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_16
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_16
 	SAY @134  /* ~(Quickly, she finds where she left the bag, and pulls out a towel.)~*/
 	
 	= @26 /* Here, hon. */
@@ -440,81 +440,81 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_16
 	EXIT
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_25
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_25
 	SAY @37  /* ~Home. I want to be there when Rohma wakes up.~ */
 	
 	IF ~~ THEN REPLY @38 /* ~Oh, of course. ~ */
 	DO ~
 		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
 	~
-	GOTO XA_LastNight
+	GOTO XA_LC_LastNight
 	
 	IF ~~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
 	DO ~
 		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
 	~
-	GOTO XA_LastNight
+	GOTO XA_LC_LastNight
 END
 
-IF ~~ THEN BEGIN XA_LastNight
+IF ~~ THEN BEGIN XA_LC_LastNight
 	SAY @136 /*~Last night was incredible, love. It a wonder how you manage to keep that battering ram between your legs so hard for so long.~*/
 	
 	IF ~~ THEN REPLY @137 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
-	GOTO XA_XAEXPL03_Neoma_26
+	GOTO XA_LC_XAEXPL03_Neoma_26
 	
 	IF ~~ THEN REPLY @139 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
-	GOTO XA_XAEXPL03_Neoma_26		
+	GOTO XA_LC_XAEXPL03_Neoma_26		
 END
 
-IF ~~ THEN BEGIN XA_Neoma
+IF ~~ THEN BEGIN XA_LC_Neoma
 	SAY @47 /* ~You're worried about her? Don't be. She's a lot tougher than she looks.~*/
 	
 	IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
-	GOTO XA_CheckNeoma
+	GOTO XA_LC_CheckNeoma
 	
 	IF ~~ THEN REPLY @53 /*~I think... Schael, I think she has feelings for you.~*/
-	GOTO XA_Feelings
+	GOTO XA_LC_Feelings
 END
 
-IF ~~ THEN BEGIN XA_Feelings
+IF ~~ THEN BEGIN XA_LC_Feelings
 	SAY @54 /* ~Don't be ridiculous, hon. I've discussed this with her already. She understands that it's only sex.~ */
 	
 	IF ~~ THEN REPLY @55 /*~That might be *your* understanding, but I'm not sure that it's hers.~*/
-	GOTO XA_NeomaRelationship
+	GOTO XA_LC_NeomaRelationship
 	
 	IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
-	GOTO XA_CheckNeoma
+	GOTO XA_LC_CheckNeoma
 END
 
-IF ~~ THEN BEGIN XA_NeomaRelationship
+IF ~~ THEN BEGIN XA_LC_NeomaRelationship
 	SAY @56 /* ... */
 	
 	IF ~~ THEN REPLY @57 /*~Schael?~*/
-	GOTO XA_NeomaRelationship2
+	GOTO XA_LC_NeomaRelationship2
 END
 
-IF ~~ THEN BEGIN XA_NeomaRelationship2
+IF ~~ THEN BEGIN XA_LC_NeomaRelationship2
 	SAY @58 /*~It sounds like I need to talk to her. Thanks for letting me know, love. I'll stop by her place after the debriefing.~*/
 	
 	IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
-	GOTO XA_Sex3_Neoma_END
+	GOTO XA_LC_Sex3_Neoma_END
 END
 
-IF ~~ THEN BEGIN XA_CheckNeoma
+IF ~~ THEN BEGIN XA_LC_CheckNeoma
 	SAY @50 /*~Fine. I'll stop by her place after the debriefing.~ */
 	
 	IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
-	GOTO XA_Sex3_Neoma_END
+	GOTO XA_LC_Sex3_Neoma_END
 END
 
-IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_26
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_26
 	SAY @39 /* ~I'm heading out. See you at the debriefing, love.~*/
 	
 	IF ~~ THEN REPLY @42 /* ~Gods, the debriefing. With this hangover?~*/
-	GOTO XA_Hangover
+	GOTO XA_LC_Hangover
 	
 	IF ~~ THEN REPLY @44 /* ~Right. See you there, love.~ */
-	GOTO XA_Sex3_Neoma_END
+	GOTO XA_LC_Sex3_Neoma_END
 	
 	IF ~
 		GlobalGT("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 0)
@@ -522,18 +522,18 @@ IF ~~ THEN BEGIN XA_XAEXPL03_Neoma_26
 	DO ~
 		SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
 	~
-	GOTO XA_Neoma
+	GOTO XA_LC_Neoma
 
 END
 
-IF ~~ THEN BEGIN XA_Hangover
+IF ~~ THEN BEGIN XA_LC_Hangover
 	SAY @43 /* ~Heh, I know what you mean. I poured you a glass of water. Drink it, it'll help.~  */
 	
 	IF ~~ THEN REPLY @45 /*~Thanks. See you at the debriefing, dear.~*/
-	GOTO XA_Sex3_Neoma_END
+	GOTO XA_LC_Sex3_Neoma_END
 END
 
-IF ~~ THEN BEGIN XA_Sex3_Neoma_END
+IF ~~ THEN BEGIN XA_LC_Sex3_Neoma_END
 	SAY @40 /*~(She plants a kiss on your forehead, and leaves.)~*/
 	
 	IF ~~ THEN

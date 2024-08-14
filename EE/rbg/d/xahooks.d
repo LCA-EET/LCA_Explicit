@@ -13,7 +13,7 @@ EXTEND_BOTTOM XALCHOOK 1
 	~
 	THEN
 	DO ~
-		SetGlobal("XA_SleepBG", "GLOBAL", 0)
+		SetGlobal("XA_LC_SleepBG", "GLOBAL", 0)
 		StartCutSceneMode()
 		StartCutScene("XAEXPL03")
 	~
@@ -27,12 +27,12 @@ EXTEND_BOTTOM XACORWIJ 704
 	IF ~
 		Gender(Player1, MALE)
 	~ THEN
-	GOTO XA_Explicit_0004_M
+	GOTO XA_LC_Explicit_0004_M
 END
 //}
 
 APPEND XACORWIJ
-	IF ~~ THEN BEGIN XA_Explicit_0004_M
+	IF ~~ THEN BEGIN XA_LC_Explicit_0004_M
 		SAY @2 /* ~(She turns and leaves. As she walks away, you gaze longingly at her well-formed ass and powerful, sexy legs.)~  */
 		
 		= @3 /* ~(Your mind fills with thoughts of what she has planned for tonight, and you groan as your erection strains against your leggings.)~*/
@@ -40,8 +40,6 @@ APPEND XACORWIJ
 		IF ~~ THEN
 		DO ~
 			SetGlobal("XA_LC_CorwinSex_3", "GLOBAL", 1)
-			SetGlobal("XA_CorwinWithFamily","GLOBAL",1)
-			SetGlobal("XA_CorwinMetFamily","GLOBAL",2)
 			SetLeavePartyDialogueFile()
 			ChangeAIScript("",OVERRIDE)
 			ChangeAIScript("",DEFAULT)

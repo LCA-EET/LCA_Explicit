@@ -3,7 +3,7 @@ IF
 THEN
 	RESPONSE #100
 		CutSceneId(Player1)
-		SetGlobal("XA_XAEXPL02", "GLOBAL", 1)
+		SetGlobal("XA_LC_XAEXPL02", "GLOBAL", 1)
 		StorePartyLocations()
 		FadeToColor([30.0],0)
 		Wait(3)

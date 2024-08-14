@@ -1,6 +1,6 @@
 APPEND XACORWIJ
 	//{ Spellhold
-	IF ~~ THEN BEGIN XA_XAGOLSTO_0
+	IF ~~ THEN BEGIN XA_LC_XAGOLSTO_0
 		SAY @4 /* ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling helplessly against her bonds to be profoundly erotic. The severity of the situation quickly stifles your arousal before your captors could notice.)~ */
 		
 		/*
@@ -47,14 +47,14 @@ ADD_TRANS_TRIGGER XAGOLSTO 0
 ~
 	OR(3)
 		!Gender(Player1, MALE)
-		!Global("XA_CorwinRomanceActive", "GLOBAL", 2)
+		!Global("XA_LC_CorwinRomanceActive", "GLOBAL", 2)
 		!Alignment(Player1, MASK_EVIL)
 ~
 EXTEND_BOTTOM XAGOLSTO 0
 	IF ~
 		Gender(Player1, MALE)
-		Global("XA_CorwinRomanceActive", "GLOBAL", 2)
+		Global("XA_LC_CorwinRomanceActive", "GLOBAL", 2)
 		Alignment(Player1, MASK_EVIL)
-	~ THEN EXTERN XACORWIJ XA_XAGOLSTO_0
+	~ THEN EXTERN XACORWIJ XA_LC_XAGOLSTO_0
 END
 

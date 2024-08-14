@@ -9,7 +9,7 @@ APPEND ~XALCDBG~
 	
 		IF ~~ THEN REPLY @201 /*~XAEXPL01 (SoA Intimate Encounter 1)~*/
 		DO ~
-			SetGlobal("XA_SleepInn", "GLOBAL", 1)
+			SetGlobal("XA_LC_SleepInn", "GLOBAL", 1)
 			SetGlobal("XA_LC_CorwinSex_1", "GLOBAL", 1)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL01")
@@ -18,7 +18,7 @@ APPEND ~XALCDBG~
 		
 		IF ~~ THEN REPLY @202 /*~XAEXPL02 (SoA Intimate Encounter 2)~*/
 		DO ~
-			SetGlobal("XA_SleepInn", "GLOBAL", 1)
+			SetGlobal("XA_LC_SleepInn", "GLOBAL", 1)
 			SetGlobal("XA_LC_CorwinSex_2", "GLOBAL", 1)
 			StartCutSceneMode()
 			StartCutScene("XAEXPL02")

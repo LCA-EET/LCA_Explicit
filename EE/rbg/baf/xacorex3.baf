@@ -1,6 +1,6 @@
 IF
 	GlobalLT("XA_LCE_EX3Portrait", "LOCALS", 1)
-	Global("XA_PortraitChange_LCA", "GLOBAL", 1)
+	Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
 THEN
 	RESPONSE #100
 		ApplySpellRES("XACHNG01", Myself)
@@ -10,7 +10,7 @@ END
 
 IF
 	GlobalLT("XA_LCE_EX3Portrait", "LOCALS", 1)
-	Global("XA_PortraitChange_LCA", "GLOBAL", 0)
+	Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
 THEN
 	RESPONSE #100
 		ApplySpellRES("XACHNG02", Myself)
