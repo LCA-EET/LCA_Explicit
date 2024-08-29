@@ -1,7 +1,13 @@
-## Love Conquers All (LCA) Release Notes
+## Love Conquers All (LCA) Explicit Release Notes
 
-# Report any bugs to LCAMod@danielvalle.net, or the Gibberlings 3 Forum Post 
-* Link to forum post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
+# If you require assistance with the mod, or find any bugs, you can contact me as indicated below. I'd also welcome any feedback or constructive criticism you have to offer.
+* Email: LCAMod@danielvalle.net
+* Discord Server: https://discord.gg/hwGf39gW9g
+* Gibberlings 3 Forum Post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
+* Beamdog Forum Post: https://forums.beamdog.com/discussion/87688/announcing-love-conquers-all-lca-corwin-romance-mod-for-eet
+
+# v1.2, 2024-08-28
+* Dialog and sound improvements.
 
 # v1.1, 2024-01-13
 * Dialog improvements based on feedback received.
