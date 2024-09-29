@@ -26,6 +26,7 @@ Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\d_compactor.ps1") -Destin
 Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath 
 Copy-Item -Path ("install.tph") -Destination $modPath 
 Copy-Item -Path "LICENSE.md" -Destination $modPath
+Copy-Item -Path "Discord Server.url" -Destination ($basePath + "/Discord Server.url")
 
 Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)
 Copy-Item -Path "Release Notes (LCA_Explicit).md" -Destination ($basePath + "/Release Notes.md")
