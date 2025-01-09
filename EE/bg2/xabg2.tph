@@ -3,6 +3,10 @@ PRINT @200 /* ~Processing Shadows of Amn components...~*/
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/baf~
 
+ACTION_IF FILE_EXISTS_IN_GAME ~xalcdbg.dlg~ THEN BEGIN
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/bg2/d/debug~
+END
+
 COPY_EXISTING ~ar0312.are~ ~override/xaexpl01.are~
 WRITE_ASCII 0x94 ~~ #8 // remove the area script
 LPF xa_delete_are_actors END

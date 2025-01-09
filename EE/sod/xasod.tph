@@ -3,6 +3,10 @@ PRINT @100 /* ~Processing Siege of Dragonspear components...~ */
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/baf~
 
+ACTION_IF FILE_EXISTS_IN_GAME ~xalcdbg.dlg~ THEN BEGIN
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/d/debug~
+END
+
 EXTEND_TOP ~bd4300.bcs~ ~%MOD_FOLDER%/sod/baf/xabd4300.baf~
 
 COPY_EXISTING ~bd4100.are~ ~override/xaexpl00.are~
