@@ -11,6 +11,6 @@ This mod patches the <a href="https://github.com/LCA-EET/LCA">Love Conquers All<
 - Oral Stimulation
 - Quirofilia
 
-Writing this content is difficult for obvious reasons. Sexuality is deeply personal; I focused on a broad set of the most "mainstream" kinks out there, so that there would be something for everyone to enjoy. 
+Writing this content is difficult for obvious reasons. Sexuality is deeply personal; I focused on a broad set of the most "mainstream" fetishes out there, so that there would be something for everyone to enjoy. 
 
 **Install at your own risk**.
