@@ -296,7 +296,7 @@ APPEND XACORWIJ
 		= @198 /*~Now, this might get a little intense. I want you to pick a safe word. If things get to be too much for you, just say the safe word and I'll stop.~*/
 		
 		IF ~~ THEN REPLY @199 /*~That won't be necessary. I'm sure I can handle whatever you have in store for me.~*/
-		GOTO XA_LC_ChoseWord
+		GOTO XA_LC_NoSafeWord
 		
 		IF ~~ THEN REPLY @201 /*~A safe word, eh? How about 'Elephant'?~*/
 		DO ~
@@ -315,6 +315,13 @@ APPEND XACORWIJ
 			SetGlobal("XA_LC_SafeWord", "LOCALS", 3)
 		~
 		GOTO XA_LC_ChoseMeadow
+	END
+
+	IF ~~ THEN BEGIN XA_LC_NoSafeWord
+		SAY @200 /* ~Suit yourself.~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_CorwinSex2_4A 
 	END
 
 	IF ~~ THEN BEGIN XA_LC_ChoseElephant

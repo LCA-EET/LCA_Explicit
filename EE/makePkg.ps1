@@ -20,17 +20,19 @@ foreach($folder in $folders){
 	Copy-Item -Path $folder -Destination ($modPath + "/" + $folder) -Recurse
 }
 Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\functions.tph") -Destination $modPath
+Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\Venmo.url") -Destination $modPath
+Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\PayPal.url") -Destination $modPath
 Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\d_compactor.ps1") -Destination $PSScriptRoot
 & $PSScriptRoot/d_compactor.ps1 -dPath ($modPath)
 
 Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath 
 Copy-Item -Path ("install.tph") -Destination $modPath 
 Copy-Item -Path "LICENSE.md" -Destination $modPath
-Copy-Item -Path "Discord Server.url" -Destination ($basePath + "/Discord Server.url")
+Copy-Item -Path "Discord Server.url" -Destination $modPath
 
 Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)
-Copy-Item -Path "Release Notes (LCA_Explicit).md" -Destination ($basePath + "/Release Notes.md")
-Copy-Item -Path "User Guide (LCA_Explicit).pdf" -Destination ($basePath + "/User Guide.pdf")
+#Copy-Item -Path "Release Notes (LCA_Explicit).md" -Destination ($basePath + "/Release Notes.md")
+#Copy-Item -Path "User Guide (LCA_Explicit).pdf" -Destination ($basePath + "/User Guide.pdf")
 
 $7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
 

@@ -4,7 +4,7 @@ ADD_TRANS_TRIGGER XALCHOOK 1
 ~
 	False()
 ~
-DO 1
+DO 0
 
 EXTEND_BOTTOM XALCHOOK 1
 	IF ~
@@ -21,9 +21,9 @@ EXTEND_BOTTOM XALCHOOK 1
 END
 
 /*
-	XACORWIJ 704: ~(She laughs). Much more. See you later.~ 
+	XACORWIJ 712: ~(She laughs). Much more. See you later.~ 
 */
-EXTEND_BOTTOM XACORWIJ 704
+EXTEND_BOTTOM XACORWIJ 712
 	IF ~
 		Gender(Player1, MALE)
 	~ THEN
