@@ -274,10 +274,10 @@ APPEND XACORWIJ
 		= @180 /*~Do you trust me?~*/
 		
 		IF ~~ THEN REPLY @181 /* ~Of course I do.~ */
-		GOTO XA_LC_CorwinSex2_4A
+		GOTO XA_LC_ChooseSafeWord
 		
 		IF ~~ THEN REPLY @182 /* ~With my life, you know that.~ */
-		GOTO XA_LC_CorwinSex2_4A
+		GOTO XA_LC_ChooseSafeWord
 		
 		IF ~~ THEN REPLY @183 /* ~What are you getting at?~ */
 		GOTO XA_LC_CorwinSex2_4B
@@ -287,11 +287,59 @@ APPEND XACORWIJ
 		SAY @184 /* ~It's a simple enough question. Do you trust me, or not?~*/
 		
 		IF ~~ THEN REPLY @185 /*~You know I do.~*/
+		GOTO XA_LC_ChooseSafeWord
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ChooseSafeWord
+		SAY @186 /* ~Good...~*/
+		
+		= @198 /*~Now, this might get a little intense. I want you to pick a safe word. If things get to be too much for you, just say the safe word and I'll stop.~*/
+		
+		IF ~~ THEN REPLY @199 /*~That won't be necessary. I'm sure I can handle whatever you have in store for me.~*/
+		GOTO XA_LC_ChoseWord
+		
+		IF ~~ THEN REPLY @201 /*~A safe word, eh? How about 'Elephant'?~*/
+		DO ~
+			SetGlobal("XA_LC_SafeWord", "LOCALS", 1)
+		~
+		GOTO XA_LC_ChoseElephant
+		
+		IF ~~ THEN REPLY @202 /*~I like the sound of this... let's use 'Pumpkin' as the safe word.~*/
+		DO ~
+			SetGlobal("XA_LC_SafeWord", "LOCALS", 2)
+		~
+		GOTO XA_LC_ChosePumpkin
+		
+		IF ~~ THEN REPLY @203 /*~I'll choose 'Meadow' as my safe word.~*/
+		DO ~
+			SetGlobal("XA_LC_SafeWord", "LOCALS", 3)
+		~
+		GOTO XA_LC_ChoseMeadow
+	END
+
+	IF ~~ THEN BEGIN XA_LC_ChoseElephant
+		SAY @204 /*~Elephant? Very well...~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_CorwinSex2_4A
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ChosePumpkin
+		SAY @205 /*~Pumpkin? They're not in season, but I suppose it's as good a word as any...~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_CorwinSex2_4A
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ChoseMeadow
+		SAY @206 /*~Meadow? Mm... there's nothing quite like laying on the grass on a spring day, under a clear blue sky... One day, you and I should... well. First things first.~*/
+		
+		IF ~~ THEN
 		GOTO XA_LC_CorwinSex2_4A
 	END
 
 	IF ~~ THEN BEGIN XA_LC_CorwinSex2_4A
-		SAY @186 /* ~Good...~*/
+		SAY @207 /* ~Let's get started, then.~ */
 		
 		= @187 /*~(She widens her stance a bit, places her hands on her hips, and rolls her shoulders forwards and backwards. Slowly, she tenses the muscles in her arms, midsection and legs. You feel your cock become even harder, almost painfully so, as her beautiful breasts bounce slightly while she flexes her pectorals. The sight of her powerful, magnificent physique in all its nude glory causes you gasp in awe.)~*/
 		
@@ -398,8 +446,61 @@ APPEND XACORWIJ
 		= @100 /* ~Come on, hero. I thought a big, strong man like you couldn't be beaten by a woman.*/
 		
 		IF ~~ THEN REPLY @155 /*~Ugh... Sch—~*/
+		DO ~
+			IncrementGlobal("XA_LC_Ordeal", "LOCALS", 1)
+		~
 		GOTO XA_LC_CorwinSex2_7ENDA
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 1)
+		~ THEN REPLY @208 /*El... elephant!*/
+		GOTO XA_LC_GiveUp_0
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 2)
+		~ THEN REPLY @209 /*Pum... pumpkin!*/
+		GOTO XA_LC_GiveUp_0
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 3)
+		~ THEN REPLY @210 /*M... meadow!*/
+		GOTO XA_LC_GiveUp_0
 	END
+	
+	IF ~~ THEN BEGIN XA_LC_GiveUp_0
+		SAY @212 /*~(Hearing you utter the safe word, Schael immediately releases her hold on your neck, and gives you a moment to regain your composure.)~*/
+		
+		= @213 /*~So, that's it? The real fun hadn't even started.~*/
+		
+		IF ~~ THEN REPLY @214 /*~Fun for you, maybe, ugh...~*/
+		DO ~
+			SetGlobal("XA_LCE_UsedSafeWord", "GLOBAL", 1)
+		~
+		GOTO XA_LC_GiveUp_0_2
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_GiveUp_0_2
+		SAY @215 /*~I'm sorry. I was too rough with you. Here, take my hand.~*/
+		
+		= @216 /*~(She helps you to your feet.)~*/
+		
+		= @217 /*~You've had a long day. Let's get to bed.~ */
+		
+		IF ~~ THEN
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("XAEX02E2")
+		~
+		EXIT
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_GiveUp_1
+		SAY @211 /*~(Hearing you utter the safe word, Schael immediately releases her hold on your neck and genitals, and gives you a moment to regain your composure.)~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_Released
+	END
+	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex2_7ENDA
 		SAY @156 /*~What was that? You *are* a man, aren't you?~*/
 		
@@ -412,7 +513,25 @@ APPEND XACORWIJ
 		= @104 /* ~(Your member shrinks due to the pain, and you frantically try with your right arm to break the vice-like grip she has on your balls. She responds by increasing the pressue on your neck. Your vision becomes dark as you try instead to pull her arm away from your neck, but as you do, she squeezes your jewels harder. Nearly in tears, you cry out in agony.)~ */
 		
 		IF ~~ THEN REPLY @105 /* ~Schael, y-you're hurting me! Please, stop! Let... aagh...  go!~*/
+		DO ~
+			IncrementGlobal("XA_LC_Ordeal", "LOCALS", 1)
+		~
 		GOTO XA_LC_CorwinSex2_8
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 1)
+		~ THEN REPLY @208 /*El... elephant!*/
+		GOTO XA_LC_GiveUp_1
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 2)
+		~ THEN REPLY @209 /*Pum... pumpkin!*/
+		GOTO XA_LC_GiveUp_1
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 3)
+		~ THEN REPLY @210 /*M... meadow!*/
+		GOTO XA_LC_GiveUp_1
 	END
 	IF ~~ THEN BEGIN XA_LC_CorwinSex2_7
 		SAY @87 /* ~(Dazed, you look up and see her standing over you, with her hands on her hips. Satisfied that you aren't getting up any time soon, she takes a seat on the edge of the bed, just next to where you went down.)~*/
@@ -444,15 +563,29 @@ APPEND XACORWIJ
 		= @107 /* ~(She squeezes even harder.)~ */
 		
 		IF ~~ THEN REPLY @108 /* ~AAAHH!~ */
+		DO ~
+			IncrementGlobal("XA_LC_Ordeal", "LOCALS", 1)
+		~
 		GOTO XA_LC_CorwinSex2_9
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 1)
+		~ THEN REPLY @208 /*El... elephant!*/
+		GOTO XA_LC_GiveUp_1
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 2)
+		~ THEN REPLY @209 /*Pum... pumpkin!*/
+		GOTO XA_LC_GiveUp_1
+		
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 3)
+		~ THEN REPLY @210 /*M... meadow!*/
+		GOTO XA_LC_GiveUp_1
 	END
 
-	IF ~~ THEN BEGIN XA_LC_CorwinSex2_9
-		SAY @109 /* ~(You let out a high pitch scream that she quickly silences by increasing the pressure on your neck. Your vision darkens again, and one last, pitiful shudder marks the end of your feeble attempts at resistance. Thoroughly beaten, you unclench your fists in an involuntary sign of surrender, and lay still.)~ */
-		
-		= @110 /* ~(Just as you are about to lose consciousness, she mercifully releases her grip on your genitals and loosens her choke hold. You feel your blood rush back into your head, and you regain your lucidity.)~ */
-		
-		= @111 /* ~You see, love? Raw strength and power are not enough to win every fight. You need to learn how and where to apply your strength.~ */
+	IF ~~ THEN BEGIN XA_LC_Released
+		SAY @111 /* ~You see, love? Raw strength and power are not enough to win every fight. You need to learn how and where to apply your strength.~ */
 		
 		= @112 /* ~(She dismounts you and rises to her feet, while you slowly recover from your ordeal. You're still groggy, and don't notice her standing over your legs until she uses hers to gently move them apart. She kneels, so that her knees are resting against your groin and inner thighs. Unsure of what to expect, your flinch in fear as she suddenly grabs your package once again.)~*/
 		
@@ -496,6 +629,16 @@ APPEND XACORWIJ
 		GOTO XA_LC_CorwinSex2_10
 	END
 
+	IF ~~ THEN BEGIN XA_LC_CorwinSex2_9
+		SAY @109 /* ~(You let out a high pitch scream that she quickly silences by increasing the pressure on your neck. Your vision darkens again, and one last, pitiful shudder marks the end of your feeble attempts at resistance. Thoroughly beaten, you unclench your fists in an involuntary sign of surrender, and lay still.)~ */
+		
+		= @110 /* ~(Just as you are about to lose consciousness, she mercifully releases her grip on your genitals and loosens her choke hold. You feel your blood rush back into your head, and you regain your lucidity.)~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_Released
+		
+	END
+
 	IF ~~ THEN BEGIN XA_LC_CorwinSex2_10
 		SAY @128 /*  ~(She slowly opens her eyes.)~ */
 		
@@ -509,7 +652,14 @@ APPEND XACORWIJ
 		IF ~~ THEN REPLY @132 /* ~No, you were *amazing* Schael. You certainly know how to keep things interesting in the bedroom.~*/
 		GOTO XA_LC_CorwinSex2_10B
 		
-		IF ~~ THEN REPLY @133 /* ~We'll need a safe word next time for sure.~ */
+		IF ~
+			Global("XA_LC_SafeWord", "LOCALS", 0)
+		~ THEN REPLY @133 /* ~We'll need a safe word next time for sure.~ */
+		GOTO XA_LC_CorwinSex2_10C
+		
+		IF ~
+			GlobalGT("XA_LC_SafeWord", "LOCALS", 0)
+		~ THEN REPLY @218 /*~It's a good thing I had that safe word...~*/
 		GOTO XA_LC_CorwinSex2_10C
 		
 		IF ~~ THEN REPLY @191 /* ~I haven't felt that helpless since I was captured by Irenicus.~ */
