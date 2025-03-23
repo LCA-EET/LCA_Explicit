@@ -24,7 +24,10 @@ APPEND ~XALCDBG~
 			StartCutScene("XAEXPL02")
 		~
 		EXIT
-	
+		
+		IF ~~ THEN REPLY @0
+		GOTO XALCDBG 10
+		
 		COPY_TRANS XALCDBG 11
 	END
 	
