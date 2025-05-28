@@ -1,0 +1,7 @@
+BEGIN ~XACORF1~
+
+IF ~
+	AreaCheck("XAEXPL01")
+~ THEN BEGIN XA_Intro
+	SAY @0 
+END

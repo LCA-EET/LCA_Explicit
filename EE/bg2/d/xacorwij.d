@@ -1,6 +1,6 @@
 //{ XACORWIJ
 APPEND XACORWIJ
-	//{ #region Corwin Sex 1 
+	//{ #region Corwin Sex 1
 	IF ~
 		Global("XA_LC_CorwinSex_1","GLOBAL",1)
 		AreaCheck("XAEXPL01")
@@ -11,15 +11,8 @@ APPEND XACORWIJ
 		
 		= @2 /* ~Help me take this armor off.~  */
 		
-		IF ~
-			Gender(Player1, MALE)
-		~ THEN REPLY @3 /* ~(Lift off her chainmail armor and set it aside.)~ */
+		IF ~~ THEN REPLY @3 /* ~(Lift off her chainmail armor and set it aside.)~ */
 		GOTO XA_LC_CorwinSex1_2
-		
-		IF ~
-			Gender(Player1, FEMALE)
-		~ THEN REPLY @3
-		GOTO XA_LC_CorwinSex1_8
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_2
@@ -37,17 +30,45 @@ APPEND XACORWIJ
 		
 		IF ~~ THEN REPLY @10 /* ~Schael, y-you're so beautiful, I.. I —~ */
 		GOTO XA_LC_CorwinSex1_3
+		
+		IF ~~ THEN REPLY @219 /*~*Gulp*~ */
+		GOTO XA_LC_CorwinSex1_3
+		
+		IF ~~ THEN REPLY @220 /* ~Ohhh.... oh WOW...~*/
+		GOTO XA_LC_CorwinSex1_3
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_3
 		SAY @11 /* ~What are you doing? Get out of those clothes!~ */
 		= @12 /* ~(She's as used to giving orders in the bedroom as she is outside of it, you think to yourself.)~ */
 		
-		IF ~~ THEN REPLY @13 /* ~R-right.~ */
-		GOTO XA_LC_ScarTalk
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @13 /* ~R-right.~ */
+		GOTO XA_LC_ScarTalk_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @13  /* ~R-right.~ */
+		GOTO XA_LC_ScarTalk_F
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_ScarTalk
+	IF ~~ THEN BEGIN XA_LC_ScarTalk2
+		SAY @170 /* ~Don't be ridiculous. I love you, <CHARNAME>. I just wasn't prepared for it, that's all. Where else did he hurt you?~*/
+		
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
+		GOTO XA_LC_ScarTalk3_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
+		GOTO XA_LC_ScarTalk3_F
+	END
+	
+	//{ M/F
+	IF ~~ THEN BEGIN XA_LC_ScarTalk_M
 		SAY @163 /* ~(You hurriedly remove your armor, then your shirt. Before you can remove your pants, she gasps.)~ */
 		
 		= @164 /*~What... gods, look what he did do to you...~*/
@@ -60,14 +81,7 @@ APPEND XACORWIJ
 		GOTO XA_LC_ScarTalk2
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_ScarTalk2
-		SAY @170 /* ~Don't be ridiculous. I love you, <CHARNAME>. I just wasn't prepared for it, that's all. Where else did he hurt you?~*/
-		
-		IF ~~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
-		GOTO XA_LC_ScarTalk3
-	END
-	
-	IF ~~ THEN BEGIN XA_LC_ScarTalk3
+	IF ~~ THEN BEGIN XA_LC_ScarTalk3_M
 		SAY @172 /*~Let me see.~*/
 		
 		= @173 /* ~(You turn around and hear a slight gasp. In moments, she reaches out to touch your scars. The feeling of her fingers caressing your back is soothing. In moments, you feel something warm and wet touch your skin... It's Schael, kissing one the largest of the many scars that were left on your back.)~*/
@@ -75,10 +89,10 @@ APPEND XACORWIJ
 		= @175 /* ~Now turn around, and take those off.~ */
 		
 		IF ~~ THEN
-		GOTO XA_LC_CorwinSex1_4
+		GOTO XA_LC_CorwinSex1_4_M
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_4
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_4_M
 		SAY @176 /* ~(You quickly lower your pants and nearly trip over yourself while doing so. She laughs, and a wide smile graces her face as she eyes your throbbing, erect member.)~*/
 		
 		= @178 /* ~Well... at least he had the decency to leave *some* parts of you unharmed. You have a beautiful cock, and ... you're even bigger than I expected. What a pleasant surprise.~ */
@@ -98,10 +112,10 @@ APPEND XACORWIJ
 		= @19 /* ~This is what you want, isn't it lover?~ */
 		
 		IF ~~ THEN REPLY @22 /* @22 = ~Ohhhh.... Schael....~ */
-		GOTO XA_LC_CorwinSex1_5
+		GOTO XA_LC_CorwinSex1_5_M
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_5
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_5_M
 		SAY @23 /* ~(In a fluid motion, she pulls back, and drops to her knees. Realizing what is about to happen, you brace yourself.) ~ */
 		
 		= @24 /* ~It's about time you received a worthy reward for all that you've done.~   */
@@ -121,10 +135,10 @@ APPEND XACORWIJ
 		= @31 /* ~Mm. Normally, I'd ask you to return the favor, but today is about you, love. Are you ready?~ */
 		
 		IF ~~ THEN REPLY @32 /* ~(Forcefully grab her hips and pull them into your own).~  */
-		GOTO XA_LC_CorwinSex1_6
+		GOTO XA_LC_CorwinSex1_6_M
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_6
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_6_M
 		SAY @33 /* ~I'll take that as a yes.~ */
 		
 		= @34 /* ~(She shoves you onto the bed, and climbs in so that she is atop your midsection. Without another word, she presses down on you).~  */
@@ -138,10 +152,10 @@ APPEND XACORWIJ
 		= @38 /* ~(You increase the pace and strength of your thrusts. Suddenly, Schael lets out a loud moan and cries out your name. You fear that you may have hurt her, and stop your thrusting.)~ */
 		
 		IF ~~ THEN REPLY @39 /* ~Schael, are you alright? Am I hurting — d-do you want me to stop?~  */
-		GOTO XA_LC_CorwinSex1_7
+		GOTO XA_LC_CorwinSex1_7_M
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_7
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_7_M
 		SAY @40 /* ~(She pulls your head up to hers and gives you a savage kiss.)~ */
 		
 		= @41 /* ~No, you're not hurting me, but I may hurt you if you stop again. Fuck me, hero! FUCK ME!!~ */
@@ -163,10 +177,10 @@ APPEND XACORWIJ
 		= @49 /* ~You don't know how much I needed that. Thank you, love.~  */
 		
 		IF ~~ THEN REPLY @50 /* ~Schael, you were incredible, I - I can't even —~ */
-		GOTO XA_LC_CorwinSex1_8
+		GOTO XA_LC_CorwinSex1_8_M
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8_M
 		SAY @51 /* ~(She smiles warmly, and places her finger across your lips.)~ */
 		
 		= @52 /* ~Shh, lover. It's time for us to get some rest. Just know that this, and more, is what awaits you when we finally return home. I love you, <CHARNAME>.~ */
@@ -174,6 +188,107 @@ APPEND XACORWIJ
 		IF ~~ THEN REPLY @53 /* ~I love you too, Schael. */
 		GOTO XA_LC_CorwinSex1_9
 	END
+	//}
+	
+	//{ F/F
+	IF ~~ THEN BEGIN XA_LC_ScarTalk_F
+		SAY @221 /* ~(Try as you might, you're unable to pull your gaze away from her even as you begin to undress. It's as though her body is some kind of magnificent sculpture that has been brought to life. Her tits, in particular, seem to beckon to you; you imagine what it would be like to taste them, while running your hands over her amazing, powerful physique.)~*/
+		
+		=@222 /* ~(You take a deep breath and are able regain your composure. Quickly, yet methodically, you work on undoing each of the knots holding your vestment in place. The last knot, however, turns out to be quite stubborn and resists all of your efforts to untie it. Seeing your growing frustration, Schael laughs.)~  */		
+		
+		= @223 /* ~Heh. Here, let me help you with that.~*/
+		
+		= @224 /* ~(She walks up so that she is behind you, and you can feel her breasts pressing into your back. With her skilled hands, she reaches around and undoes the troublesome knot. After planting a soft, gentle kiss on your neck, she removes your vestment, and lets out an audible gasp.)~*/
+		
+		= @164 /* ~What... gods, what did he do to you...~ */
+		
+		= @225 /* ~(You're suddenly reminded of the grievous scars left behind from your imprisonment at the hands of Irenicus. You feel your face flush with shame and embarrassment, and, unsure of what to do, you try and take back the vestment from Schael's hands.)~*/
+		
+		= @226 /* ~No, stop it! I ... I want to see. Please.~ */
+		
+		= @227 /* ~(She places her hands on your chest and gently moves them on and around your scars. The feeling of her hands on your breasts is soothing, and you can feel your nipples harden in response to her touch.)~ */
+		
+		= @166 /* ~Irenicus... damn him! I... I'm so sorry that you had to endure this. It must've been excruciating.~ [xalce122]*/
+		
+		IF ~~ THEN REPLY @169 /* ~Listen... if you're having second thoughts... I'd understand.~ */
+		GOTO XA_LC_ScarTalk2
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ScarTalk3_F
+		SAY @172 /* ~Let me see.~ [xalce123] */ 
+		
+		= @228 /* ~(You turn around and hear a slight gasp. Soon, you feel something warm and wet against your skin... It's Schael, kissing the largest of the many scars that mar your back. You're pulse quickens, and with each kiss, the warmth and wetness of your sex becomes more pronounced.)~ */
+		
+		= @175 /* ~Now turn around, and take those off.~ [xalce124] */
+		
+		= @229 /* ~(You quickly lower your pants and nearly trip over yourself while doing so. She laughs, and a wide smile graces her face as she eyes your snatch and emerging clit.)~*/
+		
+		= @230 /* ~Well... at least he had the decency to leave *some* parts of you unharmed.~ */
+		
+		= @231 /* ~Come here, love.~ */
+		
+		IF ~~ THEN REPLY @232 /* ~Schael, you should know that I ... I've never been with another woman before. I, ah... I don't want to disappoint you.~ */
+		GOTO XA_LC_ScarTalkEnd_F_1
+		
+		IF ~~ THEN REPLY @233 /* ~Are you sure that my scars don't bother you?~*/
+		GOTO XA_LC_ScarTalkEnd_F_2
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ScarTalkEnd_F_1
+		SAY @234 /* ~Disappoint me?~ */
+		
+		= @235 /* ~(She takes hold of your hand.)~ */
+		
+		= @236 /* ~You could never. Besides, I suspected as much ... Candlekeep, from the little I know of it, isn't exactly renowned for welcoming women. I, on the other hand ... ~*/
+		
+		= @240 /* ~(She reaches down and gently pulls your hips into hers.)~ */
+		
+		= @237 /*~... take pride in making a woman feel welcome in the bedroom.~*/
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_4_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ScarTalkEnd_F_2
+		SAY @239 /*~They don't bother me. What bothers me is that the monster that gave you those scars is still out there. But we'll get to that another time. This <DAYNIGHT> is for us. And besides ...~ */
+		
+		= @240 /* ~(She reaches down and gently pulls your hips into hers.)~ */
+		
+		= @241 /* ~... I've my own share of scars. You'll learn to live with yours as I have mine.~*/
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_4_F
+	END
+	
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_4_F
+		SAY @242 /* ~(You embrace, and lock lips during a long, sensual kiss. Slowly, you slide your hands down her back, from her shoulder blades to her waist, while she does the same. You caress and squeeze her round, firm behind, as she giggles in delight.)~ */
+		
+		= @244 /* ~(The lovely scent of feminine arousal, yours and hers, fills your nostrils as you bury your head between her breasts. They are warm, full and soft, and smell of lilacs. Unable to resist any longer, you begin to lick and suck on her hardened nipples. Schael quivers and gasps with delight as you flick your tongue on her nipple while it rests between your teeth.)~ */
+		
+		= @245/*~Hah... a demi-goddess with the same breast fixation as the other men and women who've shared my bed...~ */
+		
+		= @246 /* ~(While you continue your oral worship of her breasts, she reaches down and begins to expertly finger your engorged clit. Her touch on your most sensitive area is electrifying, and you feel yourself start to lose control.)~*/
+		
+		= @19 /* ~This is what you want, isn't it lover?~ [xalce168] */
+		
+		IF ~~ THEN REPLY @247 /* ~Oh.... oh! Schael!~*/
+		GOTO XA_LC_CorwinSex1_5_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_5_F
+		SAY @23 /* ~(In a fluid motion, she pulls back, and drops to her knees. Realizing what is about to happen, you brace yourself.)~ */
+		
+		= @24 /* ~It's about time you received a worthy reward for all that you've done.~ [xalce103]*/
+		
+		= @248 /* ~(She inserts her tongue into your vagina, and begins to slowly and deeply lick from the front to the back. Interspersed with the vigorous licking are kisses and flicks of her tongue on your sensitive clit. It's clear that she's had a lot of experience, and the pleasure you feel is unlike anything you could have imagined.)~*/
+		
+		= @243 /* ~(You take a moment to consider the situation. Just a short time ago, you were locked away in Candlekeep with your foster father Gorion, learning about things like science, history, love and sex from a collection of old, dusty books in the library. Now, the woman you love, one of the most beautiful women in Faerûn, is eagerly eating your pussy. Heroism, it seems, does indeed have its benefits.)~ */
+		
+		= @249 /* ~(You're pulled back into the moment as Schael begins to finger your g-spot while sucking on your clit. The intense pleasure causes you to moan uncontrollably, and you run your hands through her silky dark hair.)~  */
+	END
+	
+	//}
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
 		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
@@ -185,6 +300,7 @@ APPEND XACORWIJ
 		~
 		EXIT
 	END
+	
 //} #endregion
 
 	//{ #region Corwin Sex 2 - Dialog J-47 - Tested 2023-04-17
