@@ -1,0 +1,6 @@
+IF
+	Global("XA_LCE_CorwinSex1_Part2", "MYAREA", 1)
+THEN
+	RESPONSE #100
+		ActionOverride("XACORWIJ", StartDialog("XACORWIJ", Player1))
+END

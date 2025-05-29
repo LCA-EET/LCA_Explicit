@@ -2,6 +2,7 @@
 APPEND XACORWIJ
 	//{ #region Corwin Sex 1
 	IF ~
+		GlobalLT("XA_LCE_CorwinSex1_Part2", "MYAREA", 1)
 		Global("XA_LC_CorwinSex_1","GLOBAL",1)
 		AreaCheck("XAEXPL01")
 	~ THEN BEGIN XA_LC_XAEXPL01
@@ -291,25 +292,60 @@ APPEND XACORWIJ
 		
 		= @251 /*~(Overwhelmed with the pleasure of the most powerful orgasm you've ever experienced, you collapse toward the floor...)~ */
 		
-		IF ~~ THEN EXIT
+		IF ~~ THEN 
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("XAEX01F2")
+		~
+		EXIT
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_6_F
-		SAY @252 /* ~<CHARNAME>. Hey. Wake up, sleeping beauty.~ */
+	IF ~
+		Global("XA_LCE_CorwinSex1_Part2", "MYAREA", 1)
+	~ THEN BEGIN XA_LC_CorwinSex1_6_F
+		SAY @260 /* ~(You awaken on the bed, in Schael's tender, loving embrace.)~ */
+		
+		= @252 /*~<CHARNAME>. Hey. Wake up, sleeping beauty.~ */
 		
 		IF ~~ THEN REPLY @253 /* ~W... what happened?~ */
+		DO ~
+			SetGlobal("XA_LCE_CorwinSex1_Part2", "MYAREA", 2)
+		~
 		GOTO XA_LC_CorwinSex1_7_F
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_7_F
-		SAY @254 /* ~Well, you came like a volcano and fainted. I was able to catch you before you hit the floor, and carried you to bed. Are you feeling alright, dear?~*/
+		SAY @254 /* ~Well, you came like a volcano and passed out. First time for everything, I suppose. I was barely able to catch you before you hit the floor, then I carried you to bed. Are you feeling alright, dear?~*/
 		
 		IF ~~ THEN REPLY @255 /* ~Yeah... I feel amazing, actually. *You* were amazing, love.~ */
 		GOTO XA_LC_CorwinSex1_8_F
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8_F
-		SAY @256 /* ~I'm surprised you lasted as long as you did. My tongue certainly got a work out, that's for sure.~*/
+		SAY @256 /* ~I'm surprised you lasted as long as you did. My tongue certainly got a work out, that's for sure. You taste wonderful, you know.~*/
+		
+		IF ~~ THEN REPLY @257 /*~Oh gosh, I'm so sorry. I'm sure you wanted me to —~*/
+		GOTO XA_LC_CorwinSex1_9_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9_F
+		SAY @258 /*~Return the favor? Of course, but I think you've had enough for one <DAYNIGHT>. Besides, there'll be plenty of time for that... let's just get some rest, love... *yawn*... we've earned it.~*/
+		
+		IF ~~ THEN REPLY @261 /*~I love you, Schael.~*/
+		GOTO XA_LC_CorwinSex1_10_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_10_F
+		SAY @262 /*~I love you too, <CHARNAME>.~*/
+		
+		= @259 /*~(You kiss, and fall asleep in her arms.)~ */
+		
+		IF ~~ THEN 
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("XAEX01EX")
+		~
+		EXIT
 	END
 	
 	//}
