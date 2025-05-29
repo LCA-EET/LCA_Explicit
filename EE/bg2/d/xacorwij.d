@@ -286,6 +286,30 @@ APPEND XACORWIJ
 		= @243 /* ~(You take a moment to consider the situation. Just a short time ago, you were locked away in Candlekeep with your foster father Gorion, learning about things like science, history, love and sex from a collection of old, dusty books in the library. Now, the woman you love, one of the most beautiful women in Faerûn, is eagerly eating your pussy. Heroism, it seems, does indeed have its benefits.)~ */
 		
 		= @249 /* ~(You're pulled back into the moment as Schael begins to finger your g-spot while sucking on your clit. The intense pleasure causes you to moan uncontrollably, and you run your hands through her silky dark hair.)~  */
+		
+		= @250 /*~(Sensing that you're close to the edge, Schael increases the pace and intensity of her efforts. With a scream and a shudder, the orgasm crashes through you, and your cunt rewards her face and mouth with an eruption of cum.)~*/
+		
+		= @251 /*~(Overwhelmed with the pleasure of the most powerful orgasm you've ever experienced, you collapse toward the floor...)~ */
+		
+		IF ~~ THEN EXIT
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_6_F
+		SAY @252 /* ~<CHARNAME>. Hey. Wake up, sleeping beauty.~ */
+		
+		IF ~~ THEN REPLY @253 /* ~W... what happened?~ */
+		GOTO XA_LC_CorwinSex1_7_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_7_F
+		SAY @254 /* ~Well, you came like a volcano and fainted. I was able to catch you before you hit the floor, and carried you to bed. Are you feeling alright, dear?~*/
+		
+		IF ~~ THEN REPLY @255 /* ~Yeah... I feel amazing, actually. *You* were amazing, love.~ */
+		GOTO XA_LC_CorwinSex1_8_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8_F
+		SAY @256 /* ~I'm surprised you lasted as long as you did. My tongue certainly got a work out, that's for sure.~*/
 	END
 	
 	//}
