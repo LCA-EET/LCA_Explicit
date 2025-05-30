@@ -329,9 +329,12 @@ APPEND XACORWIJ
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9_F
-		SAY @258 /*~Return the favor? Of course, but I think you've had enough for one <DAYNIGHT>. Besides, there'll be plenty of time for that... let's just get some rest, love... *yawn*... we've earned it.~*/
+		SAY @258 /*~Return the favor? Of course, but I think you've had enough for one <DAYNIGHT>.~*/
 		
-		IF ~~ THEN REPLY @261 /*~I love you, Schael.~*/
+		IF ~~ THEN REPLY @273 /* ~But I feel fine, I promise. We've been waiting for this <DAYNIGHT> for so long, and I don't want it to end so soon!~*/
+		GOTO XA_LC_CorwinSex1_11_F
+		
+		IF ~~ THEN REPLY @261 /*~You're right, as usual. I love you, Schael.~*/
 		GOTO XA_LC_CorwinSex1_10_F
 	END
 	
@@ -347,6 +350,38 @@ APPEND XACORWIJ
 		~
 		EXIT
 	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_10_F
+		SAY @263/* ~Well... if you say so... there was one thing I wanted to show you.~ */
+		
+		IF ~~ THEN REPLY @264/* ~What is it?~*/
+		GOTO XA_LC_CorwinSex1_11_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_11_F
+		SAY @265/* ~Go get my knapsack and open it. There's something in there that I think you'll enjoy.~*/
+		
+		= @266/* ~(You leave the bed and fetch her knapsack. After rummaging through her things, you reach in and pull out a ...)~*/
+		
+		IF ~~ THEN REPLY @267/* ~Hah! A strap-on? And it's pink, too! Somehow I don't think this is standard issue for Flaming Fist officers.~*/
+		
+		GOTO XA_LC_CorwinSex1_12_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_12_F
+		SAY @268/* ~No kidding. I picked it up at the Promenade. I *was* going to use it on you, but I'd be remiss to make you cum again in light of that fainting episode.~*/
+		
+		= @274 /* ~Now put it on, come back into bed, and fuck me. That's an order, hero.~*/
+		
+		IF ~~ THEN REPLY @271 /* ~It's huge... I don't think it will fit.~ */
+		GOTO XA_LC_CorwinSex1_13A_F
+		
+		IF ~~ THEN REPLY @275 /* ~Me? Are you sure?~ */
+		GOTO XA_LC_CorwinSex1_13B_F
+	
+	END
+	
+	
 	
 	//}
 	
