@@ -68,6 +68,26 @@ APPEND XACORWIJ
 		GOTO XA_LC_ScarTalk3_F
 	END
 	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8
+		SAY @51 /* ~(She smiles warmly, and places her finger across your lips.)~ */
+		
+		= @52 /* ~Shh, lover. It's time for us to get some rest. Just know that this, and more, is what awaits you when we finally return home. I love you, <CHARNAME>.~ */
+		
+		IF ~~ THEN REPLY @53 /* ~I love you too, Schael. */
+		GOTO XA_LC_CorwinSex1_9
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
+		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
+		
+		IF ~~ THEN 
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("XAEX01EX")
+		~
+		EXIT
+	END
+	
 	//{ M/F
 	IF ~~ THEN BEGIN XA_LC_ScarTalk_M
 		SAY @163 /* ~(You hurriedly remove your armor, then your shirt. Before you can remove your pants, she gasps.)~ */
@@ -178,17 +198,10 @@ APPEND XACORWIJ
 		= @49 /* ~You don't know how much I needed that. Thank you, love.~  */
 		
 		IF ~~ THEN REPLY @50 /* ~Schael, you were incredible, I - I can't even —~ */
-		GOTO XA_LC_CorwinSex1_8_M
+		GOTO XA_LC_CorwinSex1_8
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8_M
-		SAY @51 /* ~(She smiles warmly, and places her finger across your lips.)~ */
-		
-		= @52 /* ~Shh, lover. It's time for us to get some rest. Just know that this, and more, is what awaits you when we finally return home. I love you, <CHARNAME>.~ */
-		
-		IF ~~ THEN REPLY @53 /* ~I love you too, Schael. */
-		GOTO XA_LC_CorwinSex1_9
-	END
+	
 	//}
 	
 	//{ F/F
@@ -332,6 +345,9 @@ APPEND XACORWIJ
 		SAY @258 /*~Return the favor? Of course, but I think you've had enough for one <DAYNIGHT>.~*/
 		
 		IF ~~ THEN REPLY @273 /* ~But I feel fine, I promise. We've been waiting for this <DAYNIGHT> for so long, and I don't want it to end so soon!~*/
+		DO ~
+			SetGlobal("XA_LC_CorwinSex_1_Penetration", "GLOBAL", 1)
+		~
 		GOTO XA_LC_CorwinSex1_11_F
 		
 		IF ~~ THEN REPLY @261 /*~You're right, as usual. I love you, Schael.~*/
@@ -464,18 +480,40 @@ APPEND XACORWIJ
 		SAY @283 /* ~(You quickly tie the strap-on around your waist and jump back into bed. Schael turns and faces the headboard, and raises her behind toward you. You place one hand on her firm, round ass, while you gently finger her pussy  starting from the front and slowly working toward the back. She's so unbelievably wet already that you're sure you won't need any lube.)~*/
 		
 		= @284 /* ~(Gently, you insert the phallus into vagina, and you hear a slight gasp. She then moves backward slightly, taking more of the phallus into her sex. It's nearly fully inserted now, and you feel some resistance as the tip edges closer toward her cervix.)~ */
+		
+		= @285 /*~Oh... that feels amazing...~*/
+		
+		= @286 /*~(She places her right hand on the headboard, then moves forward, backward, and forward again at a steady pace. You time your thrusts so that you're moving forward while she is moving backward.)~*/
+		
+		= @287 /*~Good... oh gods... just like that...~*/
+		
+		= @288 /*~(You move your hands around her ass, back and legs as you continue to smash her cervix. Every inch of her is perfect in your eyes, even those scars left behind from old wounds. Her beautiful body begins to glisten as she increases the pace of her gyrations.)~*/
+		
+		= @289 /*~Harder... faster...~*/
+		
+		= @290 /*~(You happily oblige, and raise the frequency and ferocity of your thrusts. With your left hand placed firmly on her hip, you reach down and begin to fondle her right breast. Schael responds with a shudder and long, slow moan, and begins to pant as she edges closer to her climax.)~*/
+		
+		= @291 /*~(Suddenly, she arches her back and cries out your name. You fear that you may have hurt her, and stop your thrusting. She turns her head to look back toward you, and you see in her eye a fiery intensity unlike anything you've seen from her before.)~*/
+		
+		= @292 /*~You're not *pant* hurting me... *huff* ... but I may *pant* hurt you if you stop again. Fuck me, hero! FUCK ME!~*/
+		
+		= @293 /*~(You immediately oblige and resume your thrusts, except this time you don't hold back. Schael moans wildly with delight as you mercilessly pound her cunt. Sensing that she's on the brink, you squeeze her breast with one hand while vigorously fingering her clit with the other.)~*/
+		
+		= @294 /*~(This last effort on your part sends her over the edge, and she screams in ecstasy as the wave of her orgasm sweeps through her, from her head to her toes, crashing through her and carrying her away on a tidal wave of pleasure.)~  */
+		
+		=@295 /*=~Oh.... Oh, <CHARNAME>...~*/
+		
+		=@296 /*~(Your thrusts slow, then stop, and you plant a soft kiss on her neck. Schael turns to her side as you pull out of her. You remove the strap-on and run your hand over the shaft, which is now completely covered in her juices. Unable to resist the urge, you hold your hand to your mouth and lick her cum off of your fingers. It has a pleasant aroma, and a kind of sweet and salty taste.)~*/
+		
+		=@297 /*~(You rest your head next to hers, and gaze into her eyes. As you lay there together, you inhale the smells of sweat and sex in the air, and try to comprehend what has just happened. Eventually, you're able to gather yourselves.)~*/
+		
+		=@298 /*~That was wonderful. You don't know how much I needed that. Thank you, love.~ */
+		
+		IF ~~ THEN REPLY @50 /*~Schael, you were incredible, I - I can't even —~*/
+		GOTO XA_LC_CorwinSex1_8
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
-		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
-		
-		IF ~~ THEN 
-		DO ~
-			StartCutSceneMode()
-			StartCutScene("XAEX01EX")
-		~
-		EXIT
-	END
+	
 	
 //} #endregion
 
