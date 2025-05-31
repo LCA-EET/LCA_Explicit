@@ -381,9 +381,90 @@ APPEND XACORWIJ
 	
 	END
 	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13A_F
+		SAY @272 /* ~There's only one way to find out. Now... Get. Over. Here. I won't ask again.~ */
+	END
 	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F
+		SAY @282 /* ~You?~ */
+		
+		IF ~~ THEN
+		GOTO XA_LC_CorwinSex1_13B_F_A
+		
+		IF ~
+			InParty("Nalia")
+		~ THEN
+		GOTO XA_LC_CorwinSex1_13B_F_B
+		
+		IF ~
+			InParty("Neera")
+		~ THEN
+		GOTO XA_LC_CorwinSex1_13B_F_C
+		
+		IF ~
+			InParty("Jaheira")
+		~ THEN
+		GOTO XA_LC_CorwinSex1_13B_F_D
+		
+		IF ~
+			InParty("Aerie")
+		~ THEN
+		GOTO XA_LC_CorwinSex1_13B_F_E
+		
+		IF ~
+			InParty("Viconia")
+		~ THEN
+		GOTO XA_LC_CorwinSex1_13B_F_F
+	END
 	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F_A
+		SAY @281 /* ~Is there anyone else in this damn room? Gods, wake up! Put it on and get over here, or I'll beat you with it!~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_14_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F_B
+		SAY @280 /* ~No, Nalia. Gods, wake up! Put it on and get over here, or I'll beat you with it!~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_14_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F_C
+		SAY @279 /* ~No, Neera. Gods, wake up! Put it on and get over here, or I'll beat you with it!~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_14_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F_D
+		SAY @277 /* ~No, Jaheira. Gods, wake up! Put it on and get over here, or I'll beat you with it!~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_14_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F_E
+		SAY @276 /* ~No, Aerie. Gods, wake up! Put it on and get over here, or I'll beat you with it!~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_14_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F_F
+		SAY @278 /* ~No, Viconia. Gods, wake up! Put it on and get over here, or I'll beat you with it!~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_14_F
+	END
 	//}
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_14_F
+		SAY @283 /* ~(You quickly tie the strap-on around your waist and jump back into bed. Schael turns and faces the headboard, and raises her behind toward you. You place one hand on her firm, round ass, while you gently finger her pussy  starting from the front and slowly working toward the back. She's so unbelievably wet already that you're sure you won't need any lube.)~*/
+		
+		= @284 /* ~(Gently, you insert the phallus into vagina, and you hear a slight gasp. She then moves backward slightly, taking more of the phallus into her sex. It's nearly fully inserted now, and you feel some resistance as the tip edges closer toward her cervix.)~ */
+	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
 		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
