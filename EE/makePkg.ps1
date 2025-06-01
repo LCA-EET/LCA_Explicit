@@ -29,6 +29,8 @@ Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath
 Copy-Item -Path ("install.tph") -Destination $modPath 
 Copy-Item -Path "LICENSE.md" -Destination $modPath
 Copy-Item -Path "Discord Server.url" -Destination $modPath
+Get-Date -Format "yyyy-MM-dd HH:mm K" > pkgdate.txt
+Copy-Item -Path pkgdate.txt -Destination $modPath
 
 Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)
 #Copy-Item -Path "Release Notes (LCA_Explicit).md" -Destination ($basePath + "/Release Notes.md")

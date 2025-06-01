@@ -314,7 +314,7 @@ APPEND XACORWIJ
 	END
 	
 	IF ~
-		Global("XA_LCE_CorwinSex1_Part2", "MYAREA", 1)
+		Global("XA_LCE_CorwinSex1_Part2", "MYAREA", 2)
 	~ THEN BEGIN XA_LC_CorwinSex1_6_F
 		SAY @260 /* ~(You awaken on the bed, in Schael's tender, loving embrace.)~ */
 		
@@ -322,7 +322,7 @@ APPEND XACORWIJ
 		
 		IF ~~ THEN REPLY @253 /* ~W... what happened?~ */
 		DO ~
-			SetGlobal("XA_LCE_CorwinSex1_Part2", "MYAREA", 2)
+			SetGlobal("XA_LCE_CorwinSex1_Part2", "MYAREA", 3)
 		~
 		GOTO XA_LC_CorwinSex1_7_F
 	END
@@ -348,13 +348,13 @@ APPEND XACORWIJ
 		DO ~
 			SetGlobal("XA_LC_CorwinSex_1_Penetration", "GLOBAL", 1)
 		~
-		GOTO XA_LC_CorwinSex1_11_F
+		GOTO XA_LC_CorwinSex1_10_F
 		
 		IF ~~ THEN REPLY @261 /*~You're right, as usual. I love you, Schael.~*/
-		GOTO XA_LC_CorwinSex1_10_F
+		GOTO XA_LC_CorwinSex1_9_F_END
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_10_F
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9_F_END
 		SAY @262 /*~I love you too, <CHARNAME>.~*/
 		
 		= @259 /*~(You kiss, and fall asleep in her arms.)~ */
@@ -399,6 +399,9 @@ APPEND XACORWIJ
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13A_F
 		SAY @272 /* ~There's only one way to find out. Now... Get. Over. Here. I won't ask again.~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_14_F
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13B_F
