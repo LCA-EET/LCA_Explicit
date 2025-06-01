@@ -1,4 +1,4 @@
-This mod patches <a href="https://github.com/LCA-EET/LCA">Love Conquers All</a> to add some sexually explicit dialogs and cutscenes, written from a male perspective. F/F content will be added at a later date. This mod is definitely not for everyone, especially those below 18 years of age, and I don't recommend it if any of the following kinks make you uncomfortable:
+This mod patches <a href="https://github.com/LCA-EET/LCA">Love Conquers All</a> to add some sexually explicit dialogs and cutscenes. This mod is definitely not for everyone, especially those below 18 years of age, and I don't recommend it if any of the following kinks make you uncomfortable:
 <details>
 <summary>(Click to View)</summary>
 <br>
