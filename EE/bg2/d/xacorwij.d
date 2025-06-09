@@ -541,9 +541,36 @@ APPEND XACORWIJ
 		
 		IF ~
 			Gender(Player1, FEMALE)
-		~ THEN GOTO XA_LC_CorwinSex2_12
+		~ THEN GOTO XA_LC_CorwinSex2_2F
 	END	
 
+	//{ F/F
+	IF ~~ THEN BEGIN XA_LC_CorwinSex2_2F
+		SAY @56 /* ~Mm. Before we get started. About what we discussed — your fighting skills.~  */
+		
+		IF ~~ THEN REPLY @57 /* ~You want to discuss this *now*?~ */
+		GOTO XA_LC_CorwinSex2_3F*/
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex2_3F
+		SAY @59 /* ~Now's as good a time as any. Plus...~ */
+		
+		= @299 /*~(She smiles, and reaches down to stroke your clit.)~*/
+		
+		= @61 /*~I think this'll be a lot more fun in the nude.~ */
+		
+		IF ~~ THEN REPLY @83 /*Fine*/
+		GOTO XA_LC_CorwinSex2_3F_Now
+		
+		IF ~~ THEN REPLY @84 /*~Can't we do this afterward?~*/
+		GOTO XA_LC_CorwinSex2_3F_Later
+	END
+
+	
+	
+	//}
+
+	//{ M/F
 	IF ~~ THEN BEGIN XA_LC_CorwinSex2_1M
 		SAY @58 /* ~(She pushes you back as your cock bobs up and down with eager anticipation.)~  */
 		
@@ -1086,6 +1113,7 @@ APPEND XACORWIJ
 		~
 		EXIT
 	END
+	//}
 	//} 
 
 END
