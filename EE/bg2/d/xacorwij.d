@@ -1171,6 +1171,55 @@ APPEND XACORWIJ
 			= @307 /*~(Determined to wipe the smirk off of her face, you throw a right cross directly toward her nose, which she parries effortlessly.)~*/
 			
 			= @308 /*~Is that the best you've got? You hit like a girl!~*/
+			
+			= @309 /*~(Flush with embarrassment, you throw a series of one-two combinations, but she easily dodges or parries your blows. Your tits flail in all directions as you try and fail to hit her. She laughs.)~  */
+			
+			= @310 /*~A bit better. But as much as I enjoy watching those tits swing around, we're getting nowhere.~ */
+			
+			= @311 /*~(You throw another right hook. She dodges, turns her body and grabs your right arm in one motion, then throws you over her back. Landing with a loud and painful thud, you become disoriented as you try and scramble back to your feet. Schael quickly takes your back and puts you into a sleeper hold, then wraps her powerful legs around yours.)~*/
+			
+			= @98 /*~Try and break out of this hold, lover.~ */
+			
+			= @99 /*~(You're on your left side, with your left arm pinned behind your body. Her right forearm is tight across your neck, with her right hand holding her left bicep. You feel her left hand behind your head, pushing it down into her right forearm.)~*/
+			
+			= @197 /* ~(With your right arm, you try to pull her arm away from your neck, but to your surprise, she doesn't budge. Panicking, you try and use your legs to push yourself forward in an attempt to free your pinned arm, but to no avail; her beautiful, well-muscled legs are wrapped too tightly around yours. Gradually, she increases the pressure of her forearm against your neck, and soon you're on the verge of blacking out.)~*/
+			
+			= @197 /* ~(With your right arm, you try to pull her arm away from your neck, but to your surprise, she doesn't budge. Panicking, you try and use your legs to push yourself forward in an attempt to free your pinned arm, but to no avail; her beautiful, well-muscled legs are wrapped too tightly around yours. Gradually, she increases the pressure of her forearm against your neck, and soon you're on the verge of blacking out.)~*/
+			
+			= @106 /* ~Hm, is this all that it takes to defeat the hero of Baldur's Gate? I hope not.~ [xalce117]*/
+			
+			IF ~~ THEN REPLY @155 /*~Ugh... Sch—~*/
+			DO ~
+				IncrementGlobal("XA_LC_Ordeal", "LOCALS", 1)
+			~
+			GOTO XA_LC_CorwinSex2_7F
+			
+			IF ~
+				Global("XA_LC_SafeWord", "LOCALS", 1)
+			~ THEN REPLY @208 /*El... elephant!*/
+			GOTO XA_LC_GiveUp_0_F
+			
+			IF ~
+				Global("XA_LC_SafeWord", "LOCALS", 2)
+			~ THEN REPLY @209 /*Pum... pumpkin!*/
+			GOTO XA_LC_GiveUp_0_F
+			
+			IF ~
+				Global("XA_LC_SafeWord", "LOCALS", 3)
+			~ THEN REPLY @210 /*M... meadow!*/
+			GOTO XA_LC_GiveUp_0_F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_7F
+			SAY @312 /*~(In a fluid motion, she shifts her hold so that her left forearm is across your neck, while her right hand moves lower to vigorously stroke your engorged sex. In spite of your predicament, you feel a kind of sexual euphoria flow through you as you realize you are completely under her control.)~*/
+			
+			= @313 /*~Will you cum before I ...~*/
+			
+			= @314 /*~(Her voice trails off as you feel yourself begin to lose consciousness. The only thing you can sense — besides the darkness overtaking you — is the pleasurable sensation of her fingering, followed by the fiery surge of a momentous climax.)~*/
+			
+			= @315 /*~(Whether Schael released her hold over your neck before, during, or after your orgasm, you cannot tell, but you're glad that she did. You feel the blood quickly rush back into your face as you regain your lucidity.)~ */
+			
+			= @316
 		END
 	//}
 END
