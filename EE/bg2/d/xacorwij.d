@@ -1162,6 +1162,16 @@ APPEND XACORWIJ
 			IF ~~ THEN
 			GOTO XA_LC_CorwinSex2_5_Select
 		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_6F
+			SAY @305 /* ~(You throw a long, looping hook at Schael, which she easily avoids.)~*/
+			
+			= @306 /*~You call that a punch? This is going to be more work than I thought. Try again, this time like you mean it.~*/
+			
+			= @307 /*~(Determined to wipe the smirk off of her face, you throw a right cross directly toward her nose, which she parries effortlessly.)~*/
+			
+			= @308 /*~Is that the best you've got? You hit like a girl!~*/
+		END
 	//}
 END
 //}
