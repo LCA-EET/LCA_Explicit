@@ -1219,7 +1219,35 @@ APPEND XACORWIJ
 			
 			= @315 /*~(Whether Schael released her hold over your neck before, during, or after your orgasm, you cannot tell, but you're glad that she did. You feel the blood quickly rush back into your face as you regain your lucidity.)~ */
 			
-			= @316
+			= @316 /*~(Schael easily lifts you into her arms and carries you to bed. The look of love and concern in her eyes is in stark contrast to the fiery intensity shown during your sparring session. In spite of her physical and sexual dominance over you, you do not feel any fear; instead, you feel a profound sense of safety while in her powerful arms, as though she wouldn't let anything or anyone bring you harm. She places you down into bed, and slowly licks your cum from her right hand.)~ */
+			
+			= @317 /*~You see, love? Raw power isn't enough to win every fight. You need to learn how and where to apply that power.~*/
+			
+			IF ~~ THEN REPLY @318 /*~Ugh... you could have just told me that.~*/
+			GOTO XA_LC_CorwinSex2_7FA
+			IF ~~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_7FB
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_7FA
+			SAY @319 /*~Well, experience IS the best teacher, or so they say.~*/
+			
+			IF ~~ THEN REPLY @325 /*~So, what should I have done to break out of that hold?~ */
+			GOTO XA_LC_CorwinSex2_8F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_8F
+			SAY @321 /*~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free. I was surprised you didn't. Maybe...~*/
+			
+			IF ~~ THEN REPLY @322 /*~Maybe I liked it...~*/
+			
+			IF ~~ THEN REPLY @323 /*~I tried, I really did. You're just too strong for me.~*/
+			
+			IF ~~ THEN REPLY @326 /*...*/
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_9F
+			SAY @
 		END
 	//}
 END
