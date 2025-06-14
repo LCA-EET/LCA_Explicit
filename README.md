@@ -1,3 +1,4 @@
+<img align="right" src="https://github.com/LCA-EET/LCA_Explicit/blob/main/EE/img/corwin.png">
 This mod patches <a href="https://github.com/LCA-EET/LCA">Love Conquers All</a> to add some sexually explicit dialogs and cutscenes. This mod is definitely not for everyone, especially those below 18 years of age, and I don't recommend it if any of the following kinks make you uncomfortable:
 <details>
 <summary>(Click to View)</summary>
