@@ -1,4 +1,21 @@
 IF
+	Global("XA_LCE_TS_Prep", "MYAREA", 1)
+THEN
+	RESPONSE #100
+		SetGlobal("XA_LCE_TS_Prep", "MYAREA", 2)
+		TextScreen("XALCSEX1")
+END
+
+IF 
+	Global("XA_LCE_TS_Prep", "MYAREA", 2)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("XACHNG03", "XACORWIN")
+		SmallWait(5)
+		ActionOverride("XACORWIN", StartDialog("XACORWIJ", Player1))
+END
+
+IF
 	Global("XA_LCE_CorwinSex1_Part2", "MYAREA", 1)
 THEN
 	RESPONSE #100

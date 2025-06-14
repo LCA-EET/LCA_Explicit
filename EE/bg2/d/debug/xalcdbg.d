@@ -31,6 +31,12 @@ APPEND ~XALCDBG~
 		~
 		EXIT
 		
+		IF ~~ THEN REPLY @204 /* Corwin Portrait Change */
+		DO ~
+			ReallyForceSpellRES("XACHNG03", "XACORWIN")
+		~
+		EXIT
+		
 		IF ~~ THEN REPLY @0
 		GOTO 10
 		

@@ -9,12 +9,21 @@ APPEND XACORWIJ
 		SAY @9 /* ~Well?~  */
 		
 		IF ~~ THEN REPLY @10 /* ~Schael, y-you're so beautiful, I.. I —~ */
+		DO ~
+			SetGlobal("XA_LCE_TS_Prep", "MYAREA", 3)
+		~
 		GOTO XA_LC_CorwinSex1_3
 		
 		IF ~~ THEN REPLY @219 /*~*Gulp*~ */
+		DO ~
+			SetGlobal("XA_LCE_TS_Prep", "MYAREA", 3)
+		~
 		GOTO XA_LC_CorwinSex1_3
 		
 		IF ~~ THEN REPLY @220 /* ~Ohhh.... oh WOW...~*/
+		DO ~
+			SetGlobal("XA_LCE_TS_Prep", "MYAREA", 3)
+		~
 		GOTO XA_LC_CorwinSex1_3
 	END
 	
@@ -59,8 +68,21 @@ APPEND XACORWIJ
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
 		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
 		
-		IF ~~ THEN 
+		IF ~
+			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
+		~ THEN 
 		DO ~
+			ReallyForceSpellRES("XACHNG01", "XACORWIN")
+			StartCutSceneMode()
+			StartCutScene("XAEX01EX")
+		~
+		EXIT
+		
+		IF ~
+			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
+		~ THEN 
+		DO ~
+			ReallyForceSpellRES("XACHNG02", "XACORWIN")
 			StartCutSceneMode()
 			StartCutScene("XAEX01EX")
 		~
@@ -338,8 +360,21 @@ APPEND XACORWIJ
 		
 		= @259 /*~(You kiss, and fall asleep in her arms.)~ */
 		
-		IF ~~ THEN 
+		IF ~
+			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
+		~ THEN 
 		DO ~
+			ReallyForceSpellRES("XACHNG01", "XACORWIN")
+			StartCutSceneMode()
+			StartCutScene("XAEX01EX")
+		~
+		EXIT
+		
+		IF ~
+			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
+		~ THEN 
+		DO ~
+			ReallyForceSpellRES("XACHNG02", "XACORWIN")
 			StartCutSceneMode()
 			StartCutScene("XAEX01EX")
 		~
