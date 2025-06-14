@@ -6,28 +6,7 @@ APPEND XACORWIJ
 		Global("XA_LC_CorwinSex_1","GLOBAL",1)
 		AreaCheck("XAEXPL01")
 	~ THEN BEGIN XA_LC_XAEXPL01
-		SAY @0 /* ~This room is perfect.~ */
-		
-		= @1 /* ~(She turns to you.)~ */
-		
-		= @2 /* ~Help me take this armor off.~  */
-		
-		IF ~~ THEN REPLY @3 /* ~(Lift off her chainmail armor and set it aside.)~ */
-		GOTO XA_LC_CorwinSex1_2
-	END
-	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_2
-		SAY @4 /* ~Thanks.~ */
-		
-		= @5 /* ~(She turns around and kneels. After removing her boots, she releases the clasps on her two leg harnesses and discards them, then stands with her back towards you.)~ */
-		
-		= @6 /* ~(Next, she slowly removes her vestment, revealing her bare shoulders and back. Her skin is smooth, and glistening with sweat. You notice her sharply defined back and shoulder muscles, and your pulse quickens in anticipation of what is about to happen.)~ */
-		
-		= @7 /* ~(She steps out of her leggings, revealing her firm, well-rounded bottom, shapely thighs and muscular calves. With her hands on her hips, she turns around and faces you.)~*/
-		
-		= @8 /* ~(You stand in awe and silent amazement. Schael's breasts are round, full and tanned, her nipples tiny buds on light brown areolas. Her legs, arms and midsection are packed with lean muscle, but her physique detracts in no way from her femininity. The fullness of her chest accentuates her slim waist and her wide, inviting hips. Her womanhood is hidden behind a delicate patch of hair, as dark as the hair on her head.)~  */
-		
-		= @9 /* ~Well?~  */
+		SAY @9 /* ~Well?~  */
 		
 		IF ~~ THEN REPLY @10 /* ~Schael, y-you're so beautiful, I.. I —~ */
 		GOTO XA_LC_CorwinSex1_3
@@ -1184,8 +1163,6 @@ APPEND XACORWIJ
 			
 			= @197 /* ~(With your right arm, you try to pull her arm away from your neck, but to your surprise, she doesn't budge. Panicking, you try and use your legs to push yourself forward in an attempt to free your pinned arm, but to no avail; her beautiful, well-muscled legs are wrapped too tightly around yours. Gradually, she increases the pressure of her forearm against your neck, and soon you're on the verge of blacking out.)~*/
 			
-			= @197 /* ~(With your right arm, you try to pull her arm away from your neck, but to your surprise, she doesn't budge. Panicking, you try and use your legs to push yourself forward in an attempt to free your pinned arm, but to no avail; her beautiful, well-muscled legs are wrapped too tightly around yours. Gradually, she increases the pressure of her forearm against your neck, and soon you're on the verge of blacking out.)~*/
-			
 			= @106 /* ~Hm, is this all that it takes to defeat the hero of Baldur's Gate? I hope not.~ [xalce117]*/
 			
 			IF ~~ THEN REPLY @155 /*~Ugh... Sch—~*/
@@ -1210,6 +1187,13 @@ APPEND XACORWIJ
 			GOTO XA_LC_GiveUp_0_F
 		END
 		
+		IF ~~ THEN BEGIN XA_LC_GiveUp_0_F
+			SAY @212 /*~(Hearing you utter the safe word, Schael immediately releases her hold on your neck, and gives you a moment to regain your composure.)~*/
+			
+			IF ~~ THEN
+			GOTO XA_LC_ChokeEnd_F
+		END
+		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_7F
 			SAY @312 /*~(In a fluid motion, she shifts her hold so that her left forearm is across your neck, while her right hand moves lower to vigorously stroke your engorged sex. In spite of your predicament, you feel a kind of sexual euphoria flow through you as you realize you are completely under her control.)~*/
 			
@@ -1221,12 +1205,21 @@ APPEND XACORWIJ
 			
 			= @316 /*~(Schael easily lifts you into her arms and carries you to bed. The look of love and concern in her eyes is in stark contrast to the fiery intensity shown during your sparring session. In spite of her physical and sexual dominance over you, you do not feel any fear; instead, you feel a profound sense of safety while in her powerful arms, as though she wouldn't let anything or anyone bring you harm. She places you down into bed, and slowly licks your cum from her right hand.)~ */
 			
-			= @317 /*~You see, love? Raw power isn't enough to win every fight. You need to learn how and where to apply that power.~*/
+			IF ~~ THEN
+			DO ~
+				SetGlobal("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~
+			GOTO XA_LC_ChokeEnd_F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_ChokeEnd_F
+			SAY @317 /*~You see, love? Raw power isn't enough to win every fight. You need to learn how and where to apply that power.~*/
 			
 			IF ~~ THEN REPLY @318 /*~Ugh... you could have just told me that.~*/
 			GOTO XA_LC_CorwinSex2_7FA
+			
 			IF ~~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
-			GOTO XA_LC_CorwinSex2_7FB
+			GOTO XA_LC_CorwinSex2_8F
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_7FA
@@ -1239,24 +1232,59 @@ APPEND XACORWIJ
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_8F
 			SAY @321 /*~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free. I was surprised you didn't. Maybe...~*/
 			
-			IF ~~ THEN REPLY @322 /*~Maybe I liked it...~*/
+			IF ~
+				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN REPLY @322 /*~Maybe I liked it...~*/
+			GOTO XA_LC_CorwinSex2_9F_Orgasm
+			
+			IF ~
+				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN REPLY @323 /*~I tried, I really did. You're just too strong for me.~*/
+			GOTO XA_LC_CorwinSex2_9F_Orgasm
+			
+			IF ~
+				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN REPLY @325 /*...*/
+			GOTO XA_LC_CorwinSex2_9F_Orgasm
+			
+			IF ~
+				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN REPLY @322 /*~Maybe I liked it...~*/
 			GOTO XA_LC_CorwinSex2_9F
 			
-			IF ~~ THEN REPLY @323 /*~I tried, I really did. You're just too strong for me.~*/
+			IF ~
+				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN REPLY @323 /*~I tried, I really did. You're just too strong for me.~*/
 			GOTO XA_LC_CorwinSex2_9F
 			
-			IF ~~ THEN REPLY @325 /*...*/
+			IF ~
+				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN REPLY @325 /*...*/
 			GOTO XA_LC_CorwinSex2_9F
 		END
-		
+
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_9F
+			SAY @347 /* ~(She moves her head next to yours, and gives you a kiss.)~  */
+			
+			IF ~~ THEN 
+			GOTO XA_LC_CorwinSex2_9F_End
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_9F_Orgasm
 			SAY @324 /*~(She moves her head next to yours, and gives you a kiss. On her tongue, you can taste a hint of the saltiness left behind from your own juices.)~*/
 			
-			= @144 /*~Come on, get up. There are a few more things I need to show you.~*/
+			IF ~~ THEN 
+			GOTO XA_LC_CorwinSex2_9F_End
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_9F_End
+			SAY @144 /*~Come on, get up. There are a few more things I need to show you.~*/
 			
 			= @145 /*~(You spend the rest of the time going over a series of choke holds, leg locks, arm bars, and other techniques to quickly subdue an opponent. She teaches you how to apply them, and how to break free from them. It'll take several years of practice before you're as proficient as she is, but you feel that the knowledge she's imparted to you has already increased your fighting ability.)~*/
 			
 			= @325 /*(During the lessons, it was difficult at times to focus as the now familiar, strangely comforting feeling of being under Schael's total control sent your arousal into overdrive.)~*/
+			
+			IF ~~ THEN EXIT
 		END
 	//}
 END

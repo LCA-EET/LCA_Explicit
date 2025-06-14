@@ -16,3 +16,8 @@ COPY_EXISTING ~ar0416.are~ ~override/xaexpl02.are~
 WRITE_ASCII 0x94 ~~ #8 // remove the area script
 LPF xa_delete_are_actors END
 LPF xa_delete_are_triggers END
+
+COPY ~%MOD_FOLDER%/bg2/bmp~ ~override~
+
+COPY ~%MOD_FOLDER%/bg2/2da/xalcsex1.2da~ ~override~
+SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1000)

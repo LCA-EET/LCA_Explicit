@@ -25,6 +25,12 @@ APPEND ~XALCDBG~
 		~
 		EXIT
 		
+		IF ~~ THEN REPLY @203 /* ~Sex 1 Text Screen~*/
+		DO ~
+			TextScreen("XALCSEX1")
+		~
+		EXIT
+		
 		IF ~~ THEN REPLY @0
 		GOTO 10
 		
