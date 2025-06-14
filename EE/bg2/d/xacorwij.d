@@ -1240,14 +1240,23 @@ APPEND XACORWIJ
 			SAY @321 /*~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free. I was surprised you didn't. Maybe...~*/
 			
 			IF ~~ THEN REPLY @322 /*~Maybe I liked it...~*/
+			GOTO XA_LC_CorwinSex2_9F
 			
 			IF ~~ THEN REPLY @323 /*~I tried, I really did. You're just too strong for me.~*/
+			GOTO XA_LC_CorwinSex2_9F
 			
-			IF ~~ THEN REPLY @326 /*...*/
+			IF ~~ THEN REPLY @325 /*...*/
+			GOTO XA_LC_CorwinSex2_9F
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_9F
-			SAY @
+			SAY @324 /*~(She moves her head next to yours, and gives you a kiss. On her tongue, you can taste a hint of the saltiness left behind from your own juices.)~*/
+			
+			= @144 /*~Come on, get up. There are a few more things I need to show you.~*/
+			
+			= @145 /*~(You spend the rest of the time going over a series of choke holds, leg locks, arm bars, and other techniques to quickly subdue an opponent. She teaches you how to apply them, and how to break free from them. It'll take several years of practice before you're as proficient as she is, but you feel that the knowledge she's imparted to you has already increased your fighting ability.)~*/
+			
+			= @325 /*(During the lessons, it was difficult at times to focus as the now familiar, strangely comforting feeling of being under Schael's total control sent your arousal into overdrive.)~*/
 		END
 	//}
 END
