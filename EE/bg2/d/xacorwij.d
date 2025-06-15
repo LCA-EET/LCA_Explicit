@@ -544,7 +544,10 @@ APPEND XACORWIJ
 		~ THEN BEGIN XA_LC_XAEXPL02
 			SAY @161 /* ~Gods, I've been looking forward to this all day. Help me get this armor off, lover.~ */
 			
-			IF ~~ THEN 
+			IF ~~ THEN
+			DO ~
+				SetGlobal("XA_LCE_AreaLoad", "MYAREA", 3)
+			~			
 			GOTO XA_LC_CorwinSex2_1
 		END
 

@@ -8,12 +8,12 @@ ACTION_IF FILE_EXISTS_IN_GAME ~xalcdbg.dlg~ THEN BEGIN
 END
 
 COPY_EXISTING ~ar0312.are~ ~override/xaexpl01.are~
-WRITE_ASCII 0x94 ~xalceas1~ #8 // remove the area script
+WRITE_ASCII 0x94 ~xalceas1~ #8 // overwrite the area script
 LPF xa_delete_are_actors END
 LPF xa_delete_are_triggers END
 
 COPY_EXISTING ~ar0416.are~ ~override/xaexpl02.are~
-WRITE_ASCII 0x94 ~~ #8 // remove the area script
+WRITE_ASCII 0x94 ~xalceas2~ #8 // overwrite the area script
 LPF xa_delete_are_actors END
 LPF xa_delete_are_triggers END
 

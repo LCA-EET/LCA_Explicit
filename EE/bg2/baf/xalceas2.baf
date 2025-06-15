@@ -1,0 +1,15 @@
+IF
+	Global("XA_LCE_AreaLoad", "MYAREA", 1)
+THEN
+	RESPONSE #100
+		ReallyForceSpellRES("XACHNG03", "XACORWIN")
+		Wait(1)
+		SetGlobal("XA_LCE_AreaLoad", "MYAREA", 2)
+END
+
+IF 
+	Global("XA_LCE_AreaLoad", "MYAREA", 2)
+THEN
+	RESPONSE #100
+		ActionOverride("XACORWIN", StartDialog("XACORWIJ", Player1))
+END
