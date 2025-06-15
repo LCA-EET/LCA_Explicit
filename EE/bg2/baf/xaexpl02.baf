@@ -17,6 +17,6 @@ THEN
 		FaceObject("XACORWIN")
 		SmallWait(1)
 		ActionOverride("XACORWIN", FaceObject(Player1))
-		SetGlobal("XA_LCE_AreaLoad", "MYAREA", 1)
+		SetGlobal("XA_LCE_TS_Prep", "MYAREA", 1)
 		EndCutSceneMode()
 END

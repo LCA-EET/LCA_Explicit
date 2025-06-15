@@ -541,34 +541,23 @@ APPEND XACORWIJ
 			Global("XA_LC_CorwinSex_2", "GLOBAL", 1)
 			AreaCheck("XAEXPL02")
 			// play romance song
-		~ THEN BEGIN XA_LC_XAEXPL02
-			SAY @161 /* ~Gods, I've been looking forward to this all day. Help me get this armor off, lover.~ */
-			
-			IF ~~ THEN
-			DO ~
-				SetGlobal("XA_LCE_TS_Prep", "MYAREA", 3)
-			~			
-			GOTO XA_LC_CorwinSex2_1
-		END
-
-		IF ~~ THEN BEGIN XA_LC_CorwinSex2_1
-			SAY @55 /* ~(You happily oblige, and watch as Schael gets undressed. The experience is as exhilarating and titilating as the first time the two of you made love. You also undress, and you engage in some sensual and passionate foreplay.)~ */
-			
-			IF ~~ THEN 
-			GOTO XA_LC_CorwinSex2_2
-		END	
-		
-		IF ~~ THEN BEGIN XA_LC_CorwinSex2_2
+		~ THEN BEGIN XA_LC_CorwinSex2_2
 			SAY @56 /* @56 = ~Mm. Before we get started. About what we discussed — your fighting skills.~  */
 		
 			IF ~
 				Gender(Player1, MALE)
 			~ THEN REPLY @57 /* ~You want to discuss this *now*?~ */
+			DO ~
+				SetGlobal("XA_LCE_TS_Prep", "MYAREA", 3)
+			~	
 			GOTO XA_LC_CorwinSex2_2M
 			
 			IF ~
 				Gender(Player1, FEMALE)
 			~ THEN REPLY @57 /* ~You want to discuss this *now*?~ */
+			DO ~
+				SetGlobal("XA_LCE_TS_Prep", "MYAREA", 3)
+			~	
 			GOTO XA_LC_CorwinSex2_2F
 			
 		END
