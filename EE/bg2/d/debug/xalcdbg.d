@@ -31,6 +31,12 @@ APPEND ~XALCDBG~
 		~
 		EXIT
 		
+		IF ~~ THEN REPLY @205 /* ~Sex 2 Text Screen~*/
+		DO ~
+			TextScreen("XALCSEX2")
+		~
+		EXIT
+		
 		IF ~~ THEN REPLY @204 /* Corwin Portrait Change */
 		DO ~
 			ReallyForceSpellRES("XACHNG03", "XACORWIN")

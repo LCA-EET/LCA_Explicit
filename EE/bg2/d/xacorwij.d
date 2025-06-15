@@ -546,7 +546,7 @@ APPEND XACORWIJ
 			
 			IF ~~ THEN
 			DO ~
-				SetGlobal("XA_LCE_AreaLoad", "MYAREA", 3)
+				SetGlobal("XA_LCE_TS_Prep", "MYAREA", 3)
 			~			
 			GOTO XA_LC_CorwinSex2_1
 		END

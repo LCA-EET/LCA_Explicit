@@ -1,4 +1,5 @@
 PRINT @300 /* ~Processing Return to Baldur's Gate components...~ */
+SILENT
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/rbg/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/rbg/baf~

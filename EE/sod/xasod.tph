@@ -1,4 +1,5 @@
 PRINT @100 /* ~Processing Siege of Dragonspear components...~ */
+SILENT
 
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/d~
 COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/sod/baf~
