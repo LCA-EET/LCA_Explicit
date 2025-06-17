@@ -1275,17 +1275,17 @@ APPEND XACORWIJ
 			GOTO XA_LC_CorwinSex2_9F_Orgasm
 			
 			IF ~
-				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+				GlobalLT("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
 			~ THEN REPLY @322 /*~Maybe I liked it...~*/
 			GOTO XA_LC_CorwinSex2_9F
 			
 			IF ~
-				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+				GlobalLT("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
 			~ THEN REPLY @323 /*~I tried, I really did. You're just too strong for me.~*/
 			GOTO XA_LC_CorwinSex2_9F
 			
 			IF ~
-				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+				GlobalLT("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
 			~ THEN REPLY @325 /*...*/
 			GOTO XA_LC_CorwinSex2_9F
 		END
@@ -1309,9 +1309,193 @@ APPEND XACORWIJ
 			
 			= @145 /*~(You spend the rest of the time going over a series of choke holds, leg locks, arm bars, and other techniques to quickly subdue an opponent. She teaches you how to apply them, and how to break free from them. It'll take several years of practice before you're as proficient as she is, but you feel that the knowledge she's imparted to you has already increased your fighting ability.)~*/
 			
-			= @325 /*(During the lessons, it was difficult at times to focus as the now familiar, strangely comforting feeling of being under Schael's total control sent your arousal into overdrive.)~*/
+			= @325 /*~(During the lessons, it was difficult at times to focus as the now familiar, strangely comforting feeling of being under Schael's total control sent your arousal into overdrive. The only thing keeping it in check was your growing fatigue; never in your life had you taken part in such a strenuous and intense workout.)*/
 			
-			IF ~~ THEN EXIT
+			= @326 /* ~Whew, that was quite the session. I'm impressed that you were able to keep up with me.~*/
+			
+			IF ~~ THEN REPLY @327 /* ~Gods, I'm so sore... my back, arms, legs... my everything hurts!~*/
+			GOTO XA_LC_CorwinSex2_10F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F
+			SAY @328 /*~I can help with that. Go and lay on the bed, face down.~ */
+			
+			= @329 /* ~(As instructed, you gingerly walk to the bed and lay down. Schael joins you and you can feel her straddle your body. You can her her whisper something... it sounds like a healing spell, or some kind of variation of one.)~*/
+			
+			= @330 /* ~You're going to enjoy this.~ */
+			
+			= @331/* ~(She begins to gently massage your shoulder and back muscles. To say that her touch is soothing is an understatement; the pain in those areas subsides, and is replaced with a kind of pulsing, warm, caressing sensation, that persists even after her hands have moved to a different part of your aching body. Slowly, she works toward your midsection, ass, hamstrings, calves, and finally, your feet.)~*/
+			
+			= @332/* ~Oh... Schael, this feels amazing.~*/
+			
+			= @333/* ~I know, love. Turn around. I need to work on your other side.~*/
+			
+			= @334/* ~(You happily oblige, and turn your body so that you are laying on your back. You look up at Schael; every inch of her glorious body is glistening, and you notice how her hands seem to be glowing with a bluish aura. She resumes her sensual massage, this time, focusing first on your midsection, then working toward your quads, your outer thighs, and finally, your inner thighs. The feel of her hands so close to your already dripping pussy causes you to moan loudly in pleasure.)~*/
+			
+			IF ~
+				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN
+			GOTO XA_LC_CorwinSex2_10F_Second
+						
+			IF ~
+				GlobalLT("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
+			~ THEN
+			GOTO XA_LC_CorwinSex2_10F_First
+
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F_First
+			SAY @355 /* ~(Without a word, she begins to massage and gently squeeze your breasts. It would seem that her spell has yet to wear off, as you can still feel that soothing, caressing sensation with every touch. While you lay there, contemplating what amazing gift that this incredible woman is giving you, she reaches down to stroke your clit in a slow, circular motion. This simple act is enough to send you over the edge, and you scream and shudder uncontrollably as your body is wracked by a momentous climax.)~  */
+			
+			IF ~~ THEN
+			GOTO XA_LC_CorwinSex2_11F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F_Second
+			SAY @335 /* ~(Without a word, she begins to massage and gently squeeze your breasts. It would seem that her spell has yet to wear off, as you can still feel that soothing, caressing sensation with every touch. While you lay there, contemplating what amazing gift that this incredible woman is giving you, she reaches down to stroke your clit in a slow, circular motion. This simple act is enough to send you over the edge, and you scream and shudder uncontrollably as your second orgasm of the <DAYNIGHT> wracks your body.)~ */
+			
+			IF ~~ THEN
+			GOTO XA_LC_CorwinSex2_11F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_11F
+			SAY @336 /* ~That's it, hero... now, it's MY turn.~ */
+			
+			= @337 /*~(She presses forward, and maneuvers herself so that her cunt is directly over your face and mouth. Knowing exactly what she wants, you place your tongue into her vagina and begin to vigorously eat her out. While you're not as experienced in this area as she is, you try your best to mimic how she used her tongue on you during the first night you were together.)~*/ 
+			
+			= @338 /*~Oh... oh! Gently, <CHARNAME>! Better... good. Just like that. Oh.... oh, yes...~ */
+			
+			= @339 /* ~(Schael begins to gyrate her hips and press down on you, so that your tongue is pumped into and out of her cunt. Though the concoction of her love juices and sweat is quite salty, you enjoy the taste, and you want more of it. After a time, she increases the pace and intensity of her gyrations, causing more of your face to be covered in her wetness.)~ */
+			
+			= @340 /* ~Oh... oh, <CHARNAME>... my woman, my love, my .... my hero! Oh! OHH!~*/
+			
+			= @341 /* ~(With your right hand, you reach up to forcefully grab and squeeze Schael's left breast. This is enough to send her over the edge, and her cunt unleashes a torrent of cum into and over your mouth, face, and hair. Her cum has a pleasant, slightly sweet taste, and she sits on your face for a moment as you lap up the last of her precious fluids from her pussy. After one last, forceful grind of her cunt on your face, she dismounts and lays alongside you.)~*/
+			
+			= @347 /* ~(She moves her head next to yours, and gives you a kiss.)~*/
+			
+			= @342 /* ~That was incredible. Thank you, dear.~*/
+			
+			IF ~~ THEN REPLY @343 /*~It was my pleasure, love.~ */
+			GOTO XA_LC_CorwinSex2_12F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_12F
+			SAY @344/*~*Sniff*~ */
+			
+			= @345 /* ~Gods, we could both use a bath. Go ahead and heat up the water. You can clean up first.~*/
+			
+			IF ~~ THEN REPLY @346 /* ~Are you sure? The tub looks large enough for the both of us.~*/
+			GOTO XA_LC_CorwinSex2_13F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_13F
+			SAY @348 /* ~Hey, look at that... I think you're right. Heat up the water and I'll join you.~*/
+			
+			= @349 /*~(A bath is a good idea; you both stink of battle and sex, and you don't know when your next opportunity to bathe will be. It takes a few minutes before the water is warm enough, but once it is, you and Schael eagerly get into the bath. The warm water is soothing, and you and Schael take your time to clean every square inch of your bodies. As perfect as the night has been, you realize that there is only one towel. Schael leaves the bath first and dries herself off. You follow, and ask for the towel once she's done.)~ */
+			
+			= @350 /* ~Turn around. I'll dry you off.~*/
+			
+			= @351 /* ~(With your back turned, Schael rolls the towel in her arms, and flicks it powerfully against your ass.)~*/
+			
+			IF ~~ THEN REPLY @352 /*~Ow!~ */
+			GOTO XA_LC_CorwinSex2_14F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_14F
+			SAY @353/* ~Hah! Sorry, I couldn't resist.~*/
+			
+			= @354 /* ~(With that out of her system, she dries you off, and the two of you head into bed. It takes mere minutes for you to fall asleep in each other's arms...)~*/
+			
+			= @126 /* ~(Completely exhausted, you both sleep soundly... for a while at least. After a couple of hours, you find yourself awake in bed and turn to look at Schael. Your mind is filled with thoughts of how much this beautiful, strong and incredibly talented woman has changed your life for the better, and the confluence of events that've brought you to each other.)~*/
+			
+			IF ~~ THEN REPLY @127 /* ~Love? Are you awake?~ */
+			GOTO XA_LC_CorwinSex2_15F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_15F
+			SAY @128 /* ~(She slowly opens her eyes.)~ */
+			
+			= @129 /* ~Mmm, yes hon.~ */
+			
+			= @130 /* ~I hope I wasn't too rough with you earlier.~ */
+			
+			IF ~~ THEN REPLY @131 /* ~You were, a little, but ... how do I say this. I'm finding more and more that I enjoy being, ah, under your control in the bedroom.~*/
+			GOTO XA_LC_CorwinSex2_15FA
+			
+			IF ~~ THEN REPLY @132 /* ~No, you were *amazing* Schael. You certainly know how to keep things interesting in the bedroom.~*/
+			GOTO XA_LC_CorwinSex2_15FB
+			
+			IF ~
+				Global("XA_LC_SafeWord", "LOCALS", 0)
+			~ THEN REPLY @133 /* ~We'll need a safe word next time for sure.~ */
+			GOTO XA_LC_CorwinSex2_15FC
+			
+			IF ~
+				GlobalGT("XA_LC_SafeWord", "LOCALS", 0)
+			~ THEN REPLY @218 /*~It's a good thing I had that safe word...~*/
+			GOTO XA_LC_CorwinSex2_15FC
+			
+			IF ~~ THEN REPLY @191 /* ~I haven't felt that helpless since I was captured by Irenicus.~ */
+			GOTO XA_LC_CorwinSex2_15FD
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_15FA
+			SAY @356 /* ~You have so much resting on your shoulders already... it's no surprise that you'd want to let go of the responsibility of control, at least in the bedroom.~  */
+			
+			IF ~~ THEN
+			GOTO XA_LC_CorwinSex2_15FF
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_15FB
+			SAY @136 /* ~Variety is the spice of life, my love. I'd hate for our love life to become boring. Somehow...~ */
+			
+			= @357 /* ~(She playfully pats your crotch.)~  */
+			
+			= @138 /* ~... I don't think we'll need to worry about that, eh?~ [xalce138] */
+			
+			IF ~~ THEN
+			GOTO XA_LC_CorwinSex2_15FF
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_15FC
+			SAY @140 /* ~I'm sorry. I guess I got a little carried away.~ [xalce133]*/
+			
+			IF ~~ THEN
+			GOTO XA_LC_CorwinSex2_15FF
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_15FD
+			SAY @192 /*~I... I don't know what to say. The last thing I wanted was for you to relive that nightmare. Forgive me, love.~*/
+			
+			IF ~~ THEN REPLY @193 /*~I know that wasn't your intent, and... I'm ashamed to admit it, but I enjoyed it, Schael.~*/
+			GOTO XA_LC_CorwinSex2_15FE
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_15FE
+			SAY @194 /*~Don't feel ashamed, dear. We all have our own little fantasies and... fetishes. What's important is that we trust each other enough to explore them, together.~ */
+			
+			IF ~~ THEN REPLY @195 /*~Ah, I understand. That's why you asked me if I trusted you. I still do — now, more than ever.~*/
+			GOTO XA_LC_CorwinSex2_15FF
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_15FF
+			SAY @196 /*~(She leans in and kisses you on the cheek.)~*/
+			
+			= @358/*~I love you, <CHARNAME>.~ */
+			
+			IF ~~ THEN REPLY @359 /*~I love you too, Schael.~*/
+			GOTO XA_LC_CorwinSex2_End_F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_End_F
+			SAY @360 /* ~(Together, you try and get back to sleep. After a short while, however, you begin to kiss, and you end up spending the rest of the time learning precisely how and where the two of you like to be touched, kissed, licked, and sucked. During this wonderful exploration of sensations, you learned that Schael is extremely ticklish, which you find highly amusing. Eventually, you fall asleep with your head resting on her breasts, and your fingers in her cunt.)~ */
+			
+			IF ~~ THEN
+			DO ~
+				StartCutSceneMode()
+				StartCutScene("XAEX02EX")
+			~
+			EXIT
 		END
 	//}
 END
