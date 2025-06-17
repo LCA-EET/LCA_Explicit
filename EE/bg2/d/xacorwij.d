@@ -735,11 +735,21 @@ APPEND XACORWIJ
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_5C
 			SAY @80 /* ~(She stands with her arms crossed just beneath her alluring breasts, and a look of disappointment on her face.)~ */
 				
-			IF ~~ THEN REPLY @81 /* ~I said no!~ */
+			IF ~
+				Gender(Player1, MALE)
+			~ THEN REPLY @81 /* ~I said no!~ */
 			DO ~
 				SetGlobal("XA_LCE_WontAttack", "LOCALS", 1)
 			~
 			GOTO XA_LC_CorwinSex2_5D
+			
+			IF ~
+				Gender(Player1, FEMALE)
+			~ THEN REPLY @81 /* ~I said no!~ */
+			DO ~
+				SetGlobal("XA_LCE_WontAttack", "LOCALS", 1)
+			~
+			GOTO XA_LC_CorwinSex2_5D_F
 			
 			IF ~
 				Gender(Player1, MALE)
@@ -1101,10 +1111,10 @@ APPEND XACORWIJ
 			SAY @194 /*~Don't feel ashamed, dear. We all have our own little fantasies and... fetishes. What's important is that we trust each other enough to explore them, together.~ */
 			
 			IF ~~ THEN REPLY @195 /*~Ah, I understand. That's why you asked me if I trusted you. I still do — now, more than ever.~*/
-			GOTO XA_LC_CorwinSex2_10F
+			GOTO XA_LC_CorwinSex2_10F_M
 		END
 		
-		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F_M
 			SAY @196 /*~(She leans in and kisses you on the cheek.)~*/
 			
 			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
@@ -1167,6 +1177,15 @@ APPEND XACORWIJ
 			
 			IF ~~ THEN
 			GOTO XA_LC_CorwinSex2_5_Select
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_5D_F
+			SAY @303/*~(Without another word, she delivers an open-handed slap to your face. Although you can tell that she held back, it stings nevertheless, and you instinctively move your hand to cover your cheek. )~ */
+			
+			= @304 /*~*Now* will you hit me? Or do I need to slap those gorgeous tits as well?~ */
+			
+			IF ~~ THEN REPLY @72 /* ~Fine. You asked for it! (Attack her.)~*/
+			GOTO XA_LC_CorwinSex2_6F
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_6F
@@ -1252,7 +1271,7 @@ APPEND XACORWIJ
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_7FA
 			SAY @319 /*~Well, experience IS the best teacher, or so they say.~*/
 			
-			IF ~~ THEN REPLY @325 /*~So, what should I have done to break out of that hold?~ */
+			IF ~~ THEN REPLY @361 /*~So, what should I have done to break out of that hold?~ */
 			GOTO XA_LC_CorwinSex2_8F
 		END
 		
@@ -1271,7 +1290,7 @@ APPEND XACORWIJ
 			
 			IF ~
 				Global("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
-			~ THEN REPLY @325 /*...*/
+			~ THEN REPLY @362 /*...*/
 			GOTO XA_LC_CorwinSex2_9F_Orgasm
 			
 			IF ~
@@ -1286,7 +1305,7 @@ APPEND XACORWIJ
 			
 			IF ~
 				GlobalLT("XA_LCE_HeroCameWhileChoked", "LOCALS", 1)
-			~ THEN REPLY @325 /*...*/
+			~ THEN REPLY @362 /*...*/
 			GOTO XA_LC_CorwinSex2_9F
 		END
 
@@ -1326,9 +1345,11 @@ APPEND XACORWIJ
 			
 			= @331/* ~(She begins to gently massage your shoulder and back muscles. To say that her touch is soothing is an understatement; the pain in those areas subsides, and is replaced with a kind of pulsing, warm, caressing sensation, that persists even after her hands have moved to a different part of your aching body. Slowly, she works toward your midsection, ass, hamstrings, calves, and finally, your feet.)~*/
 			
-			= @332/* ~Oh... Schael, this feels amazing.~*/
-			
-			= @333/* ~I know, love. Turn around. I need to work on your other side.~*/
+			IF ~~ THEN REPLY @332 /* ~Oh... Schael, this feels amazing.~*/
+			GOTO XA_LC_CorwinSex2_10F_Part2
+		END
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F_Part2
+			SAY @333/* ~I know, love. Turn around. I need to work on your other side.~*/
 			
 			= @334/* ~(You happily oblige, and turn your body so that you are laying on your back. You look up at Schael; every inch of her glorious body is glistening, and you notice how her hands seem to be glowing with a bluish aura. She resumes her sensual massage, this time, focusing first on your midsection, then working toward your quads, your outer thighs, and finally, your inner thighs. The feel of her hands so close to your already dripping pussy causes you to moan loudly in pleasure.)~*/
 			
@@ -1385,10 +1406,41 @@ APPEND XACORWIJ
 			= @345 /* ~Gods, we could both use a bath. Go ahead and heat up the water. You can clean up first.~*/
 			
 			IF ~~ THEN REPLY @346 /* ~Are you sure? The tub looks large enough for the both of us.~*/
-			GOTO XA_LC_CorwinSex2_13F
+			GOTO XA_LC_CorwinSex2_13F_A
+			
+			IF ~~ THEN REPLY @363 /* ~No, you first. You need it more than me... no offense.~*/
+			GOTO XA_LC_CorwinSex2_13F_B
 		END
 		
-		IF ~~ THEN BEGIN XA_LC_CorwinSex2_13F
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_13F_A
+			SAY @348 /* ~Hey, look at that... I think you're right. Heat up the water and I'll join you.~*/
+
+			IF~~ THEN 
+			GOTO XA_LC_CorwinSex2_13F_Part2
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_13F_B
+			SAY @364 /* ~Heh. Is that an order, hero? Fair enough.~*/
+
+			= @365 /* ~(Schael leaves the bed to warm up the water. You bask in the sight of her beautiful, perfectly round ass jiggling with each step toward the tub.)~*/
+			
+			= @366 /* ~Hey, it looks like the tub might be big enough for the two of us. Join me.~*/
+			
+			IF~~ THEN 
+			GOTO XA_LC_CorwinSex2_13F_Part2
+		END
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_13F_Part2
+			SAY @349 /*~(A bath is a good idea; you both stink of battle and sex, and you don't know when your next opportunity to bathe will be. It takes a few minutes before the water is warm enough, but once it is, you and Schael eagerly get into the bath. The warm water is soothing, and you and Schael take your time to clean every square inch of your bodies. As perfect as the night has been, you realize that there is only one towel. Schael leaves the bath first and dries herself off. You follow, and ask for the towel once she's done.)~ */
+			
+			= @350 /* ~Turn around. I'll dry you off.~*/
+			
+			= @351 /* ~(With your back turned, Schael rolls the towel in her arms, and flicks it powerfully against your ass.)~*/
+			
+			IF ~~ THEN REPLY @352 /*~Ow!~ */
+			GOTO XA_LC_CorwinSex2_14F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_13F_B
 			SAY @348 /* ~Hey, look at that... I think you're right. Heat up the water and I'll join you.~*/
 			
 			= @349 /*~(A bath is a good idea; you both stink of battle and sex, and you don't know when your next opportunity to bathe will be. It takes a few minutes before the water is warm enough, but once it is, you and Schael eagerly get into the bath. The warm water is soothing, and you and Schael take your time to clean every square inch of your bodies. As perfect as the night has been, you realize that there is only one towel. Schael leaves the bath first and dries herself off. You follow, and ask for the towel once she's done.)~ */
