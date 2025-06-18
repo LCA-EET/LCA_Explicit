@@ -17,7 +17,7 @@ ADD_TRANS_TRIGGER XALCHOOK 0
 ~
 	False()
 ~
-DO 0 2 3
+DO 0 1 2 3
 
 EXTEND_BOTTOM XALCHOOK 0
 	IF ~
@@ -31,7 +31,6 @@ EXTEND_BOTTOM XALCHOOK 0
 	
 	IF ~
 		Global("XA_LC_CorwinSex_2", "GLOBAL", 1)
-		Gender(Player1, MALE)
 	~
 	THEN
 	DO ~
