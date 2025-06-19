@@ -1439,20 +1439,7 @@ APPEND XACORWIJ
 			IF ~~ THEN REPLY @352 /*~Ow!~ */
 			GOTO XA_LC_CorwinSex2_14F
 		END
-		
-		IF ~~ THEN BEGIN XA_LC_CorwinSex2_13F_B
-			SAY @348 /* ~Hey, look at that... I think you're right. Heat up the water and I'll join you.~*/
 			
-			= @349 /*~(A bath is a good idea; you both stink of battle and sex, and you don't know when your next opportunity to bathe will be. It takes a few minutes before the water is warm enough, but once it is, you and Schael eagerly get into the bath. The warm water is soothing, and you and Schael take your time to clean every square inch of your bodies. As perfect as the night has been, you realize that there is only one towel. Schael leaves the bath first and dries herself off. You follow, and ask for the towel once she's done.)~ */
-			
-			= @350 /* ~Turn around. I'll dry you off.~*/
-			
-			= @351 /* ~(With your back turned, Schael rolls the towel in her arms, and flicks it powerfully against your ass.)~*/
-			
-			IF ~~ THEN REPLY @352 /*~Ow!~ */
-			GOTO XA_LC_CorwinSex2_14F
-		END
-		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_14F
 			SAY @353/* ~Hah! Sorry, I couldn't resist.~*/
 			
@@ -1542,8 +1529,22 @@ APPEND XACORWIJ
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_End_F
 			SAY @360 /* ~(Together, you try and get back to sleep. After a short while, however, you begin to kiss, and you end up spending the rest of the time learning precisely how and where the two of you like to be touched, kissed, licked, and sucked. During this wonderful exploration of sensations, you learned that Schael is extremely ticklish, which you find highly amusing. Eventually, you fall asleep with your head resting on her breasts, and your fingers in her cunt.)~ */
 			
-			IF ~~ THEN
+			
+			IF ~
+				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
+			~ THEN 
 			DO ~
+				ReallyForceSpellRES("XACHNG01", "XACORWIN")
+				StartCutSceneMode()
+				StartCutScene("XAEX02EX")
+			~
+			EXIT
+			
+			IF ~
+				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
+			~ THEN 
+			DO ~
+				ReallyForceSpellRES("XACHNG02", "XACORWIN")
 				StartCutSceneMode()
 				StartCutScene("XAEX02EX")
 			~
