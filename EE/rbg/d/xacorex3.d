@@ -356,13 +356,12 @@ END
 IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_10
 	SAY @10  /* ~(Hearing your moan, Schael and Neoma turn to you as you continue to masturbate.)~ */
 	
-	= @11  /* ~Stop it! Don't you DARE play with that cock!~ */
-	
-	= @12  /* ~(You immediately stop; you've seen that fierce look in her eyes before, and you know she means business.)~*/
-	
-	= @13  /* ~That's better. Just watch. For now, at least.~*/
-	
-	= @14  /* ~(Satisfied that you'll do as your told, the two ladies resume with their kissing and touching. They take turns licking and fondling each other's breasts, caressing their bottoms, and fingering their sex. It takes nearly all of your willpower to stop yourself from throwing them on the bed and having your way with the both of them.)~*/
+	IF ~~ THEN 
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_Laugh
+END
+
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_10_End
+	SAY @14 /* ~(Satisfied that you'll do as your told, the two ladies resume with their kissing and touching. They take turns licking and fondling each other's breasts, caressing their bottoms, and fingering their sex. It takes nearly all of your willpower to stop yourself from throwing them on the bed and having your way with the both of them.)~*/
 
 	= @123 /* ~(When their foreplay ends, they walk over to the bed. Neoma gets in first and lays face-up. Schael follows her in, and turns her body so that her head is between Neoma's legs. Using a pillow to support her neck, Neoma raises her head so that it's between Schael's powerful thighs, directly in front of her most private, sensitive, and intimate parts).~ */
 	
@@ -542,5 +541,40 @@ IF ~~ THEN BEGIN XA_LC_Sex3_Neoma_END
 		StartCutScene("XAEX03EX")
 	~
 	EXIT
+END
+
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_Laugh2
+	SAY @142 /*~Would you look at that... doesn't it turn you on? Watching the hero pleasure <PRO_HIMHER>self to us?~*/
+	
+	IF ~~ THEN 
+	EXTERN XANEOMA XA_LC_XAEXPL03_Neoma_Laugh3
+END
+
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_Laugh4
+	SAY @143 /*~<CHARNAME>, my dear, as much as I enjoy the show, we can't have you cum before the night has even started.~*/
+	
+	IF ~
+		Gender(Player1, MALE)
+	~ THEN 
+	GOTO XA_LC_XAEXPL03_Neoma_LaughEndMale
+	
+	IF ~
+		Gender(Player1, FEMALE)
+	~ THEN 
+	GOTO XA_LC_XAEXPL03_Neoma_LaughEndFemale
+END
+
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_LaughEndMale
+	SAY @144 /*~That's a good boy. Just watch. For now, at least.~*/
+	
+	IF ~~ THEN 
+	GOTO XA_LC_XAEXPL03_Neoma_10_End
+END
+
+IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_LaughEndFemale
+	SAY @145 /*~That's a good girl. Just watch. For now, at least.~*/
+	
+	IF ~~ THEN 
+	GOTO XA_LC_XAEXPL03_Neoma_10_End
 END
 //}

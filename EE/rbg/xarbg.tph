@@ -11,6 +11,11 @@ END
 COPY_EXISTING ~xaa586.are~ ~override/xaexpl03.are~ // BG1 ar0118
 WRITE_ASCII 0x94 ~xa03as~ #8 // replace the area script
 
+COPY ~%MOD_FOLDER%/rbg/bmp~ ~override~
+
+COPY ~%MOD_FOLDER%/rbg/2da/xalcsex3.2da~ ~override~
+SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1002)
+
 //{ CRE
 	COPY_EXISTING ~xacorwin.cre~ ~override/xacorex3.cre~
 	WRITE_LONG 0x28 0x6210 // Change animation to Mage Female Human

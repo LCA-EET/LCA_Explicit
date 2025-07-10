@@ -139,5 +139,19 @@ APPEND XANEOMA
 		~
 		EXIT
 	END
+	
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_Laugh
+		SAY @31 /*~Hee hee... looks like the hero can't control <PRO_HIMHER>self!~*/
+		
+		IF ~~ THEN REPLY @32 /*~Ohhh... ahh...~*/
+		EXTERN XACOREX3 XA_LC_XAEXPL03_Neoma_Laugh
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_Laugh3
+		SAY @33 /*~Mmm... definitely.~*/
+		
+		IF ~~ THEN REPLY @32 /*~Ohhh... ahh...~*/
+		EXTERN XACOREX3 XA_LC_XAEXPL03_Neoma_Laugh4
+	END
 	//}
 END
