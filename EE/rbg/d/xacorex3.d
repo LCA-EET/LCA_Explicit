@@ -1,6 +1,30 @@
 BEGIN ~XACOREX3~
 
-//{ Corwin Sex 3 - Schael
+//{ Corwin Sex 3 - Opening Dialog 
+IF ~
+	GlobalLT("XA_LCE_Sex3Start", "LOCALS", 1)
+~ THEN BEGIN XA_Sex3_Opening
+	SAY @78 /*~What are your orders, hero?~*/
+	
+	IF ~
+		Global("XA_LC_CorwinNeomaRelationship", "GLOBAL", 2)
+	~ THEN 
+	DO ~
+		SetGlobal("XA_LCE_Sex3Start", "LOCALS", 1)
+	~
+	GOTO XA_Sex3_Neoma1
+	
+	IF ~
+		!Global("XA_LC_CorwinNeomaRelationship", "GLOBAL", 2)
+	~ THEN  
+	DO ~
+		SetGlobal("XA_LCE_Sex3Start", "LOCALS", 1)
+	~
+	GOTO XA_Sex3_Schael1
+END
+//}
+
+//{ Corwin Sex 3 - M/F (Schael)
 
 IF ~
 	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 5)
@@ -47,71 +71,7 @@ END
 IF ~
 	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 2)
 ~ THEN BEGIN XA_LC_XAEXPL03_Schael_1
-	SAY @61 /*~I'm glad you're still awake.~*/
-	
-	IF ~~ THEN REPLY @62 /*~Another few minutes and I wouldn't have been.~*/
-	DO ~
-		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 3)
-	~
-	GOTO XA_LC_XAEXPL03_Schael_3
-	
-	IF ~~ THEN REPLY @63 /*~Wow... Schael, you look amazing...~*/
-	DO ~
-		SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 3)
-	~
-	GOTO XA_LC_XAEXPL03_Schael_2
-END
-
-IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_2
-	SAY @64 /* ~Thanks, love. It's been so long since I've worn a dress!~*/
-	
-	IF ~~ THEN
-	GOTO XA_LC_XAEXPL03_Schael_3
-END
-
-IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_3
-	SAY @65 /*~Sorry I'm so late. It took a while to get Rohma to bed. She was so excited, she told me everything that she did with her grandfather while I was gone. Did you know she's first in her class at math?~*/
-	
-	IF ~~ THEN REPLY @66 /*~She's a smart kid.~*/
-	GOTO XA_LC_XAEXPL03_Schael_4A
-	
-	IF ~~ THEN REPLY @67 /*~No need to apologize. Sounds like you two had a great time.~*/
-	GOTO XA_LC_XAEXPL03_Schael_4B
-END
-
-IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_4A
-	SAY @73 /*~She really is... oh, what's this? You brought wine?~ */
-	
-	IF ~~ THEN REPLY @69 /*~Berduskan dark wine, your favourite. Would you like me to pour you a glass?~*/
-	GOTO XA_LC_XAEXPL03_Schael_5
-END
-
-IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_4B
-	SAY @68 /*~We did... oh, what's this? You brought wine?~ */
-	
-	IF ~~ THEN REPLY @69 /*~Berduskan dark wine, your favourite. Would you like me to pour you a glass?~*/
-	GOTO XA_LC_XAEXPL03_Schael_5
-END
-
-IF ~~ THEN BEGIN XA_LC_XAEXPL03_Schael_5
-	SAY @70 /* ~Such a gentleman. Yes, please.~*/
-	
-	= @71 /* ~(You remove the covers, and Schael gasps with delight as she ogles your nude body.)~*/
-	
-	= @72 /*~Oh, my... someone got started a little early, mm?~ */
-	
-	= @74 /* ~(You pour her a glass and hand it to her, then pour one for yourself.)~*/
-	
-	= @75  /*~Mm. Thank you, dear.~ */
-	
-	= @76  /*~(With the wine glass in one hand, she takes hold of your dick in the other and leads you back to the edge of the bed. You sit down and tell each other about your day, while she lovingly strokes and caresses your package. With each soft, gentle, and loving stroke, more and more of your pre-cum seeps out of you and onto her hand.)~ */
-	
-	= @140 /*After a few minutes of this teasing, you set your wine glasses aside. Schael stands to disrobe, and with just a couple of fluid movements, her dress falls to the floor. You think to yourself that you'll never get tired of seeing her beautiful, magnificent physique in all its nude glory.)~  */
-	
-	
-	= @77  /* ~(Without another word, she turns and pushes you down so that you are laying flat on your back. She then straddles your body, so that her hips are directly over your erect, leaking cock.)~*/
-	
-	= @78  /* ~So. What are your orders, hero?~ */
+	SAY @78 /* ~So. What are your orders, hero?~ */
 	
 	IF ~
 		GlobalGT("XA_LC_CorwinOpinionOfPlayer", "GLOBAL", 109)
