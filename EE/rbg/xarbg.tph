@@ -13,11 +13,20 @@ WRITE_ASCII 0x94 ~xa03as~ #8 // replace the area script
 
 COPY ~%MOD_FOLDER%/rbg/bmp~ ~override~
 
-COPY ~%MOD_FOLDER%/rbg/2da/xalcsex3.2da~ ~override~
+COPY ~%MOD_FOLDER%/rbg/2da/xaex03ms.2da~ ~override~ 
 SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1002)
+
+COPY ~%MOD_FOLDER%/rbg/2da/xaex03mn.2da~ ~override~
+SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1003)
+
+COPY_EXISTING ~xachng01.spl~ ~override/xachng04.spl~
+WRITE_ASCII 0xAE ~xalcsch6~ #8
+WRITE_ASCII 0xDE ~xalcsch7~ #8
 
 //{ CRE
 	COPY_EXISTING ~xacorwin.cre~ ~override/xacorex3.cre~
+	WRITE_ASCII 0x34 ~xalcsch1~ #8
+	WRITE_ASCII 0x3C ~xalcsch2~ #8
 	WRITE_LONG 0x28 0x6210 // Change animation to Mage Female Human
 	LPF xa_reset_cre
 		STR_VAR
@@ -26,4 +35,5 @@ SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1002)
 			xa_override = ~xacorex3~
 	END
 	REMOVE_CRE_ITEMS
+	
 //}

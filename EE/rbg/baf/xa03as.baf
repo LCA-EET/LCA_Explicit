@@ -1,4 +1,22 @@
+IF
+	GlobalLT("XA_Intro", "MYAREA", 1)
+	Global("XA_LCE_Sex3Intro", "GLOBAL", 1)
+	Gender(Player1, MALE)
+	!InMyArea("XANEOMA")
+THEN
+	RESPONSE #100
+		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
+END
 
+IF
+	GlobalLT("XA_Intro", "MYAREA", 1)
+	Global("XA_LCE_Sex3Intro", "GLOBAL", 1)
+	Gender(Player1, MALE)
+	InMyArea("XANEOMA")
+THEN
+	RESPONSE #100
+		ActionOverride("XANEOMA", StartDialog("XANEOMA", Player1))
+END
 
 IF
 	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
@@ -12,20 +30,24 @@ IF
 	Global("XA_LC_CorwinSex_3_Schael", "GLOBAL", 5)
 THEN
 	RESPONSE #100
+		ReallyForceSpellRES("XACHNG04", "XACOREX3")
+		SmallWait(5)
 		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
 END
 
 IF 
-	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 6)
+	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 2)
 THEN
 	RESPONSE #100
-		SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 7)
+		SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 3)
 		RestPartyEx(0,0,FALSE)
 END
 
 IF 
-	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 7)
+	Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 3)
 THEN
 	RESPONSE #100
+		ReallyForceSpellRES("XACHNG04", "XACOREX3")
+		SmallWait(5)
 		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
 END

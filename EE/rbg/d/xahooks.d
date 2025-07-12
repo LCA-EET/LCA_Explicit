@@ -9,13 +9,27 @@ DO 0
 EXTEND_BOTTOM XALCHOOK 1
 	IF ~
 		Global("XA_LC_CorwinSex_3", "GLOBAL", 1)
+		!Global("XA_LC_CorwinNeomaRelationship", "GLOBAL", 2)
 		Gender(Player1, MALE)
 	~
 	THEN
 	DO ~
 		SetGlobal("XA_LC_SleepBG", "GLOBAL", 0)
 		StartCutSceneMode()
-		StartCutScene("XAEXPL03")
+		StartCutScene("XAEX03MS")
+	~
+	EXIT
+	
+	IF ~
+		Global("XA_LC_CorwinSex_3", "GLOBAL", 1)
+		Global("XA_LC_CorwinNeomaRelationship", "GLOBAL", 2)
+		Gender(Player1, MALE)
+	~
+	THEN
+	DO ~
+		SetGlobal("XA_LC_SleepBG", "GLOBAL", 0)
+		StartCutSceneMode()
+		StartCutScene("XAEX03MN")
 	~
 	EXIT
 END

@@ -3,8 +3,10 @@ IF
 THEN
 	RESPONSE #100
 		CutSceneID(Player1)
-		ActionOverride("XACOREX3", MoveToPoint([310.250]))
-		Wait(5)
+		ActionOverride("XACOREX3", MoveToPoint([420.200]))
+		Wait(3)
+		ActionOverride("XACOREX3", FaceObject("XANEOMA"))
+		SmallWait(5)
 		DisplayStringHead("XACOREX3", @0)
 		Wait(1)
 		ActionOverride("XANEOMA", FaceObject("XACOREX3")

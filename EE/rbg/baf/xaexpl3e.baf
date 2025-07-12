@@ -4,6 +4,8 @@ THEN
 	RESPONSE #100
 		CutSceneID(Player1)
 		RestPartyEx(0,0,FALSE)
-		Wait(3)
+		Wait(1)
+		ReallyForceSpellRES("XACHNG03", "XACOREX3")
+		Wait(2)
 		ActionOverride("XACOREX3", StartDialog("XACOREX3", Player1))
 END
