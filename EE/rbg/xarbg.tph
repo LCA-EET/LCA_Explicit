@@ -19,6 +19,12 @@ SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1002)
 COPY ~%MOD_FOLDER%/rbg/2da/xaex03mn.2da~ ~override~
 SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1003)
 
+COPY ~%MOD_FOLDER%/rbg/2da/xaex03fs.2da~ ~override~
+SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1004)
+
+COPY ~%MOD_FOLDER%/rbg/2da/xaex03fn.2da~ ~override~
+SET_2DA_ENTRY 3 2 2 RESOLVE_STR_REF(@1005)
+
 COPY_EXISTING ~xachng01.spl~ ~override/xachng04.spl~
 WRITE_ASCII 0xAE ~xalcsch6~ #8
 WRITE_ASCII 0xDE ~xalcsch7~ #8

@@ -9,4 +9,6 @@
 @300=~LCA Explicit Mod Debug - RBG~
 @301=~xaex03n (Baldur's Gate Intimate Encounter - Neoma)~
 @302=~xaex03s (Baldur's Gate Intimate Encounter - Schael)~
+@303=~SetGlobal("XA_LC_SchaelBound", "GLOBAL", 1)~
+@304=~SetGlobal("XA_LC_SchaelBound", "GLOBAL", 0)~
 @0 = ~Return to the prior menu.~

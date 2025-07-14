@@ -4,23 +4,55 @@ APPEND XANEOMA
 	IF ~
 		GlobalLT("XA_Intro", "MYAREA", 1)
 	~ THEN BEGIN XA_LC_XAEXPL03_Neoma_1
-		SAY @1  /* ~I didn't mean to snap at you. I just never experienced anything like that before...~*/
+		SAY @14  /* ~...~*/
 		
-		IF ~~ THEN REPLY @2 /* ~Neither have I.~*/
+		IF ~~ THEN REPLY @14 /* ~...~*/
 		DO ~
 			SetGlobal("XA_Intro", "MYAREA", 1)
 		~
-		GOTO XA_LC_XAEXPL03_Neoma_3
-		
-		IF ~~ THEN REPLY @3 /*  ~Neoma, I've been meaning to ask... what, exactly, is your relationship with Schael?~*/
-		DO ~
-			SetGlobal("XA_Intro", "MYAREA", 1)
-		~
-		GOTO XA_LC_XAEXPL03_Neoma_2
+		GOTO XA_LC_XAEXPL03_Neoma_1B
 	END
 //}
 
 //{ Neoma M/F
+
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_1B
+		SAY @14  /* ~...~*/
+		
+		IF ~~ THEN REPLY @15 /* ~Neoma, I -~*/
+		GOTO XA_LC_XAEXPL03_Neoma_1C
+	END
+
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_1C
+		SAY @1  /* ~I didn't mean to snap at you. I just never experienced anything like that before...~*/
+		
+		IF ~~ THEN REPLY @16 /* ~Are you sure you're alright?~*/
+		GOTO XA_LC_XAEXPL03_Neoma_1D
+		
+		IF ~~ THEN REPLY @2 /* ~Neither have I.~*/
+		GOTO XA_LC_XAEXPL03_Neoma_1E
+		
+		IF ~~ THEN REPLY @3 /*  ~Neoma, I've been meaning to ask... what, exactly, is your relationship with Schael?~*/
+		GOTO XA_LC_XAEXPL03_Neoma_2
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_1D
+		SAY @17 /* ~Yeah, I'm fine... mm. I can still taste you in my mouth.~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_XAEXPL03_Neoma_1E
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_1E
+		SAY @18 /* Plus, it's not like I regret it... if even a fraction of the amazing things Schael has told me about you are true, you deserved it. And after all, heh, how many women can say they've tasted the cum of such a mighty and famous hero?*/
+		
+		IF ~~ THEN REPLY @19 /* ~Heh. Thank you, Neoma. I really enjoyed it. Schael is lucky to count you among her friends.~  */
+		GOTO XA_LC_XAEXPL03_Neoma_3
+		
+		IF ~~ THEN REPLY @20 /*  ~Neoma, I've been meaning to ask... what, exactly, is your relationship with Schael?~*/
+		GOTO XA_LC_XAEXPL03_Neoma_2
+	END
+
 	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_2
 		SAY @4  /* ~We're friends. Friends with benefits, she'd say. But... as much as I hate to admit, there's no love in her heart for me, no romance... just physical attraction.~*/
 		

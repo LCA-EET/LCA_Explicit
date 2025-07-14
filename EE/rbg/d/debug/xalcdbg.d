@@ -20,6 +20,18 @@ APPEND ~XALCDBG~
 			StartCutScene("xaex03s")
 		~
 		EXIT
+		
+		IF ~~ THEN REPLY @303
+		DO ~
+			SetGlobal("XA_LC_SchaelBound", "GLOBAL", 1)
+		~
+		GOTO XA_LCE_SoA_Debug
+		
+		IF ~~ THEN REPLY @304
+		DO ~
+			SetGlobal("XA_LC_SchaelBound", "GLOBAL", 0)
+		~
+		GOTO XA_LCE_SoA_Debug
 	
 		IF ~~ THEN REPLY @0
 		GOTO 10
