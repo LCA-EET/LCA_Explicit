@@ -501,7 +501,7 @@ BEGIN ~XACOREX3~
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_NotMad_Male
-		SAY @236 /*~No, silly. I knew you were kidding. Like you said, it was just roleplay. I can't believe you pissed yourself, hero. Ugh, my legs and feet are covered in it... at least this room has a bath.~*/
+		SAY @236 /*~No, silly. Like you said, it was just roleplay. I can't believe you pissed yourself, though... it's certainly not what I'd expect from my handsome, brave hero. Look, my legs and feet are covered in it. You're lucky I'm in a good mood, otherwise I might've made you lick me clean. Maybe you'd like that, mm? Next time, perhaps... this room has a bath, after all.~*/
 		
 		= @237 /*~(She eyes your still twitching cock, and licks her luscious lips.)~*/
 		
