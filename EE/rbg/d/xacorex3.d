@@ -419,6 +419,14 @@ BEGIN ~XACOREX3~
 		GOTO XA_LC_Schael_Bondage_FondleTits
 		
 		IF ~
+			GlobalLT("XA_LC_Finger", "LOCALS", 1)
+		~ THEN REPLY @275 /* */
+		DO ~
+			SetGlobal("XA_LC_Finger", "LOCALS", 1)
+		~
+		GOTO XA_LC_Schael_Bondage_Finger
+		
+		IF ~
 			Global("XA_LC_Tickle", "LOCALS", 0)
 		~ THEN REPLY @175 /* ~(Tickle her.)~*/
 		DO ~
@@ -510,6 +518,40 @@ BEGIN ~XACOREX3~
 		COPY_TRANS XACOREX3 XA_LC_Schael_Bondage_Options
 	END
 	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Finger
+		SAY @276 /* ~(You insert your middle and ring fingers into Schael's extraordinarily wet cunt, and wiggle them around for a bit before inserting them deeper, eventually . As you continue to explore her cunt with your extended fingers, you rub your thumb against her clit, and she lets out an obscene, high-pitched moan which sends your own arousal to new heights. You're deep enough insider of her now to touch her cervix and g-spot, which causes her moans to turn into screams of ecstasy. Without warning, you cease your efforts, and pull your hand out of her insatiable cunt.)~*/
+		
+		= @277 /* ~W-what? You aren't going to... to...~*/
+		
+		IF ~~ THEN REPLY @278 /*~Finish you off? Not unless you tell me the safe word.~  */
+		GOTO XA_LC_Schael_Bondage_Finger_A
+		
+		IF ~~ THEN REPLY @280 /* ~Why would I want this to end so soon? We're just getting started.~*/
+		GOTO XA_LC_Schael_Bondage_Finger_B
+	END
+	
+	IF ~~ THEN BEGIN GOTO XA_LC_Schael_Bondage_Finger_A
+		SAY @279 /* ~*groan* You'll never *pant* get it out of me!~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Bondage_Finger_END
+	END
+
+	IF ~~ THEN BEGIN GOTO XA_LC_Schael_Bondage_Finger_B
+		SAY @283 /* ~Fine! I'll do it myself!~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Bondage_Finger_END
+	END
+
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Finger_END
+		SAY @281 /* ~(She flails wildly in her attempts to free her limbs and bring herself to a desperately needed orgasm. The bed posts flex and creak loudly as her powerful, sculpted physique twists and turns, but the restraints hold in spite of her exertions. After one final, forceful gyration of her hips, she collapses back into the bed with a heavy sigh.)~*/
+		
+		= @282 /*~Ugh... *pant* ...~ */
+		
+		COPY_TRANS XACOREX3 XA_LC_Schael_Bondage_Options
+	END
+	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_FondleTits
 		SAY @216 /*~(You vigorously fondle her large breasts in your hands, stopping every so often to flick and suck on her light brown nipples. Finally, you squeeze her breasts, which causes her to squeal in shock and pain. She shudders after you release your grip, and tries again to break free of the restraints before ceasing her futile efforts.)~*/
 	
@@ -542,6 +584,44 @@ BEGIN ~XACOREX3~
 		= @250 /*~(She quickly uses her free arm to unbind her other arm, then her legs. Before you can gather yourself and come to your feet, she stands atop you so that your hips are between her legs. In her eyes is a ferocity unlike anything you've never seen, neither from her, nor the foulest monsters in the darkest of dungeons.)~*/
 		
 		= @230 /*~I warned you, hero.~*/
+		
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @232 /*~S-Schael I didn't mean what I said. It was just part of the roleplay, I - I swear!~*/
+		GOTO XA_LC_Schael_Bondage_Taunt_End_Male
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @232 /*~S-Schael I didn't mean what I said. It was just part of the roleplay, I - I swear!~*/
+		GOTO XA_LC_Schael_Bondage_Taunt_End_Female
+		
+		IF ~
+			GlobalLT("XA_LC_Beg", "LOCALS", 1)
+		~ THEN REPLY @284 /*~No, please! I'll do anything, I - I'll eat your pussy, just don't hurt me!~*/
+		DO ~
+			SetGlobal("XA_LC_Beg", "LOCALS", 1)
+		~
+		GOTO XA_LC_Schael_Bondage_Beg
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Beg
+		SAY @288 /*~Hm. Well, that's more like it.~*/
+		
+		= @289 /*~(She roughly grabs you by the back of your head, and pulls it up toward her cunt and holds it there, so that your mouth is tasting her wetness.)~*/
+		
+		= @290 /*~I'll give you one minute. One. If you can't make me cum by then, you'll regret it.~*/
+		
+		= @292 /*~(You immediately begin to work your tongue like a piston into and out of her cunt, taking a moment to give her engorged clit some oral attention as well. She tastes both salty and sweet; it is a strange and sensual mix of flavors that you quite enjoy.)~*/
+		
+		= @291 /*~Ohhhh... hah... *pant* my hero... just like that...~*/
+		
+		= @295 /*~(You continue with your frenzied sucking and licking as she pulls your head closer into her. With your nose and mouth now engulfed in pussy, you realize that you are no longer able to breathe. You desperately try and pull you head back, but her grip is far too strong and she easily holds you in place. There's no way out of this other than to bring her to orgasm. With that thought in mind, you flick your tongue on her clit and feverishly lick it in a circular motion.)~  */
+		
+		= @293 /*~Oh my ... oh *pant* OH ... OHH!!~*/
+		
+		= @294 /*(Schael's cunt rewards your efforts with a deluge of cum. As her tasty, warm love juices fill your mouth and cover your face, you're thankful that no one was around to witness this degrading act; the hero of Baldur's Gate and Champion of the Sword Coast, humbled in such a way ... you'd never hear the end of it. She finally releases her hold on the back of your head, allowing you to pull back from her still dripping pussy and catch your breath.)~ */
+		
+		= @285 /*~Ohhhh... that was wonderful. Thank you dear. But... you did say some *very* unkind things, and I still need to punish you.~*/ 
 		
 		IF ~
 			Gender(Player1, MALE)
@@ -675,15 +755,27 @@ BEGIN ~XACOREX3~
 		= @271 /*(You collapse into the bed next to her, and lay comfortably at her side.)~*/
 		
 		IF ~~ THEN REPLY @200 /*~We have to do this again sometime. You seemed to really enjoy the bondage.~*/
-		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Male
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_MaleA
 		
 		IF ~~ THEN REPLY @269 /*~It definitely was. Any other kinks you'd like to tell me about?~*/
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_MaleB
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_MaleA
+		SAY @201 /*~I did, for sure... Maybe next time, you'll be the one tied up.~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Male
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_MaleB
+		SAY @274 /*~Plenty... but I think one was enough for the night. We need to be up bright and early tomorrow.~*/
+		
+		IF ~~ THEN
 		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Male
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_Male
-		SAY @201 /*~I did, for sure... Maybe next time, you'll be the one tied up.~*/
-		
 		= @202 /*~(She runs her fingers over her abs and tits, which are still covered in your cum.)~*/
 		
 		= @203 /*~All that cum... wow. You really are a dirty boy, aren't you? Go and heat up the bath water. Let's get cleaned up.~*/
@@ -718,8 +810,6 @@ BEGIN ~XACOREX3~
 		COPY_TRANS XACOREX3 XA_LC_Schael_Bondage_Options
 	END
 	
-	
-	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Taunt_End_Male
 		SAY @231 /*~(She tosses the broken bed post from one hand to the other, before placing the jagged edge dangerously close to your erect cock and vulnerable testicles, threatening to smash them.)~*/
 		
@@ -731,6 +821,38 @@ BEGIN ~XACOREX3~
 		
 		IF ~~ THEN REPLY @235 /*~You... you mean you're not mad at me?~*/
 		GOTO XA_LC_Schael_Bondage_NotMad_Male
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Taunt_End_Female
+		SAY @296 /*~(She tosses the broken bed post from one hand to the other, before placing the jagged edge dangerously close to your engorged cunt, threatening to shred it.)~*/
+		
+		= @297 /*~(You can feel your heart pounding in your ears as you tremble in fear before her. She pulls her arm back, undoubtedly to prepare for a powerful thrust forward that will forever scar your precious pussy. Shaking and unable to face what is about to happen, you close your eyes, and empty your bladder all over Schael's legs in a final, utterly humiliating act of surrender and defeat.)~*/
+		
+		= @233 /*~(She bursts out laughing at the sight of the quivering mess that is the hero of Baldur's Gate.)~*/
+		
+		= @298 /*~Hah! You should've seen the look on your face! I thought you were about to cry. Did you think I was really going to ram this down there?~*/
+		
+		IF ~~ THEN REPLY @235 /*~You... you mean you're not mad at me?~*/
+		GOTO XA_LC_Schael_Bondage_NotMad_Female
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_NotMad_Female
+		SAY @299 /*~Of course not, silly. Like you said, it was just roleplay. I can't believe you pissed yourself, though... it certainly wasn't something I expected from my beautiful and handsome hero. Look, my legs and feet are covered in it. Smell for yourself.~*/
+		
+		= @255 /* ~(She extends her leg, so that her toes are in front of your nose.)~*/
+		
+		= @256 /* ~Smell it? You're lucky I'm in a good mood, otherwise I might've made you lick me clean. Maybe you'd like that, mm? Next time, perhaps... this room has a bath, after all.~*/
+		
+		= @300 /*~(She eyes your still twitching cunt, and licks her luscious lips.)~*/
+		
+		= @301 /*~Lay down on the bed. That magnificent cunt needs some tender love and care.~  */
+		
+		= @302 /*~(You lay down face up as instructed. Schael jumps in the bed, and maneuvers herself so that her head is between your legs.)~*/
+		
+		= @240 /*~You know, I really appreciate your willingness to try new things. I think that next time though, we'll need some stronger restraints.~*/
+		
+		IF ~~ THEN REPLY @79 /*~(Reach and take hold of the back of her head.)~*/
+		GOTO XA_LC_Schael_Bondage_BJ_Female
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_NotMad_Male
@@ -750,6 +872,19 @@ BEGIN ~XACOREX3~
 		
 		IF ~~ THEN REPLY @79 /*~(Reach and take hold of the back of her head.)~*/
 		GOTO XA_LC_Schael_Bondage_BJ_Male
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Female
+		SAY @305 /*~You know what you want, and aren't afraid to take it... it's a quality I love in a woman.~ */
+		
+		= @303 /*~(From the moment that you first met this incredible woman, you observed that she is determined to the best at everything that she does. It comes as no surprise, then, that Schael's skill at eating pussy is other-worldly, certainly far beyond your own. With each kiss, lick, and flick of her loving tongue, you moan, writhe and shudder as the pleasure builds to a crescendo. Schael, for her part, giggles, squeals and moans as more and more of your juices make it into her mouth.)~*/
+		
+		= @304 /*~(While running your hands through her silky, dark hair, you scream as the inevitable, monumental climax occurs. Schael eagerly licks up and swallows your cum, and continues to lick your pussy even after your orgasm has subsided.)*/
+		
+		= @306 /*~You're so tasty, love.~*/
+		
+		
+  */
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Male
