@@ -386,6 +386,9 @@ BEGIN ~XACOREX3~
 		= @173 /* ~It's *pant* tight enough. Put the blindfold on. I'm yours *pant* to do with as you please, hero.~ */
 		
 		IF ~~ THEN 
+		DO ~
+			SetGlobal("XA_LC_Schael_BDSM", "LOCALS", 1)
+		~
 		GOTO XA_LC_Schael_Bondage_Options
 	END
 	
@@ -585,15 +588,8 @@ BEGIN ~XACOREX3~
 		
 		= @230 /*~I warned you, hero.~*/
 		
-		IF ~
-			Gender(Player1, MALE)
-		~ THEN REPLY @232 /*~S-Schael I didn't mean what I said. It was just part of the roleplay, I - I swear!~*/
-		GOTO XA_LC_Schael_Bondage_Taunt_End_Male
-		
-		IF ~
-			Gender(Player1, FEMALE)
-		~ THEN REPLY @232 /*~S-Schael I didn't mean what I said. It was just part of the roleplay, I - I swear!~*/
-		GOTO XA_LC_Schael_Bondage_Taunt_End_Female
+		IF ~~ THEN REPLY @232 /*~S-Schael I didn't mean what I said. It was just part of the roleplay, I - I swear!~*/
+		GOTO XA_LC_Schael_DidntMeanIt
 		
 		IF ~
 			GlobalLT("XA_LC_Beg", "LOCALS", 1)
@@ -604,10 +600,15 @@ BEGIN ~XACOREX3~
 		GOTO XA_LC_Schael_Bondage_Beg
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Beg
-		SAY @288 /*~Hm. Well, that's more like it.~*/
+	IF ~~ THEN BEGIN XA_LC_Schael_DidntMeanIt
+		SAY @311 /*~Shut it!~*/
 		
-		= @289 /*~(She roughly grabs you by the back of your head, and pulls it up toward her cunt and holds it there, so that your mouth is tasting her wetness.)~*/
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Forced
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Forced
+		SAY @289 /*~(She roughly grabs you by the back of your head, and pulls it up toward her cunt and holds it there, so that your mouth is tasting her wetness.)~*/
 		
 		= @290 /*~I'll give you one minute. One. If you can't make me cum by then, you'll regret it.~*/
 		
@@ -625,13 +626,20 @@ BEGIN ~XACOREX3~
 		
 		IF ~
 			Gender(Player1, MALE)
-		~ THEN REPLY @232 /*~S-Schael I didn't mean what I said. It was just part of the roleplay, I - I swear!~*/
+		~ THEN REPLY @312 /*~No! Please, don't! I didn't mean any of it. I love you!~*/
 		GOTO XA_LC_Schael_Bondage_Taunt_End_Male
 		
 		IF ~
 			Gender(Player1, FEMALE)
-		~ THEN REPLY @232 /*~S-Schael I didn't mean what I said. It was just part of the roleplay, I - I swear!~*/
+		~ THEN REPLY @312 /*~No! Please, don't! I didn't mean any of it. I love you!~*/
 		GOTO XA_LC_Schael_Bondage_Taunt_End_Female
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Beg
+		SAY @288 /*~Hm. Well, that's more like it.~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Forced
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Praise_1
@@ -787,7 +795,12 @@ BEGIN ~XACOREX3~
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Sleep
 		SAY @205 /*~(While you heat up the water, you hear Schael mouth the words to some kind of healing spell, presumably to remediate the chafing caused by the ropes that bound her to the bed. It doesn't take long for the water to rise to the desired temperature, and fortunately, the bath is large enough for the two of you. Schael enters first, and you follow, but not before changing the soiled covers on the bed.)~*/
 		
-		= @268 /*~(You spend the next half hour relaxing, while being sure to wash away the various bodily fluids that were emitted during your bondage session. Afterwards, you enjoy the last of the wine and fruit before retiring for the night in a tender, loving embrace.)~*/
+		IF ~~ THEN 
+		GOTO XA_LC_Schael_Bathing
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bathing
+		SAY @268 /*~(You spend the next half hour relaxing, while being sure to wash away the various bodily fluids that were emitted during your bondage session. Afterwards, you enjoy the last of the wine and fruit before retiring for the night in a tender, loving embrace.)~*/
 		
 		IF ~~ THEN 
 		DO ~
@@ -877,14 +890,42 @@ BEGIN ~XACOREX3~
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Female
 		SAY @305 /*~You know what you want, and aren't afraid to take it... it's a quality I love in a woman.~ */
 		
-		= @303 /*~(From the moment that you first met this incredible woman, you observed that she is determined to the best at everything that she does. It comes as no surprise, then, that Schael's skill at eating pussy is other-worldly, certainly far beyond your own. With each kiss, lick, and flick of her loving tongue, you moan, writhe and shudder as the pleasure builds to a crescendo. Schael, for her part, giggles, squeals and moans as more and more of your juices make it into her mouth.)~*/
+		= @303 /*~(From the moment that you first met this incredible woman, you observed that she is determined to the best at everything that she does. It comes as no surprise, then, that Schael's skill at eating pussy is other-worldly, certainly far beyond your own.~*/
+		
+		=@313 /*~(With each kiss, lick, and flick of her loving tongue, you moan, writhe and shudder as the pleasure builds to a crescendo. Schael, for her part, giggles, squeals and moans as more and more of your juices make it into her mouth.)~*/
+		
+		=@122 /*(Her efforts send you into a state of bliss, unlike anything you've experienced before. Everything you've suffered, everything you've had to endure... you've earned this. With that thought in mind, you finally let go of your inhibitions, and allow yourself to fully enjoy the wonderful gift that this beautiful, incredible woman is giving you.)~*/
+		
+		= @314 /*~(You lose track of time... all that matters to you now is the pleasure that you're feeling, and the profound love that you two share for one another. Slowly, you're pulled from your reverie as Schael reaches up to squeeze your breasts. In moments, you feel the pleasure inside of you surge to a crescendo.)~*/
 		
 		= @304 /*~(While running your hands through her silky, dark hair, you scream as the inevitable, monumental climax occurs. Schael eagerly licks up and swallows your cum, and continues to lick your pussy even after your orgasm has subsided.)*/
 		
 		= @306 /*~You're so tasty, love.~*/
 		
+		IF ~
+			GlobalLT("XA_LC_Schael_BDSM", "LOCALS", 1)
+		~ THEN REPLY @307 /*~Oh, Schael... that was... was...~*/
 		
+		IF ~
+			Global("XA_LC_Schael_BDSM", "LOCALS", 1)
+		~ THEN REPLY @307 /*~Oh, Schael... that was... was...~*/
+		GOTO XA_LC_Schael_Bondage_BJ_Female_End
   */
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Female_Reciprocate
+		SAY @
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Female_End
+		SAY @309 /*~(She smiles warmly.)~*/
+		
+		= @308 /*~I know. Listen... why don't you go and heat up the bath water. I'll join you shortly. The tub looks like it's big enough for the two of us.~*/
+		
+		= @310 /*~(While you heat up the water, you hear Schael mouth the words to some kind of healing spell, presumably to remediate the chafing caused by the ropes that bound her to the bed. It doesn't take long for the water to rise to the desired temperature. You enter first, followed momentarily thereafter by Schael.)~*/
+		
+		IF ~~ THEN 
+		GOTO XA_LC_Schael_Bathing
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Male
