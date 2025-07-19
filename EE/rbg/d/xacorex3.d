@@ -45,25 +45,30 @@ BEGIN ~XACOREX3~
 	~ THEN BEGIN XA_LC_XAEXPL03_Schael_1_F
 		SAY @150 /* ~What are your orders, hero?~ */
 		
+		IF ~~ THEN REPLY @79 /* ~(Reach up and take hold of the back of her head.)~*/
+		DO ~
+			SetGlobal("XA_Intro", "MYAREA", 1)
+		~
+		GOTO XA_LC_Schael_Bondage_BJ_Female
+		
 		IF ~
-			GlobalGT("XA_LC_CorwinOpinionOfPlayer", "GLOBAL", 109)
-		~ THEN REPLY @79 /* ~(Reach up and take hold of the back of her head.)~*/
+			Global("XA_LC_SchaelBound", "GLOBAL", 1)
+			GlobalLT("XA_LCE_BondageTalk", "LOCALS", 1)
+		~ THEN REPLY @324 /* /*~That depends. What's in the bag?~*//
 		DO ~
 			SetGlobal("XA_Intro", "MYAREA", 1)
+			SetGlobal("XA_LCE_BondageTalk", "LOCALS", 1)
 		~
-		GOTO XA_LC_XAEXPL03_Schael_A_M
+		GOTO XA_LC_Schael_Bondage
 		
-		IF ~~ THEN REPLY @80 /* ~Fuck me, Schael!~*/
+		IF ~
+			Global("XA_LC_CorwinNeomaRelationship", "GLOBAL", 2)
+			GlobalLT("XA_LC_WheresNeoma", "LOCALS", 1)
+		~ THEN REPLY @325 /*~Where's Neoma? Didn't you say she was interested in a threesome?~*/ 
 		DO ~
-			SetGlobal("XA_Intro", "MYAREA", 1)
+			SetGlobal("XA_LC_WheresNeoma", "LOCALS", 1)
 		~
-		GOTO XA_LC_XAEXPL03_Schael_B_M
-		
-		IF ~~ THEN REPLY @81 /* ~Turn around. I want to take you from behind.~*/
-		DO ~
-			SetGlobal("XA_Intro", "MYAREA", 1)
-		~
-		GOTO XA_LC_XAEXPL03_Schael_C_M
+		GOTO XA_LC_WheresNeoma
 	END
 
 	IF ~
@@ -292,7 +297,136 @@ BEGIN ~XACOREX3~
 		EXIT
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_Schael_Bondage
+	
+	//}
+
+//}
+
+//{ Neoma M/F
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_9
+		SAY @37  /* ~Home. I want to be there when Rohma wakes up.~ */
+		
+		IF ~~ THEN REPLY @38 /* ~Oh, of course. ~ */
+		DO ~
+			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+		~
+		GOTO XA_LC_LastNight
+		
+		IF ~~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
+		DO ~
+			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+		~
+		GOTO XA_LC_LastNight
+	END
+
+	IF ~~ THEN BEGIN XA_LC_LastNight
+		SAY @136 /*~Last night was incredible, love. It a wonder how you manage to keep that battering ram between your legs so hard for so long.~*/
+		
+		IF ~~ THEN REPLY @137 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
+		GOTO XA_LC_XAEXPL03_Neoma_10
+		
+		IF ~~ THEN REPLY @139 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
+		GOTO XA_LC_XAEXPL03_Neoma_10		
+	END
+
+	IF ~~ THEN BEGIN XA_LC_Neoma
+		SAY @47 /* ~You're worried about her? Don't be. She's a lot tougher than she looks.~*/
+		
+		IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
+		GOTO XA_LC_CheckNeoma
+		
+		IF ~~ THEN REPLY @53 /*~I think... Schael, I think she has feelings for you.~*/
+		GOTO XA_LC_Feelings
+	END
+
+	IF ~~ THEN BEGIN XA_LC_Feelings
+		SAY @54 /* ~Don't be ridiculous, hon. I've discussed this with her already. She understands that it's only sex.~ */
+		
+		IF ~~ THEN REPLY @55 /*~That might be *your* understanding, but I'm not sure that it's hers.~*/
+		GOTO XA_LC_NeomaRelationship
+		
+		IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
+		GOTO XA_LC_CheckNeoma
+	END
+
+	IF ~~ THEN BEGIN XA_LC_NeomaRelationship
+		SAY @56 /* ... */
+		
+		IF ~~ THEN REPLY @57 /*~Schael?~*/
+		GOTO XA_LC_NeomaRelationship2
+	END
+
+	IF ~~ THEN BEGIN XA_LC_NeomaRelationship2
+		SAY @58 /*~It sounds like I need to talk to her. Thanks for letting me know, love. I'll stop by her place after the debriefing.~*/
+		
+		IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
+		GOTO XA_LC_Sex3_Neoma_END
+	END
+
+	IF ~~ THEN BEGIN XA_LC_CheckNeoma
+		SAY @50 /*~Fine. I'll stop by her place after the debriefing.~ */
+		
+		IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
+		GOTO XA_LC_Sex3_Neoma_END
+	END
+
+	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_10
+		SAY @39 /* ~I'm heading out. See you at the debriefing, love.~*/
+		
+		IF ~~ THEN REPLY @42 /* ~Gods, the debriefing. With this hangover?~*/
+		GOTO XA_LC_Hangover
+		
+		IF ~~ THEN REPLY @44 /* ~Right. See you there, love.~ */
+		GOTO XA_LC_Sex3_Neoma_END
+		
+		IF ~
+			GlobalGT("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 0)
+		~ THEN REPLY @46 /* ~Wait — do you think Neoma's okay?~*/
+		DO ~
+			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+		~
+		GOTO XA_LC_Neoma
+
+	END
+
+	IF ~~ THEN BEGIN XA_LC_Hangover
+		SAY @43 /* ~Heh, I know what you mean. I poured you a glass of water. Drink it, it'll help.~  */
+		
+		IF ~~ THEN REPLY @45 /*~Thanks. See you at the debriefing, dear.~*/
+		GOTO XA_LC_Sex3_Neoma_END
+	END
+
+	IF ~~ THEN BEGIN XA_LC_Sex3_Neoma_END
+		SAY @40 /*~(She plants a kiss on your forehead, and leaves.)~*/
+		
+		IF ~~ THEN
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("XAEX03EX")
+		~
+		EXIT
+	END
+//}
+
+//{ Schael F/F
+	IF ~~ THEN BEGIN XA_LC_WheresNeoma
+		SAY @326 /*~She's is, but she said that tonight should be for the two of us. Next time, love.~*/
+		
+		IF ~~ THEN REPLY @327 /**/
+		GOTO XA_LC_WheresNeoma2
+		
+		IF ~~ THEN REPLY @328 /**/
+		GOTO XA_LC_WheresNeoma2
+	END
+	IF ~~ THEN BEGIN XA_LC_WheresNeoma2
+		SAY @329 /*~Let's forget about her... for tonight, anyway. Now, how can *I* please you, my hero?~*/
+		
+		COPY_TRANS XACOREX3 XA_LC_XAEXPL03_Schael_1_F
+	END
+//}
+
+//{ Bondage (Both Sexes)
+IF ~~ THEN BEGIN XA_LC_Schael_Bondage
 		SAY @206 /* ~It's uh... it's nothing.~ */
 		
 		IF ~~ THEN REPLY @207/* ~My love... has anyone ever told you that you're a bad liar?~*/
@@ -324,14 +458,27 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN REPLY @158 /* ~It could be because you're always in control. Having it taken from you must have made you feel vulnerable.~ */
 		GOTO XA_LC_Schael_Bondage_3
 		
-		IF ~~ THEN REPLY @178 /* ~I appreciate your openness about something like that... but I'm not into bondage.~ */
-		GOTO XA_LC_Schael_Bondage_No
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @178 /* ~I appreciate your openness about something like that... but I'm not into bondage.~ */
+		GOTO XA_LC_Schael_Bondage_No_Male
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @178 /* ~I appreciate your openness about something like that... but I'm not into bondage.~ */
+		GOTO XA_LC_Schael_Bondage_No_Female
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_No
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_No_Male
 		SAY @210 /* ~Yeah, it was stupid of me to bring them. Just... uh, just forget it. Now, tell me what you want, hero... tell me how can I make this night one that you'll never forget.~ */
 		
 		COPY_TRANS XACOREX3 XA_LC_XAEXPL03_Schael_1_M
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_No_Female
+		SAY @210 /* ~Yeah, it was stupid of me to bring them. Just... uh, just forget it. Now, tell me what you want, hero... tell me how can I make this night one that you'll never forget.~ */
+		
+		COPY_TRANS XACOREX3 XA_LC_XAEXPL03_Schael_1_F
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_3
@@ -905,6 +1052,7 @@ BEGIN ~XACOREX3~
 		IF ~
 			GlobalLT("XA_LC_Schael_BDSM", "LOCALS", 1)
 		~ THEN REPLY @307 /*~Oh, Schael... that was... was...~*/
+		GOTO XA_LC_Schael_Bondage_BJ_Female_Reciprocate
 		
 		IF ~
 			Global("XA_LC_Schael_BDSM", "LOCALS", 1)
@@ -914,7 +1062,34 @@ BEGIN ~XACOREX3~
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Female_Reciprocate
-		SAY @
+		SAY @309 /*~(She smiles warmly.)~*/
+		
+		= @315 /*~I know... and I can think of one way you can show your thanks.~*/
+		
+		= @316 /*~(She lays down on the bed and spreads her powerful legs. Knowing exactly what she wants, you enter the bed and maneuver yourself so that your head is over her neatly-trimmed cunt.)~*/
+		
+		= @317/*~(Schael, as usual, smells and tastes wonderful. Under her tutelage, you've become an expert at eating pussy, and as she did with you, you use your tongue to delicately lick and flick her most sensitive area. While eating her out, you run your hands over her spectacular physique, starting with her thighs, then her firm and sculpted midsection, and finally, her large, heaving breasts.)~*/
+		
+		=@322 /*~(Seeing how much her physique pleases you, she flexes and tenses the muscles in her thighs, arms and abs. Her moaning tells you that she's really getting off on having one of the most powerful beings on the planet pleasure her in such a devoted way.)~*/
+		
+		= @219 /*~Ohhhh... hahah... my hero... *pant* ... just like that...~*/
+		
+		= @318 /*~(This amazing and magnificently skilled woman that you love has risked and sacrificed for you countless times, so you're more than happy to be able to do this for her. The pitch and intensity of her moaning increases steadily, and it doesn't take long before her overly aroused cunt rewards your mouth with a warm, salty and oddly sweet eruption of cum. You dismount her after giving her clit a gentle and loving kiss, and lay down at her side.)~*/
+		
+		= @319 /*~Oh... oh my... that might've been the best I've ever had...~*/
+		
+		= @320 /*~(She kisses you, and licks away some of the remnants of her eruption that still covered your mouth and chin.)~*/ 
+		
+		= @321 /*~That bath is calling to me... would you be a dear and heat up the water?~*/
+		
+		= @323 /*~(You do as your told, and heat up the bath water. It doesn't take long for the water to reach a comfortable temperature, and you're pleased to see that the tub is large enough for the two of you. Schael brings over the wine and fruit platter and places it on a stool next to the bed, and you both enter the tub. You spend the next half hour relaxing in the tub, drinking wine and eating fruit, before returning to bed to retire for the night in a loving, tender embrace.)~*/
+		
+		IF ~~ THEN
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("XAEX03EX")
+		~
+		EXIT
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Female_End
@@ -935,113 +1110,5 @@ BEGIN ~XACOREX3~
 		
 		IF ~~ THEN
 		GOTO XA_LC_XAEXPL04_Schael_BJ
-	END
-	//}
-
-//}
-
-//{ Neoma M/F
-	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_9
-		SAY @37  /* ~Home. I want to be there when Rohma wakes up.~ */
-		
-		IF ~~ THEN REPLY @38 /* ~Oh, of course. ~ */
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
-		GOTO XA_LC_LastNight
-		
-		IF ~~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
-		GOTO XA_LC_LastNight
-	END
-
-	IF ~~ THEN BEGIN XA_LC_LastNight
-		SAY @136 /*~Last night was incredible, love. It a wonder how you manage to keep that battering ram between your legs so hard for so long.~*/
-		
-		IF ~~ THEN REPLY @137 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
-		GOTO XA_LC_XAEXPL03_Neoma_10
-		
-		IF ~~ THEN REPLY @139 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
-		GOTO XA_LC_XAEXPL03_Neoma_10		
-	END
-
-	IF ~~ THEN BEGIN XA_LC_Neoma
-		SAY @47 /* ~You're worried about her? Don't be. She's a lot tougher than she looks.~*/
-		
-		IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
-		GOTO XA_LC_CheckNeoma
-		
-		IF ~~ THEN REPLY @53 /*~I think... Schael, I think she has feelings for you.~*/
-		GOTO XA_LC_Feelings
-	END
-
-	IF ~~ THEN BEGIN XA_LC_Feelings
-		SAY @54 /* ~Don't be ridiculous, hon. I've discussed this with her already. She understands that it's only sex.~ */
-		
-		IF ~~ THEN REPLY @55 /*~That might be *your* understanding, but I'm not sure that it's hers.~*/
-		GOTO XA_LC_NeomaRelationship
-		
-		IF ~~ THEN REPLY @49 /*~Still, I'd appreciate it if you could check in on her.~*/
-		GOTO XA_LC_CheckNeoma
-	END
-
-	IF ~~ THEN BEGIN XA_LC_NeomaRelationship
-		SAY @56 /* ... */
-		
-		IF ~~ THEN REPLY @57 /*~Schael?~*/
-		GOTO XA_LC_NeomaRelationship2
-	END
-
-	IF ~~ THEN BEGIN XA_LC_NeomaRelationship2
-		SAY @58 /*~It sounds like I need to talk to her. Thanks for letting me know, love. I'll stop by her place after the debriefing.~*/
-		
-		IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
-		GOTO XA_LC_Sex3_Neoma_END
-	END
-
-	IF ~~ THEN BEGIN XA_LC_CheckNeoma
-		SAY @50 /*~Fine. I'll stop by her place after the debriefing.~ */
-		
-		IF ~~ THEN REPLY @52 /*~Thanks, love.~*/
-		GOTO XA_LC_Sex3_Neoma_END
-	END
-
-	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_10
-		SAY @39 /* ~I'm heading out. See you at the debriefing, love.~*/
-		
-		IF ~~ THEN REPLY @42 /* ~Gods, the debriefing. With this hangover?~*/
-		GOTO XA_LC_Hangover
-		
-		IF ~~ THEN REPLY @44 /* ~Right. See you there, love.~ */
-		GOTO XA_LC_Sex3_Neoma_END
-		
-		IF ~
-			GlobalGT("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 0)
-		~ THEN REPLY @46 /* ~Wait — do you think Neoma's okay?~*/
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
-		GOTO XA_LC_Neoma
-
-	END
-
-	IF ~~ THEN BEGIN XA_LC_Hangover
-		SAY @43 /* ~Heh, I know what you mean. I poured you a glass of water. Drink it, it'll help.~  */
-		
-		IF ~~ THEN REPLY @45 /*~Thanks. See you at the debriefing, dear.~*/
-		GOTO XA_LC_Sex3_Neoma_END
-	END
-
-	IF ~~ THEN BEGIN XA_LC_Sex3_Neoma_END
-		SAY @40 /*~(She plants a kiss on your forehead, and leaves.)~*/
-		
-		IF ~~ THEN
-		DO ~
-			StartCutSceneMode()
-			StartCutScene("XAEX03EX")
-		~
-		EXIT
 	END
 //}
