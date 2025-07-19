@@ -61,6 +61,12 @@ BEGIN ~XACOREX3~
 		~
 		GOTO XA_LC_Schael_Bondage
 		
+		IF ~~ THEN REPLY @80 /* ~Fuck me, Schael!~*/
+		DO ~
+			SetGlobal("XA_Intro", "MYAREA", 1)
+		~
+		GOTO XA_LC_Schael_Sex_Female
+		
 		IF ~
 			Global("XA_LC_CorwinNeomaRelationship", "GLOBAL", 2)
 			GlobalLT("XA_LC_WheresNeoma", "LOCALS", 1)
@@ -306,20 +312,47 @@ BEGIN ~XACOREX3~
 	IF ~~ THEN BEGIN XA_LC_XAEXPL03_Neoma_9
 		SAY @37  /* ~Home. I want to be there when Rohma wakes up.~ */
 		
-		IF ~~ THEN REPLY @38 /* ~Oh, of course. ~ */
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @38 /* ~Oh, of course. ~ */
 		DO ~
 			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
 		~
-		GOTO XA_LC_LastNight
+		GOTO XA_LC_LastNight_M
 		
-		IF ~~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
 		DO ~
 			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
 		~
-		GOTO XA_LC_LastNight
+		GOTO XA_LC_LastNight_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @38 /* ~Oh, of course. ~ */
+		DO ~
+			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+		~
+		GOTO XA_LC_LastNight_F
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
+		DO ~
+			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
+		~
+		GOTO XA_LC_LastNight_F
 	END
 
-	IF ~~ THEN BEGIN XA_LC_LastNight
+	IF ~~ THEN BEGIN XA_LC_LastNight_F
+		SAY @348 /* ~Last night was incredible, love. I hope you enjoyed it as much as I did.~ */
+		
+		IF ~~ THEN 
+		GOTO XA_LC_XAEXPL03_Neoma_10
+	END
+
+	IF ~~ THEN BEGIN XA_LC_LastNight_M
 		SAY @136 /*~Last night was incredible, love. It a wonder how you manage to keep that battering ram between your legs so hard for so long.~*/
 		
 		IF ~~ THEN REPLY @137 /*~Heh. My foster father once told me that can divinity manifest itself in ways you'd never expect.~*/
@@ -409,6 +442,69 @@ BEGIN ~XACOREX3~
 //}
 
 //{ Schael F/F
+	IF ~~ THEN BEGIN XA_LC_Schael_Sex_Female
+		SAY @345 /*~Of course, love.~ */
+		
+		= @346 /*~(She rummages through her bag, and pulls out a large, ribbed, pink strap-on. It looks strange, however. Seeing the look of confusion on your face, she explains.)~*/
+		
+		= @339 /* ~It's a new kind of strap-on. A strapless strap-on, if that makes sense. The curved part is held in place by my cunt, and the shaft, of course, goes in yours.~*/
+		
+		= @347 /* ~(She affixes the strap-on, and runs her hand up and down the shaft.)~*/
+		
+		IF ~~ THEN REPLY @337 /* ~How does it feel?~*/
+		GOTO XA_LC_Schael_Sex_Female2
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Sex_Female2
+		SAY @338 /* ~It feels amazing. It's hard to explain... it feels like an extension of my body. As through I had a cock... this is going to be *so* much fun!~*/
+		
+		= @331 /* ~(Schael reaches into her knapsack and pulls out a small vial, the contents of which she uses to lube up the shaft of the strap-on. She then runs her hands up and down the shaft. It looks, just like she said, as though she were stroking a penis. Satisfied that the coverage is sufficient, she gently uses the bulbous tip to part your labia before slowly inserting it further inside. She stops pushing once she feels that she's reached your cervix.)~*/
+		
+		IF ~~ THEN REPLY @332 /* ~Oh...~*/
+		GOTO XA_LC_Schael_Sex_Female3
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Sex_Female3
+		SAY @333 /* ~Such a deep cunt... you're going to love this, hero.~*/
+		
+		= @334 /* ~(She pulls back before driving into you with a steady rhythm. Even though she's not using all of her incredible strength, the force of her exertions is so great that you need to steady yourself by grabbing the headboard of the bed. With each of her thrusts forward, you push backward, as you feel the pleasure inside you begin to build.)~*/
+		
+		= @335 /* ~(Without warning, Schael forcibly grabs the back of your neck and increases the pace and intensity of her thrusts, causing you to yelp momentarily. In and out, she works the strap-on like a piston as she continues the pounding of your vagina. The pain you feel is dwarfed by ever-increasing amount of pleasure you're experiencing. You can hear her breathing heavily as she pours more and more of her immense strength into each thrust forward.)~*/
+		
+		=@336 /* ~*pant* Won't be long now, *pant* will it, love?~*/
+		
+		=@330 /* ~(As she continues to forcefully penetrate you, she reaches down to stroke your engorged clit. She then releases her grip on the back of your neck, and uses your free hand to fondle your breasts. The pleasure inside of you reaches a crescendo, and you scream and shudder uncontrollably as the orgasm takes hold. Schael, nearing her own orgasm, continues to mercilessly pound your cunt while the dildo stimulates both her clit and g-spot.)~*/
+		
+		=@197 /*~Oh, Tymora! Yes! YES!~ */
+		
+		=@340 /* ~(With a scream and one final, savage thrust forward, Schael reaches her own climax. You can feel the dildo vibrate within you as the orgasm crashes through her. Gradually, she slows the pace of her thrusts before stopping them entirely. After dismounting you, she delivers a stinging open handed slap to your well-rounded ass.)~*/
+		
+		IF ~~ THEN REPLY @341 /* ~Ow!~*/
+		GOTO XA_LC_Schael_Sex_Female4
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Sex_Female4
+		SAY @342 /* ~*pant* That was amazing....~*/
+		
+		= @343 /* ~(Schael collapses into bed next to you, and turns so that her body is facing up towards the ceiling. She removes the strap-on and looks at it with wonder as it's covered in her cum as well as yours. She holds it to her mouth and begins to softly lick up some of the fluids, starting with yours, then hers. You take the dildo from her and do the same.)~*/
+		
+		IF ~~ THEN REPLY @344 /* ~Mmm... so yummy.~*/
+		GOTO XA_LC_Schael_Sex_Female5
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Sex_Female5
+		SAY @321 /* ~That bath is calling to me... would you be a dear and heat up the water?~ */
+		
+		= @323 /*~(You do as your told, and heat up the bath water. It doesn't take long for the water to reach a comfortable temperature, and you're pleased to see that the tub is large enough for the two of you. Schael brings over the wine and fruit platter and places it on a stool next to the bed, and you both enter the tub. You spend the next half hour relaxing in the tub, drinking wine and eating fruit, before returning to bed to retire for the night in a loving, tender embrace.)~*/
+		
+		IF ~~ THEN
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("XAEX03EX")
+		~
+		EXIT
+	END
+	
 	IF ~~ THEN BEGIN XA_LC_WheresNeoma
 		SAY @326 /*~She's is, but she said that tonight should be for the two of us. Next time, love.~*/
 		
@@ -426,7 +522,7 @@ BEGIN ~XACOREX3~
 //}
 
 //{ Bondage (Both Sexes)
-IF ~~ THEN BEGIN XA_LC_Schael_Bondage
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage
 		SAY @206 /* ~It's uh... it's nothing.~ */
 		
 		IF ~~ THEN REPLY @207/* ~My love... has anyone ever told you that you're a bad liar?~*/
@@ -1058,7 +1154,7 @@ IF ~~ THEN BEGIN XA_LC_Schael_Bondage
 			Global("XA_LC_Schael_BDSM", "LOCALS", 1)
 		~ THEN REPLY @307 /*~Oh, Schael... that was... was...~*/
 		GOTO XA_LC_Schael_Bondage_BJ_Female_End
-  */
+  
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_BJ_Female_Reciprocate
