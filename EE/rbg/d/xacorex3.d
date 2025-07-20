@@ -36,7 +36,7 @@ BEGIN ~XACOREX3~
 			SetGlobal("XA_Intro", "MYAREA", 1)
 			SetGlobal("XA_LCE_BondageTalk", "LOCALS", 1)
 		~
-		GOTO XA_LC_XAEXPL03_Schael_D_M
+		GOTO XA_LC_Schael_Bondage
 	END
 
 	IF ~
@@ -54,7 +54,7 @@ BEGIN ~XACOREX3~
 		IF ~
 			Global("XA_LC_SchaelBound", "GLOBAL", 1)
 			GlobalLT("XA_LCE_BondageTalk", "LOCALS", 1)
-		~ THEN REPLY @324 /* /*~That depends. What's in the bag?~*//
+		~ THEN REPLY @324 /* /*~That depends. What's in the bag?~*/
 		DO ~
 			SetGlobal("XA_Intro", "MYAREA", 1)
 			SetGlobal("XA_LCE_BondageTalk", "LOCALS", 1)
@@ -129,8 +129,6 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN 
 		DO ~
 			SetGlobal("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 2)
-			//StartCutSceneMode()
-			//StartCutScene("XAEXPL3E")
 		~
 		EXIT
 	END
@@ -212,8 +210,6 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN 
 		DO ~
 			SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
-			//StartCutSceneMode()
-			//StartCutScene("XAEXPL3E")
 		~
 		EXIT
 	END
@@ -256,8 +252,6 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN 
 		DO ~
 			SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
-			//StartCutSceneMode()
-			//StartCutScene("XAEXPL3E")
 		~
 		EXIT
 	END
@@ -297,13 +291,9 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN 
 		DO ~
 			SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
-			//StartCutSceneMode()
-			//StartCutScene("XAEXPL3E")
 		~
 		EXIT
 	END
-	
-	
 	//}
 
 //}
@@ -538,8 +528,15 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN REPLY @154/* ~Rope and a blindfold? That's... interesting.~*/
 		GOTO XA_LC_Schael_Bondage_2
 		
-		IF ~~ THEN REPLY @247 /* ~I don't like where this is going.~*/
-		GOTO XA_LC_Schael_Bondage_No
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @247 /* ~I don't like where this is going.~*/
+		GOTO XA_LC_Schael_Bondage_No_Male
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @247 /* ~I don't like where this is going.~*/
+		GOTO XA_LC_Schael_Bondage_No_Female
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_2
@@ -547,6 +544,7 @@ BEGIN ~XACOREX3~
 		
 		= @157 /* ~I haven't told you this, but back in Spellhold, when I was straining helplessly against my bonds... it turned me on. Being powerless in spite of my... my muscles, and my strength, in front of you and the others... it made me feel... naked.~ */
 		
+		= @354 /* ~Gods, this is *so* embarrassing...~*/
 		= @162 /* ~(She blushes.)~*/
 		
 		= @164 /* ~It's hard to explain. But the more I struggled, the closer I came to... you know. Now *that* would have been humiliating. Thankfully, I passed out before it could happen.~*/
@@ -602,8 +600,15 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN REPLY @166 /* ~Should we have a safe word?~ */
 		GOTO XA_LC_Schael_Bondage_5
 		
-		IF ~~ THEN REPLY @212 /* ~I'm having second thoughts.~*/
-		GOTO XA_LC_XAEXPL03_Schael_D_M_NotIntoBondage
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @212 /* ~I appreciate your openness about something like that... but I'm not into bondage.~ */
+		GOTO XA_LC_Schael_Bondage_No_Male
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @212 /* ~I appreciate your openness about something like that... but I'm not into bondage.~ */
+		GOTO XA_LC_Schael_Bondage_No_Female
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_5
@@ -776,14 +781,14 @@ BEGIN ~XACOREX3~
 		GOTO XA_LC_Schael_Bondage_Finger_B
 	END
 	
-	IF ~~ THEN BEGIN GOTO XA_LC_Schael_Bondage_Finger_A
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Finger_A
 		SAY @279 /* ~*groan* You'll never *pant* get it out of me!~*/
 		
 		IF ~~ THEN
 		GOTO XA_LC_Schael_Bondage_Finger_END
 	END
 
-	IF ~~ THEN BEGIN GOTO XA_LC_Schael_Bondage_Finger_B
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Finger_B
 		SAY @283 /* ~Fine! I'll do it myself!~*/
 		
 		IF ~~ THEN
@@ -894,7 +899,7 @@ BEGIN ~XACOREX3~
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Praise_2
-		SAY @242 /*~I know... but I believe that people that are meant to be together are destined to meet at the right time.~/
+		SAY @242 /*~I know... but I believe that people that are meant to be together are destined to meet at the right time.~*/
 		
 		= @258 /* ~If we'd met earlier, I don't think things would've worked out as well as they have.~ */
 		
@@ -997,7 +1002,27 @@ BEGIN ~XACOREX3~
 		
 		= @196 /* ~(With a scream and a shudder, your seed explodes out of your enormous penis in great, gushing bursts. The first and most powerful blast hits just below her right eye, covering the most visible of her scars. The second covers her parted lips and chin, while the third, fourth and fifth impact her large tits and shredded abs. One final emission covers the hand she is using to feverishly bring herself to her own climax.)~*/
 		
-		= @197 /* ~Oh, Tymora! Yes! YES!~ */
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Bondage_Tickle_Orgasm
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_END_Female
+		SAY @349 /* ~(Eyeing your cunt that is directly over her chest, she pleads.)~*/
+		
+		= @350 /* ~(~Oh.... oh <CHARNAME>, so beautiful, so powerful... cum for me, my hero...)~*/
+		
+		= @351 /* ~(Wasting no time, you immediately begin to pleasure yourself over the helplessly horny and still exhausted Schael. It doesn't take long before you feel the familiar surge forming in your vagina.)~*/
+		
+		= @195 /* ~That's it, love! *pant* Give it to me!~ */
+		
+		= @352 /* ~(With a scream and a shudder, your cum explodes out of your cunt in great, gushing bursts. The first and most powerful blast hits just below her right eye, covering the most visible of her scars. The second covers her parted lips and chin, while the third, fourth and fifth impact her large tits and shredded abs. One final emission covers the hand she is using to feverishly bring herself to her own climax.)~*/
+		
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Bondage_Tickle_Orgasm
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Orgasm
+		SAY @197 /* ~Oh, Tymora! Yes! YES!~ */
 		
 		= @198 /* ~(Schael shrieks in unbridled pleasure as she reaches her orgasm. A voluminous amount of hot cum gushes out of her cunt, covering her hand. Unable to resist the temptation, you take her hand and lick the cum – yours, and hers – off of her fingers. She, in turn, wipes your seed from her lovely face, and eagerly licks her hand clean.)~*/
 		
@@ -1006,31 +1031,50 @@ BEGIN ~XACOREX3~
 		= @271 /*(You collapse into the bed next to her, and lay comfortably at her side.)~*/
 		
 		IF ~~ THEN REPLY @200 /*~We have to do this again sometime. You seemed to really enjoy the bondage.~*/
-		GOTO XA_LC_Schael_Bondage_Tickle_Bath_MaleA
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_A
 		
 		IF ~~ THEN REPLY @269 /*~It definitely was. Any other kinks you'd like to tell me about?~*/
-		GOTO XA_LC_Schael_Bondage_Tickle_Bath_MaleB
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_B
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_MaleA
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_A
 		SAY @201 /*~I did, for sure... Maybe next time, you'll be the one tied up.~*/
 		
 		IF ~~ THEN
-		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Male
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Dirty
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_MaleB
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_B
 		SAY @274 /*~Plenty... but I think one was enough for the night. We need to be up bright and early tomorrow.~*/
 		
 		IF ~~ THEN
-		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Male
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Dirty
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_Male
-		= @202 /*~(She runs her fingers over her abs and tits, which are still covered in your cum.)~*/
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_Dirty
+		SAY @202 /*~(She runs her fingers over her abs and tits, which are still covered in your cum.)~*/
 		
-		= @203 /*~All that cum... wow. You really are a dirty boy, aren't you? Go and heat up the bath water. Let's get cleaned up.~*/
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Dirty_Male
 		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN
+		GOTO XA_LC_Schael_Bondage_Tickle_Bath_Dirty_Female
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_Dirty_Male
+		SAY @203 /*~All that cum... wow. You really are a dirty boy, aren't you? Go and heat up the bath water. Let's get cleaned up.~*/
+	
+		IF ~~ THEN
+		GOTO XA_LC_Schael_Bondage_Tickle_Sleep
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_Tickle_Bath_Dirty_Female
+		SAY @353 /*~All that cum... wow. You really are a dirty girl, aren't you? Go and heat up the bath water. Let's get cleaned up.~*/
+	
 		IF ~~ THEN
 		GOTO XA_LC_Schael_Bondage_Tickle_Sleep
 	END
@@ -1048,8 +1092,6 @@ BEGIN ~XACOREX3~
 		IF ~~ THEN 
 		DO ~
 			SetGlobal("XA_LC_CorwinSex_3_Schael", "GLOBAL", 4)
-			//StartCutSceneMode()
-			//StartCutScene("XAEXPL3E")
 		~
 		EXIT
 	END

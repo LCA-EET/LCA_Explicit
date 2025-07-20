@@ -7,17 +7,24 @@ APPEND ~XALCDBG~
 	IF ~~ THEN BEGIN XA_LCE_SoA_Debug
 		SAY @300 /* ~LCA Explicit Mod Debug - RBG~ */
 	
-		IF ~~ THEN REPLY @301 /*~Baldur's Gate Intimate Encounter - Neoma~*/
+		IF ~~ THEN REPLY @301 /*~xaex03mn (Baldur's Gate Intimate Encounter - Male, Neoma)~*/
 		DO ~
 			StartCutSceneMode()
-			StartCutScene("xaex03n")
+			StartCutScene("xaex03mn")
 		~
 		EXIT
 		
-		IF ~~ THEN REPLY @302 /*~Baldur's Gate Intimate Encounter - Schael~*/
+		IF ~~ THEN REPLY @302 /*~xaex03ms (Baldur's Gate Intimate Encounter - Male, Schael)~*/
 		DO ~
 			StartCutSceneMode()
-			StartCutScene("xaex03s")
+			StartCutScene("xaex03ms")
+		~
+		EXIT
+		
+		IF ~~ THEN REPLY @305 /*~xaex03fs (Baldur's Gate Intimate Encounter - Female, Schael)~*/
+		DO ~
+			StartCutSceneMode()
+			StartCutScene("xaex03fs")
 		~
 		EXIT
 		

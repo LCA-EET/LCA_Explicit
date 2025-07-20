@@ -32,6 +32,18 @@ EXTEND_BOTTOM XALCHOOK 1
 		StartCutScene("XAEX03MN")
 	~
 	EXIT
+	
+	IF ~
+		Global("XA_LC_CorwinSex_3", "GLOBAL", 1)
+		Gender(Player1, FEMALE)
+	~
+	THEN
+	DO ~
+		SetGlobal("XA_LC_SleepBG", "GLOBAL", 0)
+		StartCutSceneMode()
+		StartCutScene("XAEX03FS")
+	~
+	EXIT
 END
 
 /*

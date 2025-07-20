@@ -7,8 +7,9 @@
 @204=~Portrait Change (LCA Explicit)~
 @205=~Sex 2 Text Screen~
 @300=~LCA Explicit Mod Debug - RBG~
-@301=~xaex03n (Baldur's Gate Intimate Encounter - Neoma)~
-@302=~xaex03s (Baldur's Gate Intimate Encounter - Schael)~
+@301=~xaex03mn (Baldur's Gate Intimate Encounter - Male, Neoma)~
+@302=~xaex03ms (Baldur's Gate Intimate Encounter - Male, Schael)~
 @303=~SetGlobal("XA_LC_SchaelBound", "GLOBAL", 1)~
 @304=~SetGlobal("XA_LC_SchaelBound", "GLOBAL", 0)~
+@305=~xaex03fs (Baldur's Gate Intimate Encounter - Female, Schael)~
 @0 = ~Return to the prior menu.~
