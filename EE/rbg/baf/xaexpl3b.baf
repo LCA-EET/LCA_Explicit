@@ -1,9 +1,0 @@
-IF
-	True()
-THEN
-	RESPONSE #100
-		CutSceneID(Player1)
-		ActionOverride("XACOREX3", MoveToPoint([630.290]))
-		Wait(5)
-		ActionOverride("XANEOMA", StartDialog("XANEOMA", Player1))
-END

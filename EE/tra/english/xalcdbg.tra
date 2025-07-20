@@ -1,3 +1,4 @@
+@0=~Return to the prior menu.~
 @100=~LCA Explicit Mod Debug - SoD~
 @101=~XAEXPL00 (SoD Intimate Encounter)~
 @200=~LCA Explicit Mod Debug - SoA~
@@ -12,4 +13,3 @@
 @303=~SetGlobal("XA_LC_SchaelBound", "GLOBAL", 1)~
 @304=~SetGlobal("XA_LC_SchaelBound", "GLOBAL", 0)~
 @305=~xaex03fs (Baldur's Gate Intimate Encounter - Female, Schael)~
-@0 = ~Return to the prior menu.~
