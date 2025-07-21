@@ -305,33 +305,21 @@ BEGIN ~XACOREX3~
 		IF ~
 			Gender(Player1, MALE)
 		~ THEN REPLY @38 /* ~Oh, of course. ~ */
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
 		GOTO XA_LC_LastNight_M
 		
 		IF ~
 			Gender(Player1, MALE)
 		~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
 		GOTO XA_LC_LastNight_M
 		
 		IF ~
 			Gender(Player1, FEMALE)
 		~ THEN REPLY @38 /* ~Oh, of course. ~ */
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
 		GOTO XA_LC_LastNight_F
 		
 		IF ~
 			Gender(Player1, FEMALE)
 		~ THEN REPLY @138 /*~Gods (*yawn*), it's morning already?~*/
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
 		GOTO XA_LC_LastNight_F
 	END
 
@@ -405,9 +393,6 @@ BEGIN ~XACOREX3~
 		IF ~
 			GlobalGT("XA_LC_CorwinSex_3_Neoma", "GLOBAL", 0)
 		~ THEN REPLY @46 /* ~Wait — do you think Neoma's okay?~*/
-		DO ~
-			SetGlobal("XA_LCE_EXTalk", "GLOBAL", 0)
-		~
 		GOTO XA_LC_Neoma
 
 	END
@@ -1210,7 +1195,7 @@ BEGIN ~XACOREX3~
 		
 		=@322 /*~(Seeing how much her physique pleases you, she flexes and tenses the muscles in her thighs, arms and abs. Her moaning tells you that she's really getting off on having one of the most powerful beings on the planet pleasure her in such a devoted way.)~*/
 		
-		= @219 /*~Ohhhh... hahah... my hero... *pant* ... just like that...~*/
+		= @291 /*~Ohhhh... hahah... my hero... *pant* ... just like that...~*/
 		
 		= @318 /*~(This amazing and magnificently skilled woman that you love has risked and sacrificed for you countless times, so you're more than happy to be able to do this for her. The pitch and intensity of her moaning increases steadily, and it doesn't take long before her overly aroused cunt rewards your mouth with a warm, salty and oddly sweet eruption of cum. You dismount her after giving her clit a gentle and loving kiss, and lay down at her side.)~*/
 		

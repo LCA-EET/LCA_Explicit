@@ -1,7 +1,6 @@
 IF
 	GlobalLT("XA_Intro", "MYAREA", 1)
 	Global("XA_LCE_Sex3Intro", "GLOBAL", 1)
-	Gender(Player1, MALE)
 	!InMyArea("XANEOMA")
 THEN
 	RESPONSE #100
@@ -11,7 +10,6 @@ END
 IF
 	GlobalLT("XA_Intro", "MYAREA", 1)
 	Global("XA_LCE_Sex3Intro", "GLOBAL", 1)
-	Gender(Player1, MALE)
 	InMyArea("XANEOMA")
 THEN
 	RESPONSE #100
