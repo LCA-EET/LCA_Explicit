@@ -27,68 +27,6 @@ APPEND XACORWIJ
 		GOTO XA_LC_CorwinSex1_3
 	END
 	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_3
-		SAY @11 /* ~What are you doing? Get out of those clothes!~ */
-		= @12 /* ~(She's as used to giving orders in the bedroom as she is outside of it, you think to yourself.)~ */
-		
-		IF ~
-			Gender(Player1, MALE)
-		~ THEN REPLY @13 /* ~R-right.~ */
-		GOTO XA_LC_ScarTalk_M
-		
-		IF ~
-			Gender(Player1, FEMALE)
-		~ THEN REPLY @13  /* ~R-right.~ */
-		GOTO XA_LC_ScarTalk_F
-	END
-	
-	IF ~~ THEN BEGIN XA_LC_ScarTalk2
-		SAY @170 /* ~Don't be ridiculous. I love you, <CHARNAME>. I just wasn't prepared for it, that's all. Where else did he hurt you?~*/
-		
-		IF ~
-			Gender(Player1, MALE)
-		~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
-		GOTO XA_LC_ScarTalk3_M
-		
-		IF ~
-			Gender(Player1, FEMALE)
-		~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
-		GOTO XA_LC_ScarTalk3_F
-	END
-	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8
-		SAY @51 /* ~(She smiles warmly, and places her finger across your lips.)~ */
-		
-		= @52 /* ~Shh, lover. It's time for us to get some rest. Just know that this, and more, is what awaits you when we finally return home. I love you, <CHARNAME>.~ */
-		
-		IF ~~ THEN REPLY @53 /* ~I love you too, Schael. */
-		GOTO XA_LC_CorwinSex1_9
-	END
-	
-	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
-		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
-		
-		IF ~
-			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
-		~ THEN 
-		DO ~
-			ReallyForceSpellRES("XACHNG01", "XACORWIN")
-			StartCutSceneMode()
-			StartCutScene("XAEX01EX")
-		~
-		EXIT
-		
-		IF ~
-			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
-		~ THEN 
-		DO ~
-			ReallyForceSpellRES("XACHNG02", "XACORWIN")
-			StartCutSceneMode()
-			StartCutScene("XAEX01EX")
-		~
-		EXIT
-	END
-	
 	//{ M/F
 	IF ~~ THEN BEGIN XA_LC_ScarTalk_M
 		SAY @163 /* ~(You hurriedly remove your armor, then your shirt. Before you can remove your pants, she gasps.)~ */
@@ -97,12 +35,10 @@ APPEND XACORWIJ
 		
 		= @165 /* ~(She places her hands on your chest and gently moves them on and around the scars left behind from your imprisonment at the hands of the wizard.)~*/
 		
-		= @166 /* ~Irenicus... damn him! I... I'm so sorry that you had to endure this. It must've been excruciating.~ */
-		
-		IF ~~ THEN REPLY @169  /*~Listen... if you're having second thoughts... I'd understand.~ */
-		GOTO XA_LC_ScarTalk2
+		IF ~~ THEN
+		GOTO XA_LC_ScarTalk_Excruciating
 	END
-	
+
 	IF ~~ THEN BEGIN XA_LC_ScarTalk3_M
 		SAY @172 /*~Let me see.~*/
 		
@@ -196,13 +132,9 @@ APPEND XACORWIJ
 		
 		= @48 /* ~(She plants a kiss on your forehead.)~ */
 		 
-		= @49 /* ~You don't know how much I needed that. Thank you, love.~  */
+		GOTO XA_LC_CorwinSex1_Finished
 		
-		IF ~~ THEN REPLY @50 /* ~Schael, you were incredible, I - I can't even —~ */
-		GOTO XA_LC_CorwinSex1_8
 	END
-	
-	
 	//}
 	
 	//{ F/F
@@ -223,10 +155,8 @@ APPEND XACORWIJ
 		
 		= @227 /* ~(She places her hands on your chest and gently moves them on and around your scars. The feeling of her hands on your breasts is soothing, and you can feel your nipples harden in response to her touch.)~ */
 		
-		= @166 /* ~Irenicus... damn him! I... I'm so sorry that you had to endure this. It must've been excruciating.~ [xalce122]*/
-		
-		IF ~~ THEN REPLY @169 /* ~Listen... if you're having second thoughts... I'd understand.~ */
-		GOTO XA_LC_ScarTalk2
+		IF ~~ THEN
+		GOTO XA_LC_ScarTalk_Excruciating
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_ScarTalk3_F
@@ -333,10 +263,20 @@ APPEND XACORWIJ
 		
 		IF ~~ THEN REPLY @255 /* ~Yeah... I feel amazing, actually. *You* were amazing, love.~ */
 		GOTO XA_LC_CorwinSex1_8_F
+		
+		IF ~~ THEN REPLY @369 /* ~I feel a bit woozy, but none the worse for wear.~ */
+		GOTO XA_LC_CorwinSex1_7FB
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_7FB
+		SAY @370 /* ~Here, I poured you a glass of water while you were out. Drink it, it'll help.~*/
+		
+		IF ~~ THEN REPLY @371 /* ~Thanks... ah, much better.~*/
+		GOTO XA_LC_CorwinSex1_8_F
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8_F
-		SAY @256 /* ~I'm surprised you lasted as long as you did. My tongue certainly got a work out, that's for sure. You taste wonderful, you know.~*/
+		SAY @256 /* ~I'm surprised you lasted as long as you did. You certainly gave my tongue a work out, not that I mind... you taste wonderful, you know.~*/
 		
 		IF ~~ THEN REPLY @257 /*~Oh gosh, I'm so sorry. I'm sure you wanted me to —~*/
 		GOTO XA_LC_CorwinSex1_9_F
@@ -394,14 +334,11 @@ APPEND XACORWIJ
 		= @266/* ~(You leave the bed and fetch her knapsack. After rummaging through her things, you reach in and pull out a ...)~*/
 		
 		IF ~~ THEN REPLY @267/* ~Hah! A strap-on? And it's pink, too! Somehow I don't think this is standard issue for Flaming Fist officers.~*/
-		
 		GOTO XA_LC_CorwinSex1_12_F
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_12_F
-		SAY @268/* ~No kidding. I picked it up at the Promenade. I *was* going to use it on you, but I'd be remiss to make you cum again in light of that fainting episode.~*/
-		
-		= @274 /* ~Now put it on, come back into bed, and fuck me. That's an order, hero.~*/
+		SAY @268/* ~No kidding. I picked it up at the Promenade not long after I arrived. Now put it on, come back into bed, and fuck me. That's an *order*, hero.~*/
 		
 		IF ~~ THEN REPLY @271 /* ~It's huge... I don't think it will fit.~ */
 		GOTO XA_LC_CorwinSex1_13A_F
@@ -409,6 +346,11 @@ APPEND XACORWIJ
 		IF ~~ THEN REPLY @275 /* ~Me? Are you sure?~ */
 		GOTO XA_LC_CorwinSex1_13B_F
 	
+		IF ~~ THEN REPLY @373 /* ~I thought you would be the one doing the fucking.~*/
+		GOTO XA_LC_CorwinSex1_13C_F
+		
+		IF ~~ THEN REPLY @374 /* ~Far be it from me to disobey orders.~*/
+		GOTO XA_LC_CorwinSex1_14_F
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13A_F
@@ -491,8 +433,16 @@ APPEND XACORWIJ
 		IF ~~ THEN 
 		GOTO XA_LC_CorwinSex1_14_F
 	END
-	//}
 	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_13C_F
+		SAY @372 /* ~So did I, but I'd be remiss to make you cum again so soon after that fainting episode.~ */
+		
+		IF ~~ THEN REPLY @271 /* ~It's huge... I don't think it will fit.~ */
+		GOTO XA_LC_CorwinSex1_13A_F
+		
+		IF ~~ THEN REPLY @374 /* ~Far be it from me to disobey orders.~*/
+		GOTO XA_LC_CorwinSex1_14_F
+	END
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_14_F
 		SAY @283 /* ~(You quickly tie the strap-on around your waist and jump back into bed. Schael turns and faces the headboard, and raises her behind toward you. You place one hand on her firm, round ass, while you gently finger her pussy  starting from the front and slowly working toward the back. She's so unbelievably wet already that you're sure you won't need any lube.)~*/
 		
@@ -524,13 +474,133 @@ APPEND XACORWIJ
 		
 		=@297 /*~(You rest your head next to hers, and gaze into her eyes. As you lay there together, you inhale the smells of sweat and sex in the air, and try to comprehend what has just happened. Eventually, you're able to gather yourselves.)~*/
 		
-		=@298 /*~That was wonderful. You don't know how much I needed that. Thank you, love.~ */
+		IF ~~ THEN 
+		GOTO XA_LC_CorwinSex1_Finished
+	END
+	//}
+	
+	//{ Shared
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_3
+		SAY @11 /* ~What are you doing? Get out of those clothes!~ */
+		= @12 /* ~(She's as used to giving orders in the bedroom as she is outside of it, you think to yourself.)~ */
 		
-		IF ~~ THEN REPLY @50 /*~Schael, you were incredible, I - I can't even —~*/
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @13 /* ~R-right.~ */
+		GOTO XA_LC_ScarTalk_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @13  /* ~R-right.~ */
+		GOTO XA_LC_ScarTalk_F
+		
+		IF ~~ THEN REPLY @375 /* ~Sorry, I uh... I was admiring the view.~ */
+		GOTO XA_LC_PleasantView
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_PleasantView
+		SAY @376 /* ~(She crosses her powerful, sculpted arms beneath her tits and taps her bare foot with impatience.)~*/
+		
+		= @377 /* =~Oh, how I *love* that sense of humor. I wonder if you'll have more jokes to tell after I shove your underwear down your throat!~*/
+		
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @378/* ~Okay, okay! Clothes are coming off, relax!~*/
+		GOTO XA_LC_ScarTalk_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @378/* ~Okay, okay! Clothes are coming off, relax!~*/
+		GOTO XA_LC_ScarTalk_F
+		
+		IF ~~ THEN REPLY @379 /* ~That actually doesn't sound too bad.~*/
+		GOTO XA_LC_Lift
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_Lift
+		SAY @380 /* ~(Her annoyance with you is evident as she tenses the muscles in her arms and midsection. Without warning, she reaches forward and grabs you by the underside of your collar. To your astonishment, she easily lifts you about a foot off the floor with just her right arm. Her immense strength causes you to shudder with fear and arousal, as she draws her left arm back, threatening to strike you.)~   */
+		
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @381/* ~Okay, okay! Clothes are coming off, relax!~*/
+		GOTO XA_LC_ScarTalk_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @381/* ~Okay, okay! Clothes are coming off, relax!~*/
+		GOTO XA_LC_ScarTalk_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ScarTalk_Excruciating
+		SAY @166 /*~Irenicus... damn him! I... I'm so sorry that you had to endure this. It must've been excruciating.~  */
+		
+		IF ~~ THEN REPLY @169 /* ~Listen... if you're having second thoughts... I'd understand.~*/
+		GOTO XA_LC_ScarTalk_ExcruciatingA
+		
+		IF ~~ THEN REPLY @367 /* ~He placed me under some kind of paralysis spell, but I could feel everything... the knives piercing my skin, the needles, the chemicals... all of it. I never stopped fighting to break free, but it was no use.~*/
+		GOTO XA_LC_ScarTalk_ExcruciatingB
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ScarTalk_ExcruciatingA
+		SAY @170 /*~Don't be ridiculous. I love you, <CHARNAME>. I just wasn't prepared for it, that's all. Where else did he hurt you?~  */
+		
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
+		GOTO XA_LC_ScarTalk3_M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @171 /*~My back mainly, and p-parts of my legs.~*/
+		GOTO XA_LC_ScarTalk3_F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_ScarTalk_ExcruciatingB
+		SAY @368 /* ~Such cruelty... it's worse than I could've imagined. Where else did he hurt you?~*/
+		
+		COPY_TRANS XACORWIJ XA_LC_ScarTalk_ExcruciatingA
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_Finished
+		SAY @49 /* ~You don't know how much I needed that. Thank you, love.~  */
+		
+		IF ~~ THEN REPLY @50 /* ~Schael, you were incredible, I - I can't even —~ */
 		GOTO XA_LC_CorwinSex1_8
 	END
 	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8
+		SAY @51 /* ~(She smiles warmly, and places her finger across your lips.)~ */
+		
+		= @52 /* ~Shh, lover. It's time for us to get some rest. Just know that this, and more, is what awaits you when we finally return home. I love you, <CHARNAME>.~ */
+		
+		IF ~~ THEN REPLY @53 /* ~I love you too, Schael. */
+		GOTO XA_LC_CorwinSex1_9
+	END
 	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
+		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
+		
+		IF ~
+			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
+		~ THEN 
+		DO ~
+			ReallyForceSpellRES("XACHNG01", "XACORWIN")
+			StartCutSceneMode()
+			StartCutScene("XAEX01EX")
+		~
+		EXIT
+		
+		IF ~
+			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
+		~ THEN 
+		DO ~
+			ReallyForceSpellRES("XACHNG02", "XACORWIN")
+			StartCutSceneMode()
+			StartCutScene("XAEX01EX")
+		~
+		EXIT
+	END
+	//}
 	
 //} #endregion
 
@@ -616,6 +686,9 @@ APPEND XACORWIJ
 			SAY @184 /* ~It's a simple enough question. Do you trust me, or not?~*/
 			
 			IF ~~ THEN REPLY @185 /*~You know I do.~*/
+			GOTO XA_LC_ChooseSafeWord
+			
+			IF ~~ THEN REPLY @382 /*~After all that we've been through, you more than any other have earned my trust.~*/
 			GOTO XA_LC_ChooseSafeWord
 		END
 		
@@ -760,6 +833,110 @@ APPEND XACORWIJ
 				Gender(Player1, FEMALE)
 			~ THEN REPLY @72 /* ~Fine. You asked for it. (Attack her.)~ */
 			GOTO XA_LC_CorwinSex2_6F
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_Technique
+			SAY @383 /*~My father began teaching me at a young age, not long after my mother died. Given *how* she died, he didn't want me to become a victim, too.~*/
+			
+			IF ~
+				GlobalLT("XA_LCE_MothersName", "LOCALS", 1)
+			~ THEN REPLY @384 /*~What was her name?~*/
+			DO ~
+				SetGlobal("XA_LCE_MothersName", "LOCALS", 1)
+			~
+			GOTO XA_LC_MothersName
+			
+			IF ~
+				GlobalLT("XA_LCE_MotherDied", "LOCALS", 1)
+			~ THEN REPLY @386 /*~How she died? What do you mean?~*/
+			DO ~
+				SetGlobal("XA_LCE_MotherDied", "LOCALS", 1)
+			~
+			GOTO XA_LC_HowDied
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_HowDied
+			SAY @387 /*~Well, the perp mugged her, then tried to ... you know. When she fought back, he killed her.~*/
+			
+			= @391 /*~When she didn't come home, my father gathered a team to look for her. He and the other gauntlets searched everywhere... but by the time they found her body, it was too late for the temples to do anything for her.~ */
+			
+			IF ~
+				GlobalLT("XA_LCE_FoundKiller", "LOCALS", 1)
+			~ THEN REPLY @392 /*~Did they find the one responsible?~*/
+			DO ~
+				SetGlobal("XA_LCE_FoundKiller", "LOCALS", 1)
+			~
+			GOTO XA_LC_Responsible
+			
+			IF ~
+				GlobalLT("XA_LCE_MothersName", "LOCALS", 1)
+			~ THEN REPLY @394 /*~I'm sorry. That couldn't have been easy. What was her name?~*/
+			DO ~
+				SetGlobal("XA_LCE_MothersName", "LOCALS", 1)
+			~
+			GOTO XA_LC_MothersName
+			
+			IF ~
+				GlobalLT("XA_LCE_MomProud", "LOCALS", 1)
+			~ THEN REPLY @390 /*~I'm sure she'd be proud of the woman you've become.~*/
+			DO ~
+				SetGlobal("XA_LCE_MomProud", "LOCALS", 1)
+			~
+			GOTO XA_LC_MomWouldBeProud
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_Responsible
+			SAY @393 /*~They did. He was a common thug, and a follower of Cyric.~ */
+			
+			= @395 /*~Duke Eltan was gracious enough to allow my father to carry out the sentence.~*/
+			
+			COPY_TRANS XACORWIJ XA_LC_HowDied
+			
+			IF ~
+				Gender(Player1, FEMALE)
+			~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~
+				Gender(Player1, MALE)
+			~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_11
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_MothersName
+			SAY @385 /*~Her name was Ilara.~*/
+			
+			= @389 /*~I don't remember much of her, beyond her face... my father keeps a portrait of her on the mantle.~ */
+			
+			COPY_TRANS XACORWIJ XA_LC_HowDied
+			
+			IF ~
+				Gender(Player1, FEMALE)
+			~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~
+				Gender(Player1, MALE)
+			~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_11
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_MomWouldBeProud
+			SAY @396 /*~Sweet of you to say... I imagine Gorion would be equally proud of you.~*/
+			
+			= @397 /*~I imagine Gorion would be equally proud of you.~*/
+			
+			COPY_TRANS XACORWIJ XA_LC_HowDied
+			
+			IF ~
+				Gender(Player1, FEMALE)
+			~ THEN REPLY @361 /*So, what should I have done to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~
+				Gender(Player1, MALE)
+			~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_11
 		END
 	//}
 
@@ -1075,6 +1252,9 @@ APPEND XACORWIJ
 			
 			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
 			GOTO XA_LC_CorwinSex2_11
+			
+			IF ~~ THEN REPLY @398 /*~How did you learn to do all this? I never imagined I could be subdued so easily.~*/
+			GOTO XA_LC_Technique
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10B
@@ -1266,7 +1446,12 @@ APPEND XACORWIJ
 			
 			IF ~~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
 			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~~ THEN REPLY @383 /*~I wish I knew that earlier... where did you learn those techniques?~*/
+			GOTO XA_LC_Technique
 		END
+		
+		
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_7FA
 			SAY @319 /*~Well, experience IS the best teacher, or so they say.~*/
