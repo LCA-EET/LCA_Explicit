@@ -6,6 +6,10 @@
 * Gibberlings 3 Forum Post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
 * Beamdog Forum Post: https://forums.beamdog.com/discussion/87688/announcing-love-conquers-all-lca-corwin-romance-mod-for-eet
 
+# v1.7, 2025-07-25
+* Overhauled the Baldur's Gate intimate encounter to include a bondage component, and to make it accessible for both genders.
+* Added additional dialog options and states to the two SoA intimate encounters.
+
 # v1.6, 2025-06-18
 * Added the second F/F intimate encounter.
 

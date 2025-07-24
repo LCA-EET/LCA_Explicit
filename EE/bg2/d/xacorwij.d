@@ -131,7 +131,8 @@ APPEND XACORWIJ
 		= @47 /* ~Mm, <CHARNAME>. That was wonderful.~ */
 		
 		= @48 /* ~(She plants a kiss on your forehead.)~ */
-		 
+		
+		IF ~~ THEN
 		GOTO XA_LC_CorwinSex1_Finished
 		
 	END
@@ -630,6 +631,8 @@ APPEND XACORWIJ
 			~	
 			GOTO XA_LC_CorwinSex2_2F
 			
+			IF ~~ THEN REPLY @399 /*~Ah, right. You told me you didn't like what you were seeing.~ */
+			GOTO XA_LC_CorwinSex2_2_Now
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_2_Now
@@ -883,6 +886,34 @@ APPEND XACORWIJ
 				SetGlobal("XA_LCE_MomProud", "LOCALS", 1)
 			~
 			GOTO XA_LC_MomWouldBeProud
+			
+			IF ~
+				GlobalLT("XA_LCE_ParentsKilled", "LOCALS", 1)
+			~ THEN REPLY @401 /*~The pain of losing a parent in such a way... I'm afraid I know it all too well.~*/
+			DO ~
+				SetGlobal("XA_LCE_ParentsKilled", "LOCALS", 1)
+			~
+			GOTO XA_LC_ParentsKilled
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_ParentsKilled
+			SAY @402  /*~My father and I at least had each other... we were able to make it through, together. You didn't have anyone, yet you persevered.~*/
+			
+			= @403 /*~It's just another reason why I and so many others admire you, my love.~*/
+			
+			= @404 /*~(She plants a soft kiss on your cheek.)~*/
+			
+			COPY_TRANS XACORWIJ XA_LC_HowDied
+			
+			IF ~
+				Gender(Player1, FEMALE)
+			~ THEN REPLY @139 /*~I understand... so, how was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~
+				Gender(Player1, MALE)
+			~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_11
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_Responsible
@@ -1052,6 +1083,12 @@ APPEND XACORWIJ
 			= @213 /*~So, that's it? The real fun hadn't even started.~*/
 			
 			IF ~~ THEN REPLY @214 /*~Fun for you, maybe, ugh...~*/
+			DO ~
+				SetGlobal("XA_LCE_UsedSafeWord", "GLOBAL", 1)
+			~
+			GOTO XA_LC_GiveUp_0_2
+			
+			IF ~~ THEN REPLY @400 /*~*pant* You call that fun?~ */
 			DO ~
 				SetGlobal("XA_LCE_UsedSafeWord", "GLOBAL", 1)
 			~
@@ -1253,7 +1290,7 @@ APPEND XACORWIJ
 			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
 			GOTO XA_LC_CorwinSex2_11
 			
-			IF ~~ THEN REPLY @398 /*~How did you learn to do all this? I never imagined I could be subdued so easily.~*/
+			IF ~~ THEN REPLY @398 /*~I never imagined I could be subdued so easily.~*/
 			GOTO XA_LC_Technique
 		END
 
@@ -1447,7 +1484,7 @@ APPEND XACORWIJ
 			IF ~~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
 			GOTO XA_LC_CorwinSex2_8F
 			
-			IF ~~ THEN REPLY @383 /*~I wish I knew that earlier... where did you learn those techniques?~*/
+			IF ~~ THEN REPLY @398 /*~I never imagined I could be subdued so easily. Where did you learn that choke hold?~*/
 			GOTO XA_LC_Technique
 		END
 		
