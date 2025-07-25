@@ -697,15 +697,13 @@ BEGIN XACOREX2
 			
 			= @138 /* ~... I dont think we'll need to worry about that.~ */
 			
-			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
-			GOTO XA_LC_CorwinSex2_11
+			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10C
 			SAY @140 /* ~I'm sorry. I guess I got a little carried away.~ */
 			
-			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
-			GOTO XA_LC_CorwinSex2_11
+			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10D
@@ -714,8 +712,7 @@ BEGIN XACOREX2
 			IF ~~ THEN REPLY @193 /*~I know that wasn't your intent, and... I'm ashamed to admit it, but I enjoyed it, Schael.~*/
 			GOTO XA_LC_CorwinSex2_10E
 			
-			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
-			GOTO XA_LC_CorwinSex2_11
+			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10E
@@ -728,8 +725,7 @@ BEGIN XACOREX2
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F_M
 			SAY @196 /*~(She leans in and kisses you on the cheek.)~*/
 			
-			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
-			GOTO XA_LC_CorwinSex2_11
+			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_11

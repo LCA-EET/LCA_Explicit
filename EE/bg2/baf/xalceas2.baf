@@ -4,6 +4,7 @@ THEN
 	RESPONSE #100
 		SetGlobal("XA_LCE_TS_Prep", "MYAREA", 2)
 		TextScreen("XALCSEX2")
+		FadeFromColor([30.0],0)
 END
 
 IF

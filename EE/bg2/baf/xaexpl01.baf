@@ -12,11 +12,10 @@ THEN
 		LeaveAreaLUA("XAEXPL01","",[610.250],SW)
 		ActionOverride("XACORWIN", LeaveAreaLUA("XAEXPL01","",[585.265],NE)) 
 		Explore()
-		FadeFromColor([30.0],0)
 		FaceObject("XACORWIN")
 		SmallWait(1)
 		ActionOverride("XACORWIN", FaceObject(Player1))
-		Wait(2)
+		Wait(1)
 		SetGlobal("XA_LCE_TS_Prep", "MYAREA", 1)
 		EndCutSceneMode()
 		

@@ -11,7 +11,6 @@ THEN
 		LeaveAreaLUA("XAEXPL02","",[460.295],NW)
 		ActionOverride("XACORWIN", LeaveAreaLUA("XAEXPL02","",[425.270],SE)) 
 		Explore()
-		FadeFromColor([30.0],0)
 		ReallyForceSpellRES("XACHNG03", "XACORWIN")
 		SmallWait(5)
 		FaceObject("XACORWIN")
