@@ -252,10 +252,8 @@ BEGIN XACOREX2
 			GOTO XA_LC_HowDied
 		END
 		
-		IF ~~ THEN BEGIN XA_LC_HowDied
-			SAY @387 /*~Well, the perp mugged her, then tried to ... you know. When she fought back, he killed her.~*/
-			
-			= @391 /*~When she didn't come home, my father gathered a team to look for her. He and the other gauntlets searched everywhere... but by the time they found her body, it was too late for the temples to do anything for her.~ */
+		IF ~~ THEN BEGIN XA_LC_MotherOptions
+			SAY @387
 			
 			IF ~
 				GlobalLT("XA_LCE_FoundKiller", "LOCALS", 1)
@@ -290,6 +288,14 @@ BEGIN XACOREX2
 			GOTO XA_LC_ParentsKilled
 		END
 		
+		IF ~~ THEN BEGIN XA_LC_HowDied
+			SAY @387 /*~Well, the perp mugged her, then tried to ... you know. When she fought back, he killed her.~*/
+			
+			= @391 /*~When she didn't come home, my father gathered a team to look for her. He and the other gauntlets searched everywhere... but by the time they found her body, it was too late for the temples to do anything for her.~ */
+			
+			COPY_TRANS XACOREX2 XA_LC_MotherOptions
+		END
+		
 		IF ~~ THEN BEGIN XA_LC_ParentsKilled
 			SAY @402  /*~My father and I at least had each other... we were able to make it through, together. You didn't have anyone, yet you persevered.~*/
 			
@@ -297,7 +303,7 @@ BEGIN XACOREX2
 			
 			= @404 /*~(She plants a soft kiss on your cheek.)~*/
 			
-			COPY_TRANS XACOREX2 XA_LC_HowDied
+			COPY_TRANS XACOREX2 XA_LC_MotherOptions
 			
 			IF ~
 				Gender(Player1, FEMALE)
@@ -315,7 +321,7 @@ BEGIN XACOREX2
 			
 			= @395 /*~Duke Eltan was gracious enough to allow my father to carry out the sentence.~*/
 			
-			COPY_TRANS XACOREX2 XA_LC_HowDied
+			COPY_TRANS XACOREX2 XA_LC_MotherOptions
 			
 			IF ~
 				Gender(Player1, FEMALE)
@@ -333,7 +339,7 @@ BEGIN XACOREX2
 			
 			= @389 /*~I don't remember much of her, beyond her face... my father keeps a portrait of her on the mantle.~ */
 			
-			COPY_TRANS XACOREX2 XA_LC_HowDied
+			COPY_TRANS XACOREX2 XA_LC_MotherOptions
 			
 			IF ~
 				Gender(Player1, FEMALE)
@@ -351,7 +357,7 @@ BEGIN XACOREX2
 			
 			= @397 /*~I imagine Gorion would be equally proud of you.~*/
 			
-			COPY_TRANS XACOREX2 XA_LC_HowDied
+			COPY_TRANS XACOREX2 XA_LC_MotherOptions
 			
 			IF ~
 				Gender(Player1, FEMALE)
@@ -676,16 +682,22 @@ BEGIN XACOREX2
 			GOTO XA_LC_CorwinSex2_10D
 		END
 
-		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10A
-			SAY @134 /* ~(She smiles.)~ */
-			
-			= @135 /* ~Somehow I knew that you're the type of man that would appreciate being controlled by a woman.~ */
+		IF ~~ THEN BEGIN XA_LC_10_Options
+			SAY @134
 			
 			IF ~~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
 			GOTO XA_LC_CorwinSex2_11
 			
 			IF ~~ THEN REPLY @398 /*~I never imagined I could be subdued so easily.~*/
 			GOTO XA_LC_Technique
+		END
+
+		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10A
+			SAY @134 /* ~(She smiles.)~ */
+			
+			= @135 /* ~Somehow I knew that you're the type of man that would appreciate being controlled by a woman.~ */
+			
+			COPY_TRANS XACOREX2 XA_LC_10_Options
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10B
@@ -697,13 +709,13 @@ BEGIN XACOREX2
 			
 			= @138 /* ~... I dont think we'll need to worry about that.~ */
 			
-			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
+			COPY_TRANS XACOREX2 XA_LC_10_Options
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10C
 			SAY @140 /* ~I'm sorry. I guess I got a little carried away.~ */
 			
-			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
+			COPY_TRANS XACOREX2 XA_LC_10_Options
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10D
@@ -712,7 +724,7 @@ BEGIN XACOREX2
 			IF ~~ THEN REPLY @193 /*~I know that wasn't your intent, and... I'm ashamed to admit it, but I enjoyed it, Schael.~*/
 			GOTO XA_LC_CorwinSex2_10E
 			
-			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
+			COPY_TRANS XACOREX2 XA_LC_10_Options
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10E
@@ -725,7 +737,7 @@ BEGIN XACOREX2
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_10F_M
 			SAY @196 /*~(She leans in and kisses you on the cheek.)~*/
 			
-			COPY_TRANS XACOREX2 XA_LC_CorwinSex2_10A
+			COPY_TRANS XACOREX2 XA_LC_10_Options
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_11
@@ -885,6 +897,9 @@ BEGIN XACOREX2
 			
 			IF ~~ THEN REPLY @361 /*~So, what should I have done to break out of that hold?~ */
 			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~~ THEN REPLY @398 /*~I never imagined I could be subdued so easily. Where did you learn that choke hold?~*/
+			GOTO XA_LC_Technique
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_8F
