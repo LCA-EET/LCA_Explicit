@@ -12,7 +12,7 @@ THEN
 	RESPONSE #100
 		ReallyForceSpellRES("XACHNG03", "XACORWIN")
 		SmallWait(5)
-		ActionOverride("XACORWIN", StartDialog("XACORWIJ", Player1))
+		ActionOverride("XACORWIN", StartDialog("XACOREX1", Player1))
 END
 
 IF
@@ -28,5 +28,5 @@ IF
 	Global("XA_LCE_CorwinSex1_Part2", "MYAREA", 2)
 THEN
 	RESPONSE #100
-		ActionOverride("XACORWIN", StartDialog("XACORWIJ", Player1))
+		ActionOverride("XACORWIN", StartDialog("XACOREX1", Player1))
 END

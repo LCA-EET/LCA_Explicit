@@ -12,6 +12,6 @@ THEN
 	RESPONSE #100
 		ReallyForceSpellRES("XACHNG03", "XACORWIN")
 		SmallWait(5)
-		ActionOverride("XACORWIN", StartDialog("XACORWIJ", Player1))
+		ActionOverride("XACORWIN", StartDialog("XACOREX2", Player1))
 END
 
