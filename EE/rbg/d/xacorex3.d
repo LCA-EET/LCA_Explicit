@@ -549,14 +549,16 @@ BEGIN ~XACOREX3~
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_No_Male
-		SAY @210 /* ~Yeah, it was stupid of me to bring them. Just... uh, just forget it. Now, tell me what you want, hero... tell me how can I make this night one that you'll never forget.~ */
+		SAY @210 /* I understand. Just... uh, just forget it.~ */
 		
+		= @356 /* ~Now, tell me what you want, hero... tell me how can I make this night one that you'll never forget.~*/
 		COPY_TRANS XACOREX3 XA_LC_XAEXPL03_Schael_1_M
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_No_Female
-		SAY @210 /* ~Yeah, it was stupid of me to bring them. Just... uh, just forget it. Now, tell me what you want, hero... tell me how can I make this night one that you'll never forget.~ */
+		SAY @210 /* I understand. Just... uh, just forget it.~*/
 		
+		= @356 /* ~Now, tell me what you want, hero... tell me how can I make this night one that you'll never forget.~*/
 		COPY_TRANS XACOREX3 XA_LC_XAEXPL03_Schael_1_F
 	END
 	
@@ -573,7 +575,9 @@ BEGIN ~XACOREX3~
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_4A
-		SAY @248 /* ~Wow... I thought it would take some more convincing. Let's use a safe word, just in case. How does 'arrow' sound?~*/
+		SAY @248 /* ~Wow... I thought it would take some more convincing.~ ~*/
+		
+		= @355 /* Let's use a safe word, just in case. How does 'arrow' sound? */
 		
 		IF ~~ THEN REPLY @168 /* ~Arrow? That's fine by me. Let's get started.~*/
 		GOTO XA_LC_Schael_Bondage_6

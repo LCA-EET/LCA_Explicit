@@ -339,7 +339,9 @@ BEGIN XACOREX1
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_12_F
-		SAY @268/* ~No kidding. I picked it up at the Promenade not long after I arrived. Now put it on, come back into bed, and fuck me. That's an *order*, hero.~*/
+		SAY @268/* ~No kidding. I picked it up at the Promenade not long after I arrived.*/
+		
+		= @407 /*~Now put it on, come back into bed, and fuck me. That's an *order*, hero.~ */
 		
 		IF ~~ THEN REPLY @271 /* ~It's huge... I don't think it will fit.~ */
 		GOTO XA_LC_CorwinSex1_13A_F
@@ -517,6 +519,14 @@ BEGIN XACOREX1
 		IF ~
 			GlobalLT("XA_LCE_LiftedPlayer", "LOCALS", 1)
 		~ THEN REPLY @379 /* ~That actually doesn't sound too bad.~*/
+		DO ~
+			SetGlobal("XA_LCE_LiftedPlayer", "LOCALS", 1)
+		~
+		GOTO XA_LC_Lift
+		
+		IF ~
+			GlobalLT("XA_LCE_LiftedPlayer", "LOCALS", 1)
+		~ THEN REPLY @406 /* ~That actually doesn't sound too bad.~*/
 		DO ~
 			SetGlobal("XA_LCE_LiftedPlayer", "LOCALS", 1)
 		~
