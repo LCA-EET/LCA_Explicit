@@ -323,6 +323,44 @@ BEGIN XACOREX2
 			
 			COPY_TRANS XACOREX2 XA_LC_MotherOptions
 			
+			IF ~~ THEN REPLY @405 /* ~The sentence? So he was executed?~*/
+			GOTO XA_LC_Sentence
+			
+			IF ~
+				Gender(Player1, FEMALE)
+			~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~
+				Gender(Player1, MALE)
+			~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_11
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_Sentence
+			SAY @406 /* ~Yes, though not at the gallows. That, obviously, was a mercy he didn't deserve. He instead received the punishment that all rapists who murder their victims receive: castration, followed by hot irons to cauterize the wound, then finally the rack. It was a drawn out affair from what I've been told... so much the better.~*/
+			
+			IF ~~ THEN REPLY @408 /* ~Castration? The rack? I didn't know Duke Eltan had the appetite for something so gruesome.~*/
+			GOTO XA_LC_Gruesome
+			
+			COPY_TRANS XACOREX2 XA_LC_MotherOptions
+			
+			IF ~
+				Gender(Player1, FEMALE)
+			~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_8F
+			
+			IF ~
+				Gender(Player1, MALE)
+			~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
+			GOTO XA_LC_CorwinSex2_11
+		END
+		
+		IF ~~ THEN BEGIN XA_LC_Gruesome
+			SAY @409 /* ~Well, that's the point. The sight of a punishment like that serves to deter others. In that sense, my mother's death wasn't in vain.~*/ 
+			
+			COPY_TRANS XACOREX2 XA_LC_MotherOptions
+			
 			IF ~
 				Gender(Player1, FEMALE)
 			~ THEN REPLY @320 /*~I understand... so, how was I supposed to break out of that hold?~*/
