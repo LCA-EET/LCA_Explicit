@@ -779,9 +779,11 @@ BEGIN XACOREX2
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_11
-			SAY @141 /* ~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free. Instead, you tried to free those big, beautiful balls of yours from my grip.~*/
+			SAY @141 /* ~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free.~*/
 			
-			= @142 /* ~Not that I blame you. They're quite precious, after all.~  */
+			= @142 /* ~Instead, you tried to free those huge, heroic balls of yours from my grip.~ */
+			
+			= @410 /*~Not that I blame you. They're quite precious, after all.~*/
 			
 			= @143 /* ~(She reaches over and gently massages your package. The pain from earlier is completely gone, and you feel a twitch as your member begins to awaken from its slumber.)~ */
 			
