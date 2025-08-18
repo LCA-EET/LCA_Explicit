@@ -779,9 +779,9 @@ BEGIN XACOREX2
 		END
 
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_11
-			SAY @141 /* ~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free.~*/
+			SAY @141 /* ~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. ~*/
 			
-			= @142 /* ~Instead, you tried to free those huge, heroic balls of yours from my grip.~ */
+			= @142 /* ~Also, when I was holding your neck with one arm, you should've been able to break free. Instead, you tried to free those huge, heroic balls of yours from my grip.~ */
 			
 			= @410 /*~Not that I blame you. They're quite precious, after all.~*/
 			
@@ -943,7 +943,7 @@ BEGIN XACOREX2
 		END
 		
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_8F
-			SAY @141/*~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck. Also, when I was holding your neck with one arm, you should've been able to break free.~ [xalce012] */
+			SAY @141/*~You needed to shift your weight and turn your body to free your left arm. If you'd done that, you probably would've been able to pry my right arm away and break the hold over your neck.~ [xalce012] */
 			
 			= @321 /*~I was surprised you didn't. Maybe...~*/
 			
