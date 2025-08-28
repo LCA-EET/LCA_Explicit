@@ -407,6 +407,30 @@ BEGIN XACOREX2
 			~ THEN REPLY @139 /* ~So, what did I do wrong? How was I supposed to break out of that hold?~*/
 			GOTO XA_LC_CorwinSex2_11
 		END
+		
+		IF ~~ THEN BEGIN XA_LCE_Exit2
+			SAY @56
+			
+			IF ~
+				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
+			~ THEN 
+			DO ~
+				ReallyForceSpellRES("XACHNG01", "XACORWIN")
+				StartCutSceneMode()
+				StartCutScene("XAEX02EX")
+			~
+			EXIT
+			
+			IF ~
+				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
+			~ THEN 
+			DO ~
+				ReallyForceSpellRES("XACHNG02", "XACORWIN")
+				StartCutSceneMode()
+				StartCutScene("XAEX02EX")
+			~
+			EXIT
+		END
 	//}
 
 	//{ M/F
@@ -540,8 +564,21 @@ BEGIN XACOREX2
 			
 			= @217 /*~You've had a long day. Let's get to bed.~ */
 			
-			IF ~~ THEN
+			IF ~
+				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
+			~ THEN 
 			DO ~
+				ReallyForceSpellRES("XACHNG01", "XACORWIN")
+				StartCutSceneMode()
+				StartCutScene("XAEX02E2")
+			~
+			EXIT
+			
+			IF ~
+				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
+			~ THEN 
+			DO ~
+				ReallyForceSpellRES("XACHNG02", "XACORWIN")
 				StartCutSceneMode()
 				StartCutScene("XAEX02E2")
 			~
@@ -800,12 +837,7 @@ BEGIN XACOREX2
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_12
 			SAY @147 /* ~(Once the lessons has concluded, you eagerly made love to each other yet again, before finally falling asleep.)~ */
 			
-			IF ~~ THEN
-			DO ~
-				StartCutSceneMode()
-				StartCutScene("XAEX02EX")
-			~
-			EXIT
+			COPY_TRANS XACOREX2 XA_LCE_Exit2
 		END
 	//} 
 
@@ -1198,25 +1230,6 @@ BEGIN XACOREX2
 		IF ~~ THEN BEGIN XA_LC_CorwinSex2_End_F
 			SAY @360 /* ~(Together, you try and get back to sleep. After a short while, however, you begin to kiss, and you end up spending the rest of the time learning precisely how and where the two of you like to be touched, kissed, licked, and sucked. During this wonderful exploration of sensations, you learned that Schael is extremely ticklish, which you find highly amusing. Eventually, you fall asleep with your head resting on her breasts, and your fingers in her cunt.)~ */
 			
-			
-			IF ~
-				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)
-			~ THEN 
-			DO ~
-				ReallyForceSpellRES("XACHNG01", "XACORWIN")
-				StartCutSceneMode()
-				StartCutScene("XAEX02EX")
-			~
-			EXIT
-			
-			IF ~
-				Global("XA_LC_PortraitChange_LCA", "GLOBAL", 0)
-			~ THEN 
-			DO ~
-				ReallyForceSpellRES("XACHNG02", "XACORWIN")
-				StartCutSceneMode()
-				StartCutScene("XAEX02EX")
-			~
-			EXIT
+			COPY_TRANS XACOREX2 XA_LCE_Exit2
 		END
 	//}
