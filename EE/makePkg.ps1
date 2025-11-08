@@ -9,12 +9,13 @@ Remove-Item $archive -Force
 Remove-Item $exePath -Force
 
 $folders = @(
+'2da',
+'bam',
 'bg2',
+'ogg',
 'rbg',
 'sod',
-'tra',
-'2da',
-'bam'
+'tra'
 )
 
 foreach($folder in $folders){
