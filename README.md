@@ -20,4 +20,6 @@ This mod patches <a href="https://github.com/LCA-EET/LCA">Love Conquers All</a> 
 </details>
 Writing this content is difficult for obvious reasons. Sexuality is deeply personal; I focused on a broad set of the most "mainstream" fetishes out there, so that there would be something for everyone to enjoy.<br><br>
 
+> [!NOTE]
+> To run the installer without the explicit content warning, run the installer with the --args 1 parameter (i.e. ./setup-LCA_Explicit --args 1)
 

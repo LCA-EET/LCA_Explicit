@@ -6,6 +6,9 @@
 * Gibberlings 3 Forum Post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
 * Beamdog Forum Post: https://forums.beamdog.com/discussion/87688/announcing-love-conquers-all-lca-corwin-romance-mod-for-eet
 
+# v1.7.3, 2025-12-20
+* Added a command line option to skip the explicit content warning.
+
 # v1.7.2, 2025-11-08
 * Converted audio files from WAV to OGG format.
 
