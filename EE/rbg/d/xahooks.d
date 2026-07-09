@@ -49,7 +49,7 @@ END
 /*
 	XACORWIJ 712: ~(She laughs). Much more. See you later.~ 
 */
-EXTEND_BOTTOM XACORWIJ 712
+EXTEND_BOTTOM XACORWIJ 722
 	IF ~
 		Gender(Player1, MALE)
 	~ THEN

@@ -4,9 +4,9 @@ APPEND XACORWIJ
 		SAY @4 /* ~(In spite of your predicament, you find the sight of the always-in-control Schael struggling helplessly against her bonds to be profoundly erotic. The severity of the situation quickly stifles your arousal before your captors could notice.)~ */
 		
 		/*
-			XACORWIJ 301: ~..... gods.... can't... breathe...~
+			XACORWIJ 300: ~..... gods.... can't... breathe...~
 		*/
-		IF ~~ THEN EXTERN ~XACORWIJ~ 301
+		IF ~~ THEN EXTERN ~XACORWIJ~ 300
 	END
 	//{
 	

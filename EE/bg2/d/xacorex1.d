@@ -59,7 +59,7 @@ BEGIN XACOREX1
 		
 		= @18 /* ~(You pull eachother into a tight embrace, and lock lips during a long, sensual kiss. Slowly, you slide your hands down her back, from her shoulder blades to her waist, while she does the same. You caress and squeeze her round, firm behind, as she giggles in delight.)~ */
 		
-		= @159 /* ~(Unable to resist, you bury your head in Schael's ample breasts, and begin to kiss them. They are warm and soft, and smell of lilacs.)~ */
+		= @159 /* @159=~(Unable to resist the temptation any longer, you bury your head in Schael's ample breasts; they are warm, full and soft, and smell of lilacs. You can feel her shudder with pleasure as you begin to kiss, lick and suck on her erect nipples.)~*/
 		
 		= @160 /* ~(She laughs as she strokes the back of your head.)~*/
 		
@@ -579,7 +579,39 @@ BEGIN XACOREX1
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8
-		SAY @51 /* ~(She smiles warmly, and places her finger across your lips.)~ */
+		SAY @55 /*@55=~I always strive to be the best, whether while training, on the battlefield, or in the bedroom. And you... you have tremendous potential as a lover.~   */
+			
+		IF ~
+			Gender(Player1, MALE)
+		~ THEN REPLY @56 /*@56=~Potential? You mean you didn't enjoy it?~*/
+		GOTO XA_LC_CorwinSex1_8M
+		
+		IF ~
+			Gender(Player1, FEMALE)
+		~ THEN REPLY @56 /*@56=~Potential? You mean you didn't enjoy it?~*/
+		GOTO XA_LC_CorwinSex1_8F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8M
+		SAY @57 /*@57=~I enjoyed every second of it. You just need to pace yourself a bit more, and to use your tongue as much as your cock, but believe me... it was better than I ever expected.~*/
+		
+		= @58 /*@58=~And don't worry. We'll have all the time in the world to practice.~*/
+		
+		IF ~~ THEN REPLY @60 /*@60=~I understand... thank you for being patient with me.~*/
+		GOTO XA_LC_CorwinSex1_8_END
+		
+		IF ~~ THEN REPLY @61 /*@61=~Well, Gorion did always say that practice makes perfect.~*/
+		GOTO XA_LC_CorwinSex1_8_END
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8F
+		SAY @59 /* @59=~I enjoyed every second of it. You just need to pace yourself a bit more, and to use your tongue as much as your fingers, but believe me... it was better than I ever expected.~*/
+		
+		COPY_TRANS XACOREX1 XA_LC_CorwinSex1_8F
+	END
+	
+	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8_END
+		SAY @51 /*@51=~(She smiles warmly, and places her finger across your lips.)~*/
 		
 		= @52 /* ~Shh, lover. It's time for us to get some rest. Just know that this, and more, is what awaits you when we finally return home. I love you, <CHARNAME>.~ */
 		
@@ -588,7 +620,7 @@ BEGIN XACOREX1
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_9
-		SAY @54 /* ~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you finally pass out from sheer exhaustion).~*/
+		SAY @54 /* @54=~(You kiss and embrace, and try to get some sleep. Eventually, you give up, and the two of you make love again, and again, and again. Mercifully, you eventually pass out from sheer exhaustion, with your head buried between Schael's powerful and sculpted legs.)~*/
 		
 		IF ~
 			Global("XA_LC_PortraitChange_LCA", "GLOBAL", 1)

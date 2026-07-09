@@ -1,13 +1,11 @@
-$basePath = "LCA_Explicit_EE"
+$weiduApps		= @("weidu.exe", "weidu_linux")
+$weiduExts		= @(".exe", "")
+$weiduArchives 	= @("_win", "_linux")
+
+$basePath = "LCA_Explicit"
 $tp2Name = "LCA_Explicit"
 $modPath = $basePath + "/" + $tp2Name 
-$archive = $basePath + ".zip"
-$exePath = "setup-" + $tp2Name + ".exe"
-
-Remove-Item -LiteralPath $modPath -Force -Recurse
-Remove-Item $archive -Force
-Remove-Item $exePath -Force
-
+$exePath = "setup-" + $tp2Name
 $folders = @(
 '2da',
 'bam',
@@ -18,40 +16,51 @@ $folders = @(
 'tra'
 )
 
-foreach($folder in $folders){
-	Copy-Item -Path $folder -Destination ($modPath + "/" + $folder) -Recurse
+foreach($weiduArchive in $weiduArchives){
+	Remove-Item -LiteralPath ($basePath + $weiduArchive + ".zip") -Force
 }
-Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\functions.tph") -Destination $modPath
-Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\Venmo.url") -Destination $modPath
-Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\PayPal.url") -Destination $modPath
-Copy-Item -Path ("F:\BGModding - LCA\Game\00783\LCA\EE\d_compactor.ps1") -Destination $PSScriptRoot
-& $PSScriptRoot/d_compactor.ps1 -dPath ($modPath)
+
+Remove-Item -LiteralPath $basePath -Force -Recurse
+
+foreach($folder in $folders){
+	Copy-Item -Path $folder -Destination ($modPath + "/" + $folder) -Recurse	
+}
+
+& $PSScriptRoot/d_compactor.ps1 -dPath $modPath
 
 Copy-Item -Path ($tp2Name + ".tp2") -Destination $modPath 
 Copy-Item -Path ("install.tph") -Destination $modPath 
-Copy-Item -Path "LICENSE.md" -Destination $modPath
-Copy-Item -Path "Discord Server.url" -Destination $modPath
-Get-Date -Format "yyyy-MM-dd HH:mm K" > pkgdate.txt
-Copy-Item -Path pkgdate.txt -Destination $modPath
+Copy-Item -Path ("functions.tph") -Destination $modPath 
+Copy-Item -Path "Discord Server.url" -Destination ($modPath + "/Discord Server.url")
+Copy-Item -Path "Venmo.url" -Destination ($modPath + "/Venmo.url")
+Copy-Item -Path "PayPal.url" -Destination ($modPath + "/PayPal.url")
+Copy-Item -Path "release notes.md" -Destination ($modPath + "/Release Notes.md")
 
-Copy-Item -Path "weidu.exe" -Destination ($basePath + "/" + $exePath)
-#Copy-Item -Path "Release Notes (LCA_Explicit).md" -Destination ($basePath + "/Release Notes.md")
-#Copy-Item -Path "User Guide (LCA_Explicit).pdf" -Destination ($basePath + "/User Guide.pdf")
+for ($i = 0; $i -lt $weiduApps.Length; $i++) {
+	if($i -gt 0){
+		Write-Output "Deleting " ($basePath + "/" + $exePath + $weiduExts[$i-1])
+		Remove-Item -LiteralPath ($basePath + "/" + $exePath + $weiduExts[$i-1])
+	}
+    Copy-Item -Path $weiduApps[$i] -Destination ($basePath + "/" + $exePath + $weiduExts[$i])
+	
+	$7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
 
-$7zipPath = "$env:ProgramFiles/7-Zip/7z.exe"
+	if (-not (Test-Path -Path $7zipPath -PathType Leaf)) {
+		$7zipPath = "F:/Program Files/7-Zip/7z.exe"
+	}
 
-if (-not (Test-Path -Path $7zipPath -PathType Leaf)) {
-	$7zipPath = "F:/Program Files/7-Zip/7z.exe"
+	Set-Alias Start-SevenZip $7zipPath
+
+	$archive = $basePath + $weiduArchives[$i] + ".zip"
+	$Source = "./" + $basePath + "/*"
+	$Target = "./" + $archive
+
+	Start-SevenZip a -mx=9 $Target $Source
+
+	#Remove-Item -LiteralPath $basePath -Force -Recurse
+	#Get-FileHash $archive -Algorithm SHA256 > SHA256.txt
+
+	Copy-Item -Path $archive -Destination ("\\nas.home.lan\smbuser\Home\Installers\" + $archive)
 }
 
-Set-Alias Start-SevenZip $7zipPath
-
-$Source = "./" + $basePath + "/*"
-$Target = "./" + $archive
-
-Start-SevenZip a -mx=9 $Target $Source
-
 Remove-Item -LiteralPath $basePath -Force -Recurse
-Get-FileHash $archive -Algorithm SHA256 > SHA256.txt
-
-Copy-Item -Path $archive -Destination ("\\192.168.1.88\smbuser\Home\Installers\" + $archive)
