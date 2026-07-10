@@ -607,7 +607,7 @@ BEGIN XACOREX1
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8F
 		SAY @59 /* @59=~I enjoyed every second of it. You just need to pace yourself a bit more, and to use your tongue as much as your fingers, but believe me... it was better than I ever expected.~*/
 		
-		COPY_TRANS XACOREX1 XA_LC_CorwinSex1_8F
+		COPY_TRANS XACOREX1 XA_LC_CorwinSex1_8M
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_CorwinSex1_8_END
