@@ -54,7 +54,7 @@ BEGIN ~XACOREX3~
 		IF ~
 			Global("XA_LC_SchaelBound", "GLOBAL", 1)
 			GlobalLT("XA_LCE_BondageTalk", "LOCALS", 1)
-		~ THEN REPLY @324 /* /*~That depends. What's in the bag?~*/
+		~ THEN REPLY @324 /*~That depends. What's in the bag?~*/
 		DO ~
 			SetGlobal("XA_Intro", "MYAREA", 1)
 			SetGlobal("XA_LCE_BondageTalk", "LOCALS", 1)
@@ -114,7 +114,7 @@ BEGIN ~XACOREX3~
 	END
 
 	IF ~
-		Global("XA_LC_CorwinSex_3_Neoma",  "GLOBAL",2)
+		Global("XA_LC_CorwinSex_3_Neoma", "GLOBAL",2)
 	~ THEN BEGIN XA_LC_XAEXPL03_Neoma_7
 		SAY @32  /* ~Well, that was fun.~ */
 		
@@ -483,10 +483,10 @@ BEGIN ~XACOREX3~
 	IF ~~ THEN BEGIN XA_LC_WheresNeoma
 		SAY @326 /*~She's is, but she said that tonight should be for the two of us. Next time, love.~*/
 		
-		IF ~~ THEN REPLY @327 /**/
+		IF ~~ THEN REPLY @327 /* ~~ */
 		GOTO XA_LC_WheresNeoma2
 		
-		IF ~~ THEN REPLY @328 /**/
+		IF ~~ THEN REPLY @328 /* ~~ */
 		GOTO XA_LC_WheresNeoma2
 	END
 	IF ~~ THEN BEGIN XA_LC_WheresNeoma2
@@ -575,7 +575,7 @@ BEGIN ~XACOREX3~
 	END
 	
 	IF ~~ THEN BEGIN XA_LC_Schael_Bondage_4A
-		SAY @248 /* ~Wow... I thought it would take some more convincing.~ ~*/
+		SAY @248 /* ~Wow... I thought it would take some more convincing.~*/
 		
 		= @355 /* Let's use a safe word, just in case. How does 'arrow' sound? */
 		

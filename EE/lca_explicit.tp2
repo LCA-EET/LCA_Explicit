@@ -13,6 +13,7 @@ AUTHOR ~support@fosiemods.net~
 AUTO_TRA ~%MOD_FOLDER%/tra/%s~ //automatically associate .tras to their respective .D files
 AUTO_EVAL_STRINGS
 LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/tra/english/xalcaex.tra~
+LANGUAGE ~Schinese~ ~schinese~ ~%MOD_FOLDER%/tra/schinese/xalcaex.tra~
 
 BEGIN @0 /* Love Conquers All (LCA) - Explicit~ */
 
