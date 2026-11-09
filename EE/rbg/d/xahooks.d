@@ -47,7 +47,7 @@ EXTEND_BOTTOM XALCHOOK 1
 END
 
 /*
-	XACORWIJ 712: ~(She laughs). Much more. See you later.~ 
+	XACORWIJ 722: ~(She laughs). Much more. See you later.~ 
 */
 EXTEND_BOTTOM XACORWIJ 722
 	IF ~
