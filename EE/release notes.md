@@ -6,10 +6,11 @@
 * Gibberlings 3 Forum Post: https://www.gibberlings3.net/forums/topic/36832-announcing-love-conquers-all-lca-%E2%80%93-corwin-romance-mod-for-eet
 * Beamdog Forum Post: https://forums.beamdog.com/discussion/87688/announcing-love-conquers-all-lca-corwin-romance-mod-for-eet
 
-# v1.8u1, 2026-08-16
+# v1.8u2, 2026-11-08
 * Added Simplified Chinese language translation, courtesy of DiabloIORI.
 * Conforming changes for LCA v1.7.
 * Miscellaneous improvements.
+* Updated translations.
 
 # v1.7.3, 2025-12-20
 * Added a command line option to skip the explicit content warning.
